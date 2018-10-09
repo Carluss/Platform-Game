@@ -1,4 +1,4 @@
 # Platform-Game
 Platform game
 
-5443
+2D Game with basic mechanics and a metroidvania gameplay, created using the Godot engine and free assets and sprites. 
