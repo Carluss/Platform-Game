@@ -1,0 +1,74 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Enemy.gd" type="Script" id=1]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Dead-15.png" type="Texture" id=2]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Idle-00.png" type="Texture" id=3]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Idle-01.png" type="Texture" id=4]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Idle-02.png" type="Texture" id=5]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Idle-03.png" type="Texture" id=6]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Idle-04.png" type="Texture" id=7]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Idle-05.png" type="Texture" id=8]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Idle-06.png" type="Texture" id=9]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Idle-07.png" type="Texture" id=10]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Idle-08.png" type="Texture" id=11]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Idle-09.png" type="Texture" id=12]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Idle-10.png" type="Texture" id=13]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": false,
+"name": "dead",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "walk",
+"speed": 12.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 11.0679, 16.0971 )
+
+[node name="Enemy" type="KinematicBody2D"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
+
+frames = SubResource( 1 )
+animation = "walk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="RayCast2D" type="RayCast2D" parent="." index="2"]
+
+position = Vector2( 10.2809, -4.11237 )
+enabled = true
+exclude_parent = true
+cast_to = Vector2( 0, 22 )
+collision_mask = 1
+
+[node name="Timer" type="Timer" parent="." index="3"]
+
+process_mode = 1
+wait_time = 2.0
+one_shot = true
+autostart = false
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+
+

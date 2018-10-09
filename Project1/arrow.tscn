@@ -20,6 +20,7 @@ extents = Vector2( 12, 4 )
 
 [node name="arrow" type="Area2D"]
 
+position = Vector2( -4.93669, -2.79031 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -31,19 +32,23 @@ script = ExtResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
 
+position = Vector2( 4.72205, 1.50248 )
 frames = SubResource( 1 )
 animation = "arrow"
-frame = 1
+_sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
-position = Vector2( 7.11979, 1.85115 )
+position = Vector2( 3.63015, 2.86046 )
+rotation = 3.14159
+scale = Vector2( 0.941515, 1 )
 shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="." index="2"]
 
-position = Vector2( 7.17513, 1.70874 )
-scale = Vector2( 1.19065, 1 )
+position = Vector2( 3.48013, 2.63527 )
+scale = Vector2( 1.17096, 0.427187 )
 rect = Rect2( -10, -10, 20, 20 )
 _sections_unfolded = [ "Transform" ]
 

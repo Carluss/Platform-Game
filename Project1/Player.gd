@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 const speed=60
 const GRAVITY=10
-const JUMP_POWER=-250
+const JUMP_POWER=-400
 const FLOOR = Vector2(0,-1)
 const ARROW =preload("res://arrow.tscn")
 
@@ -15,28 +15,34 @@ var is_attacking =false
 
 func _physics_process(delta):
 	if  Input.is_action_pressed("ui_right") and not Input.is_action_pressed("ui_down") :
-		if is_attacking==false:
+		if is_attacking==false or is_on_floor()==false:
 			velocity.x= speed
-			$AnimatedSprite.play("Run")
-			$AnimatedSprite.flip_h = false
-			if sign($Position2D.position.x)==-1:
-				$Position2D.position.x *=-1
+			$CollisionShape2D.disabled=false
+			if is_attacking==false:
+				$AnimatedSprite.play("Run")
+				$AnimatedSprite.flip_h = false
+				if sign($Position2D.position.x)==-1:
+					$Position2D.position.x *=-1
 	elif Input.is_action_pressed("ui_left") and not Input.is_action_pressed("ui_down") :
-		if is_attacking==false:
+		if is_attacking==false or is_on_floor()==false :
 			velocity.x=-speed
-			$AnimatedSprite.play("Run")
-			$AnimatedSprite.flip_h = true
-			if sign($Position2D.position.x)==1:
-				$Position2D.position.x *=-1
+			$CollisionShape2D.disabled=false
+			if is_attacking==false:
+				$AnimatedSprite.play("Run")
+				$AnimatedSprite.flip_h = true
+				if sign($Position2D.position.x)==1:
+					$Position2D.position.x *=-1
 	elif Input.is_action_pressed("ui_down") and not Input.is_action_pressed("ui_right") and not Input.is_action_pressed("ui_left") :
 		if is_attacking==false:
 			$AnimatedSprite.play("Crouch")
+			$CollisionShape2D.disabled=true
 			velocity.x=0
 	elif Input.is_action_pressed("ui_right") and Input.is_action_pressed("ui_down"):
 		if is_attacking==false:
 			velocity.x= speed-25
 			$AnimatedSprite.play("Crouchw")
 			$AnimatedSprite.flip_h = false
+			$CollisionShape2D.disabled=true
 			if sign($Position2D.position.x)==-1:
 				$Position2D.position.x *=-1
 	elif Input.is_action_pressed("ui_left") and Input.is_action_pressed("ui_down"):
@@ -44,11 +50,13 @@ func _physics_process(delta):
 			velocity.x= -speed+25
 			$AnimatedSprite.play("Crouchw")
 			$AnimatedSprite.flip_h = true
+			$CollisionShape2D.disabled=true
 			if sign($Position2D.position.x)==1:
 				$Position2D.position.x *=-1
 
 				
 	else:
+		$CollisionShape2D.disabled=false
 		velocity.x=0
 		if on_ground==true and is_attacking==false:
 			$AnimatedSprite.play("Idle")
@@ -57,15 +65,22 @@ func _physics_process(delta):
 	if  Input.is_action_pressed("ui_up") :
 		if is_attacking==false:
 			if on_ground== true:
+				$CollisionShape2D.disabled=false
 				velocity.y= JUMP_POWER
 				
 				on_ground=false
 		
 	
-	if Input.is_action_just_pressed("ui_focus_next") and is_attacking==false:
+	if Input.is_action_just_pressed("ui_focus_next") and is_attacking==false and on_ground==true:
+		velocity.x=0
 		is_attacking=true
+		$CollisionShape2D.disabled=false
 		$AnimatedSprite.play("arrowfire")
 		
+	if Input.is_action_just_pressed("ui_focus_next")  and is_attacking==false and on_ground==false:
+		is_attacking=true
+		$CollisionShape2D.disabled=false
+		$AnimatedSprite.play("arrowfirejump")	
 		
 		
 	velocity.y += GRAVITY
