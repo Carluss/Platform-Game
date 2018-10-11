@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Skeleton Dead-15.png-c7531d0cacac172d0a3afbe84dc17ba2.stex"
+path="res://.import/Skeleton Dead-08.png-5dca3349cbdf68af08733e50fdf5f2b3.stex"
 
 [deps]
 
-source_file="res://sprites/Enemies/Skeleton/Skeleton Dead-15.png"
-dest_files=[ "res://.import/Skeleton Dead-15.png-c7531d0cacac172d0a3afbe84dc17ba2.stex" ]
+source_file="res://sprites/Enemies/Skeleton/Skeleton Dead-08.png"
+dest_files=[ "res://.import/Skeleton Dead-08.png-5dca3349cbdf68af08733e50fdf5f2b3.stex" ]
 
 [params]
 

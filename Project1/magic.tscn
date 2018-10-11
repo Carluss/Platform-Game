@@ -7,18 +7,17 @@
 custom_solver_bias = 0.0
 extents = Vector2( 16, 16 )
 
-[sub_resource type="SegmentShape2D" id=2]
+[sub_resource type="ConvexPolygonShape2D" id=2]
 
 custom_solver_bias = 0.0
-a = Vector2( 21.4757, 0.357199 )
-b = Vector2( -4.11911, 9.87481 )
+points = PoolVector2Array( 0, -10, 8.66025, 5, -8.66025, 5 )
 
 [sub_resource type="RectangleShape2D" id=3]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="MagicCliffStuff" type="Node" index="0"]
+[node name="MagicCliffStuff" type="Node"]
 
 [node name="NoCollisionStuff" type="Node" parent="." index="0"]
 
@@ -231,18 +230,19 @@ bounce = 0.0
 
 [node name="Ponte" type="Sprite" parent="NoCollisionStuff" index="9"]
 
-position = Vector2( 594.444, 57.9518 )
-scale = Vector2( 1.10583, 1 )
+editor/display_folded = true
+position = Vector2( 608, 64 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
-region_rect = Rect2( 672, 160, 64, 64 )
+region_rect = Rect2( 640, 160, 64, 64 )
 _sections_unfolded = [ "Offset", "Region" ]
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="StaticBody2D" type="StaticBody2D" parent="NoCollisionStuff/Ponte" index="0"]
 
-position = Vector2( 36.1824, 39.8515 )
-scale = Vector2( 0.6558, 0.470918 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -1475,11 +1475,11 @@ _sections_unfolded = [ "Transform" ]
 [node name="Rochedo_8" type="Sprite" parent="CollisionStuff" index="33"]
 
 editor/display_folded = true
-position = Vector2( 779.073, 260.755 )
+position = Vector2( 832, 224 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
-region_rect = Rect2( 576, 160, 64, 64 )
+region_rect = Rect2( 832, 224, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 __meta__ = {
 "_edit_group_": true
@@ -1654,7 +1654,8 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="DescerRochas" type="Sprite" parent="CollisionStuff" index="39"]
 
-position = Vector2( 715.358, -5.60493 )
+editor/display_folded = true
+position = Vector2( 717.623, -9.1638 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -1676,14 +1677,14 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionStuff/DescerRochas/StaticBody2D" index="0"]
 
-position = Vector2( 8.09406, 22.0372 )
-scale = Vector2( 1.90873, 4.55508 )
+position = Vector2( 45.2275, 47.9967 )
+scale = Vector2( 5.15417, 3.1787 )
 shape = SubResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="CollisionStuff/DescerRochas/StaticBody2D" index="1"]
 
-position = Vector2( 53.8744, 25.2154 )
+position = Vector2( 53.8744, 26.186 )
 shape = SubResource( 3 )
 
 

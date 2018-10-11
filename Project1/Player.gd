@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 const speed=60
 const GRAVITY=10
-const JUMP_POWER=-400
+const JUMP_POWER=-250
 const FLOOR = Vector2(0,-1)
 const ARROW =preload("res://arrow.tscn")
 
@@ -12,45 +12,64 @@ var on_ground = false
 
 var is_attacking =false
 
+var is_crouch=false
+
 
 func _physics_process(delta):
-	if  Input.is_action_pressed("ui_right") and not Input.is_action_pressed("ui_down") :
+	if  Input.is_action_pressed("ui_right") :
 		if is_attacking==false or is_on_floor()==false:
 			velocity.x= speed
 			$CollisionShape2D.disabled=false
 			if is_attacking==false:
-				$AnimatedSprite.play("Run")
-				$AnimatedSprite.flip_h = false
-				if sign($Position2D.position.x)==-1:
-					$Position2D.position.x *=-1
-	elif Input.is_action_pressed("ui_left") and not Input.is_action_pressed("ui_down") :
+				if $RayCast2D.is_colliding()==true or Input.is_action_pressed("ui_down"):
+					is_crouch==true
+					velocity.x= speed-25
+					$CollisionShape2D.disabled=true
+					$AnimatedSprite.play("Crouch")
+					$AnimatedSprite.flip_h = false
+				else:
+					$AnimatedSprite.play("Run")
+					$AnimatedSprite.flip_h = false
+					if sign($Position2D.position.x)==-1:
+						$Position2D.position.x *=-1
+	elif Input.is_action_pressed("ui_left") :
 		if is_attacking==false or is_on_floor()==false :
 			velocity.x=-speed
 			$CollisionShape2D.disabled=false
 			if is_attacking==false:
-				$AnimatedSprite.play("Run")
-				$AnimatedSprite.flip_h = true
-				if sign($Position2D.position.x)==1:
-					$Position2D.position.x *=-1
+				if $RayCast2D.is_colliding()==true or Input.is_action_pressed("ui_down"):
+					is_crouch==true
+					velocity.x= -speed+25
+					$CollisionShape2D.disabled=true
+					$AnimatedSprite.play("Crouch")
+					$AnimatedSprite.flip_h = true
+					
+				else:
+					$AnimatedSprite.play("Run")
+					$AnimatedSprite.flip_h = true
+					if sign($Position2D.position.x)==1:
+						$Position2D.position.x *=-1
 	elif Input.is_action_pressed("ui_down") and not Input.is_action_pressed("ui_right") and not Input.is_action_pressed("ui_left") :
 		if is_attacking==false:
 			$AnimatedSprite.play("Crouch")
 			$CollisionShape2D.disabled=true
 			velocity.x=0
-	elif Input.is_action_pressed("ui_right") and Input.is_action_pressed("ui_down"):
+	elif (Input.is_action_pressed("ui_down") and Input.is_action_pressed("ui_right")) :
 		if is_attacking==false:
 			velocity.x= speed-25
 			$AnimatedSprite.play("Crouchw")
 			$AnimatedSprite.flip_h = false
-			$CollisionShape2D.disabled=true
+			if is_crouch==true:
+				$CollisionShape2D.disabled=true
 			if sign($Position2D.position.x)==-1:
 				$Position2D.position.x *=-1
-	elif Input.is_action_pressed("ui_left") and Input.is_action_pressed("ui_down"):
+	elif Input.is_action_pressed("ui_down") and Input.is_action_pressed("ui_left"):
 		if is_attacking==false:
 			velocity.x= -speed+25
 			$AnimatedSprite.play("Crouchw")
 			$AnimatedSprite.flip_h = true
-			$CollisionShape2D.disabled=true
+			if is_crouch==true:
+				$CollisionShape2D.disabled=true
 			if sign($Position2D.position.x)==1:
 				$Position2D.position.x *=-1
 
@@ -58,11 +77,19 @@ func _physics_process(delta):
 	else:
 		$CollisionShape2D.disabled=false
 		velocity.x=0
+		
 		if on_ground==true and is_attacking==false:
-			$AnimatedSprite.play("Idle")
+			if $RayCast2D.is_colliding()==true:
+				is_crouch==true
+				$CollisionShape2D.disabled=true
+				$AnimatedSprite.play("Crouch")
+			elif $RayCast2D.is_colliding()==false:
+				is_crouch=false
+				$AnimatedSprite.play("Idle")
+
 	
 		
-	if  Input.is_action_pressed("ui_up") :
+	if  Input.is_action_pressed("ui_up") and $RayCast2D.is_colliding()==false :
 		if is_attacking==false:
 			if on_ground== true:
 				$CollisionShape2D.disabled=false
@@ -88,7 +115,7 @@ func _physics_process(delta):
 	if is_on_floor():
 		on_ground=true
 	else:
-		if is_attacking==false:
+		if is_attacking==false and $RayCast2D.is_colliding()==false:
 			on_ground=false
 			if velocity.y<0:
 				$AnimatedSprite.play("Jump")
@@ -107,3 +134,4 @@ func _on_AnimatedSprite_animation_finished():
 		get_parent().add_child(arrow)
 		arrow.position = $Position2D.global_position
 		is_attacking=false
+

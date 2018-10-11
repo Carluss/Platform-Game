@@ -1,28 +1,42 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://Enemy.gd" type="Script" id=1]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Dead-15.png" type="Texture" id=2]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Idle-00.png" type="Texture" id=3]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Idle-01.png" type="Texture" id=4]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Idle-02.png" type="Texture" id=5]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Idle-03.png" type="Texture" id=6]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Idle-04.png" type="Texture" id=7]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Idle-05.png" type="Texture" id=8]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Idle-06.png" type="Texture" id=9]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Idle-07.png" type="Texture" id=10]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Idle-08.png" type="Texture" id=11]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Idle-09.png" type="Texture" id=12]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Idle-10.png" type="Texture" id=13]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Dead-00.png" type="Texture" id=2]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Dead-01.png" type="Texture" id=3]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Dead-02.png" type="Texture" id=4]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Dead-03.png" type="Texture" id=5]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Dead-04.png" type="Texture" id=6]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Dead-05.png" type="Texture" id=7]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Dead-06.png" type="Texture" id=8]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Dead-07.png" type="Texture" id=9]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Dead-08.png" type="Texture" id=10]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Dead-09.png" type="Texture" id=11]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Dead-10.png" type="Texture" id=12]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Dead-11.png" type="Texture" id=13]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Dead-12.png" type="Texture" id=14]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Dead-13.png" type="Texture" id=15]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Dead-14.png" type="Texture" id=16]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Idle-00.png" type="Texture" id=17]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Idle-01.png" type="Texture" id=18]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Idle-02.png" type="Texture" id=19]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Idle-03.png" type="Texture" id=20]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Idle-04.png" type="Texture" id=21]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Idle-05.png" type="Texture" id=22]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Idle-06.png" type="Texture" id=23]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Idle-07.png" type="Texture" id=24]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Idle-08.png" type="Texture" id=25]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Idle-09.png" type="Texture" id=26]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Idle-10.png" type="Texture" id=27]
 
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
-"frames": [ ExtResource( 2 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
 "loop": false,
 "name": "dead",
-"speed": 0.0
+"speed": 10.0
 }, {
-"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
+"frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ) ],
 "loop": true,
 "name": "walk",
 "speed": 12.0
@@ -47,7 +61,8 @@ __meta__ = {
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
 
 frames = SubResource( 1 )
-animation = "walk"
+animation = "dead"
+frame = 14
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
@@ -65,7 +80,7 @@ collision_mask = 1
 [node name="Timer" type="Timer" parent="." index="3"]
 
 process_mode = 1
-wait_time = 2.0
+wait_time = 3.0
 one_shot = true
 autostart = false
 
