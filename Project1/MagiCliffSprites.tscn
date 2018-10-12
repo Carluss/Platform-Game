@@ -1,0 +1,643 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://sprites/Map Sprites/Magic-cliffs_tileset.png" type="Texture" id=2]
+[ext_resource path="res://magicFinal.tres" type="TileSet" id=3]
+
+[node name="MagiCliffSprites" type="Node" index="0"]
+
+__meta__ = {
+"_edit_horizontal_guides_": [  ]
+}
+
+[node name="Player" parent="." index="0" instance=ExtResource( 1 )]
+
+position = Vector2( 32, -32 )
+scale = Vector2( 1.25, 1.25 )
+
+[node name="Chao_esquerda_0" type="Sprite" parent="." index="1"]
+
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 64, 176, 64, 112 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Chao_esquerda_1" type="Sprite" parent="." index="2"]
+
+position = Vector2( 64, 0 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 192, 176, 48, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Chao_esquerda_2" type="Sprite" parent="." index="3"]
+
+position = Vector2( 112, 0 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 64, 176, 64, 112 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Chao_esquerda_3" type="Sprite" parent="." index="4"]
+
+position = Vector2( 128, 0 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 96, 176, 32, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Chao_esquerda_4" type="Sprite" parent="." index="5"]
+
+position = Vector2( 224, 0 )
+texture = ExtResource( 2 )
+centered = false
+flip_h = true
+region_enabled = true
+region_rect = Rect2( 256, 176, 32, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Arvore_0" type="Sprite" parent="." index="6"]
+
+position = Vector2( 32, -112 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 192, 32, 128, 128 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Pedra_esquerda_0" type="Sprite" parent="." index="7"]
+
+position = Vector2( 112, 0 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 144, 176, 32, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Mini_precipicio_esquerda_0" type="Sprite" parent="." index="8"]
+
+position = Vector2( 240, 32 )
+texture = ExtResource( 2 )
+centered = false
+flip_h = true
+region_enabled = true
+region_rect = Rect2( 576, 240, 64, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Chao_Centro_5" type="Sprite" parent="." index="9"]
+
+position = Vector2( 692.898, 237.202 )
+rotation = -0.00420028
+texture = ExtResource( 2 )
+centered = false
+flip_h = true
+region_enabled = true
+region_rect = Rect2( 64, 176, 64, 112 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Chao_Centro_3" type="Sprite" parent="." index="10"]
+
+position = Vector2( 756.898, 236.933 )
+rotation = -0.00420028
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 64, 176, 64, 112 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Flutuante_4" type="Sprite" parent="." index="11"]
+
+position = Vector2( 461.663, 70.1056 )
+rotation = -0.00420028
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 256, 176, 48, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Flutuante_0" type="Sprite" parent="." index="12"]
+
+position = Vector2( 418.931, 75.8284 )
+rotation = -0.00420028
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 32, 16, 112, 80 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Flutuante_1" type="Sprite" parent="." index="13"]
+
+position = Vector2( 554.604, 54.8381 )
+rotation = -0.00420028
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 48, 112, 48, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Flutuante_3" type="Sprite" parent="." index="14"]
+
+position = Vector2( 850.624, -61.5015 )
+rotation = -0.00420028
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 32, 16, 112, 80 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Flutuante_2" type="Sprite" parent="." index="15"]
+
+editor/display_folded = true
+position = Vector2( 645.603, 24.082 )
+rotation = -0.00420028
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 320, 32, 64, 112 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Flutuante_3" type="Sprite" parent="Flutuante_2" index="0"]
+
+position = Vector2( 63.9976, 0 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 400, 32, 16, 112 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Flutuante_4" type="Sprite" parent="Flutuante_2" index="1"]
+
+position = Vector2( 79.9976, 0 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 432, 32, 32, 112 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Flutuante_6" type="Sprite" parent="Flutuante_2" index="2"]
+
+position = Vector2( 79.995, 58.117 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 432, 80, 32, 64 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Flutuante_7" type="Sprite" parent="Flutuante_2" index="3"]
+
+position = Vector2( 38.0779, 58.117 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 432, 80, 32, 64 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Flutuante_5" type="Sprite" parent="Flutuante_2" index="4"]
+
+position = Vector2( 103.364, 3.05176e-005 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 432, 32, 64, 112 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Flutuante_8" type="Sprite" parent="Flutuante_2" index="5"]
+
+position = Vector2( 46.3996, -20.5515 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 432, 160, 32, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Parte_preta_mapa" type="TileMap" parent="." index="16"]
+
+mode = 0
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = true
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 131085, 28, 0, 131086, 28, 0, 196612, 28, 0, 196613, 28, 0, 196614, 28, 0, 196616, 28, 0, 196618, 28, 0, 196619, 28, 0, 196621, 28, 0, 262148, 28, 0, 262149, 28, 0, 262151, 28, 0, 262152, 28, 0, 262153, 28, 0, 262154, 28, 0, 262155, 28, 0, 262157, 28, 0, 262158, 28, 0, 327684, 28, 0, 327685, 28, 0, 327687, 28, 0, 327688, 28, 0, 327689, 28, 0, 327690, 28, 0, 327691, 28, 0, 327693, 28, 0, 327694, 28, 0, 327695, 28, 0, 327696, 28, 0, 327697, 28, 0, 393217, 28, 0, 393219, 28, 0, 393220, 28, 0, 393222, 28, 0, 393223, 28, 0, 393224, 28, 0, 393226, 28, 0, 393227, 28, 0, 393228, 28, 0, 393230, 28, 0, 393232, 28, 0, 393233, 28, 0, 393234, 28, 0, 458752, 28, 0, 458753, 28, 0, 458754, 28, 0, 458755, 28, 0, 458756, 28, 0, 458758, 28, 0, 458759, 28, 0, 458760, 28, 0, 458762, 28, 0, 458763, 28, 0, 458764, 28, 0, 458765, 28, 0, 458768, 28, 0, 458769, 28, 0, 524288, 28, 0, 524289, 28, 0, 524291, 28, 0, 524292, 28, 0, 524294, 28, 0, 524295, 28, 0, 524296, 28, 0, 524298, 28, 0, 524299, 28, 0, 524300, 28, 0, 524301, 28, 0, 524302, 28, 0, 524303, 28, 0, 524304, 28, 0, 524305, 28, 0, 589824, 28, 0, 589825, 28, 0, 589827, 28, 0, 589828, 28, 0, 589829, 28, 0, 589830, 28, 0, 589832, 28, 0, 589834, 28, 0, 589835, 28, 0, 589837, 28, 0, 589838, 28, 0, 589839, 28, 0, 589841, 28, 0, 655360, 28, 0, 655362, 28, 0, 655363, 28, 0, 655364, 28, 0, 655365, 28, 0, 655366, 28, 0, 655368, 28, 0, 655370, 28, 0, 655371, 28, 0, 655373, 28, 0, 655374, 28, 0, 720896, 28, 0, 720897, 28, 0, 720898, 28, 0, 720899, 28, 0, 720900, 28, 0, 720902, 28, 0, 720904, 28, 0, 720906, 28, 0, 720907, 28, 0, 720909, 28, 0, 720910, 28, 0, 786432, 28, 0, 786433, 28, 0, 786435, 28, 0, 786438, 28, 0, 786439, 28, 0, 786443, 28, 0, 786444, 28, 0, 786445, 28, 0, 786446, 28, 0, 851968, 28, 0, 851969, 28, 0, 851970, 28, 0, 851971, 28, 0, 851973, 28, 0, 851976, 28, 0, 851977, 28, 0, 851978, 28, 0, 851980, 28, 0, 851981, 28, 0, 851983, 28, 0, 917504, 28, 0, 917509, 28, 0, 917510, 28, 0, 917511, 28, 0, 917515, 28, 0, 917516, 28, 0, 917517, 28, 0, 917520, 28, 0, 983040, 28, 0, 983041, 28, 0, 983042, 28, 0, 983043, 28, 0, 983044, 28, 0, 983045, 28, 0, 983046, 28, 0, 983047, 28, 0, 983048, 28, 0, 983049, 28, 0, 983050, 28, 0, 983051, 28, 0, 983052, 28, 0, 983053, 28, 0, 983054, 28, 0, 983056, 28, 0, 983057, 28, 0, 983058, 28, 0, 1048576, 28, 0, 1048577, 28, 0, 1048578, 28, 0, 1048583, 28, 0, 1048585, 28, 0, 1048586, 28, 0, 1048588, 28, 0, 1048589, 28, 0, 1048592, 28, 0, 1048593, 28, 0, 1048594, 28, 0, 1048613, 28, 0, 1048614, 28, 0, 1048615, 28, 0, 1048616, 28, 0, 1048617, 28, 0, 1048626, 28, 0, 1048628, 28, 0, 1048629, 28, 0, 1048630, 28, 0, 1048631, 28, 0, 1048632, 28, 0, 1048633, 28, 0, 1048635, 28, 0, 1048636, 28, 0, 1048637, 28, 0, 1048638, 28, 0, 1048639, 28, 0, 1048640, 28, 0, 1048641, 28, 0, 1048642, 28, 0, 1048643, 28, 0, 1114112, 28, 0, 1114114, 28, 0, 1114115, 28, 0, 1114116, 28, 0, 1114117, 28, 0, 1114118, 28, 0, 1114119, 28, 0, 1114120, 28, 0, 1114121, 28, 0, 1114122, 28, 0, 1114123, 28, 0, 1114124, 28, 0, 1114125, 28, 0, 1114126, 28, 0, 1114127, 28, 0, 1114129, 28, 0, 1114130, 28, 0, 1114131, 28, 0, 1114149, 28, 0, 1114150, 28, 0, 1114151, 28, 0, 1114152, 28, 0, 1114153, 28, 0, 1114154, 28, 0, 1114155, 28, 0, 1114156, 28, 0, 1114159, 28, 0, 1114162, 28, 0, 1114164, 28, 0, 1114165, 28, 0, 1114167, 28, 0, 1114168, 28, 0, 1114169, 28, 0, 1114171, 28, 0, 1114172, 28, 0, 1114173, 28, 0, 1114174, 28, 0, 1114175, 28, 0, 1114176, 28, 0, 1114177, 28, 0, 1114179, 28, 0, 1179648, 28, 0, 1179652, 28, 0, 1179653, 28, 0, 1179657, 28, 0, 1179658, 28, 0, 1179659, 28, 0, 1179660, 28, 0, 1179661, 28, 0, 1179662, 28, 0, 1179663, 28, 0, 1179664, 28, 0, 1179665, 28, 0, 1179667, 28, 0, 1179668, 28, 0, 1179669, 28, 0, 1179670, 28, 0, 1179685, 28, 0, 1179686, 28, 0, 1179688, 28, 0, 1179689, 28, 0, 1179690, 28, 0, 1179692, 28, 0, 1179693, 28, 0, 1179694, 28, 0, 1179695, 28, 0, 1179696, 28, 0, 1179697, 28, 0, 1179698, 28, 0, 1179699, 28, 0, 1179700, 28, 0, 1179701, 28, 0, 1179703, 28, 0, 1179704, 28, 0, 1179705, 28, 0, 1179706, 28, 0, 1179708, 28, 0, 1179709, 28, 0, 1179710, 28, 0, 1179711, 28, 0, 1179712, 28, 0, 1179713, 28, 0, 1179715, 28, 0, 1245184, 28, 0, 1245186, 28, 0, 1245190, 28, 0, 1245191, 28, 0, 1245192, 28, 0, 1245193, 28, 0, 1245194, 28, 0, 1245195, 28, 0, 1245196, 28, 0, 1245197, 28, 0, 1245198, 28, 0, 1245199, 28, 0, 1245200, 28, 0, 1245201, 28, 0, 1245202, 28, 0, 1245203, 28, 0, 1245204, 28, 0, 1245205, 28, 0, 1245206, 28, 0, 1245222, 28, 0, 1245224, 28, 0, 1245225, 28, 0, 1245227, 28, 0, 1245229, 28, 0, 1245230, 28, 0, 1245231, 28, 0, 1245232, 28, 0, 1245233, 28, 0, 1245234, 28, 0, 1245236, 28, 0, 1245237, 28, 0, 1245238, 28, 0, 1245239, 28, 0, 1245242, 28, 0, 1245243, 28, 0, 1245244, 28, 0, 1245245, 28, 0, 1245246, 28, 0, 1245247, 28, 0, 1245248, 28, 0, 1245249, 28, 0, 1245251, 28, 0, 1310720, 28, 0, 1310721, 28, 0, 1310722, 28, 0, 1310723, 28, 0, 1310725, 28, 0, 1310726, 28, 0, 1310730, 28, 0, 1310731, 28, 0, 1310732, 28, 0, 1310733, 28, 0, 1310734, 28, 0, 1310735, 28, 0, 1310737, 28, 0, 1310738, 28, 0, 1310739, 28, 0, 1310740, 28, 0, 1310741, 28, 0, 1310761, 28, 0, 1310763, 28, 0, 1310765, 28, 0, 1310767, 28, 0, 1310769, 28, 0, 1310771, 28, 0, 1310772, 28, 0, 1310774, 28, 0, 1310775, 28, 0, 1310777, 28, 0, 1310778, 28, 0, 1310779, 28, 0, 1310780, 28, 0, 1310781, 28, 0, 1310782, 28, 0, 1310783, 28, 0, 1310784, 28, 0, 1310785, 28, 0, 1310786, 28, 0, 1310787, 28, 0, 1441791, 28, 0, 1376256, 28, 0, 1376258, 28, 0, 1376260, 28, 0, 1376261, 28, 0, 1376262, 28, 0, 1376263, 28, 0, 1376264, 28, 0, 1376265, 28, 0, 1376266, 28, 0, 1376267, 28, 0, 1376268, 28, 0, 1376271, 28, 0, 1376272, 28, 0, 1376273, 28, 0, 1376274, 28, 0, 1376275, 28, 0, 1376276, 28, 0, 1376277, 28, 0, 1376278, 28, 0, 1376299, 28, 0, 1376300, 28, 0, 1376301, 28, 0, 1376303, 28, 0, 1376305, 28, 0, 1376307, 28, 0, 1376309, 28, 0, 1376310, 28, 0, 1376311, 28, 0, 1376313, 28, 0, 1376314, 28, 0, 1376315, 28, 0, 1376318, 28, 0, 1376319, 28, 0, 1376320, 28, 0, 1376321, 28, 0, 1376322, 28, 0, 1376323, 28, 0, 1507327, 28, 0, 1441792, 28, 0, 1441793, 28, 0, 1441794, 28, 0, 1441795, 28, 0, 1441796, 28, 0, 1441797, 28, 0, 1441802, 28, 0, 1441803, 28, 0, 1441804, 28, 0, 1441805, 28, 0, 1441806, 28, 0, 1441807, 28, 0, 1441810, 28, 0, 1441812, 28, 0, 1441813, 28, 0, 1441814, 28, 0, 1441834, 28, 0, 1441836, 28, 0, 1441838, 28, 0, 1441839, 28, 0, 1441840, 28, 0, 1441843, 28, 0, 1441848, 28, 0, 1441849, 28, 0, 1441851, 28, 0, 1441853, 28, 0, 1441855, 28, 0, 1441856, 28, 0, 1441857, 28, 0, 1441858, 28, 0, 1572863, 28, 0, 1507328, 28, 0, 1507329, 28, 0, 1507330, 28, 0, 1507331, 28, 0, 1507332, 28, 0, 1507333, 28, 0, 1507334, 28, 0, 1507335, 28, 0, 1507336, 28, 0, 1507342, 28, 0, 1507343, 28, 0, 1507344, 28, 0, 1507345, 28, 0, 1507346, 28, 0, 1507347, 28, 0, 1507350, 28, 0, 1507370, 28, 0, 1507372, 28, 0, 1507373, 28, 0, 1507379, 28, 0, 1507384, 28, 0, 1507388, 28, 0, 1507389, 28, 0, 1507391, 28, 0, 1507392, 28, 0, 1507393, 28, 0, 1507394, 28, 0, 1572864, 28, 0, 1572865, 28, 0, 1572866, 28, 0, 1572867, 28, 0, 1572868, 28, 0, 1572870, 28, 0, 1572871, 28, 0, 1572872, 28, 0, 1572873, 28, 0, 1572874, 28, 0, 1572875, 28, 0, 1572876, 28, 0, 1572877, 28, 0, 1572880, 28, 0, 1572881, 28, 0, 1572882, 28, 0, 1572883, 28, 0, 1572885, 28, 0, 1572886, 28, 0, 1572908, 28, 0, 1572924, 28, 0, 1572929, 28, 0, 1638402, 28, 0, 1638404, 28, 0, 1638405, 28, 0, 1638407, 28, 0, 1638408, 28, 0, 1638410, 28, 0, 1638411, 28, 0, 1638412, 28, 0, 1638413, 28, 0, 1638415, 28, 0, 1638418, 28, 0, 1638419, 28, 0, 1638420, 28, 0, 1638421, 28, 0, 1638422, 28, 0, 1703942, 28, 0, 1703943, 28, 0, 1703944, 28, 0, 1703945, 28, 0, 1703946, 28, 0, 1703949, 28, 0, 1703950, 28, 0, 1703952, 28, 0, 1703954, 28, 0, 1703955, 28, 0, 1703957, 28, 0, 1703958, 28, 0, 1769478, 28, 0, 1769480, 28, 0, 1769481, 28, 0, 1769483, 28, 0, 1769485, 28, 0, 1769486, 28, 0, 1769488, 28, 0, 1769489, 28, 0, 1769490, 28, 0, 1769491, 28, 0, 1835014, 28, 0, 1835015, 28, 0, 1835017, 28, 0, 1835018, 28, 0, 1835020, 28, 0, 1835021, 28, 0, 1835022, 28, 0, 1835023, 28, 0, 1835024, 28, 0, 1835025, 28, 0, 1835026, 28, 0, 1835027, 28, 0, 1835029, 28, 0, 1835030, 28, 0, 1900550, 28, 0, 1900551, 28, 0, 1900553, 28, 0, 1900554, 28, 0, 1900555, 28, 0, 1900557, 28, 0, 1900558, 28, 0, 1900559, 28, 0, 1900560, 28, 0, 1900561, 28, 0, 1900562, 28, 0, 1900564, 28, 0, 1900565, 28, 0, 1900566, 28, 0, 1966087, 28, 0, 1966088, 28, 0, 1966089, 28, 0, 1966090, 28, 0, 1966092, 28, 0, 1966093, 28, 0, 1966094, 28, 0, 1966097, 28, 0, 1966098, 28, 0, 1966100, 28, 0, 1966101, 28, 0, 1966102, 28, 0, 2031624, 28, 0, 2031625, 28, 0, 2031626, 28, 0, 2031627, 28, 0, 2031628, 28, 0, 2031629, 28, 0, 2031630, 28, 0, 2031631, 28, 0, 2031632, 28, 0, 2031633, 28, 0, 2031636, 28, 0, 2031637, 28, 0, 2097164, 28, 0, 2097165, 28, 0, 2097166, 28, 0, 2097167, 28, 0, 2097168, 28, 0, 2097169, 28, 0, 2097170, 28, 0, 2097171, 28, 0 )
+_sections_unfolded = [ "Cell", "Collision", "Occluder" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Chao_esquerda_7" type="Sprite" parent="." index="17"]
+
+position = Vector2( 288, 64 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 80, 208, 48, 80 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Chao_esquerda_6" type="Sprite" parent="." index="18"]
+
+position = Vector2( 288, 48 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 256, 176, 32, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Chao_esquerda_5" type="Sprite" parent="." index="19"]
+
+position = Vector2( 208, 0 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 352, 176, 16, 32 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Pedra_Esquerda_1" type="Sprite" parent="." index="20"]
+
+position = Vector2( 176, -16 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 144, 96, 32, 64 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Pedra_Dentro_Chao_1" type="Sprite" parent="." index="21"]
+
+position = Vector2( 64, 160 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 192, 240, 32, 64 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Pedra_Dentro_Chao_0" type="Sprite" parent="." index="22"]
+
+position = Vector2( 128, 96 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 240, 240, 64, 32 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Boca_de_precipicio_6" type="Sprite" parent="." index="23"]
+
+position = Vector2( 320, 48 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 512, 176, 48, 96 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Boca_de_precipicio_5" type="Sprite" parent="." index="24"]
+
+position = Vector2( 272, 112 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 400, 80, 80, 64 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Boca_de_precipicio_4" type="Sprite" parent="." index="25"]
+
+position = Vector2( 272, 144 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 432, 96, 48, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Boca_de_precipicio_3" type="Sprite" parent="." index="26"]
+
+position = Vector2( 361.038, 293.539 )
+rotation = 3.1379
+texture = ExtResource( 2 )
+centered = false
+flip_h = true
+region_enabled = true
+region_rect = Rect2( 432, 80, 48, 64 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Boca_de_precipicio_2" type="Sprite" parent="." index="27"]
+
+position = Vector2( 384.382, 305.354 )
+rotation = 3.1379
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 432, 80, 32, 64 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Boca_de_precipicio_1" type="Sprite" parent="." index="28"]
+
+position = Vector2( 272, 192 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 656, 240, 48, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Boca_de_precipicio_0" type="Sprite" parent="." index="29"]
+
+position = Vector2( 256, 160 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 512, 224, 48, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Boca_de_precipicio_7" type="Sprite" parent="." index="30"]
+
+position = Vector2( 382.586, 238.505 )
+rotation = 6.27899
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 432, 32, 64, 112 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Ponte_Baixo_0" type="Sprite" parent="." index="31"]
+
+position = Vector2( 403.533, 215.526 )
+rotation = -0.00420028
+texture = ExtResource( 2 )
+centered = false
+flip_v = true
+region_enabled = true
+region_rect = Rect2( 576, 176, 48, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Ponte_0" type="Sprite" parent="." index="32"]
+
+position = Vector2( 391.788, 210.739 )
+rotation = 6.27899
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 576, 176, 48, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Ponte_Baixo_5" type="Sprite" parent="." index="33"]
+
+position = Vector2( 539.395, 214.956 )
+rotation = 6.27899
+texture = ExtResource( 2 )
+centered = false
+flip_v = true
+region_enabled = true
+region_rect = Rect2( 576, 176, 48, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Ponte_Baixo_4" type="Sprite" parent="." index="34"]
+
+position = Vector2( 520.399, 215.036 )
+rotation = 6.27899
+texture = ExtResource( 2 )
+centered = false
+flip_v = true
+region_enabled = true
+region_rect = Rect2( 576, 176, 48, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Ponte_Baixo_3" type="Sprite" parent="." index="35"]
+
+position = Vector2( 488.133, 215.172 )
+rotation = 6.27899
+texture = ExtResource( 2 )
+centered = false
+flip_v = true
+region_enabled = true
+region_rect = Rect2( 576, 176, 48, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Ponte_Baixo_2" type="Sprite" parent="." index="36"]
+
+position = Vector2( 456.234, 215.306 )
+rotation = 6.27899
+texture = ExtResource( 2 )
+centered = false
+flip_v = true
+region_enabled = true
+region_rect = Rect2( 576, 176, 48, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Ponte_Baixo_1" type="Sprite" parent="." index="37"]
+
+position = Vector2( 434.711, 215.396 )
+rotation = 6.27899
+texture = ExtResource( 2 )
+centered = false
+flip_v = true
+region_enabled = true
+region_rect = Rect2( 576, 176, 48, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Ponte_1" type="Sprite" parent="." index="38"]
+
+position = Vector2( 439.788, 210.537 )
+rotation = 6.27899
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 640, 176, 32, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Ponte_2" type="Sprite" parent="." index="39"]
+
+position = Vector2( 471.788, 210.403 )
+rotation = 6.27899
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 640, 176, 32, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Ponte_3" type="Sprite" parent="." index="40"]
+
+position = Vector2( 503.787, 210.268 )
+rotation = 6.27899
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 640, 176, 32, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Ponte_5" type="Sprite" parent="." index="41"]
+
+position = Vector2( 535.787, 210.134 )
+rotation = 6.27899
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 640, 176, 32, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Ponte_6" type="Sprite" parent="." index="42"]
+
+position = Vector2( 555.256, 210.052 )
+rotation = 6.27899
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 640, 176, 32, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Ponte_4" type="Sprite" parent="." index="43"]
+
+position = Vector2( 585.852, 209.924 )
+rotation = 6.27899
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 688, 176, 48, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Chao_Centro_0" type="Sprite" parent="." index="44"]
+
+position = Vector2( 567.904, 237.727 )
+rotation = 6.27899
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 320, 32, 64, 112 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Chao_Centro_1" type="Sprite" parent="." index="45"]
+
+position = Vector2( 628.835, 222.199 )
+rotation = 6.27899
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 432, 160, 32, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Chao_Centro_2" type="Sprite" parent="." index="46"]
+
+position = Vector2( 660.879, 232.564 )
+rotation = -0.00420028
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 256, 176, 32, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Chao_Centro_4" type="Sprite" parent="." index="47"]
+
+position = Vector2( 781.934, 236.827 )
+rotation = -0.00420028
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 464, 240, 32, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Chao_Centro_12" type="Sprite" parent="." index="48"]
+
+position = Vector2( 975.999, 239.462 )
+rotation = -0.00420028
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 80, 176, 48, 112 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Chao_Centro_13" type="Sprite" parent="." index="49"]
+
+position = Vector2( 1024, 239.261 )
+rotation = -0.00420028
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 256, 176, 32, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Chao_Centro_14" type="Sprite" parent="." index="50"]
+
+position = Vector2( 1056, 239.126 )
+rotation = -0.00420028
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 192, 176, 48, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Chao_Centro_6" type="Sprite" parent="." index="51"]
+
+position = Vector2( 816, 240.134 )
+rotation = -0.00420028
+texture = ExtResource( 2 )
+centered = false
+flip_v = true
+region_enabled = true
+region_rect = Rect2( 432, 112, 32, 32 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Chao_Centro_7" type="Sprite" parent="." index="52"]
+
+position = Vector2( 848, 240 )
+rotation = -0.00420028
+texture = ExtResource( 2 )
+centered = false
+flip_v = true
+region_enabled = true
+region_rect = Rect2( 432, 112, 32, 32 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Chao_Centro_8" type="Sprite" parent="." index="53"]
+
+position = Vector2( 880, 239.866 )
+rotation = -0.00420028
+texture = ExtResource( 2 )
+centered = false
+flip_v = true
+region_enabled = true
+region_rect = Rect2( 432, 112, 32, 32 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Chao_Centro_9" type="Sprite" parent="." index="54"]
+
+position = Vector2( 911.999, 239.731 )
+rotation = -0.00420028
+texture = ExtResource( 2 )
+centered = false
+flip_v = true
+region_enabled = true
+region_rect = Rect2( 432, 112, 32, 32 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Chao_Centro_10" type="Sprite" parent="." index="55"]
+
+position = Vector2( 943.999, 239.597 )
+rotation = -0.00420028
+texture = ExtResource( 2 )
+centered = false
+flip_v = true
+region_enabled = true
+region_rect = Rect2( 432, 112, 32, 32 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Chao_Centro_11" type="Sprite" parent="." index="56"]
+
+position = Vector2( 943.999, 239.597 )
+rotation = -0.00420028
+texture = ExtResource( 2 )
+centered = false
+flip_v = true
+region_enabled = true
+region_rect = Rect2( 432, 112, 32, 32 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+
