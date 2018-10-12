@@ -7,7 +7,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 4, 4 )
 
-[node name="GroundTileset" type="Node2D" index="0"]
+[node name="GroundTileset" type="Node2D"]
 
 [node name="Ground00" type="Sprite" parent="." index="0"]
 
@@ -233,7 +233,7 @@ bounce = 0.0
 
 shape = SubResource( 1 )
 
-[node name="Ground08" type="Sprite" parent="." index="8"]
+[node name="test" type="Sprite" parent="." index="8"]
 
 editor/display_folded = true
 position = Vector2( 76.0028, 45.8119 )
@@ -246,7 +246,7 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Ground08" index="0"]
+[node name="StaticBody2D" type="StaticBody2D" parent="test" index="0"]
 
 visible = false
 input_pickable = false
@@ -257,7 +257,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground08/StaticBody2D" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="test/StaticBody2D" index="0"]
 
 shape = SubResource( 1 )
 
