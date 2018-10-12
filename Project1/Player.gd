@@ -13,6 +13,14 @@ var on_ground = false
 
 var is_attacking =false
 
+
+# novas var de attk
+var is_att=false
+var is_attf=true
+var rdyatt=true
+var at=1
+#-------------
+
 func _physics_process(delta):
 	if  Input.is_action_pressed("ui_right") :
 		if is_attacking==false:
@@ -58,7 +66,11 @@ func _physics_process(delta):
 			if $RayCast2D.is_colliding()==true:
 				$CollisionShape2D.disabled=true
 				$AnimatedSprite.play("Crouch")
-			elif $RayCast2D.is_colliding()==false:
+			elif Input.is_action_just_pressed("ui_attack"):
+				is_att=true
+				velocity.x=0
+				attacking()
+			elif $RayCast2D.is_colliding()==false and is_att!=true:
 				$AnimatedSprite.play("Idle")
 		
 	if  Input.is_action_pressed("ui_up") and $RayCast2D.is_colliding()==false :
@@ -68,8 +80,7 @@ func _physics_process(delta):
 				velocity.y= JUMP_POWER	
 				on_ground=false
 	
-	if Input.is_action_just_pressed("ui_attack"):
-		$AnimatedSprite.play("attack1")
+
 
 	
 	if Input.is_action_just_pressed("ui_focus_next") and is_attacking==false and on_ground==true:
@@ -98,7 +109,30 @@ func _physics_process(delta):
 		
 	velocity = move_and_slide(velocity, FLOOR)
 
+	
+func attacking():
+	if is_attf==true and rdyatt==true:
+		match at:
+			1:
+				$AnimatedSprite.play("attack1")
+				is_attf=false
+			2:
+				$AnimatedSprite.play("attack2")
+				is_attf=false
+			3:
+				$AnimatedSprite.play("attack3")
+				is_attf=false
+		rdyatt=false
+		$attdelay.start()
+		at+=1
+		if at>=4:
+			at=1
+
 func _on_AnimatedSprite_animation_finished():
+	if is_att==true:
+		is_attf=true
+		is_att=false
+		$AnimatedSprite.stop()
 	if is_attacking==true:
 		var arrow = ARROW.instance()
 		if sign($Position2D.position.x)==1:
@@ -109,3 +143,7 @@ func _on_AnimatedSprite_animation_finished():
 		arrow.position = $Position2D.global_position
 		is_attacking=false
 
+
+
+func _on_att_delay_timeout():
+	rdyatt=true
