@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Ground tileset.tres" type="TileSet" id=2]
 [ext_resource path="res://Enemy.tscn" type="PackedScene" id=3]
 [ext_resource path="res://sprite.tscn" type="PackedScene" id=4]
+[ext_resource path="res://TileSEtRui.tres" type="TileSet" id=5]
 
 [node name="StageOne" type="Node2D" index="0"]
 
@@ -37,9 +38,8 @@ _sections_unfolded = [ "Cell", "Transform" ]
 
 position = Vector2( 289.189, 72.4469 )
 
-[node name="sprite2" parent="." index="3" instance=ExtResource( 4 )]
+[node name="sprite" parent="." index="3" instance=ExtResource( 4 )]
 
-<<<<<<< HEAD
 position = Vector2( 214.946, 58.676 )
 
 [node name="TileMap2" type="TileMap" parent="." index="4"]
@@ -62,8 +62,5 @@ occluder_light_mask = 1
 format = 1
 tile_data = PoolIntArray( 458784, 0, 0, 458790, 3, 0, 458791, 5, 0, 458792, 3, 0, 458793, 3, 0, 655393, 1, 0, 655398, 4, 0, 655399, 4, 0, 655400, 4, 0, 655401, 4, 0, 655402, 536870913, 0, 720934, 4, 0, 720935, 4, 0, 720936, 4, 0, 720937, 4, 0, 786470, 4, 0, 786471, 4, 0, 786472, 4, 0, 786473, 4, 0, 786474, 536870913, 0, 852001, 2, 0, 852006, 4, 0, 852007, 536870914, 0, 852008, 4, 0, 852009, 536870914, 0, 917542, 4, 0, 917543, 4, 0, 917544, 4, 0, 917545, 4, 0 )
 _sections_unfolded = [ "Cell", "Collision" ]
-=======
-position = Vector2( 213.946, 58.676 )
->>>>>>> 633f70b5f90b706813147af3df5fa992da01e928
 
 

@@ -14,17 +14,15 @@ func _ready():
 	
 func hit():
 	is_hit=true
-	$CollisionShape2D2sd.disabled=true
-	$Sprite2.visible=false
-	get_node("CollisionShape2D2sd").scale = Vector2(0, 0)
-	$AnimatedSprite.play("da")
 
 func _physics_process(delta):
 	if is_hit==true and on_ground==false:
 		velocity.y +=GRAVITY
 		
-		
 	velocity = move_and_slide(velocity,FLOOR)
 	
 	if is_on_floor():
 		on_ground=true
+	
+	
+
