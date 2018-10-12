@@ -9,8 +9,6 @@ extents = Vector2( 4, 4 )
 
 [node name="GroundTileset" type="Node2D"]
 
-_sections_unfolded = [ "Transform" ]
-
 [node name="Ground00" type="Sprite" parent="." index="0"]
 
 editor/display_folded = true
