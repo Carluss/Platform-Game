@@ -1,10 +1,11 @@
 extends KinematicBody2D
 
-const speed=60
+const speed=30
 const GRAVITY=10
-const JUMP_POWER=-400
+const JUMP_POWER=-250
 const FLOOR = Vector2(0,-1)
 const ARROW =preload("res://arrow.tscn")
+const MaxSpeed = 100
 
 var velocity = Vector2()
 
@@ -16,7 +17,7 @@ var is_attacking =false
 func _physics_process(delta):
 	if  Input.is_action_pressed("ui_right") and not Input.is_action_pressed("ui_down") :
 		if is_attacking==false or is_on_floor()==false:
-			velocity.x= speed
+			velocity.x = min(velocity.x+speed,MaxSpeed)
 			$CollisionShape2D.disabled=false
 			if is_attacking==false:
 				$AnimatedSprite.play("Run")
@@ -25,7 +26,7 @@ func _physics_process(delta):
 					$Position2D.position.x *=-1
 	elif Input.is_action_pressed("ui_left") and not Input.is_action_pressed("ui_down") :
 		if is_attacking==false or is_on_floor()==false :
-			velocity.x=-speed
+			velocity.x = max(velocity.x-speed,-MaxSpeed)
 			$CollisionShape2D.disabled=false
 			if is_attacking==false:
 				$AnimatedSprite.play("Run")
