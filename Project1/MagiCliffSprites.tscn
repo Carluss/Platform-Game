@@ -7,16 +7,19 @@
 
 [node name="Kadyria_1" type="Node" index="0"]
 
+editor/display_folded = true
 __meta__ = {
 "_edit_horizontal_guides_": [  ]
 }
 
 [node name="Player" parent="." index="0" instance=ExtResource( 1 )]
 
-position = Vector2( 64, -16 )
+position = Vector2( 710, -30 )
 scale = Vector2( 1.25, 1.25 )
 
 [node name="Chao_esquerda" type="Node" parent="." index="1"]
+
+editor/display_folded = true
 
 [node name="Chao_esquerda_6" type="Sprite" parent="Chao_esquerda" index="0"]
 
@@ -462,7 +465,6 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 position = Vector2( -95.4753, -299.67 )
 rotation = -1.20018
-scale = Vector2( 1, 1 )
 texture = ExtResource( 2 )
 centered = false
 flip_h = true
@@ -562,8 +564,6 @@ region_rect = Rect2( 432, 32, 64, 112 )
 _sections_unfolded = [ "Offset", "Region" ]
 
 [node name="Ponte" type="Node" parent="." index="10"]
-
-editor/display_folded = true
 
 [node name="Ponte_Baixo_0" type="Sprite" parent="Ponte" index="0"]
 
@@ -930,8 +930,6 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 [node name="Parte_cima_gruta17" type="Node" parent="." index="15"]
 
-editor/display_folded = true
-
 [node name="Parte_cima_gruta" type="Sprite" parent="Parte_cima_gruta17" index="0"]
 
 position = Vector2( 1230.68, -68.6621 )
@@ -1197,5 +1195,59 @@ centered = false
 region_enabled = true
 region_rect = Rect2( 144, 416, 48, 64 )
 _sections_unfolded = [ "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." index="18"]
+
+position = Vector2( 160, 100 )
+scale = Vector2( 12.3438, 15 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 15.3924, -2.66667, 15.3924, 2.66667, 9.72152, 6, 9.72152, 7.33333, 13.7722, 10, 17.8228, 10, 18.6329, 10, 19.443, 10, 21.0633, 10, 37.2658, 10, 21.0633, 15.3333, 17.8228, 15.3333, 17.8228, 27.3333, -2.43038, 28, -5.67089, 22, -17.0127, 22, -25.1139, 22.6667, -27.5443, 11.3333, -27.5443, -0.666667, -27.5443, -0.666667, -26.7342, -25.3333, -21.0633, -29.3333, -17.0127, -28, -13.7722, -25.3333, -12.1519, -22, -12.1519, -18, -12.1519, -10.6667, -12.1519, -9.33333, -13.7722, -9.33333, -15.3924, -8, -15.3924, -6.66667, -13.7722, -5.33333, -12.962, -5.33333, -12.1519, -6, 7.29114, -6, 9.72152, -2.66667 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D" index="1"]
+
+build_mode = 0
+polygon = PoolVector2Array( 21.8734, -0.666667, 29.1646, -0.666667, 29.1646, 0, 28.3544, 0.666667, 28.3544, 2, 26.7342, 2.66667, 25.924, 3.33333, 24.3038, 2.66667, 23.4937, 2, 22.6835, 1.33333, 23.4937, 0.666667, 21.8734, 0 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D" index="2"]
+
+build_mode = 0
+polygon = PoolVector2Array( 32.4051, -0.666667, 32.4051, -2, 35.6456, -2, 35.6456, -0.666667, 34.8354, 0, 34.0253, 0, 33.2152, 0 )
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="StaticBody2D" index="3"]
+
+build_mode = 0
+polygon = PoolVector2Array( 40.5063, -4, 39.6962, -3.33333, 40.5063, -2.66667, 40.5063, 0.666667, 42.9367, 2, 44.557, 2, 45.3671, 1.33333, 46.1772, 2, 47.7975, 2, 49.4177, 1.33333, 50.2278, 1.33333, 51.8481, 0, 51.8481, -2.66667, 52.6582, -3.33333, 51.8481, -4, 44.557, -4.66667 )
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="StaticBody2D" index="4"]
+
+position = Vector2( -12.962, -6.66667 )
+scale = Vector2( 0.0810127, 0.0666667 )
+build_mode = 0
+polygon = PoolVector2Array( 620, 250, 650, 250, 780, 250, 810, 250, 820, 260, 970, 260, 980, 250, 1100, 250, 1100, 40, 1320, 40, 1330, 50, 1430, 50, 1430, 60, 1470, 60, 1470, 80, 1520, 80, 1520, 100, 1550, 100, 1520, 100, 1580, 140, 1510, 430, 600, 320, 590, 310, 590, 260 )
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="StaticBody2D" index="5"]
+
+build_mode = 0
+polygon = PoolVector2Array( 55.8987, -12, 55.8987, -11.3333, 56.7089, -10.6667, 56.7089, -10, 58.3291, -8.66667, 60.7595, -8.66667, 62.3797, -9.33333, 62.3797, -10.6667, 63.1899, -11.3333, 63.1899, -12 )
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="StaticBody2D" index="6"]
+
+position = Vector2( -12.962, -6.66667 )
+scale = Vector2( 0.0810127, 0.0666667 )
+build_mode = 0
+polygon = PoolVector2Array( 1270, 0, 1470, 0, 1570, 60, 1600, 60, 1600, 90, 1630, 90, 1630, 170, 1770, 170, 1760, -190, 1260, -340, 1170, -250, 1170, -230, 1160, -220, 1170, -190, 1180, -160, 1220, -130, 1220, -110, 1230, -90, 1240, -60, 1240, -50, 1250, -20 )
 
 
