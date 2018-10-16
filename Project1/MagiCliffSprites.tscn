@@ -1,23 +1,162 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://sprites/Map Sprites/Magic-cliffs_tileset.png" type="Texture" id=2]
+[ext_resource path="res://sprites/Map Sprites/Magic-cliffs_tileset.png" type="Texture" id=1]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://magicFinal.tres" type="TileSet" id=3]
 [ext_resource path="res://sprites/Map Sprites/Dungeon_tileset.png" type="Texture" id=4]
 
 [node name="Kadyria_1" type="Node" index="0"]
 
-editor/display_folded = true
 __meta__ = {
 "_edit_horizontal_guides_": [  ]
 }
 
-[node name="Player" parent="." index="0" instance=ExtResource( 1 )]
+[node name="Ponte" type="Node" parent="." index="0"]
 
-position = Vector2( 710, -30 )
+editor/display_folded = true
+
+[node name="Ponte_Baixo_0" type="Sprite" parent="Ponte" index="0"]
+
+position = Vector2( 403.533, 215.526 )
+rotation = -0.00420028
+texture = ExtResource( 1 )
+centered = false
+flip_v = true
+region_enabled = true
+region_rect = Rect2( 576, 176, 48, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Ponte_0" type="Sprite" parent="Ponte" index="1"]
+
+position = Vector2( 391.788, 210.739 )
+rotation = -0.00419552
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 576, 176, 48, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Ponte_Baixo_5" type="Sprite" parent="Ponte" index="2"]
+
+position = Vector2( 539.395, 214.956 )
+rotation = -0.00419552
+texture = ExtResource( 1 )
+centered = false
+flip_v = true
+region_enabled = true
+region_rect = Rect2( 576, 176, 48, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Ponte_Baixo_4" type="Sprite" parent="Ponte" index="3"]
+
+position = Vector2( 520.399, 215.036 )
+rotation = -0.00419552
+texture = ExtResource( 1 )
+centered = false
+flip_v = true
+region_enabled = true
+region_rect = Rect2( 576, 176, 48, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Ponte_Baixo_3" type="Sprite" parent="Ponte" index="4"]
+
+position = Vector2( 488.133, 215.172 )
+rotation = -0.00419552
+texture = ExtResource( 1 )
+centered = false
+flip_v = true
+region_enabled = true
+region_rect = Rect2( 576, 176, 48, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Ponte_Baixo_2" type="Sprite" parent="Ponte" index="5"]
+
+position = Vector2( 456.234, 215.306 )
+rotation = -0.00419552
+texture = ExtResource( 1 )
+centered = false
+flip_v = true
+region_enabled = true
+region_rect = Rect2( 576, 176, 48, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Ponte_Baixo_1" type="Sprite" parent="Ponte" index="6"]
+
+position = Vector2( 434.711, 215.396 )
+rotation = -0.00419552
+texture = ExtResource( 1 )
+centered = false
+flip_v = true
+region_enabled = true
+region_rect = Rect2( 576, 176, 48, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Ponte_1" type="Sprite" parent="Ponte" index="7"]
+
+position = Vector2( 439.788, 210.537 )
+rotation = -0.00419552
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 640, 176, 32, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Ponte_2" type="Sprite" parent="Ponte" index="8"]
+
+position = Vector2( 471.788, 210.403 )
+rotation = -0.00419552
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 640, 176, 32, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Ponte_3" type="Sprite" parent="Ponte" index="9"]
+
+position = Vector2( 503.787, 210.268 )
+rotation = -0.00419552
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 640, 176, 32, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Ponte_5" type="Sprite" parent="Ponte" index="10"]
+
+position = Vector2( 535.787, 210.134 )
+rotation = -0.00419552
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 640, 176, 32, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Ponte_6" type="Sprite" parent="Ponte" index="11"]
+
+position = Vector2( 555.256, 210.052 )
+rotation = -0.00419552
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 640, 176, 32, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Ponte_4" type="Sprite" parent="Ponte" index="12"]
+
+position = Vector2( 585.852, 209.924 )
+rotation = -0.00419552
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 688, 176, 48, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Player" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 112, -64 )
 scale = Vector2( 1.25, 1.25 )
 
-[node name="Chao_esquerda" type="Node" parent="." index="1"]
+[node name="Chao_esquerda" type="Node" parent="." index="2"]
 
 editor/display_folded = true
 
@@ -25,7 +164,7 @@ editor/display_folded = true
 
 position = Vector2( -2.23026, 20.6473 )
 rotation = -1.58117
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 flip_v = true
 region_enabled = true
@@ -34,7 +173,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 [node name="Chao_esquerda_0" type="Sprite" parent="Chao_esquerda" index="1"]
 
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 64, 176, 64, 112 )
@@ -43,7 +182,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 [node name="Chao_esquerda_1" type="Sprite" parent="Chao_esquerda" index="2"]
 
 position = Vector2( 64, 0 )
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 192, 176, 48, 48 )
@@ -52,7 +191,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 [node name="Chao_esquerda_2" type="Sprite" parent="Chao_esquerda" index="3"]
 
 position = Vector2( 112, 0 )
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 64, 176, 64, 112 )
@@ -61,7 +200,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 [node name="Chao_esquerda_3" type="Sprite" parent="Chao_esquerda" index="4"]
 
 position = Vector2( 128, 0 )
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 96, 176, 32, 48 )
@@ -70,21 +209,21 @@ _sections_unfolded = [ "Offset", "Region" ]
 [node name="Chao_esquerda_4" type="Sprite" parent="Chao_esquerda" index="5"]
 
 position = Vector2( 224, 0 )
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 flip_h = true
 region_enabled = true
 region_rect = Rect2( 256, 176, 32, 48 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Arvores" type="Node" parent="." index="2"]
+[node name="Arvores" type="Node" parent="." index="3"]
 
 editor/display_folded = true
 
 [node name="Arvore_0" type="Sprite" parent="Arvores" index="0"]
 
 position = Vector2( 32, -112 )
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 192, 32, 128, 128 )
@@ -93,7 +232,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 [node name="Arvore_2" type="Sprite" parent="Arvores" index="1"]
 
 position = Vector2( 656, 128 )
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 192, 32, 128, 128 )
@@ -102,7 +241,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 [node name="Arvore_3" type="Sprite" parent="Arvores" index="2"]
 
 position = Vector2( 416, -32 )
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 192, 32, 128, 128 )
@@ -111,7 +250,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 [node name="Arvore_4" type="Sprite" parent="Arvores" index="3"]
 
 position = Vector2( 816, -208 )
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 flip_h = true
 region_enabled = true
@@ -121,21 +260,21 @@ _sections_unfolded = [ "Offset", "Region" ]
 [node name="Arvore_1" type="Sprite" parent="Arvores" index="4"]
 
 position = Vector2( 256, -64 )
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 flip_h = true
 region_enabled = true
 region_rect = Rect2( 192, 32, 128, 128 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Pedra_esquerda" type="Node" parent="." index="3"]
+[node name="Pedra_esquerda" type="Node" parent="." index="4"]
 
 editor/display_folded = true
 
 [node name="Pedra_esquerda_0" type="Sprite" parent="Pedra_esquerda" index="0"]
 
 position = Vector2( 112, 0 )
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 144, 176, 32, 48 )
@@ -144,14 +283,14 @@ _sections_unfolded = [ "Offset", "Region" ]
 [node name="Mini_precipicio_esquerda_0" type="Sprite" parent="Pedra_esquerda" index="1"]
 
 position = Vector2( 240, 32 )
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 flip_h = true
 region_enabled = true
 region_rect = Rect2( 576, 240, 64, 48 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Estruturas_flutuantes" type="Node" parent="." index="4"]
+[node name="Estruturas_flutuantes" type="Node" parent="." index="5"]
 
 editor/display_folded = true
 
@@ -159,7 +298,7 @@ editor/display_folded = true
 
 position = Vector2( 461.663, 70.1056 )
 rotation = -0.00420028
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 256, 176, 48, 48 )
@@ -169,7 +308,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 position = Vector2( 418.931, 75.8284 )
 rotation = -0.00420028
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 32, 16, 112, 80 )
@@ -179,7 +318,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 position = Vector2( 554.604, 54.8381 )
 rotation = -0.00420028
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 48, 112, 48, 48 )
@@ -189,7 +328,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 position = Vector2( 834.624, -93.5015 )
 rotation = -0.00420028
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 32, 16, 112, 80 )
@@ -200,7 +339,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 editor/display_folded = true
 position = Vector2( 645.603, 24.082 )
 rotation = -0.00420028
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 320, 32, 64, 112 )
@@ -209,7 +348,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 [node name="Flutuante_3" type="Sprite" parent="Estruturas_flutuantes/Flutuante_2" index="0"]
 
 position = Vector2( 63.9976, 0 )
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 400, 32, 16, 112 )
@@ -218,7 +357,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 [node name="Flutuante_4" type="Sprite" parent="Estruturas_flutuantes/Flutuante_2" index="1"]
 
 position = Vector2( 79.9976, 0 )
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 432, 32, 32, 112 )
@@ -227,7 +366,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 [node name="Flutuante_6" type="Sprite" parent="Estruturas_flutuantes/Flutuante_2" index="2"]
 
 position = Vector2( 79.995, 58.117 )
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 432, 80, 32, 64 )
@@ -236,7 +375,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 [node name="Flutuante_7" type="Sprite" parent="Estruturas_flutuantes/Flutuante_2" index="3"]
 
 position = Vector2( 38.0779, 58.117 )
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 432, 80, 32, 64 )
@@ -245,7 +384,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 [node name="Flutuante_5" type="Sprite" parent="Estruturas_flutuantes/Flutuante_2" index="4"]
 
 position = Vector2( 103.364, 3.05176e-005 )
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 432, 32, 64, 112 )
@@ -254,34 +393,34 @@ _sections_unfolded = [ "Offset", "Region" ]
 [node name="Flutuante_8" type="Sprite" parent="Estruturas_flutuantes/Flutuante_2" index="5"]
 
 position = Vector2( 46.3996, -20.5515 )
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 432, 160, 32, 48 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Chao_Centro_5" type="Sprite" parent="." index="5"]
+[node name="Chao_Centro_5" type="Sprite" parent="." index="6"]
 
 position = Vector2( 692.898, 237.202 )
 rotation = -0.00420028
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 flip_h = true
 region_enabled = true
 region_rect = Rect2( 64, 176, 64, 112 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Chao_Centro_3" type="Sprite" parent="." index="6"]
+[node name="Chao_Centro_3" type="Sprite" parent="." index="7"]
 
 position = Vector2( 756.898, 236.933 )
 rotation = -0.00420028
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 64, 176, 64, 112 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Parte_preta_mapa" type="TileMap" parent="." index="7"]
+[node name="Parte_preta_mapa" type="TileMap" parent="." index="8"]
 
 mode = 0
 tile_set = ExtResource( 3 )
@@ -305,14 +444,14 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Chao_Esquerda_TileMap" type="Node" parent="." index="8"]
+[node name="Chao_Esquerda_TileMap" type="Node" parent="." index="9"]
 
 editor/display_folded = true
 
 [node name="Chao_esquerda_7" type="Sprite" parent="Chao_Esquerda_TileMap" index="0"]
 
 position = Vector2( 288, 64 )
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 80, 208, 48, 80 )
@@ -321,7 +460,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 [node name="Chao_esquerda_6" type="Sprite" parent="Chao_Esquerda_TileMap" index="1"]
 
 position = Vector2( 288, 48 )
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 256, 176, 32, 48 )
@@ -330,7 +469,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 [node name="Chao_esquerda_5" type="Sprite" parent="Chao_Esquerda_TileMap" index="2"]
 
 position = Vector2( 208, 0 )
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 352, 176, 16, 32 )
@@ -339,7 +478,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 [node name="Pedra_Esquerda_1" type="Sprite" parent="Chao_Esquerda_TileMap" index="3"]
 
 position = Vector2( 176, -16 )
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 144, 96, 32, 64 )
@@ -348,7 +487,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 [node name="Pedra_Dentro_Chao_1" type="Sprite" parent="Chao_Esquerda_TileMap" index="4"]
 
 position = Vector2( 64, 160 )
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 192, 240, 32, 64 )
@@ -357,7 +496,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 [node name="Pedra_Dentro_Chao_0" type="Sprite" parent="Chao_Esquerda_TileMap" index="5"]
 
 position = Vector2( 128, 96 )
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 240, 240, 64, 32 )
@@ -367,7 +506,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 position = Vector2( -45.6051, 21.0973 )
 rotation = -1.58117
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 544, 96, 64, 48 )
@@ -377,7 +516,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 position = Vector2( -31.2656, -90.7505 )
 rotation = 0.00687146
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 flip_h = true
 region_enabled = true
@@ -388,7 +527,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 position = Vector2( -31.0561, -121.24 )
 rotation = 0.00687146
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 flip_h = true
 region_enabled = true
@@ -399,7 +538,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 position = Vector2( -30.8196, -155.661 )
 rotation = 0.00687146
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 flip_h = true
 region_enabled = true
@@ -410,7 +549,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 position = Vector2( -30.5413, -196.153 )
 rotation = 0.00687146
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 flip_h = true
 region_enabled = true
@@ -421,7 +560,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 position = Vector2( -30.2951, -231.98 )
 rotation = 0.00687146
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 flip_h = true
 region_enabled = true
@@ -432,7 +571,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 position = Vector2( -41.1024, -248.732 )
 rotation = -0.446605
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 flip_h = true
 region_enabled = true
@@ -443,7 +582,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 position = Vector2( -58.2947, -284.633 )
 rotation = -0.446605
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 flip_h = true
 region_enabled = true
@@ -454,7 +593,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 position = Vector2( -78.3288, -292.156 )
 rotation = -0.847534
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 flip_h = true
 region_enabled = true
@@ -465,7 +604,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 position = Vector2( -95.4753, -299.67 )
 rotation = -1.20018
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 flip_h = true
 region_enabled = true
@@ -476,21 +615,21 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 position = Vector2( -111.279, -296.316 )
 rotation = -1.63765
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 flip_h = true
 region_enabled = true
 region_rect = Rect2( 320, 64, 64, 48 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Boca_de_precipicio" type="Node" parent="." index="9"]
+[node name="Boca_de_precipicio" type="Node" parent="." index="10"]
 
 editor/display_folded = true
 
 [node name="Boca_de_precipicio_6" type="Sprite" parent="Boca_de_precipicio" index="0"]
 
 position = Vector2( 320, 48 )
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 512, 176, 48, 96 )
@@ -499,7 +638,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 [node name="Boca_de_precipicio_5" type="Sprite" parent="Boca_de_precipicio" index="1"]
 
 position = Vector2( 272, 112 )
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 400, 80, 80, 64 )
@@ -508,7 +647,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 [node name="Boca_de_precipicio_4" type="Sprite" parent="Boca_de_precipicio" index="2"]
 
 position = Vector2( 272, 144 )
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 432, 96, 48, 48 )
@@ -518,7 +657,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 position = Vector2( 361.038, 293.539 )
 rotation = 3.1379
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 flip_h = true
 region_enabled = true
@@ -529,7 +668,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 position = Vector2( 384.382, 305.354 )
 rotation = 3.1379
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 432, 80, 32, 64 )
@@ -538,7 +677,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 [node name="Boca_de_precipicio_1" type="Sprite" parent="Boca_de_precipicio" index="5"]
 
 position = Vector2( 272, 192 )
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 656, 240, 48, 48 )
@@ -547,7 +686,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 [node name="Boca_de_precipicio_0" type="Sprite" parent="Boca_de_precipicio" index="6"]
 
 position = Vector2( 256, 160 )
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 512, 224, 48, 48 )
@@ -557,148 +696,10 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 position = Vector2( 382.586, 238.505 )
 rotation = -0.00419552
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 432, 32, 64, 112 )
-_sections_unfolded = [ "Offset", "Region" ]
-
-[node name="Ponte" type="Node" parent="." index="10"]
-
-[node name="Ponte_Baixo_0" type="Sprite" parent="Ponte" index="0"]
-
-position = Vector2( 403.533, 215.526 )
-rotation = -0.00420028
-texture = ExtResource( 2 )
-centered = false
-flip_v = true
-region_enabled = true
-region_rect = Rect2( 576, 176, 48, 48 )
-_sections_unfolded = [ "Offset", "Region" ]
-
-[node name="Ponte_0" type="Sprite" parent="Ponte" index="1"]
-
-position = Vector2( 391.788, 210.739 )
-rotation = -0.00419552
-texture = ExtResource( 2 )
-centered = false
-region_enabled = true
-region_rect = Rect2( 576, 176, 48, 48 )
-_sections_unfolded = [ "Offset", "Region" ]
-
-[node name="Ponte_Baixo_5" type="Sprite" parent="Ponte" index="2"]
-
-position = Vector2( 539.395, 214.956 )
-rotation = -0.00419552
-texture = ExtResource( 2 )
-centered = false
-flip_v = true
-region_enabled = true
-region_rect = Rect2( 576, 176, 48, 48 )
-_sections_unfolded = [ "Offset", "Region" ]
-
-[node name="Ponte_Baixo_4" type="Sprite" parent="Ponte" index="3"]
-
-position = Vector2( 520.399, 215.036 )
-rotation = -0.00419552
-texture = ExtResource( 2 )
-centered = false
-flip_v = true
-region_enabled = true
-region_rect = Rect2( 576, 176, 48, 48 )
-_sections_unfolded = [ "Offset", "Region" ]
-
-[node name="Ponte_Baixo_3" type="Sprite" parent="Ponte" index="4"]
-
-position = Vector2( 488.133, 215.172 )
-rotation = -0.00419552
-texture = ExtResource( 2 )
-centered = false
-flip_v = true
-region_enabled = true
-region_rect = Rect2( 576, 176, 48, 48 )
-_sections_unfolded = [ "Offset", "Region" ]
-
-[node name="Ponte_Baixo_2" type="Sprite" parent="Ponte" index="5"]
-
-position = Vector2( 456.234, 215.306 )
-rotation = -0.00419552
-texture = ExtResource( 2 )
-centered = false
-flip_v = true
-region_enabled = true
-region_rect = Rect2( 576, 176, 48, 48 )
-_sections_unfolded = [ "Offset", "Region" ]
-
-[node name="Ponte_Baixo_1" type="Sprite" parent="Ponte" index="6"]
-
-position = Vector2( 434.711, 215.396 )
-rotation = -0.00419552
-texture = ExtResource( 2 )
-centered = false
-flip_v = true
-region_enabled = true
-region_rect = Rect2( 576, 176, 48, 48 )
-_sections_unfolded = [ "Offset", "Region" ]
-
-[node name="Ponte_1" type="Sprite" parent="Ponte" index="7"]
-
-position = Vector2( 439.788, 210.537 )
-rotation = -0.00419552
-texture = ExtResource( 2 )
-centered = false
-region_enabled = true
-region_rect = Rect2( 640, 176, 32, 48 )
-_sections_unfolded = [ "Offset", "Region" ]
-
-[node name="Ponte_2" type="Sprite" parent="Ponte" index="8"]
-
-position = Vector2( 471.788, 210.403 )
-rotation = -0.00419552
-texture = ExtResource( 2 )
-centered = false
-region_enabled = true
-region_rect = Rect2( 640, 176, 32, 48 )
-_sections_unfolded = [ "Offset", "Region" ]
-
-[node name="Ponte_3" type="Sprite" parent="Ponte" index="9"]
-
-position = Vector2( 503.787, 210.268 )
-rotation = -0.00419552
-texture = ExtResource( 2 )
-centered = false
-region_enabled = true
-region_rect = Rect2( 640, 176, 32, 48 )
-_sections_unfolded = [ "Offset", "Region" ]
-
-[node name="Ponte_5" type="Sprite" parent="Ponte" index="10"]
-
-position = Vector2( 535.787, 210.134 )
-rotation = -0.00419552
-texture = ExtResource( 2 )
-centered = false
-region_enabled = true
-region_rect = Rect2( 640, 176, 32, 48 )
-_sections_unfolded = [ "Offset", "Region" ]
-
-[node name="Ponte_6" type="Sprite" parent="Ponte" index="11"]
-
-position = Vector2( 555.256, 210.052 )
-rotation = -0.00419552
-texture = ExtResource( 2 )
-centered = false
-region_enabled = true
-region_rect = Rect2( 640, 176, 32, 48 )
-_sections_unfolded = [ "Offset", "Region" ]
-
-[node name="Ponte_4" type="Sprite" parent="Ponte" index="12"]
-
-position = Vector2( 585.852, 209.924 )
-rotation = -0.00419552
-texture = ExtResource( 2 )
-centered = false
-region_enabled = true
-region_rect = Rect2( 688, 176, 48, 48 )
 _sections_unfolded = [ "Offset", "Region" ]
 
 [node name="Chao_Centro" type="Node" parent="." index="11"]
@@ -709,7 +710,7 @@ editor/display_folded = true
 
 position = Vector2( 567.904, 237.727 )
 rotation = -0.00419552
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 320, 32, 64, 112 )
@@ -719,7 +720,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 position = Vector2( 628.835, 222.199 )
 rotation = -0.00419552
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 432, 160, 32, 48 )
@@ -729,7 +730,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 position = Vector2( 660.879, 232.564 )
 rotation = -0.00420028
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 256, 176, 32, 48 )
@@ -739,7 +740,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 position = Vector2( 781.934, 236.827 )
 rotation = -0.00420028
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 464, 240, 32, 48 )
@@ -749,7 +750,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 position = Vector2( 975.999, 239.462 )
 rotation = -0.00420028
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 80, 176, 48, 112 )
@@ -759,7 +760,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 position = Vector2( 1024, 239.261 )
 rotation = -0.00420028
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 256, 176, 32, 48 )
@@ -769,7 +770,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 position = Vector2( 1056, 239.126 )
 rotation = -0.00420028
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 192, 176, 48, 48 )
@@ -783,7 +784,7 @@ editor/display_folded = true
 
 position = Vector2( 1087.72, 180.6 )
 rotation = -0.00420028
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 32, 208, 96, 80 )
@@ -793,7 +794,7 @@ _sections_unfolded = [ "Offset", "Region", "Transform" ]
 
 position = Vector2( 1089.39, 100.601 )
 rotation = -0.00420028
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 flip_v = true
 region_enabled = true
@@ -804,7 +805,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 position = Vector2( 1088.06, 22.2277 )
 rotation = -0.00420028
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 32, 176, 96, 112 )
@@ -818,7 +819,7 @@ editor/display_folded = true
 
 position = Vector2( 1142.06, 21.9967 )
 rotation = -0.00420028
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 464, 240, 32, 32 )
@@ -828,7 +829,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 position = Vector2( 1295.06, 21.3541 )
 rotation = -0.00420028
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 144, 176, 32, 48 )
@@ -838,7 +839,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 position = Vector2( 1319.94, 30.8912 )
 rotation = -0.00420028
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 144, 176, 32, 48 )
@@ -852,7 +853,7 @@ editor/display_folded = true
 
 position = Vector2( 1183.06, 21.8246 )
 rotation = -0.00420028
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 192, 176, 48, 48 )
@@ -862,7 +863,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 position = Vector2( 1231.06, 21.6271 )
 rotation = -0.00420028
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 96, 176, 32, 48 )
@@ -872,7 +873,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 position = Vector2( 1263.06, 21.4927 )
 rotation = -0.00420028
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 256, 176, 32, 48 )
@@ -882,7 +883,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 position = Vector2( 1351.96, 36.4381 )
 rotation = -0.00420028
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 256, 176, 32, 48 )
@@ -892,7 +893,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 position = Vector2( 1383.96, 36.3037 )
 rotation = -0.00420028
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 80, 176, 48, 64 )
@@ -902,7 +903,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 position = Vector2( 1427.25, 48.2476 )
 rotation = -0.00420028
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 48, 176, 48, 32 )
@@ -912,7 +913,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 position = Vector2( 1475.33, 65.8482 )
 rotation = -0.00420028
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 192, 176, 48, 48 )
@@ -922,7 +923,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 position = Vector2( 1521.38, 80.8441 )
 rotation = -0.00420028
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 304, 176, 32, 32 )
@@ -934,7 +935,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 position = Vector2( 1230.68, -68.6621 )
 rotation = -0.00420028
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 320, 64, 64, 80 )
@@ -944,7 +945,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 position = Vector2( 1294.88, -20.1008 )
 rotation = -0.00420028
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 432, 112, 32, 32 )
@@ -954,7 +955,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 position = Vector2( 1319.72, -20.2051 )
 rotation = -0.00420028
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 432, 112, 32, 32 )
@@ -964,7 +965,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 position = Vector2( 1351.72, -20.3396 )
 rotation = -0.00420028
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 432, 112, 32, 32 )
@@ -974,7 +975,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 position = Vector2( 1389.46, -20.498 )
 rotation = -0.00420028
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 432, 112, 32, 32 )
@@ -984,7 +985,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 position = Vector2( 1434.72, -20.6881 )
 rotation = -0.00420028
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 432, 112, 32, 32 )
@@ -994,7 +995,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 position = Vector2( 1474.85, -11.9494 )
 rotation = 0.217329
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 432, 112, 32, 32 )
@@ -1004,7 +1005,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 position = Vector2( 1507.12, 6.65883 )
 rotation = 0.122529
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 432, 112, 32, 32 )
@@ -1014,7 +1015,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 position = Vector2( 1537.7, 26.9167 )
 rotation = 0.164194
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 432, 112, 32, 32 )
@@ -1024,7 +1025,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 position = Vector2( 1151.93, -247.512 )
 rotation = -0.00420028
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 32, 224, 96, 64 )
@@ -1034,7 +1035,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 position = Vector2( 1163.24, -294.623 )
 rotation = -0.00420028
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 576, 240, 64, 48 )
@@ -1044,7 +1045,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 position = Vector2( 1208.14, -338.196 )
 rotation = -0.00420028
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 576, 240, 64, 48 )
@@ -1054,7 +1055,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 position = Vector2( 1223.27, -126.911 )
 rotation = -0.00420028
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 320, 64, 64, 80 )
@@ -1064,7 +1065,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 position = Vector2( 1223.36, -106.612 )
 rotation = -0.00420028
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 32, 224, 96, 64 )
@@ -1074,7 +1075,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 position = Vector2( 1197.14, -137.197 )
 rotation = -0.319574
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 32, 224, 96, 64 )
@@ -1084,7 +1085,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 position = Vector2( 1168.8, -127.91 )
 rotation = -1.59042
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 576, 240, 64, 48 )
