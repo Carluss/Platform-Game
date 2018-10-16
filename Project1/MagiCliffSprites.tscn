@@ -1,9 +1,12 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://sprites/Map Sprites/Magic-cliffs_tileset.png" type="Texture" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://magicFinal.tres" type="TileSet" id=3]
 [ext_resource path="res://sprites/Map Sprites/Dungeon_tileset.png" type="Texture" id=4]
+[ext_resource path="res://sprite.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Enemy.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Puzzle-Game (1).ogg" type="AudioStream" id=7]
 
 [node name="Kadyria_1" type="Node" index="0"]
 
@@ -153,7 +156,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 [node name="Player" parent="." index="1" instance=ExtResource( 2 )]
 
-position = Vector2( 112, -64 )
+position = Vector2( 64, -16 )
 scale = Vector2( 1.25, 1.25 )
 
 [node name="Chao_esquerda" type="Node" parent="." index="2"]
@@ -931,6 +934,8 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 [node name="Parte_cima_gruta17" type="Node" parent="." index="15"]
 
+editor/display_folded = true
+
 [node name="Parte_cima_gruta" type="Sprite" parent="Parte_cima_gruta17" index="0"]
 
 position = Vector2( 1230.68, -68.6621 )
@@ -1142,6 +1147,8 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 [node name="Mech" type="Node" parent="." index="17"]
 
+editor/display_folded = true
+
 [node name="Dungeon_tileset" type="Sprite" parent="Mech" index="0"]
 
 position = Vector2( 880, -64 )
@@ -1151,17 +1158,13 @@ region_enabled = true
 region_rect = Rect2( 416, 240, 32, 64 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Dungeon_tileset2" type="Sprite" parent="Mech" index="1"]
+[node name="sprite2" parent="Mech/Dungeon_tileset" index="0" instance=ExtResource( 5 )]
 
-position = Vector2( 857, -13 )
-scale = Vector2( 1.25, 1 )
-texture = ExtResource( 4 )
-centered = false
-region_enabled = true
-region_rect = Rect2( 416, 320, 64, 32 )
-_sections_unfolded = [ "Offset", "Region" ]
+position = Vector2( 18, 47.9999 )
+scale = Vector2( 2.5, 2.5 )
+_sections_unfolded = [ "Collision", "collision" ]
 
-[node name="Dungeon_tileset3" type="Sprite" parent="Mech" index="2"]
+[node name="Dungeon_tileset3" type="Sprite" parent="Mech" index="1"]
 
 position = Vector2( 149, -29 )
 texture = ExtResource( 4 )
@@ -1170,7 +1173,7 @@ region_enabled = true
 region_rect = Rect2( 144, 416, 48, 64 )
 _sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="Dungeon_tileset4" type="Sprite" parent="Mech" index="3"]
+[node name="Dungeon_tileset4" type="Sprite" parent="Mech" index="2"]
 
 position = Vector2( 720, 0 )
 texture = ExtResource( 4 )
@@ -1179,7 +1182,7 @@ region_enabled = true
 region_rect = Rect2( 144, 416, 48, 64 )
 _sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="Dungeon_tileset5" type="Sprite" parent="Mech" index="4"]
+[node name="Dungeon_tileset5" type="Sprite" parent="Mech" index="3"]
 
 position = Vector2( 992, 208 )
 texture = ExtResource( 4 )
@@ -1188,7 +1191,7 @@ region_enabled = true
 region_rect = Rect2( 144, 416, 48, 64 )
 _sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="Dungeon_tileset6" type="Sprite" parent="Mech" index="5"]
+[node name="Dungeon_tileset6" type="Sprite" parent="Mech" index="4"]
 
 position = Vector2( 1136, -16 )
 texture = ExtResource( 4 )
@@ -1199,6 +1202,7 @@ _sections_unfolded = [ "Offset", "Region", "Transform" ]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." index="18"]
 
+editor/display_folded = true
 position = Vector2( 160, 100 )
 scale = Vector2( 12.3438, 15 )
 input_pickable = false
@@ -1250,5 +1254,18 @@ position = Vector2( -12.962, -6.66667 )
 scale = Vector2( 0.0810127, 0.0666667 )
 build_mode = 0
 polygon = PoolVector2Array( 1270, 0, 1470, 0, 1570, 60, 1600, 60, 1600, 90, 1630, 90, 1630, 170, 1770, 170, 1760, -190, 1260, -340, 1170, -250, 1170, -230, 1160, -220, 1170, -190, 1180, -160, 1220, -130, 1220, -110, 1230, -90, 1240, -60, 1240, -50, 1250, -20 )
+
+[node name="Enemy" parent="." index="19" instance=ExtResource( 6 )]
+
+position = Vector2( 208, 0 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="20"]
+
+stream = ExtResource( 7 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = true
+mix_target = 0
+bus = "Master"
 
 
