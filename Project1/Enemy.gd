@@ -9,6 +9,10 @@ var velocity = Vector2()
 var is_dead=false
 var direction = 1
 
+var hitstun=0
+var knockdir=Vector2(0,0)
+const TYPE="ENEMY"
+
 
 func _ready():
 	pass
@@ -54,7 +58,16 @@ func _physics_process(delta):
 		$RayCast2D.position.x*=-1
 		
 	
+func atck():
+	if hitstun >0:
+		hitstun -=1
 
+	for body in $Body.get_overlapping_bodies():
+		if hitstun == 0 and body.get("TYPE") != TYPE:
+			hitstun=10
+			knockdir= transform.origin - body.transform.origin
+			
+			
 
 func _on_Timer_timeout():
 	queue_free()

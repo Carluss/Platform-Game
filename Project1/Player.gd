@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+const TYPE="PLAYER"
+
 const speed=30
 const GRAVITY=10
 const JUMP_POWER=-250
@@ -33,6 +35,7 @@ var corner=false
 #------		
 
 func _physics_process(delta):
+	#atck()
 	if  Input.is_action_pressed("ui_right"):
 		if is_attacking==false and corner==false and is_climbw==false:
 			velocity.x = min(velocity.x+speed,MaxSpeed)

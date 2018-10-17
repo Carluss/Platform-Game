@@ -1,4 +1,4 @@
-[gd_scene load_steps=74 format=2]
+[gd_scene load_steps=73 format=2]
 
 [ext_resource path="res://Enemy.gd" type="Script" id=1]
 [ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Idle-00.png" type="Texture" id=2]
@@ -48,28 +48,28 @@
 [ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk11.png" type="Texture" id=46]
 [ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk12.png" type="Texture" id=47]
 [ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk13.png" type="Texture" id=48]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack01.png" type="Texture" id=49]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack02.png" type="Texture" id=50]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack03.png" type="Texture" id=51]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack04.png" type="Texture" id=52]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack05.png" type="Texture" id=53]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack06.png" type="Texture" id=54]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack07.png" type="Texture" id=55]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack08.png" type="Texture" id=56]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack09.png" type="Texture" id=57]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack10.png" type="Texture" id=58]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack11.png" type="Texture" id=59]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack12.png" type="Texture" id=60]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack13.png" type="Texture" id=61]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack14.png" type="Texture" id=62]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack15.png" type="Texture" id=63]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack16.png" type="Texture" id=64]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack17.png" type="Texture" id=65]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack18.png" type="Texture" id=66]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton React-00.png" type="Texture" id=67]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton React-01.png" type="Texture" id=68]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton React-02.png" type="Texture" id=69]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton React-03.png" type="Texture" id=70]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton React-00.png" type="Texture" id=49]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton React-01.png" type="Texture" id=50]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton React-02.png" type="Texture" id=51]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton React-03.png" type="Texture" id=52]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack01.png" type="Texture" id=53]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack02.png" type="Texture" id=54]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack03.png" type="Texture" id=55]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack04.png" type="Texture" id=56]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack05.png" type="Texture" id=57]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack06.png" type="Texture" id=58]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack07.png" type="Texture" id=59]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack08.png" type="Texture" id=60]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack09.png" type="Texture" id=61]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack10.png" type="Texture" id=62]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack11.png" type="Texture" id=63]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack12.png" type="Texture" id=64]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack13.png" type="Texture" id=65]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack14.png" type="Texture" id=66]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack15.png" type="Texture" id=67]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack16.png" type="Texture" id=68]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack17.png" type="Texture" id=69]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack18.png" type="Texture" id=70]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -94,14 +94,14 @@ animations = [ {
 "name": "walk",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ) ],
-"loop": true,
-"name": "attack",
-"speed": 12.0
-}, {
-"frames": [ ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 70 ) ],
+"frames": [ ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ) ],
 "loop": true,
 "name": "react",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 53 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 70 ) ],
+"loop": true,
+"name": "attack",
 "speed": 12.0
 } ]
 
@@ -109,11 +109,6 @@ animations = [ {
 
 custom_solver_bias = 0.0
 extents = Vector2( 11.0679, 16.0971 )
-
-[sub_resource type="CircleShape2D" id=3]
-
-custom_solver_bias = 0.0
-radius = 32.0166
 
 [node name="Enemy" type="KinematicBody2D" index="0"]
 
@@ -147,22 +142,6 @@ process_mode = 1
 wait_time = 3.0
 one_shot = true
 autostart = false
-
-[node name="Body" type="Area2D" parent="." index="4"]
-
-position = Vector2( -1, 1 )
-scale = Vector2( 0.96875, 0.96875 )
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
-
-[node name="DetectionBox" type="CollisionShape2D" parent="Body" index="0"]
-
-shape = SubResource( 3 )
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 
