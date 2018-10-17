@@ -19,7 +19,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 10, 105.835 )
 
-[node name="Kadyria_1" type="Node" index="0"]
+[node name="Kadyria_1" type="Node"]
 
 __meta__ = {
 "_edit_horizontal_guides_": [  ]
@@ -27,7 +27,6 @@ __meta__ = {
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." index="0"]
 
-editor/display_folded = true
 layer = -1
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -42,8 +41,8 @@ scroll_ignore_camera_zoom = false
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground" index="0"]
 
-position = Vector2( -240, -352 )
-scale = Vector2( 1.11667, 1.11667 )
+position = Vector2( -1013.33, -954.104 )
+scale = Vector2( 1.928, 1.87248 )
 texture = ExtResource( 1 )
 centered = false
 _sections_unfolded = [ "Offset" ]
@@ -142,7 +141,6 @@ _sections_unfolded = [ "Offset" ]
 
 [node name="Mountains_0" type="ParallaxLayer" parent="ParallaxBackground" index="7"]
 
-editor/display_folded = true
 motion_scale = Vector2( 1, 1 )
 motion_offset = Vector2( 0, 0 )
 motion_mirroring = Vector2( 0, 0 )
@@ -1289,8 +1287,6 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 [node name="Mech" type="Node" parent="." index="18"]
 
-editor/display_folded = true
-
 [node name="Dungeon_tileset" type="Sprite" parent="Mech" index="0"]
 
 position = Vector2( 880, -64 )
@@ -1335,7 +1331,7 @@ _sections_unfolded = [ "Offset", "Region", "Transform" ]
 
 [node name="Dungeon_tileset6" type="Sprite" parent="Mech" index="4"]
 
-position = Vector2( 1136, -16 )
+position = Vector2( 1137.43, -5.96238 )
 texture = ExtResource( 10 )
 centered = false
 region_enabled = true
@@ -1399,7 +1395,7 @@ polygon = PoolVector2Array( 1270, 0, 1470, 0, 1570, 60, 1600, 60, 1600, 90, 1630
 
 [node name="Enemy" parent="." index="20" instance=ExtResource( 12 )]
 
-position = Vector2( 208, 0 )
+position = Vector2( 210.201, -16.2847 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="21"]
 
@@ -1410,7 +1406,7 @@ autoplay = true
 mix_target = 0
 bus = "Master"
 
-[node name="Sprite" type="Area2D" parent="." index="22"]
+[node name="climb w" type="Area2D" parent="." index="22"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -1423,7 +1419,7 @@ audio_bus_override = false
 audio_bus_name = "Master"
 _sections_unfolded = [ "Collision" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="climb w" index="0"]
 
 position = Vector2( 1109.24, 144.87 )
 shape = SubResource( 1 )
