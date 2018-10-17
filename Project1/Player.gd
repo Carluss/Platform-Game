@@ -198,7 +198,7 @@ func jumpcorner():
 		corner=false
 		is_climbw=false
 		$AnimatedSprite.play("climbcornerj")
-		velocity.y= JUMP_POWER+50	
+		velocity.y= JUMP_POWER
 		on_ground=false
 	
 func attacking():
