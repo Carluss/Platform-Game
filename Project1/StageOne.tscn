@@ -70,6 +70,7 @@ _sections_unfolded = [ "Collision" ]
 [node name="Climb" type="TileMap" parent="." index="5"]
 
 modulate = Color( 0.851563, 0.362579, 0.362579, 1 )
+position = Vector2( -170, 0 )
 scale = Vector2( 3, 3 )
 mode = 0
 tile_set = ExtResource( 5 )

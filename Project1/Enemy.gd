@@ -9,8 +9,11 @@ var velocity = Vector2()
 var is_dead=false
 var direction = 1
 
+
 func _ready():
 	pass
+	
+
 
 func dead():
 	is_dead=true
@@ -21,12 +24,21 @@ func dead():
 	$Timer.start()
 
 func _physics_process(delta):
+	
+	#var detect = $Body.get_overlapping_bodies()
+	
 	if is_dead==false:
+		
 		velocity.x=SPEED* direction
+		
+		#if detect.size() !=0:
+			#$AnimatedSprite.play("hit")
+		
 		if direction ==1:
 			$AnimatedSprite.flip_h = false
 		else:
 			$AnimatedSprite.flip_h = true
+		
 		$AnimatedSprite.play("walk")
 
 		velocity.y +=GRAVITY
@@ -40,6 +52,8 @@ func _physics_process(delta):
 	if $RayCast2D.is_colliding()==false:
 		direction=direction*-1
 		$RayCast2D.position.x*=-1
+		
+	
 
 
 func _on_Timer_timeout():
