@@ -37,7 +37,7 @@ var attmode=false
 #---
 
 func limitation(mode,state):
-	if mode==false and state=="right":	
+	if mode==false and (state=="right" or state=="left" or state=="idle" or state=="crouch") :	
 		is_inladder=false
 		is_attacking=false 
 		corner=false
@@ -57,7 +57,7 @@ func fliph(position):
 		if sign($Position2D.position.x)==1:
 			$Position2D.position.x *=-1	
 			
-func crouch(cmode):
+func incrouch(cmode):
 	if cmode==true:
 		get_node("CollisionShape2D").scale = Vector2(1,0.6)
 		get_node("CollisionShape2D").position = Vector2(0, 8.9)
@@ -68,69 +68,76 @@ func crouch(cmode):
 		#velocity.x= speed
 		#$AnimatedSprite.play("Crouchw")
 		
+		
+#Move functions---------		
 func right(mode):
-	if mode==false and limitation(mode,"right")==true and not Input.is_action_pressed("ui_down"):
+	if mode==false and limitation(mode,"right")==true and not Input.is_action_pressed("ui_down") and $Crouch.is_colliding()==false:
 		limitation(mode,"right")
 		fliph("right")
-		crouch(false)
+		incrouch(false)
 		velocity.x = min(velocity.x+speed,MaxSpeed)
 		$AnimatedSprite.play("Run")
-	elif mode==false and limitation(mode,"right")==true and Input.is_action_pressed("ui_down"):
+	elif mode==false and limitation(mode,"right")==true and Input.is_action_pressed("ui_down") or $Crouch.is_colliding()==true:
 		velocity.x= speed
 		fliph("right")
-		crouch(true)
+		incrouch(true)
+		$AnimatedSprite.play("Crouchw")
+	return true
+	
+func left(mode):
+	if mode==false and limitation(mode,"left")==true and not Input.is_action_pressed("ui_down") and $Crouch.is_colliding()==false:
+		limitation(mode,"left")
+		fliph("left")
+		incrouch(false)
+		velocity.x = max(velocity.x-speed,-MaxSpeed)
+		$AnimatedSprite.play("Run")
+	elif mode==false and limitation(mode,"left")==true and Input.is_action_pressed("ui_down") or $Crouch.is_colliding()==true:
+		velocity.x= -speed
+		fliph("left")
+		incrouch(true)
 		$AnimatedSprite.play("Crouchw")
 	return true
 
+func crouch(mode):
+	if mode==false and limitation(mode,"crouch")==true:
+		limitation(mode,"crouch")
+		$AnimatedSprite.play("Crouch")
+		incrouch(true)
+		velocity.x=0
+	return true
+	
+func idle(mode):
+	incrouch(false)
+	velocity.x=0
+	if mode==false and limitation(mode,"idle")==true:
+		if $Crouch.is_colliding()==true:
+			limitation(mode,"crouch")
+			incrouch(true)
+			$AnimatedSprite.play("Crouch")
+		elif $Crouch.is_colliding()==false:
+			limitation(mode,"idle")
+			$AnimatedSprite.play("Idle")
+			incrouch(false)
+		elif corner==true:	
+			$AnimatedSprite.play("climbcorner")
+	elif mode==true and limitation(mode,"idle")==true:
+		is_att=true
+		attacking()
+			
+#-------------------------
 		
 func _physics_process(delta):
 	if  Input.is_action_pressed("ui_right"):
 		right(attmode)
 	elif Input.is_action_pressed("ui_left") :
-		if is_attacking==false and corner==false and is_climbw==false:
-			velocity.x = max(velocity.x-speed,-MaxSpeed)
-			get_node("CollisionShape2D").scale = Vector2(1,1)
-			get_node("CollisionShape2D").position = Vector2(0,3)
-			if $RayCast2D.is_colliding()==true or Input.is_action_pressed("ui_down"):
-				velocity.x= -speed
-				$AnimatedSprite.play("Crouchw")
-				get_node("CollisionShape2D").scale = Vector2(1,0.6)
-				get_node("CollisionShape2D").position = Vector2(0, 8.9)
-				fliph("left")
-			elif is_inladder==false:
-				$AnimatedSprite.play("Run")
-				$AnimatedSprite.flip_h = true
-				fliph("left")
-			else:
-				fliph("left")
+		left(attmode)
 	elif Input.is_action_pressed("ui_down") :
-		if is_attacking==false and is_inladder==false and corner==false and is_climbw==false:
-			$AnimatedSprite.play("Crouch")
-			get_node("CollisionShape2D").scale = Vector2(1,0.6)
-			get_node("CollisionShape2D").position = Vector2(0, 8.9)
-			velocity.x=0
+		crouch(attmode)
 	else:
-		get_node("CollisionShape2D").scale = Vector2(1,1)
-		get_node("CollisionShape2D").position = Vector2(0,3)
-		velocity.x=0	
-		if on_ground==true and is_attacking==false and is_inladder==false:
-			if $RayCast2D.is_colliding()==true:
-				get_node("CollisionShape2D").scale = Vector2(1,0.6)
-				get_node("CollisionShape2D").position = Vector2(0, 8.9)
-				$AnimatedSprite.play("Crouch")
-			elif Input.is_action_just_pressed("ui_attack"):
-				is_att=true
-				velocity.x=0
-				attacking()
-			elif $RayCast2D.is_colliding()==false and is_att!=true:
-				$AnimatedSprite.play("Idle")
-		elif corner==true:
-			$AnimatedSprite.play("climbcorner")
-		elif is_inladder==true and not Input.is_action_pressed("ui_up") and not Input.is_action_pressed("ui_down"):
-			velocity.y=0
-			$AnimatedSprite.stop()
+		idle(attmode)
+	
 		
-	if  Input.is_action_pressed("ui_up") and $RayCast2D.is_colliding()==false or is_ladder==true :
+	if  Input.is_action_pressed("ui_up") and $Crouch.is_colliding()==false or is_ladder==true :
 		if is_attacking==false:
 			if on_ground==true and is_ladder==false:
 				velocity.y= JUMP_POWER
@@ -153,7 +160,7 @@ func _physics_process(delta):
 			is_inladder=true
 	
 	if Input.is_action_just_pressed("ui_focus_next") and is_attacking==false and on_ground==true:
-		if $RayCast2D.is_colliding()==false and is_climbw==false:
+		if $Crouch.is_colliding()==false and is_climbw==false:
 			velocity.x=0
 			is_attacking=true
 			get_node("CollisionShape2D").scale = Vector2(1,1)
@@ -161,7 +168,7 @@ func _physics_process(delta):
 			$AnimatedSprite.play("arrowfire")
 			
 	if Input.is_action_just_pressed("ui_focus_next")  and is_attacking==false and on_ground==false:
-		if $RayCast2D.is_colliding()==false and is_climbw==false:
+		if $Crouch.is_colliding()==false and is_climbw==false:
 			is_attacking=true
 			get_node("CollisionShape2D").scale = Vector2(1,1)
 			get_node("CollisionShape2D").position = Vector2(0,3)
@@ -179,7 +186,7 @@ func _physics_process(delta):
 		is_inladder=false
 	else:
 		on_ground=false
-		if is_attacking==false and $RayCast2D.is_colliding()==false and is_ladder==false :
+		if is_attacking==false and $Crouch.is_colliding()==false and is_ladder==false :
 			on_ground=false
 			if velocity.y<0 and is_ladder==false and jumped==true:
 				$AnimatedSprite.play("Jump")

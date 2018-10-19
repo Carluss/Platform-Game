@@ -1,7 +1,7 @@
 extends Area2D
 
 const SPEED = 100
-
+const maxpeed=175
 var velocity=Vector2()
 var direction=1
 
@@ -17,6 +17,7 @@ func set_arrow_direction(dir):
 		$AnimatedSprite.flip_h=false
 
 func _physics_process(delta):
+	#velocity.x = min(velocity.x+speed*delta,MaxSpeed)
 	velocity.x=SPEED*delta*direction
 	translate(velocity)
 	$AnimatedSprite.play("arrow")
