@@ -709,7 +709,16 @@ region_enabled = true
 region_rect = Rect2( 192, 240, 32, 64 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Pedra_Dentro_Chao_5" type="Sprite" parent="Chao_Esquerda_TileMap" index="13"]
+[node name="Pedra_Dentro_Chao_21" type="Sprite" parent="Chao_Esquerda_TileMap" index="13"]
+
+position = Vector2( -384, -288 )
+texture = ExtResource( 7 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 192, 240, 32, 64 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Pedra_Dentro_Chao_5" type="Sprite" parent="Chao_Esquerda_TileMap" index="14"]
 
 position = Vector2( -224, -256 )
 texture = ExtResource( 7 )
@@ -718,7 +727,7 @@ region_enabled = true
 region_rect = Rect2( 192, 240, 32, 64 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Pedra_Dentro_Chao_6" type="Sprite" parent="Chao_Esquerda_TileMap" index="14"]
+[node name="Pedra_Dentro_Chao_6" type="Sprite" parent="Chao_Esquerda_TileMap" index="15"]
 
 position = Vector2( -272, 432 )
 texture = ExtResource( 7 )
@@ -727,7 +736,7 @@ region_enabled = true
 region_rect = Rect2( 192, 240, 32, 64 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Pedra_Dentro_Chao_12" type="Sprite" parent="Chao_Esquerda_TileMap" index="15"]
+[node name="Pedra_Dentro_Chao_12" type="Sprite" parent="Chao_Esquerda_TileMap" index="16"]
 
 position = Vector2( -336, 272 )
 texture = ExtResource( 7 )
@@ -736,7 +745,7 @@ region_enabled = true
 region_rect = Rect2( 192, 240, 32, 64 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Pedra_Dentro_Chao_14" type="Sprite" parent="Chao_Esquerda_TileMap" index="16"]
+[node name="Pedra_Dentro_Chao_14" type="Sprite" parent="Chao_Esquerda_TileMap" index="17"]
 
 position = Vector2( -48, 496 )
 texture = ExtResource( 7 )
@@ -745,7 +754,7 @@ region_enabled = true
 region_rect = Rect2( 192, 240, 32, 64 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Pedra_Dentro_Chao_15" type="Sprite" parent="Chao_Esquerda_TileMap" index="17"]
+[node name="Pedra_Dentro_Chao_15" type="Sprite" parent="Chao_Esquerda_TileMap" index="18"]
 
 position = Vector2( 768, 432 )
 rotation = 0.774612
@@ -755,7 +764,7 @@ region_enabled = true
 region_rect = Rect2( 192, 240, 32, 64 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Pedra_Dentro_Chao_17" type="Sprite" parent="Chao_Esquerda_TileMap" index="18"]
+[node name="Pedra_Dentro_Chao_17" type="Sprite" parent="Chao_Esquerda_TileMap" index="19"]
 
 position = Vector2( 960, 448 )
 rotation = -0.922579
@@ -765,7 +774,7 @@ region_enabled = true
 region_rect = Rect2( 192, 240, 32, 64 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Pedra_Dentro_Chao_19" type="Sprite" parent="Chao_Esquerda_TileMap" index="19"]
+[node name="Pedra_Dentro_Chao_19" type="Sprite" parent="Chao_Esquerda_TileMap" index="20"]
 
 position = Vector2( 864, 448 )
 texture = ExtResource( 7 )
@@ -774,7 +783,7 @@ region_enabled = true
 region_rect = Rect2( 192, 240, 32, 64 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Pedra_Dentro_Chao_7" type="Sprite" parent="Chao_Esquerda_TileMap" index="20"]
+[node name="Pedra_Dentro_Chao_7" type="Sprite" parent="Chao_Esquerda_TileMap" index="21"]
 
 position = Vector2( -256, 32 )
 rotation = 1.00926
@@ -784,7 +793,7 @@ region_enabled = true
 region_rect = Rect2( 192, 240, 32, 64 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Pedra_Dentro_Chao_8" type="Sprite" parent="Chao_Esquerda_TileMap" index="21"]
+[node name="Pedra_Dentro_Chao_8" type="Sprite" parent="Chao_Esquerda_TileMap" index="22"]
 
 position = Vector2( -352, -128 )
 rotation = -2.52508
@@ -794,7 +803,7 @@ region_enabled = true
 region_rect = Rect2( 192, 240, 32, 64 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Pedra_Dentro_Chao_9" type="Sprite" parent="Chao_Esquerda_TileMap" index="22"]
+[node name="Pedra_Dentro_Chao_9" type="Sprite" parent="Chao_Esquerda_TileMap" index="23"]
 
 position = Vector2( -320, 112 )
 rotation = -0.759283
@@ -804,7 +813,7 @@ region_enabled = true
 region_rect = Rect2( 192, 240, 32, 64 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Pedra_Dentro_Chao_10" type="Sprite" parent="Chao_Esquerda_TileMap" index="23"]
+[node name="Pedra_Dentro_Chao_10" type="Sprite" parent="Chao_Esquerda_TileMap" index="24"]
 
 position = Vector2( -352, 0 )
 rotation = 1.04856
@@ -814,7 +823,7 @@ region_enabled = true
 region_rect = Rect2( 192, 240, 32, 64 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Pedra_Dentro_Chao_0" type="Sprite" parent="Chao_Esquerda_TileMap" index="24"]
+[node name="Pedra_Dentro_Chao_0" type="Sprite" parent="Chao_Esquerda_TileMap" index="25"]
 
 position = Vector2( 128, 96 )
 texture = ExtResource( 7 )
@@ -823,7 +832,7 @@ region_enabled = true
 region_rect = Rect2( 240, 240, 64, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Chao_esquerda_8" type="Sprite" parent="Chao_Esquerda_TileMap" index="25"]
+[node name="Chao_esquerda_8" type="Sprite" parent="Chao_Esquerda_TileMap" index="26"]
 
 position = Vector2( -45.6051, 21.0973 )
 rotation = -1.58117
@@ -833,7 +842,7 @@ region_enabled = true
 region_rect = Rect2( 544, 96, 64, 48 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Chao_esquerda_9" type="Sprite" parent="Chao_Esquerda_TileMap" index="26"]
+[node name="Chao_esquerda_9" type="Sprite" parent="Chao_Esquerda_TileMap" index="27"]
 
 position = Vector2( -31.2656, -90.7505 )
 rotation = 0.00687146
@@ -844,7 +853,7 @@ region_enabled = true
 region_rect = Rect2( 320, 64, 64, 48 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Chao_esquerda_10" type="Sprite" parent="Chao_Esquerda_TileMap" index="27"]
+[node name="Chao_esquerda_10" type="Sprite" parent="Chao_Esquerda_TileMap" index="28"]
 
 position = Vector2( -31.0561, -121.24 )
 rotation = 0.00687146
@@ -855,7 +864,7 @@ region_enabled = true
 region_rect = Rect2( 320, 64, 64, 48 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Chao_esquerda_11" type="Sprite" parent="Chao_Esquerda_TileMap" index="28"]
+[node name="Chao_esquerda_11" type="Sprite" parent="Chao_Esquerda_TileMap" index="29"]
 
 position = Vector2( -30.8196, -155.661 )
 rotation = 0.00687146
@@ -866,7 +875,7 @@ region_enabled = true
 region_rect = Rect2( 320, 64, 64, 48 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Chao_esquerda_12" type="Sprite" parent="Chao_Esquerda_TileMap" index="29"]
+[node name="Chao_esquerda_12" type="Sprite" parent="Chao_Esquerda_TileMap" index="30"]
 
 position = Vector2( -30.5413, -196.153 )
 rotation = 0.00687146
@@ -877,7 +886,7 @@ region_enabled = true
 region_rect = Rect2( 320, 64, 64, 48 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Chao_esquerda_13" type="Sprite" parent="Chao_Esquerda_TileMap" index="30"]
+[node name="Chao_esquerda_13" type="Sprite" parent="Chao_Esquerda_TileMap" index="31"]
 
 position = Vector2( -30.2951, -231.98 )
 rotation = 0.00687146
@@ -888,7 +897,7 @@ region_enabled = true
 region_rect = Rect2( 320, 64, 64, 48 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Chao_esquerda_14" type="Sprite" parent="Chao_Esquerda_TileMap" index="31"]
+[node name="Chao_esquerda_14" type="Sprite" parent="Chao_Esquerda_TileMap" index="32"]
 
 position = Vector2( -41.1024, -248.732 )
 rotation = -0.446605
@@ -899,7 +908,7 @@ region_enabled = true
 region_rect = Rect2( 320, 64, 64, 48 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Chao_esquerda_15" type="Sprite" parent="Chao_Esquerda_TileMap" index="32"]
+[node name="Chao_esquerda_15" type="Sprite" parent="Chao_Esquerda_TileMap" index="33"]
 
 position = Vector2( -58.2947, -284.633 )
 rotation = -0.446605
@@ -910,7 +919,7 @@ region_enabled = true
 region_rect = Rect2( 320, 64, 64, 48 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Chao_esquerda_16" type="Sprite" parent="Chao_Esquerda_TileMap" index="33"]
+[node name="Chao_esquerda_16" type="Sprite" parent="Chao_Esquerda_TileMap" index="34"]
 
 position = Vector2( -78.3288, -292.156 )
 rotation = -0.847534
@@ -921,7 +930,7 @@ region_enabled = true
 region_rect = Rect2( 320, 64, 64, 48 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Chao_esquerda_17" type="Sprite" parent="Chao_Esquerda_TileMap" index="34"]
+[node name="Chao_esquerda_17" type="Sprite" parent="Chao_Esquerda_TileMap" index="35"]
 
 position = Vector2( -95.4753, -299.67 )
 rotation = -1.20018
@@ -932,7 +941,7 @@ region_enabled = true
 region_rect = Rect2( 320, 64, 64, 48 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Chao_esquerda_18" type="Sprite" parent="Chao_Esquerda_TileMap" index="35"]
+[node name="Chao_esquerda_18" type="Sprite" parent="Chao_Esquerda_TileMap" index="36"]
 
 position = Vector2( -111.279, -296.316 )
 rotation = -1.63765
