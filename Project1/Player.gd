@@ -37,9 +37,17 @@ var attmode=false
 #---
 
 func limitation(mode,state):
+	if mode==false and state=="jump":
+		if $Crouch.is_colliding()==false:
+			#is_inladder=false
+			#is_attacking=false 
+			corner=false
+			is_climbw=false
+			return true
+		
 	if mode==false and (state=="right" or state=="left" or state=="idle" or state=="crouch") :	
-		is_inladder=false
-		is_attacking=false 
+		#is_inladder=false
+		#is_attacking=false 
 		corner=false
 		is_climbw=false
 		return true
@@ -69,7 +77,7 @@ func incrouch(cmode):
 		#$AnimatedSprite.play("Crouchw")
 		
 		
-#Move functions---------		
+#Move functions------------------
 func right(mode):
 	if mode==false and limitation(mode,"right")==true and not Input.is_action_pressed("ui_down") and $Crouch.is_colliding()==false:
 		limitation(mode,"right")
@@ -111,10 +119,12 @@ func idle(mode):
 	velocity.x=0
 	if mode==false and limitation(mode,"idle")==true:
 		if $Crouch.is_colliding()==true:
+			print("1")
 			limitation(mode,"crouch")
 			incrouch(true)
 			$AnimatedSprite.play("Crouch")
-		elif $Crouch.is_colliding()==false:
+		elif $Crouch.is_colliding()==false and is_inladder==false:
+			print("2")
 			limitation(mode,"idle")
 			$AnimatedSprite.play("Idle")
 			incrouch(false)
@@ -123,9 +133,47 @@ func idle(mode):
 	elif mode==true and limitation(mode,"idle")==true:
 		is_att=true
 		attacking()
-			
-#-------------------------
 		
+		
+func jump(mode):
+	if mode==false and limitation(mode,"jump")==true:
+		if is_on_floor()==true:
+			set_collision_layer_bit(1,false)
+			limitation(mode,"jump")
+			velocity.y= JUMP_POWER
+	elif mode==true and is_on_floor()==false:
+		if Input.is_action_just_pressed("ui_focus_next")  and is_attacking==false:
+			is_attacking=true
+			$AnimatedSprite.play("arrowfirejump")
+
+			
+func climbladders(mode):
+	if is_inladder==true or velocity.y==0:
+		$AnimatedSprite.play("climbl")
+		$AnimatedSprite.stop()
+		velocity.y=0
+		$ladder.enabled=false
+	if $ladder.is_colliding()==true:
+		set_collision_layer_bit(1,true)
+	else:
+		set_collision_layer_bit(1,false)
+	if mode==false and is_on_floor()==false and is_ladder==true:
+		$AnimatedSprite.play("climbl")
+		is_inladder=true
+	if mode==false and Input.is_action_pressed("ui_up") and is_ladder==true:
+		is_inladder=true
+		$AnimatedSprite.play("climbl")
+		velocity.y=-speed-10
+	elif (is_ladder==true or $ladder.is_colliding()==true) and Input.is_action_pressed("ui_down"):
+		if is_on_floor()==true and $ladder.is_colliding()==false:
+			idle(mode)
+		else:
+			set_collision_layer_bit(1,false )
+			is_inladder=true
+			$AnimatedSprite.play("climbl")
+			velocity.y=speed+10
+		
+#--------------------------------------------	
 func _physics_process(delta):
 	if  Input.is_action_pressed("ui_right"):
 		right(attmode)
@@ -136,29 +184,23 @@ func _physics_process(delta):
 	else:
 		idle(attmode)
 	
-		
-	if  Input.is_action_pressed("ui_up") and $Crouch.is_colliding()==false or is_ladder==true :
-		if is_attacking==false:
-			if on_ground==true and is_ladder==false:
-				velocity.y= JUMP_POWER
-				jumped=true	
-				on_ground=false
-			elif is_ladder==true and Input.is_action_pressed("ui_up"):
-				is_inladder=true
-				$AnimatedSprite.play("climbl")
-				velocity.y=-speed-10
-			elif is_ladder==true and Input.is_action_pressed("ui_down"):
-				if is_on_floor()==false:
-					is_inladder=true
-					$AnimatedSprite.play("climbl")
-					velocity.y=speed+10
-				elif is_on_floor()==true:
-					$AnimatedSprite.play("Idle")
-					is_inladder=false
-	if is_on_floor()==false and is_ladder==true:
-			$AnimatedSprite.play("climbl")
-			is_inladder=true
+	if  Input.is_action_pressed("ui_jump"):	
+		jump(attmode)
+	if $ladder.is_colliding()==true or is_ladder==true:	
+		climbladders(false)
 	
+	#if $ladder.is_colliding()==true and Input.is_action_pressed("ui_down"):
+		#set_collision_layer_bit(1,false )
+		#if is_inladder==true:
+			#$ladder.enabled=false
+	#elif $ladder.is_colliding()==true :	
+		#set_collision_layer_bit(1,true)
+	#else:
+		#set_collision_layer_bit(1,false )
+		#if is_inladder==true:
+			#$ladder.enabled=false
+	
+	"""
 	if Input.is_action_just_pressed("ui_focus_next") and is_attacking==false and on_ground==true:
 		if $Crouch.is_colliding()==false and is_climbw==false:
 			velocity.x=0
@@ -173,7 +215,7 @@ func _physics_process(delta):
 			get_node("CollisionShape2D").scale = Vector2(1,1)
 			get_node("CollisionShape2D").position = Vector2(0,3)
 			$AnimatedSprite.play("arrowfirejump")
-			
+	"""		
 	if is_inladder==false and corner==false:
 		if is_climbw==true and is_on_floor()==false and corner==false and velocity.y>0:
 			$AnimatedSprite.play("climbwdown")
@@ -193,19 +235,7 @@ func _physics_process(delta):
 				jumped=false
 			#elif is_ladder==false:
 				#$AnimatedSprite.play("fall")
-				
-			
-	if $ladder.is_colliding()==true and Input.is_action_pressed("ui_down"):
-		set_collision_layer_bit(1,false )
-		if is_inladder==true:
-			$ladder.enabled=false
-	elif $ladder.is_colliding()==true :	
-		set_collision_layer_bit(1,true)
-	else:
-		set_collision_layer_bit(1,false )
-		if is_inladder==true:
-			$ladder.enabled=false
-	
+	"""
 	
 	if ($climbw.is_colliding()==true and Input.is_action_pressed("ui_up"))or($climbw.is_colliding()==true and Input.is_action_pressed("ui_up") and Input.is_action_pressed("ui_right")) or($climbw.is_colliding()==true and Input.is_action_pressed("ui_up") and Input.is_action_pressed("ui_left")):
 		is_climbw=true
@@ -215,8 +245,9 @@ func _physics_process(delta):
 		if $climbw.is_colliding()==false:
 			corner=true
 			jumpcorner()
+	"""		
 	velocity = move_and_slide(velocity, FLOOR)
-
+"""
 func jumpcorner():
 	velocity.y=0
 	if (corner==true and Input.is_action_pressed("ui_jump")) or (corner==true and Input.is_action_pressed("ui_jump") and Input.is_action_pressed("ui_right") )or (corner==true and Input.is_action_pressed("ui_jump") and Input.is_action_pressed("ui_left")):
@@ -263,17 +294,16 @@ func _on_AnimatedSprite_animation_finished():
 
 func _on_att_delay_timeout():
 	rdyatt=true
-
+"""
 
 func _on_ladders_body_entered(body):
 	if body.get_collision_mask_bit(1)==true:
 		is_ladder=true
 		print("true")
 
-
-
 func _on_ladders_body_exited(body):
 	if body.get_collision_mask_bit(1)==true:
+		set_collision_layer_bit(1,false)
 		is_ladder=false
 		$ladder.enabled=true
 		is_inladder=false
