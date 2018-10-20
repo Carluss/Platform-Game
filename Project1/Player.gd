@@ -44,8 +44,12 @@ func limitation(mode,state):
 			corner=false
 			is_climbw=false
 			return true
-		
-	if mode==false and (state=="right" or state=="left" or state=="idle" or state=="crouch") :	
+	if mode==false and state=="crouch":
+		if is_inladder==true:
+			return false
+		else:
+			return true
+	if mode==false and (state=="right" or state=="left" or state=="idle") :	
 		#is_inladder=false
 		#is_attacking=false 
 		corner=false
@@ -86,10 +90,15 @@ func right(mode):
 		velocity.x = min(velocity.x+speed,MaxSpeed)
 		$AnimatedSprite.play("Run")
 	elif mode==false and limitation(mode,"right")==true and Input.is_action_pressed("ui_down") or $Crouch.is_colliding()==true:
-		velocity.x= speed
-		fliph("right")
-		incrouch(true)
-		$AnimatedSprite.play("Crouchw")
+		if limitation(attmode,"crouch")==true:
+			velocity.x= speed
+			fliph("right")
+			incrouch(true)
+			$AnimatedSprite.play("Crouchw")
+		else:
+			velocity.x= speed
+			fliph("right")
+			
 	return true
 	
 func left(mode):
@@ -100,10 +109,14 @@ func left(mode):
 		velocity.x = max(velocity.x-speed,-MaxSpeed)
 		$AnimatedSprite.play("Run")
 	elif mode==false and limitation(mode,"left")==true and Input.is_action_pressed("ui_down") or $Crouch.is_colliding()==true:
-		velocity.x= -speed
-		fliph("left")
-		incrouch(true)
-		$AnimatedSprite.play("Crouchw")
+		if limitation(attmode,"crouch")==true:
+			velocity.x= -speed
+			fliph("left")
+			incrouch(true)
+			$AnimatedSprite.play("Crouchw")
+		else:
+			velocity.x= -speed
+			fliph("left")
 	return true
 
 func crouch(mode):
@@ -119,16 +132,14 @@ func idle(mode):
 	velocity.x=0
 	if mode==false and limitation(mode,"idle")==true:
 		if $Crouch.is_colliding()==true:
-			print("1")
 			limitation(mode,"crouch")
 			incrouch(true)
 			$AnimatedSprite.play("Crouch")
 		elif $Crouch.is_colliding()==false and is_inladder==false:
-			print("2")
 			limitation(mode,"idle")
 			$AnimatedSprite.play("Idle")
 			incrouch(false)
-		elif corner==true:	
+		elif corner==true:
 			$AnimatedSprite.play("climbcorner")
 	elif mode==true and limitation(mode,"idle")==true:
 		is_att=true
@@ -138,7 +149,6 @@ func idle(mode):
 func jump(mode):
 	if mode==false and limitation(mode,"jump")==true:
 		if is_on_floor()==true:
-			set_collision_layer_bit(1,false)
 			limitation(mode,"jump")
 			velocity.y= JUMP_POWER
 	elif mode==true and is_on_floor()==false:
@@ -148,9 +158,12 @@ func jump(mode):
 
 			
 func climbladders(mode):
-	if is_inladder==true or velocity.y==0:
-		$AnimatedSprite.play("climbl")
-		$AnimatedSprite.stop()
+	if is_inladder==true:
+		if velocity.y==0:
+			$AnimatedSprite.play("climbl")
+			$AnimatedSprite.stop()
+		else:
+			$AnimatedSprite.play("climbl")
 		velocity.y=0
 		$ladder.enabled=false
 	if $ladder.is_colliding()==true:
@@ -179,14 +192,15 @@ func _physics_process(delta):
 		right(attmode)
 	elif Input.is_action_pressed("ui_left") :
 		left(attmode)
-	elif Input.is_action_pressed("ui_down") :
+	elif Input.is_action_pressed("ui_down") and limitation(attmode,"crouch")==true :
 		crouch(attmode)
 	else:
 		idle(attmode)
 	
 	if  Input.is_action_pressed("ui_jump"):	
 		jump(attmode)
-	if $ladder.is_colliding()==true or is_ladder==true:	
+		
+	if $ladder.is_colliding()==true or is_ladder==true or is_inladder==true:	
 		climbladders(false)
 	
 	#if $ladder.is_colliding()==true and Input.is_action_pressed("ui_down"):
