@@ -2,25 +2,26 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/rocks_2.png-3e35dc0f7cd050602608c3127d3cb6aa.stex"
+path.s3tc="res://.import/rocks_2.png-3e35dc0f7cd050602608c3127d3cb6aa.s3tc.stex"
+path.etc2="res://.import/rocks_2.png-3e35dc0f7cd050602608c3127d3cb6aa.etc2.stex"
 
 [deps]
 
 source_file="res://sprites/game_background_2/layers/rocks_2.png"
-dest_files=[ "res://.import/rocks_2.png-3e35dc0f7cd050602608c3127d3cb6aa.stex" ]
+dest_files=[ "res://.import/rocks_2.png-3e35dc0f7cd050602608c3127d3cb6aa.s3tc.stex", "res://.import/rocks_2.png-3e35dc0f7cd050602608c3127d3cb6aa.etc2.stex" ]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
-flags/repeat=0
-flags/filter=false
-flags/mipmaps=false
+flags/repeat=1
+flags/filter=true
+flags/mipmaps=true
 flags/anisotropic=false
 flags/srgb=2
-process/fix_alpha_border=true
+process/fix_alpha_border=false
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
