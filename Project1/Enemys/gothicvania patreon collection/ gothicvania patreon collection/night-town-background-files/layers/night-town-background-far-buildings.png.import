@@ -1,0 +1,29 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/night-town-background-far-buildings.png-da1f5d85b332d96e0dfc49ae16dd63dc.stex"
+
+[deps]
+
+source_file="res://Enemys/gothicvania patreon collection/ gothicvania patreon collection/night-town-background-files/layers/night-town-background-far-buildings.png"
+dest_files=[ "res://.import/night-town-background-far-buildings.png-da1f5d85b332d96e0dfc49ae16dd63dc.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0
