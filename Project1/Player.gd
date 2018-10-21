@@ -5,6 +5,7 @@ const TYPE="PLAYER"
 const speed=30
 const GRAVITY=10
 const JUMP_POWER=-280
+const JUMP_CLIMB=200
 const FLOOR = Vector2(0,-1)
 const ARROW =preload("res://arrow.tscn")
 const MaxSpeed = 100
@@ -32,39 +33,39 @@ var is_inladder=false
 var climbdir = 1
 var is_climbw=false
 var corner=false
+var jumpedw=0
+
 #Modes
 var attmode=false
 #---
 
 func limitation(mode,state):
 	if state=="arrow":
-		if is_attacking==false and is_on_floor()==true:
+		if is_attacking==false and is_on_floor()==true and is_climbw==false:
 			return true
 	if state=="arrowjump":
-		if is_attacking==false and is_on_floor()==false:
+		if is_attacking==false and is_on_floor()==false and is_climbw==false:
 			return true
 	if mode==false and state=="jump":
-		if $Crouch.is_colliding()==false and is_attacking==false:
-			corner=false
-			is_climbw=false
+		if $Crouch.is_colliding()==false and is_attacking==false and is_climbw==false:
 			return true
 	if mode==false and state=="crouch":
-		if is_inladder==false and is_attacking==false and is_on_floor()==true:
+		if is_inladder==false and is_attacking==false and is_on_floor()==true and is_climbw==false:
 			return true
 		else:
 			return false
+	if mode==false and state=="climbwalls":
+		print("")
 	if mode==false and state=="idle":
-		if is_attacking==false:
+		if is_attacking==false and is_climbw==false:
 			return true
 		else:
 			return false
-	if mode==false and (state=="right" or state=="left") :	
-		if is_attacking==false or is_on_floor()==false:
+	if mode==false and is_climbw==false and (state=="right" or state=="left") :	
+		if is_attacking==false or is_on_floor()==false :
 			return true
 		else:
 			return false
-		corner=false
-		is_climbw=false
 	return	false
 			
 func fliph(position):
@@ -78,6 +79,10 @@ func fliph(position):
 		get_node("climbw").rotation_degrees = 90
 		if sign($Position2D.position.x)==1:
 			$Position2D.position.x *=-1	
+	if $AnimatedSprite.flip_h==false:
+		return true
+	else:
+		return false
 			
 func incrouch(cmode):
 	if cmode==true:
@@ -157,8 +162,6 @@ func idle(mode):
 			limitation(mode,"idle")
 			$AnimatedSprite.play("Idle")
 			incrouch(false)
-		elif corner==true:
-			$AnimatedSprite.play("climbcorner")
 	elif mode==true and limitation(mode,"idle")==true:
 		is_att=true
 		attacking()
@@ -169,10 +172,6 @@ func jump(mode):
 		if is_on_floor()==true:
 			limitation(mode,"jump")
 			velocity.y= JUMP_POWER
-	#elif mode==true and is_on_floor()==false:
-		#if Input.is_action_just_pressed("ui_focus_next")  and is_attacking==false:
-			#is_attacking=true
-			#$AnimatedSprite.play("arrowfirejump")
 
 			
 func climbladders(mode):
@@ -206,7 +205,7 @@ func climbladders(mode):
 			velocity.y=speed+10
 
 func Arrow(mode):
-	if firearrow==true and $Crouch.is_colliding()==false:
+	if firearrow==true and $Crouch.is_colliding()==false and is_climbw==false:
 		firearrow=false
 		if limitation(mode,"arrow")==true :
 			velocity.x=0
@@ -240,12 +239,16 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("ui_focus_next"):
 		Arrow(attmode)
 		
+	climbwalls(attmode)
+		
 	if is_inladder==false and corner==false:
-		if is_climbw==true and is_on_floor()==false and corner==false and velocity.y>0:
+		if (is_climbw==true or $climbw.is_colliding()==true) and is_on_floor()==false and corner==false and velocity.y>0:
+			is_climbw=true
 			$AnimatedSprite.play("climbwdown")
-		velocity.y += GRAVITY	
+		velocity.y += GRAVITY
 		
 	if is_on_floor()==true:
+		jumpedw=0
 		on_ground=true
 		corner=false
 		is_climbw=false
@@ -254,33 +257,46 @@ func _physics_process(delta):
 		on_ground=false
 		if is_attacking==false and $Crouch.is_colliding()==false and is_ladder==false :
 			on_ground=false
-			if velocity.y<0 and is_ladder==false:
+			if velocity.y<0 and is_ladder==false and corner==false and is_climbw==false:
 				$AnimatedSprite.play("Jump")
-			elif $Fallray.is_colliding()==false:
+			elif $Fallray.is_colliding()==false and corner==false and $climbw.is_colliding()==false:
 				$AnimatedSprite.play("fall")	
+				
+	velocity = move_and_slide(velocity, FLOOR)
 	
-	"""
-	
-	if ($climbw.is_colliding()==true and Input.is_action_pressed("ui_up"))or($climbw.is_colliding()==true and Input.is_action_pressed("ui_up") and Input.is_action_pressed("ui_right")) or($climbw.is_colliding()==true and Input.is_action_pressed("ui_up") and Input.is_action_pressed("ui_left")):
+func climbwalls(mode):
+	if mode==false and ($climbw.is_colliding()==true and Input.is_action_pressed("ui_up"))or($climbw.is_colliding()==true and Input.is_action_pressed("ui_up") and Input.is_action_pressed("ui_right")) or($climbw.is_colliding()==true and Input.is_action_pressed("ui_up") and Input.is_action_pressed("ui_left")):
 		is_climbw=true
-		velocity.y=-speed-5	
+		velocity.y=-speed-5
 		$AnimatedSprite.play("climbl")
-	if is_climbw==true:
+	if is_climbw==true and mode==false:
+		if Input.is_action_just_pressed("ui_jump") and ((Input.is_action_pressed("ui_right") and fliph("nada")==false) or (Input.is_action_pressed("ui_left") and fliph("nada")==true) )and jumpedw==0:
+			velocity.y= JUMP_POWER+50
+			jumpedw =1
+			is_climbw=false
+		if Input.is_action_pressed("ui_right") and Input.is_action_just_pressed("ui_jump") and fliph("nada")==false and jumpedw==0:
+			velocity.y=JUMP_POWER+50
+			jumpedw =1
+			is_climbw=false
+		if Input.is_action_pressed("ui_left") and Input.is_action_just_pressed("ui_jump") and fliph("nada")==true and jumpedw==0:
+			velocity.y=JUMP_POWER+50
+			jumpedw =1
+			is_climbw=false
 		if $climbw.is_colliding()==false:
+			$AnimatedSprite.play("climbcorner")
 			corner=true
 			jumpcorner()
-	"""		
-	velocity = move_and_slide(velocity, FLOOR)
-"""
+	if $climbw.is_colliding()==false and is_climbw==false:
+		jumpedw=0
 func jumpcorner():
 	velocity.y=0
 	if (corner==true and Input.is_action_pressed("ui_jump")) or (corner==true and Input.is_action_pressed("ui_jump") and Input.is_action_pressed("ui_right") )or (corner==true and Input.is_action_pressed("ui_jump") and Input.is_action_pressed("ui_left")):
 		corner=false
 		is_climbw=false
-		$AnimatedSprite.play("climbcornerj")
 		velocity.y= JUMP_POWER
 		on_ground=false
-	
+
+"""	
 func attacking():
 	if is_attf==true and rdyatt==true:
 		match at:
@@ -298,6 +314,10 @@ func attacking():
 		at+=1
 		if at>=4:
 			at=1
+
+
+func _on_att_delay_timeout():
+	rdyatt=true
 """
 func _on_AnimatedSprite_animation_finished():
 	if is_att==true:
@@ -314,11 +334,6 @@ func _on_AnimatedSprite_animation_finished():
 		arrow.position = $Position2D.global_position
 		is_attacking=false
 		$Arrowdelay.start()
-
-
-
-#func _on_att_delay_timeout():
-	#rdyatt=true
 
 
 func _on_ladders_body_entered(body):
