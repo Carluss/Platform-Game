@@ -1,0 +1,29 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/f4e7b74c-0f3a-4832-b9a2-8a3a9050aa07 (1).png-972c2673b8a7259ecc87460436c81a91.stex"
+
+[deps]
+
+source_file="res://sprites/Logo/f4e7b74c-0f3a-4832-b9a2-8a3a9050aa07 (1).png"
+dest_files=[ "res://.import/f4e7b74c-0f3a-4832-b9a2-8a3a9050aa07 (1).png-972c2673b8a7259ecc87460436c81a91.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0
