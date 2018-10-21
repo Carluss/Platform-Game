@@ -18,7 +18,7 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-extents = Vector2( 12, 4 )
+extents = Vector2( 10.2496, 2.76697 )
 
 [node name="arrow" type="Area2D" index="0"]
 
@@ -41,7 +41,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
-position = Vector2( 3.63015, 2.86046 )
+position = Vector2( 5.16864, 2.1475 )
 rotation = 3.14159
 scale = Vector2( 0.941515, 1 )
 shape = SubResource( 2 )
@@ -49,8 +49,8 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="." index="2"]
 
-position = Vector2( 3.48013, 2.63527 )
-scale = Vector2( 1.17096, 0.427187 )
+position = Vector2( 5.14566, 1.99736 )
+scale = Vector2( 0.966025, 0.427187 )
 rect = Rect2( -10, -10, 20, 20 )
 _sections_unfolded = [ "Transform" ]
 
