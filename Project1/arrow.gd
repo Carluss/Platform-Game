@@ -1,6 +1,6 @@
 extends Area2D
 
-const SPEED = 100
+const SPEED = 200
 const maxpeed=175
 var velocity=Vector2()
 var direction=1

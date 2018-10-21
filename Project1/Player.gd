@@ -282,7 +282,7 @@ func climbwalls(mode):
 			velocity.y=JUMP_POWER+50
 			jumpedw =1
 			is_climbw=false
-		if $climbw.is_colliding()==false:
+		if $climbw.is_colliding()==false and not velocity.y>0:
 			$AnimatedSprite.play("climbcorner")
 			corner=true
 			jumpcorner()
@@ -325,6 +325,8 @@ func _on_AnimatedSprite_animation_finished():
 		is_att=false
 		$AnimatedSprite.stop()
 	if is_attacking==true:
+		$Arrowdelay.start()
+		is_attacking=false
 		var arrow = ARROW.instance()
 		if sign($Position2D.position.x)==1:
 			arrow.set_arrow_direction(1)
@@ -332,8 +334,6 @@ func _on_AnimatedSprite_animation_finished():
 			arrow.set_arrow_direction(-1)
 		get_parent().add_child(arrow)
 		arrow.position = $Position2D.global_position
-		is_attacking=false
-		$Arrowdelay.start()
 
 
 func _on_ladders_body_entered(body):

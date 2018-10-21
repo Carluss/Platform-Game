@@ -182,11 +182,12 @@ animation = "Idle"
 
 [node name="Position2D" type="Position2D" parent="." index="1"]
 
-position = Vector2( 32.3157, 0.219336 )
+position = Vector2( 24.6609, 1.03121 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Camera2D" type="Camera2D" parent="." index="2"]
 
+visible = false
 anchor_mode = 1
 rotating = false
 current = true
