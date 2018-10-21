@@ -66,7 +66,7 @@ collision_layer = 2
 collision_mask = 2
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( -131074, 0, 0, -131073, 0, 0, 65541, 536870931, 0, 131077, 536870931, 0, 196613, 536870931, 0, 262149, 536870931, 0 )
+tile_data = PoolIntArray( 65541, 536870931, 0, 131077, 536870931, 0, 196613, 536870931, 0, 262149, 536870931, 0 )
 _sections_unfolded = [ "Collision" ]
 __meta__ = {
 "_edit_lock_": true
