@@ -2,26 +2,25 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/pines.png-dc6765b88ed946a9577b8bc324ff8bad.s3tc.stex"
-path.etc2="res://.import/pines.png-dc6765b88ed946a9577b8bc324ff8bad.etc2.stex"
+path="res://.import/pines.png-dc6765b88ed946a9577b8bc324ff8bad.stex"
 
 [deps]
 
 source_file="res://sprites/game_background_2/layers/pines.png"
-dest_files=[ "res://.import/pines.png-dc6765b88ed946a9577b8bc324ff8bad.s3tc.stex", "res://.import/pines.png-dc6765b88ed946a9577b8bc324ff8bad.etc2.stex" ]
+dest_files=[ "res://.import/pines.png-dc6765b88ed946a9577b8bc324ff8bad.stex" ]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
-flags/repeat=1
-flags/filter=true
-flags/mipmaps=true
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
-process/fix_alpha_border=false
+process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false

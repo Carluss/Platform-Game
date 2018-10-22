@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Balao_benvindo.png-c03e0320f303e229fbd1a781e424abd0.stex"
+path="res://.import/Balao_escalar.png-55fdb1578254a44a8069132df5fc0bab.stex"
 
 [deps]
 
-source_file="res://sprites/Ballons/Balao_benvindo.png"
-dest_files=[ "res://.import/Balao_benvindo.png-c03e0320f303e229fbd1a781e424abd0.stex" ]
+source_file="res://sprites/Ballons/Balao_escalar.png"
+dest_files=[ "res://.import/Balao_escalar.png-55fdb1578254a44a8069132df5fc0bab.stex" ]
 
 [params]
 

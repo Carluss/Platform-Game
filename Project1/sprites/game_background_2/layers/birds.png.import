@@ -2,26 +2,25 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/birds.png-bd679c90a0eaa667f4de2c143d655fe2.s3tc.stex"
-path.etc2="res://.import/birds.png-bd679c90a0eaa667f4de2c143d655fe2.etc2.stex"
+path="res://.import/birds.png-bd679c90a0eaa667f4de2c143d655fe2.stex"
 
 [deps]
 
 source_file="res://sprites/game_background_2/layers/birds.png"
-dest_files=[ "res://.import/birds.png-bd679c90a0eaa667f4de2c143d655fe2.s3tc.stex", "res://.import/birds.png-bd679c90a0eaa667f4de2c143d655fe2.etc2.stex" ]
+dest_files=[ "res://.import/birds.png-bd679c90a0eaa667f4de2c143d655fe2.stex" ]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
-flags/repeat=1
-flags/filter=true
-flags/mipmaps=true
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
-process/fix_alpha_border=false
+process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
