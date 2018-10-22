@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://sprites/game_background_2/layers/sky.png" type="Texture" id=1]
 [ext_resource path="res://sprites/game_background_2/layers/clouds_3.png" type="Texture" id=2]
@@ -11,8 +11,9 @@
 [ext_resource path="res://magicFinal.tres" type="TileSet" id=9]
 [ext_resource path="res://sprites/Map Sprites/Dungeon_tileset.png" type="Texture" id=10]
 [ext_resource path="res://sprite.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Enemy.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Puzzle-Game (1).ogg" type="AudioStream" id=13]
+[ext_resource path="res://sprites/Ballons/Balao_benvindo.png" type="Texture" id=12]
+[ext_resource path="res://Enemy.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Puzzle-Game (1).ogg" type="AudioStream" id=14]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -27,6 +28,7 @@ __meta__ = {
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." index="0"]
 
+editor/display_folded = true
 layer = -1
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -77,7 +79,6 @@ texture = ExtResource( 3 )
 
 [node name="Mountains_1" type="ParallaxLayer" parent="ParallaxBackground" index="3"]
 
-editor/display_folded = true
 motion_scale = Vector2( 0.25, 1 )
 motion_offset = Vector2( 0, 0 )
 motion_mirroring = Vector2( 0, 0 )
@@ -93,7 +94,6 @@ _sections_unfolded = [ "Offset" ]
 
 [node name="Mountains_2" type="ParallaxLayer" parent="ParallaxBackground" index="4"]
 
-editor/display_folded = true
 motion_scale = Vector2( 0.1, 1 )
 motion_offset = Vector2( 0, 0 )
 motion_mirroring = Vector2( 500, 0 )
@@ -109,7 +109,6 @@ _sections_unfolded = [ "Offset" ]
 
 [node name="Mountains_3" type="ParallaxLayer" parent="ParallaxBackground" index="5"]
 
-editor/display_folded = true
 motion_scale = Vector2( 0.1, 1 )
 motion_offset = Vector2( 0, 0 )
 motion_mirroring = Vector2( 500, 0 )
@@ -587,6 +586,8 @@ __meta__ = {
 }
 
 [node name="Chao_Esquerda_TileMap" type="Node" parent="." index="10"]
+
+editor/display_folded = true
 
 [node name="Chao_esquerda_7" type="Sprite" parent="Chao_Esquerda_TileMap" index="0"]
 
@@ -1147,7 +1148,7 @@ editor/display_folded = true
 
 [node name="Pedra_direita_0" type="Sprite" parent="Pedra_direita" index="0"]
 
-position = Vector2( 1142.06, 21.9967 )
+position = Vector2( 1157.06, 21.9967 )
 rotation = -0.00420028
 texture = ExtResource( 7 )
 centered = false
@@ -1463,7 +1464,16 @@ region_enabled = true
 region_rect = Rect2( 224, 304, 32, 16 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Espinhos_4" type="Sprite" parent="Espinhos" index="4"]
+[node name="Espinhos_6" type="Sprite" parent="Espinhos" index="4"]
+
+position = Vector2( 1099, 20 )
+texture = ExtResource( 10 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 224, 304, 32, 16 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Espinhos_4" type="Sprite" parent="Espinhos" index="5"]
 
 position = Vector2( 944, 240 )
 texture = ExtResource( 10 )
@@ -1472,10 +1482,22 @@ region_enabled = true
 region_rect = Rect2( 224, 304, 32, 16 )
 _sections_unfolded = [ "Offset", "Region" ]
 
+[node name="Espinhos_5" type="Sprite" parent="Espinhos" index="6"]
+
+position = Vector2( 1131, 20 )
+texture = ExtResource( 10 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 224, 304, 32, 16 )
+_sections_unfolded = [ "Offset", "Region" ]
+
 [node name="Mech" type="Node" parent="." index="18"]
+
+editor/display_folded = true
 
 [node name="Dungeon_tileset" type="Sprite" parent="Mech" index="0"]
 
+editor/display_folded = true
 position = Vector2( 880, -64 )
 texture = ExtResource( 10 )
 centered = false
@@ -1489,7 +1511,13 @@ position = Vector2( 18, 47.9999 )
 scale = Vector2( 2.5, 2.5 )
 _sections_unfolded = [ "Collision", "collision" ]
 
-[node name="Dungeon_tileset3" type="Sprite" parent="Mech" index="1"]
+[node name="Balao_benvindo" type="Sprite" parent="Mech" index="1"]
+
+position = Vector2( 201, -48 )
+scale = Vector2( 0.212917, 0.212917 )
+texture = ExtResource( 12 )
+
+[node name="Dungeon_tileset3" type="Sprite" parent="Mech" index="2"]
 
 position = Vector2( 149, -29 )
 texture = ExtResource( 10 )
@@ -1498,7 +1526,7 @@ region_enabled = true
 region_rect = Rect2( 144, 416, 48, 64 )
 _sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="Dungeon_tileset4" type="Sprite" parent="Mech" index="2"]
+[node name="Dungeon_tileset4" type="Sprite" parent="Mech" index="3"]
 
 position = Vector2( 720, 0 )
 texture = ExtResource( 10 )
@@ -1507,7 +1535,7 @@ region_enabled = true
 region_rect = Rect2( 144, 416, 48, 64 )
 _sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="Dungeon_tileset5" type="Sprite" parent="Mech" index="3"]
+[node name="Dungeon_tileset5" type="Sprite" parent="Mech" index="4"]
 
 position = Vector2( 992, 208 )
 texture = ExtResource( 10 )
@@ -1516,9 +1544,9 @@ region_enabled = true
 region_rect = Rect2( 144, 416, 48, 64 )
 _sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="Dungeon_tileset6" type="Sprite" parent="Mech" index="4"]
+[node name="Dungeon_tileset6" type="Sprite" parent="Mech" index="5"]
 
-position = Vector2( 1137.43, -5.96238 )
+position = Vector2( 1189.43, -5.96238 )
 texture = ExtResource( 10 )
 centered = false
 region_enabled = true
@@ -1527,6 +1555,7 @@ _sections_unfolded = [ "Offset", "Region", "Transform" ]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." index="19"]
 
+editor/display_folded = true
 position = Vector2( 160, 100 )
 scale = Vector2( 12.3438, 15 )
 input_pickable = false
@@ -1576,13 +1605,33 @@ scale = Vector2( 0.0810127, 0.0666667 )
 build_mode = 0
 polygon = PoolVector2Array( 1270, 0, 1470, 0, 1570, 60, 1600, 60, 1600, 90, 1630, 90, 1630, 170, 1770, 170, 1760, -190, 1260, -340, 1170, -250, 1170, -230, 1160, -220, 1170, -190, 1180, -160, 1220, -130, 1220, -110, 1230, -90, 1240, -60, 1240, -50, 1250, -20 )
 
-[node name="Enemy" parent="." index="20" instance=ExtResource( 12 )]
+[node name="Balao_benvindo" type="Sprite" parent="StaticBody2D" index="7"]
+
+position = Vector2( 544, -256 )
+texture = ExtResource( 12 )
+
+[node name="Balao_benvindo2" type="Sprite" parent="StaticBody2D" index="8"]
+
+position = Vector2( 560, -288 )
+texture = ExtResource( 12 )
+
+[node name="Balao_benvindo3" type="Sprite" parent="StaticBody2D" index="9"]
+
+position = Vector2( 384, -96 )
+texture = ExtResource( 12 )
+
+[node name="Balao_benvindo4" type="Sprite" parent="StaticBody2D" index="10"]
+
+position = Vector2( 144, -192 )
+texture = ExtResource( 12 )
+
+[node name="Enemy" parent="." index="20" instance=ExtResource( 13 )]
 
 position = Vector2( 210.201, -16.2847 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="21"]
 
-stream = ExtResource( 13 )
+stream = ExtResource( 14 )
 volume_db = 0.0
 pitch_scale = 1.0
 autoplay = true
@@ -1604,7 +1653,7 @@ _sections_unfolded = [ "Collision" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="climb w" index="0"]
 
-position = Vector2( 1109.24, 144.87 )
+position = Vector2( 1112.24, 144.87 )
 shape = SubResource( 1 )
 
 
