@@ -6,7 +6,7 @@
 [ext_resource path="res://sprite.tscn" type="PackedScene" id=4]
 [ext_resource path="res://CollisionCave.tres" type="TileSet" id=5]
 
-[node name="StageOne" type="Node2D"]
+[node name="StageOne" type="Node2D" index="0"]
 
 [node name="Player" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -63,7 +63,7 @@ collision_layer = 2
 collision_mask = 2
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( 65541, 536870931, 0, 131077, 536870931, 0, 196613, 536870931, 0, 262149, 536870931, 0 )
+tile_data = PoolIntArray( -983052, 19, 0, -917516, 19, 0, -851980, 19, 0, -786444, 19, 0, -720908, 19, 0, -655372, 19, 0, 65541, 536870931, 0, 131077, 536870931, 0, 196613, 536870931, 0, 262149, 536870931, 0 )
 _sections_unfolded = [ "Collision" ]
 
 [node name="Climb" type="TileMap" parent="." index="5"]
