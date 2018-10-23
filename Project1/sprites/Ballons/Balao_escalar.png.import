@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/birds.png-bd679c90a0eaa667f4de2c143d655fe2.stex"
+path="res://.import/Balao_escalar.png-55fdb1578254a44a8069132df5fc0bab.stex"
 
 [deps]
 
-source_file="res://sprites/game_background_2/layers/birds.png"
-dest_files=[ "res://.import/birds.png-bd679c90a0eaa667f4de2c143d655fe2.stex" ]
+source_file="res://sprites/Ballons/Balao_escalar.png"
+dest_files=[ "res://.import/Balao_escalar.png-55fdb1578254a44a8069132df5fc0bab.stex" ]
 
 [params]
 

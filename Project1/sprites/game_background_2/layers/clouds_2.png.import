@@ -2,26 +2,25 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/clouds_2.png-cf1710585fe9202f13a4899eb09b681c.s3tc.stex"
-path.etc2="res://.import/clouds_2.png-cf1710585fe9202f13a4899eb09b681c.etc2.stex"
+path="res://.import/clouds_2.png-cf1710585fe9202f13a4899eb09b681c.stex"
 
 [deps]
 
 source_file="res://sprites/game_background_2/layers/clouds_2.png"
-dest_files=[ "res://.import/clouds_2.png-cf1710585fe9202f13a4899eb09b681c.s3tc.stex", "res://.import/clouds_2.png-cf1710585fe9202f13a4899eb09b681c.etc2.stex" ]
+dest_files=[ "res://.import/clouds_2.png-cf1710585fe9202f13a4899eb09b681c.stex" ]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
-flags/repeat=1
-flags/filter=true
-flags/mipmaps=true
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
-process/fix_alpha_border=false
+process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false

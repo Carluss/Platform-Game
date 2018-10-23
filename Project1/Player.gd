@@ -183,10 +183,6 @@ func climbladders(mode):
 			$AnimatedSprite.play("climbl")
 		velocity.y=0
 		$ladder.enabled=false
-	if $ladder.is_colliding()==true:
-		set_collision_layer_bit(1,true)
-	else:
-		set_collision_layer_bit(1,false)
 	if mode==false and is_on_floor()==false and is_ladder==true:
 		$AnimatedSprite.play("climbl")
 		is_inladder=true
@@ -232,10 +228,14 @@ func _physics_process(delta):
 	
 	if  Input.is_action_pressed("ui_jump"):	
 		jump(attmode)
-		
+	#climbladders------
+	if $ladder.is_colliding()==true:
+		set_collision_layer_bit(1,true)
+	elif $ladder.is_colliding()==false and get_collision_layer_bit(1)==true:
+		set_collision_layer_bit(1,false)	
 	if $ladder.is_colliding()==true or is_ladder==true or is_inladder==true:	
 		climbladders(false)
-	
+	#------
 	if Input.is_action_just_pressed("ui_focus_next"):
 		Arrow(attmode)
 		
@@ -285,16 +285,15 @@ func climbwalls(mode):
 		if $climbw.is_colliding()==false and not velocity.y>0:
 			$AnimatedSprite.play("climbcorner")
 			corner=true
-			jumpcorner()
+			velocity.y=0
+			if (corner==true and Input.is_action_pressed("ui_jump")) or (corner==true and Input.is_action_pressed("ui_jump") and Input.is_action_pressed("ui_right") )or (corner==true and Input.is_action_pressed("ui_jump") and Input.is_action_pressed("ui_left")):
+				corner=false
+				is_climbw=false
+				velocity.y= JUMP_POWER
+				on_ground=false
 	if $climbw.is_colliding()==false and is_climbw==false:
 		jumpedw=0
-func jumpcorner():
-	velocity.y=0
-	if (corner==true and Input.is_action_pressed("ui_jump")) or (corner==true and Input.is_action_pressed("ui_jump") and Input.is_action_pressed("ui_right") )or (corner==true and Input.is_action_pressed("ui_jump") and Input.is_action_pressed("ui_left")):
-		corner=false
-		is_climbw=false
-		velocity.y= JUMP_POWER
-		on_ground=false
+
 
 """	
 func attacking():
