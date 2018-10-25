@@ -8,7 +8,7 @@
 [ext_resource path="res://sprites/Map Sprites/Industrial assets/industrial.v2.png" type="Texture" id=6]
 [ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack01.png" type="Texture" id=7]
 
-[node name="StageOne" type="Node2D" index="0"]
+[node name="StageOne" type="Node2D"]
 
 [node name="Player" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -101,7 +101,7 @@ texture = ExtResource( 6 )
 
 [node name="Light2D" type="Light2D" parent="." index="7"]
 
-position = Vector2( 121.974, -209.759 )
+position = Vector2( 93.4469, -160.002 )
 enabled = true
 editor_only = false
 texture = ExtResource( 7 )
