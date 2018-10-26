@@ -33,7 +33,7 @@ var is_inladder=false
 var climbdir = 1
 var is_climbw=false
 var corner=false
-var jumpedw=0
+
 
 #Modes
 var attmode=false
@@ -248,7 +248,6 @@ func _physics_process(delta):
 		velocity.y += GRAVITY
 		
 	if is_on_floor()==true:
-		jumpedw=0
 		on_ground=true
 		corner=false
 		is_climbw=false
@@ -270,17 +269,14 @@ func climbwalls(mode):
 		velocity.y=-speed-5
 		$AnimatedSprite.play("climbl")
 	if is_climbw==true and mode==false:
-		if Input.is_action_just_pressed("ui_jump") and ((Input.is_action_pressed("ui_right") and fliph("nada")==false) or (Input.is_action_pressed("ui_left") and fliph("nada")==true) )and jumpedw==0:
+		if Input.is_action_just_pressed("ui_jump") and ((Input.is_action_pressed("ui_right") and fliph("nada")==false) or (Input.is_action_pressed("ui_left") and fliph("nada")==true) ):
 			velocity.y= JUMP_POWER+50
-			jumpedw =1
 			is_climbw=false
-		if Input.is_action_pressed("ui_right") and Input.is_action_just_pressed("ui_jump") and fliph("nada")==false and jumpedw==0:
+		if Input.is_action_pressed("ui_right") and Input.is_action_just_pressed("ui_jump") and fliph("nada")==false: 
 			velocity.y=JUMP_POWER+50
-			jumpedw =1
 			is_climbw=false
-		if Input.is_action_pressed("ui_left") and Input.is_action_just_pressed("ui_jump") and fliph("nada")==true and jumpedw==0:
+		if Input.is_action_pressed("ui_left") and Input.is_action_just_pressed("ui_jump") and fliph("nada")==true:
 			velocity.y=JUMP_POWER+50
-			jumpedw =1
 			is_climbw=false
 		if $climbw.is_colliding()==false and not velocity.y>0:
 			$AnimatedSprite.play("climbcorner")
@@ -291,8 +287,6 @@ func climbwalls(mode):
 				is_climbw=false
 				velocity.y= JUMP_POWER
 				on_ground=false
-	if $climbw.is_colliding()==false and is_climbw==false:
-		jumpedw=0
 
 
 """	
