@@ -21,12 +21,12 @@
 [ext_resource path="res://Enemy.tscn" type="PackedScene" id=19]
 [ext_resource path="res://Puzzle-Game (1).ogg" type="AudioStream" id=20]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 105.835 )
@@ -57,7 +57,7 @@ __meta__ = {
 
 position = Vector2( -5.72205e-006, -5.72205e-006 )
 scale = Vector2( 3.2, 3.2 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="Ballons" type="Node" parent="." index="1"]
 
@@ -2569,6 +2569,6 @@ _sections_unfolded = [ "Collision" ]
 [node name="CollisionShape2D" type="CollisionShape2D" parent="climb w" index="0"]
 
 position = Vector2( 1112.24, 144.87 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 
