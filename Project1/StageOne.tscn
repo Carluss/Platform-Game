@@ -8,7 +8,7 @@
 [ext_resource path="res://sprites/Map Sprites/Industrial assets/industrial.v2.png" type="Texture" id=6]
 [ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack01.png" type="Texture" id=7]
 
-[node name="StageOne" type="Node2D"]
+[node name="StageOne" type="Node2D" index="0"]
 
 [node name="Player" parent="." index="0" instance=ExtResource( 1 )]
 
