@@ -5,7 +5,7 @@ const TYPE="PLAYER"
 const speed=30
 const GRAVITY=10
 const JUMP_POWER=-280
-const JUMP_CLIMB=200
+const JUMP_ATTPWR=-170
 const FLOOR = Vector2(0,-1)
 const ARROW =preload("res://arrow.tscn")
 const MaxSpeed = 100
@@ -119,6 +119,13 @@ func right(mode):
 			velocity.x = min(velocity.x+speed,MaxSpeed)
 			if is_attacking==false:
 				fliph("right")
+	if mode==true and not Input.is_action_pressed("ui_down") and $Crouch.is_colliding()==false:
+		if is_attacking==false:
+			fliph("right")
+		incrouch(false)
+		velocity.x = min(velocity.x+speed,MaxSpeed)
+		if !velocity.y<0 and is_attacking==false:
+			$AnimatedSprite.play("RunSword")	
 			
 	return true
 	
@@ -142,6 +149,13 @@ func left(mode):
 			velocity.x = max(velocity.x-speed,-MaxSpeed)
 			if is_attacking==false:
 				fliph("left")
+	if mode==true and not Input.is_action_pressed("ui_down") and $Crouch.is_colliding()==false:
+		if is_attacking==false:
+			fliph("left")
+		incrouch(false)
+		velocity.x = max(velocity.x-speed,-MaxSpeed)
+		if !velocity.y<0 and is_attacking==false:
+			$AnimatedSprite.play("RunSword")	
 	return true
 
 func crouch(mode):
@@ -184,6 +198,10 @@ func jump(mode):
 		if is_on_floor()==true:
 			limitation(mode,"jump")
 			velocity.y= JUMP_POWER
+	if mode==true:
+		if is_on_floor()==true:
+			velocity.y= JUMP_ATTPWR
+			$AnimatedSprite.play("Jumpatt00")
 
 			
 func climbladders(mode):
@@ -249,7 +267,7 @@ func _physics_process(delta):
 	else:
 		idle(attmode)
 	
-	if  Input.is_action_pressed("ui_jump"):	
+	if  Input.is_action_just_pressed("ui_jump"):	
 		jump(attmode)
 	#climbladders------
 	if $ladder.is_colliding()==true:
@@ -279,9 +297,9 @@ func _physics_process(delta):
 		on_ground=false
 		if is_attacking==false and $Crouch.is_colliding()==false and is_ladder==false :
 			on_ground=false
-			if velocity.y<0 and is_ladder==false and corner==false and is_climbw==false:
+			if attmode==false and velocity.y<0 and is_ladder==false and corner==false and is_climbw==false:
 				$AnimatedSprite.play("Jump")
-			elif $Fallray.is_colliding()==false and corner==false and $climbw.is_colliding()==false:
+			elif attmode==false and $Fallray.is_colliding()==false and corner==false and $climbw.is_colliding()==false:
 				$AnimatedSprite.play("fall")	
 				
 	velocity = move_and_slide(velocity, FLOOR)

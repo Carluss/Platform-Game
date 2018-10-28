@@ -20,7 +20,7 @@ animations = [ {
 custom_solver_bias = 0.0
 extents = Vector2( 10.2496, 2.76697 )
 
-[node name="arrow" type="Area2D" index="0"]
+[node name="arrow" type="Area2D"]
 
 position = Vector2( -4.93669, -2.79031 )
 input_pickable = true
@@ -28,9 +28,12 @@ gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
+collision_layer = 9
+collision_mask = 9
 audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 1 )
+_sections_unfolded = [ "Collision" ]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
 
