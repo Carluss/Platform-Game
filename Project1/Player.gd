@@ -33,8 +33,10 @@ var is_inladder=false
 var climbdir = 1
 var is_climbw=false
 var corner=false
-
-
+#Sword Draw f----
+var swordanimation=false
+var anifinished=false
+#_---
 #Modes
 var attmode=false
 #---
@@ -56,7 +58,7 @@ func limitation(mode,state):
 			return false
 	if mode==false and state=="climbwalls":
 		print("")
-	if mode==false and state=="idle":
+	if  state=="idle":
 		if is_attacking==false and is_climbw==false:
 			return true
 		else:
@@ -154,17 +156,27 @@ func idle(mode):
 	incrouch(false)
 	velocity.x=0
 	if mode==false and limitation(mode,"idle")==true:
+		anifinished=false
 		if $Crouch.is_colliding()==true:
 			limitation(mode,"crouch")
 			incrouch(true)
 			$AnimatedSprite.play("Crouch")
 		elif $Crouch.is_colliding()==false and is_inladder==false and is_on_floor()==true:
 			limitation(mode,"idle")
-			$AnimatedSprite.play("Idle")
+			if swordanimation==false:
+				$AnimatedSprite.play("Idle")
+			else:
+				$AnimatedSprite.play("IdleSwordS")
+				$DrawSheet.start()
 			incrouch(false)
 	elif mode==true and limitation(mode,"idle")==true:
-		is_att=true
-		attacking()
+		if swordanimation==false:
+			$AnimatedSprite.play("Idleatt")
+		else:
+			$AnimatedSprite.play("IdleSwordD")
+			$DrawSheet.start()
+		incrouch(false)
+		#attacking()
 		
 		
 func jump(mode):
@@ -217,6 +229,17 @@ func _on_Arrowdelay_timeout():
 
 #--------------------------------------------	
 func _physics_process(delta):
+	if attmode==false:
+		if Input.is_action_just_pressed("ui_attack"):
+			swordanimation=true
+			attmode=true
+			print(attmode)
+	else:
+		if Input.is_action_just_pressed("ui_attack"):
+			swordanimation=true
+			attmode=false
+			print(attmode)
+		
 	if  Input.is_action_pressed("ui_right"):
 		right(attmode)
 	elif Input.is_action_pressed("ui_left") :
@@ -313,6 +336,9 @@ func _on_att_delay_timeout():
 	rdyatt=true
 """
 func _on_AnimatedSprite_animation_finished():
+	if swordanimation==true:
+		anifinished=true
+		swordanimation=false
 	if is_att==true:
 		is_attf=true
 		is_att=false
@@ -342,3 +368,7 @@ func _on_ladders_body_exited(body):
 		is_inladder=false
 		print("false")
 
+
+
+func _on_DrawSheet_timeout():
+	swordanimation=false
