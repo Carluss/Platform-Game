@@ -1,4 +1,4 @@
-[gd_scene load_steps=73 format=2]
+[gd_scene load_steps=75 format=2]
 
 [ext_resource path="res://Enemy.gd" type="Script" id=1]
 [ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Idle-00.png" type="Texture" id=2]
@@ -35,23 +35,23 @@
 [ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Hit5.png" type="Texture" id=33]
 [ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Hit6.png" type="Texture" id=34]
 [ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Hit7.png" type="Texture" id=35]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk01.png" type="Texture" id=36]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk02.png" type="Texture" id=37]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk03.png" type="Texture" id=38]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk04.png" type="Texture" id=39]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk05.png" type="Texture" id=40]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk06.png" type="Texture" id=41]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk07.png" type="Texture" id=42]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk08.png" type="Texture" id=43]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk09.png" type="Texture" id=44]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk10.png" type="Texture" id=45]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk11.png" type="Texture" id=46]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk12.png" type="Texture" id=47]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk13.png" type="Texture" id=48]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton React-00.png" type="Texture" id=49]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton React-01.png" type="Texture" id=50]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton React-02.png" type="Texture" id=51]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton React-03.png" type="Texture" id=52]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton React-00.png" type="Texture" id=36]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton React-01.png" type="Texture" id=37]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton React-02.png" type="Texture" id=38]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton React-03.png" type="Texture" id=39]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk01.png" type="Texture" id=40]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk02.png" type="Texture" id=41]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk03.png" type="Texture" id=42]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk04.png" type="Texture" id=43]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk05.png" type="Texture" id=44]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk06.png" type="Texture" id=45]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk07.png" type="Texture" id=46]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk08.png" type="Texture" id=47]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk09.png" type="Texture" id=48]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk10.png" type="Texture" id=49]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk11.png" type="Texture" id=50]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk12.png" type="Texture" id=51]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk13.png" type="Texture" id=52]
 [ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack01.png" type="Texture" id=53]
 [ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack02.png" type="Texture" id=54]
 [ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack03.png" type="Texture" id=55]
@@ -89,15 +89,15 @@ animations = [ {
 "name": "hit",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ) ],
-"loop": true,
-"name": "walk",
-"speed": 12.0
-}, {
-"frames": [ ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ) ],
+"frames": [ ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ) ],
 "loop": false,
 "name": "react",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ) ],
+"loop": true,
+"name": "walk",
+"speed": 12.0
 }, {
 "frames": [ ExtResource( 53 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 70 ) ],
 "loop": true,
@@ -105,10 +105,24 @@ animations = [ {
 "speed": 12.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="SpriteFrames" id=2]
+
+animations = [ {
+"frames": [ ExtResource( 53 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 70 ) ],
+"loop": true,
+"name": "attack",
+"speed": 12.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=3]
 
 custom_solver_bias = 0.0
-extents = Vector2( 11.0679, 16.0971 )
+extents = Vector2( 11.893, 16.0971 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 12.0552, 10 )
 
 [node name="Enemy" type="KinematicBody2D" index="0"]
 
@@ -122,30 +136,40 @@ _sections_unfolded = [ "Collision", "Transform" ]
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
 
 frames = SubResource( 1 )
-animation = "Idle"
+animation = "react"
+frame = 3
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+[node name="Animatedattack" type="AnimatedSprite" parent="." index="1"]
 
-scale = Vector2( 0.655113, 1 )
-shape = SubResource( 2 )
+position = Vector2( 7.03002, -2.98742 )
+frames = SubResource( 2 )
+animation = "attack"
+frame = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
+
+position = Vector2( 0.077258, -0.0276318 )
+scale = Vector2( 0.934776, 1 )
+shape = SubResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="RayCast2D" type="RayCast2D" parent="." index="2"]
+[node name="RayCast2D" type="RayCast2D" parent="." index="3"]
 
-position = Vector2( 9.5816, -5.16132 )
+position = Vector2( 8.08537, 11.0394 )
+scale = Vector2( 1, 0.33605 )
 enabled = true
 exclude_parent = true
 cast_to = Vector2( 0, 22 )
 collision_mask = 1
 
-[node name="Timer" type="Timer" parent="." index="3"]
+[node name="Timer" type="Timer" parent="." index="4"]
 
 process_mode = 1
 wait_time = 3.0
 one_shot = true
 autostart = false
 
-[node name="SeePlayer" type="RayCast2D" parent="." index="4"]
+[node name="SeePlayer" type="RayCast2D" parent="." index="5"]
 
 rotation = 4.71239
 scale = Vector2( 1, 1.60044 )
@@ -155,19 +179,40 @@ cast_to = Vector2( 0, 50 )
 collision_mask = 16
 _sections_unfolded = [ "Transform" ]
 
-[node name="AttPlayer" type="RayCast2D" parent="." index="5"]
+[node name="AttPlayer" type="RayCast2D" parent="." index="6"]
 
-position = Vector2( -3.46253, 0 )
+position = Vector2( -0.33736, 3.01766e-006 )
 rotation = 4.71239
-scale = Vector2( 0.769372, 0.280268 )
+scale = Vector2( 0.769372, 0.37793 )
 enabled = true
 exclude_parent = true
 cast_to = Vector2( 0, 50 )
 collision_mask = 16
 _sections_unfolded = [ "Transform" ]
 
+[node name="is_on_wall" type="Area2D" parent="." index="7"]
+
+position = Vector2( 0, -0.0873718 )
+scale = Vector2( 1, 0.43315 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 9
+collision_mask = 9
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="is_on_wall" index="0"]
+
+shape = SubResource( 4 )
+
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+
+[connection signal="body_entered" from="is_on_wall" to="." method="_on_is_on_wall_body_entered"]
 
 

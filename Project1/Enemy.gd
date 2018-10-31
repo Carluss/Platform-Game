@@ -32,7 +32,7 @@ func dead():
 
 func _physics_process(delta):
 	
-	if $SeePlayer.is_colliding()==true and done==false and is_dead==false:
+	if $SeePlayer.is_colliding()==true and done==false and is_dead==false and attplayer==false:
 		$AnimatedSprite.play("react")
 		velocity.x=0
 		react=true
@@ -40,27 +40,42 @@ func _physics_process(delta):
 		done=false
 		
 	if $AttPlayer.is_colliding()==true and is_dead==false:
+		$AnimatedSprite.visible=false
+		$Animatedattack.visible=true
 		attplayer=true
+		react=false
+		done=true
 		$SeePlayer.enabled=false
-		$AnimatedSprite.play("attack")
-
+		$Animatedattack.play("attack")
+	elif $AttPlayer.is_colliding()==false and attplayer==false:
+		$AnimatedSprite.visible=true
+		$Animatedattack.visible=false
+		$Animatedattack.stop()
+		
+	if 	is_dead==true:
+		$AnimatedSprite.visible=true
+		$Animatedattack.visible=false
+		$Animatedattack.stop()
+		
 	if $AttPlayer.is_colliding()==false:
 		$SeePlayer.enabled=true
 		
 		
-	if is_dead==false and react==false:
+	if is_dead==false and react==false and attplayer==false:
 		if done==false and attplayer==false:
 			velocity.x=SPEED*direction
 		elif done==true and attplayer==false:
-			velocity.x=SPEED+20*direction
+			velocity.x=(SPEED+30)*direction
 		elif attplayer==true:
 			velocity.x=0
 		if direction==1:
 			$AnimatedSprite.flip_h = false
+			$Animatedattack.flip_h = false
 			get_node("SeePlayer").rotation_degrees = 270
 			get_node("AttPlayer").rotation_degrees = 270
 		else:
 			$AnimatedSprite.flip_h = true
+			$Animatedattack.flip_h = true
 			get_node("SeePlayer").rotation_degrees = 90
 			get_node("AttPlayer").rotation_degrees = 90
 		if attplayer==false:
@@ -70,16 +85,19 @@ func _physics_process(delta):
 
 	velocity = move_and_slide(velocity,FLOOR)
 
-	if is_on_wall():
-		direction = direction * -1
-		$RayCast2D.position.x*=-1
-
 
 	if $RayCast2D.is_colliding()==false:
 		direction=direction*-1
 		$RayCast2D.position.x*=-1
 
-		
+
+func _on_is_on_wall_body_entered(body):
+	if "Player" in body.name:
+		print("fuck")
+	else:
+		direction = direction * -1
+		$RayCast2D.position.x*=-1
+
 """	
 func atck():
 	if hitstun >0:
@@ -103,4 +121,4 @@ func _on_AnimatedSprite_animation_finished():
 		done=true
 		$AnimatedSprite.stop()
 		react=false
-		print(react)
+
