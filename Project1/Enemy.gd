@@ -31,23 +31,22 @@ func dead():
 	$Timer.start()
 
 func _physics_process(delta):
-	
-	if $SeePlayer.is_colliding()==true and done==false and is_dead==false and attplayer==false:
-		$AnimatedSprite.play("react")
+	if $SeePlayer.is_colliding()==true and done==false and is_dead==false:
 		velocity.x=0
-		react=true
+		if $AttPlayer.is_colliding()==true:
+			$AnimatedSprite.visible=false
+			$Animatedattack.visible=true
+			attplayer=true
+			react=false
+			$Animatedattack.play("attack")
+		else:
+			$AnimatedSprite.play("react")
+			react=true	
+			
 	if $SeePlayer.is_colliding()==false:
 		done=false
 		
-	if $AttPlayer.is_colliding()==true and is_dead==false:
-		$AnimatedSprite.visible=false
-		$Animatedattack.visible=true
-		attplayer=true
-		react=false
-		done=true
-		$SeePlayer.enabled=false
-		$Animatedattack.play("attack")
-	elif $AttPlayer.is_colliding()==false and attplayer==false:
+	if $AttPlayer.is_colliding()==false and attplayer==false:
 		$AnimatedSprite.visible=true
 		$Animatedattack.visible=false
 		$Animatedattack.stop()
@@ -71,11 +70,23 @@ func _physics_process(delta):
 		if direction==1:
 			$AnimatedSprite.flip_h = false
 			$Animatedattack.flip_h = false
+			get_node("SeePlayer").position = Vector2(0, 0)
+			get_node("AttPlayer").position = Vector2(0, 0)
+			get_node("is_on_wall").position = Vector2(0, 0)
+			
+			get_node("AnimatedSprite").position = Vector2(0, 0)
+			get_node("CollisionShape2D").position = Vector2(0, 0)
 			get_node("SeePlayer").rotation_degrees = 270
 			get_node("AttPlayer").rotation_degrees = 270
 		else:
 			$AnimatedSprite.flip_h = true
 			$Animatedattack.flip_h = true
+			get_node("SeePlayer").position = Vector2(16, 0)
+			get_node("AttPlayer").position = Vector2(16, 0)
+			get_node("is_on_wall").position = Vector2(16, 0)
+			
+			get_node("AnimatedSprite").position = Vector2(16, 0)
+			get_node("CollisionShape2D").position = Vector2(16, 0)
 			get_node("SeePlayer").rotation_degrees = 90
 			get_node("AttPlayer").rotation_degrees = 90
 		if attplayer==false:

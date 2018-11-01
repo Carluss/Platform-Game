@@ -12,64 +12,64 @@
 [ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Idle-08.png" type="Texture" id=10]
 [ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Idle-09.png" type="Texture" id=11]
 [ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Idle-10.png" type="Texture" id=12]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk01.png" type="Texture" id=13]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk02.png" type="Texture" id=14]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk03.png" type="Texture" id=15]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk04.png" type="Texture" id=16]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk05.png" type="Texture" id=17]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk06.png" type="Texture" id=18]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk07.png" type="Texture" id=19]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk08.png" type="Texture" id=20]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk09.png" type="Texture" id=21]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk10.png" type="Texture" id=22]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk11.png" type="Texture" id=23]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk12.png" type="Texture" id=24]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk13.png" type="Texture" id=25]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack01.png" type="Texture" id=26]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack02.png" type="Texture" id=27]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack03.png" type="Texture" id=28]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack04.png" type="Texture" id=29]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack05.png" type="Texture" id=30]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack06.png" type="Texture" id=31]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack07.png" type="Texture" id=32]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack08.png" type="Texture" id=33]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack09.png" type="Texture" id=34]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack10.png" type="Texture" id=35]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack11.png" type="Texture" id=36]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack12.png" type="Texture" id=37]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack13.png" type="Texture" id=38]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack14.png" type="Texture" id=39]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack15.png" type="Texture" id=40]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack16.png" type="Texture" id=41]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack17.png" type="Texture" id=42]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack18.png" type="Texture" id=43]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Dead-00.png" type="Texture" id=44]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Dead-01.png" type="Texture" id=45]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Dead-02.png" type="Texture" id=46]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Dead-03.png" type="Texture" id=47]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Dead-04.png" type="Texture" id=48]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Dead-05.png" type="Texture" id=49]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Dead-06.png" type="Texture" id=50]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Dead-07.png" type="Texture" id=51]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Dead-08.png" type="Texture" id=52]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Dead-09.png" type="Texture" id=53]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Dead-10.png" type="Texture" id=54]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Dead-11.png" type="Texture" id=55]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Dead-12.png" type="Texture" id=56]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Dead-13.png" type="Texture" id=57]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Dead-14.png" type="Texture" id=58]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Hit0.png" type="Texture" id=59]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Hit1.png" type="Texture" id=60]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Hit2.png" type="Texture" id=61]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Hit3.png" type="Texture" id=62]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Hit4.png" type="Texture" id=63]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Hit5.png" type="Texture" id=64]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Hit6.png" type="Texture" id=65]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Hit7.png" type="Texture" id=66]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton React-00.png" type="Texture" id=67]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton React-01.png" type="Texture" id=68]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton React-02.png" type="Texture" id=69]
-[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton React-03.png" type="Texture" id=70]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Dead-00.png" type="Texture" id=13]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Dead-01.png" type="Texture" id=14]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Dead-02.png" type="Texture" id=15]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Dead-03.png" type="Texture" id=16]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Dead-04.png" type="Texture" id=17]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Dead-05.png" type="Texture" id=18]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Dead-06.png" type="Texture" id=19]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Dead-07.png" type="Texture" id=20]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Dead-08.png" type="Texture" id=21]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Dead-09.png" type="Texture" id=22]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Dead-10.png" type="Texture" id=23]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Dead-11.png" type="Texture" id=24]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Dead-12.png" type="Texture" id=25]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Dead-13.png" type="Texture" id=26]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Dead-14.png" type="Texture" id=27]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Hit0.png" type="Texture" id=28]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Hit1.png" type="Texture" id=29]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Hit2.png" type="Texture" id=30]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Hit3.png" type="Texture" id=31]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Hit4.png" type="Texture" id=32]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Hit5.png" type="Texture" id=33]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Hit6.png" type="Texture" id=34]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Hit7.png" type="Texture" id=35]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton React-00.png" type="Texture" id=36]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton React-01.png" type="Texture" id=37]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton React-02.png" type="Texture" id=38]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton React-03.png" type="Texture" id=39]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk01.png" type="Texture" id=40]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk02.png" type="Texture" id=41]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk03.png" type="Texture" id=42]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk04.png" type="Texture" id=43]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk05.png" type="Texture" id=44]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk06.png" type="Texture" id=45]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk07.png" type="Texture" id=46]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk08.png" type="Texture" id=47]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk09.png" type="Texture" id=48]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk10.png" type="Texture" id=49]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk11.png" type="Texture" id=50]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk12.png" type="Texture" id=51]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Walk13.png" type="Texture" id=52]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack01.png" type="Texture" id=53]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack02.png" type="Texture" id=54]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack03.png" type="Texture" id=55]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack04.png" type="Texture" id=56]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack05.png" type="Texture" id=57]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack06.png" type="Texture" id=58]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack07.png" type="Texture" id=59]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack08.png" type="Texture" id=60]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack09.png" type="Texture" id=61]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack10.png" type="Texture" id=62]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack11.png" type="Texture" id=63]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack12.png" type="Texture" id=64]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack13.png" type="Texture" id=65]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack14.png" type="Texture" id=66]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack15.png" type="Texture" id=67]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack16.png" type="Texture" id=68]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack17.png" type="Texture" id=69]
+[ext_resource path="res://sprites/Enemies/Skeleton/Skeleton Attack18.png" type="Texture" id=70]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -79,36 +79,36 @@ animations = [ {
 "name": "Idle",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ) ],
-"loop": true,
-"name": "walk",
-"speed": 12.0
-}, {
-"frames": [ ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ) ],
-"loop": true,
-"name": "attack",
-"speed": 12.0
-}, {
-"frames": [ ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ) ],
+"frames": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ) ],
 "loop": false,
 "name": "dead",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 59 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ) ],
+"frames": [ ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ) ],
 "loop": false,
 "name": "hit",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 70 ) ],
+"frames": [ ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ) ],
 "loop": false,
 "name": "react",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ) ],
+"loop": true,
+"name": "walk",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 53 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 70 ) ],
+"loop": true,
+"name": "attack",
+"speed": 12.0
 } ]
 
 [sub_resource type="SpriteFrames" id=2]
 
 animations = [ {
-"frames": [ ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ) ],
+"frames": [ ExtResource( 53 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 70 ) ],
 "loop": true,
 "name": "attack",
 "speed": 12.0
@@ -138,17 +138,19 @@ _sections_unfolded = [ "Collision", "Transform" ]
 frames = SubResource( 1 )
 animation = "react"
 frame = 3
+_sections_unfolded = [ "Transform" ]
 
 [node name="Animatedattack" type="AnimatedSprite" parent="." index="1"]
 
+visible = false
 position = Vector2( 7.03002, -2.98742 )
 frames = SubResource( 2 )
 animation = "attack"
 frame = 2
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
 
-position = Vector2( 0.077258, -0.0276318 )
 scale = Vector2( 0.934776, 1 )
 shape = SubResource( 3 )
 _sections_unfolded = [ "Transform" ]
@@ -161,6 +163,7 @@ enabled = true
 exclude_parent = true
 cast_to = Vector2( 0, 22 )
 collision_mask = 1
+_sections_unfolded = [ "Transform" ]
 
 [node name="Timer" type="Timer" parent="." index="4"]
 
@@ -203,7 +206,7 @@ collision_layer = 9
 collision_mask = 9
 audio_bus_override = false
 audio_bus_name = "Master"
-_sections_unfolded = [ "Collision" ]
+_sections_unfolded = [ "Collision", "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="is_on_wall" index="0"]
 
