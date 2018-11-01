@@ -41,7 +41,7 @@ position = Vector2( 279.807, 81.428 )
 
 [node name="ladders" type="TileMap" parent="." index="3"]
 
-position = Vector2( 1.00001, 0 )
+position = Vector2( -176.797, -1.99026 )
 scale = Vector2( 3, 3 )
 mode = 0
 tile_set = ExtResource( 4 )
