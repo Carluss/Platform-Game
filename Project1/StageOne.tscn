@@ -6,7 +6,7 @@
 [ext_resource path="res://CollisionCave.tres" type="TileSet" id=4]
 [ext_resource path="res://Enemy.tscn" type="PackedScene" id=5]
 
-[node name="StageOne" type="Node2D" index="0"]
+[node name="StageOne" type="Node2D"]
 
 [node name="Player" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -41,7 +41,6 @@ position = Vector2( 279.807, 81.428 )
 
 [node name="ladders" type="TileMap" parent="." index="3"]
 
-position = Vector2( -176.797, -1.99026 )
 scale = Vector2( 3, 3 )
 mode = 0
 tile_set = ExtResource( 4 )
@@ -60,7 +59,7 @@ collision_mask = 2
 occluder_light_mask = 1
 format = 1
 tile_data = PoolIntArray( -983052, 19, 0, -917516, 19, 0, -851980, 19, 0, -786444, 19, 0, -720908, 19, 0, -655372, 19, 0, 65541, 536870931, 0, 131077, 536870931, 0, 196613, 536870931, 0, 262149, 536870931, 0 )
-_sections_unfolded = [ "Collision" ]
+_sections_unfolded = [ "Collision", "Transform" ]
 
 [node name="Climb" type="TileMap" parent="." index="4"]
 
@@ -93,7 +92,12 @@ __meta__ = {
 position = Vector2( 433.485, 109.569 )
 collision/safe_margin = 0.001
 
-[node name="Enemy2" parent="." index="6" instance=ExtResource( 5 )]
+[node name="Enemy3" parent="." index="6" instance=ExtResource( 5 )]
+
+position = Vector2( 180, 0 )
+collision/safe_margin = 0.001
+
+[node name="Enemy2" parent="." index="7" instance=ExtResource( 5 )]
 
 position = Vector2( -130, -50 )
 

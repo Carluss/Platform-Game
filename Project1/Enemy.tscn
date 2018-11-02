@@ -124,7 +124,7 @@ extents = Vector2( 11.893, 16.0971 )
 custom_solver_bias = 0.0
 extents = Vector2( 12.0552, 10 )
 
-[node name="Enemy" type="KinematicBody2D" index="0"]
+[node name="Enemy" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 9
@@ -146,8 +146,6 @@ visible = false
 position = Vector2( 7.03002, -2.98742 )
 frames = SubResource( 2 )
 animation = "attack"
-frame = 2
-flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
 
@@ -157,7 +155,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="RayCast2D" type="RayCast2D" parent="." index="3"]
 
-position = Vector2( 8.08537, 11.0394 )
+position = Vector2( 9.62426, 10.193 )
 scale = Vector2( 1, 0.33605 )
 enabled = true
 exclude_parent = true
@@ -175,7 +173,7 @@ autostart = false
 [node name="SeePlayer" type="RayCast2D" parent="." index="5"]
 
 rotation = 4.71239
-scale = Vector2( 1, 1.60044 )
+scale = Vector2( 1, 1.79603 )
 enabled = true
 exclude_parent = true
 cast_to = Vector2( 0, 50 )
@@ -193,7 +191,18 @@ cast_to = Vector2( 0, 50 )
 collision_mask = 16
 _sections_unfolded = [ "Transform" ]
 
-[node name="is_on_wall" type="Area2D" parent="." index="7"]
+[node name="Playerabove" type="RayCast2D" parent="." index="7"]
+
+position = Vector2( 0, -16.2 )
+rotation = 3.14159
+scale = Vector2( 8, 0.107866 )
+enabled = true
+exclude_parent = true
+cast_to = Vector2( 0, 50 )
+collision_mask = 16
+_sections_unfolded = [ "Transform" ]
+
+[node name="is_on_wall" type="Area2D" parent="." index="8"]
 
 position = Vector2( 0, -0.0873718 )
 scale = Vector2( 1, 0.43315 )
@@ -213,6 +222,8 @@ _sections_unfolded = [ "Collision", "Transform" ]
 shape = SubResource( 4 )
 
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
+
+[connection signal="animation_finished" from="Animatedattack" to="." method="_on_Animatedattack_animation_finished"]
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 

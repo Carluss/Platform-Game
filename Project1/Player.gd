@@ -9,6 +9,7 @@ const JUMP_ATTPWR=-170
 const FLOOR = Vector2(0,-1)
 const ARROW =preload("res://arrow.tscn")
 const MaxSpeed = 100
+const MaxSpeedatt =45
 
 var velocity = Vector2()
 
@@ -57,7 +58,10 @@ func limitation(mode,state):
 		else:
 			return false
 	if mode==false and state=="climbwalls":
-		print("")
+		return true
+	if mode==false and state=="ladder":
+		if is_attacking==false:
+			return true
 	if  state=="idle":
 		if is_attacking==false and is_climbw==false:
 			return true
@@ -123,10 +127,23 @@ func right(mode):
 		if is_attacking==false:
 			fliph("right")
 		incrouch(false)
+		if is_att==false:
+			velocity.x = min(velocity.x+speed,MaxSpeed)
+		else:
+			velocity.x = min(velocity.x+speed,MaxSpeedatt)
+		if Input.is_action_just_pressed("ui_attack1"):
+			velocity.x = min(velocity.x+speed,MaxSpeedatt)
+			is_att=true
+			attacking()
+		if !velocity.y<0 and is_attacking==false and is_att==false:
+			$AnimatedSprite.play("RunSword")
+	elif mode==true and Input.is_action_pressed("ui_down"):
+		if is_attacking==false:
+			fliph("right")
+		incrouch(false)
 		velocity.x = min(velocity.x+speed,MaxSpeed)
 		if !velocity.y<0 and is_attacking==false:
-			$AnimatedSprite.play("RunSword")	
-			
+			$AnimatedSprite.play("RunSword")
 	return true
 	
 func left(mode):
@@ -150,6 +167,19 @@ func left(mode):
 			if is_attacking==false:
 				fliph("left")
 	if mode==true and not Input.is_action_pressed("ui_down") and $Crouch.is_colliding()==false:
+		if is_attacking==false:
+			fliph("left")
+		incrouch(false)
+		if is_att==false:
+			velocity.x = max(velocity.x-speed,-MaxSpeed)
+		else:
+			velocity.x = max(velocity.x-speed,-MaxSpeedatt)
+		if Input.is_action_just_pressed("ui_attack1"):
+			is_att=true
+			attacking()
+		if !velocity.y<0 and is_attacking==false and is_att==false:
+			$AnimatedSprite.play("RunSword")
+	elif mode==true and Input.is_action_pressed("ui_down"):
 		if is_attacking==false:
 			fliph("left")
 		incrouch(false)
@@ -184,13 +214,15 @@ func idle(mode):
 				$DrawSheet.start()
 			incrouch(false)
 	elif mode==true and limitation(mode,"idle")==true:
-		if swordanimation==false:
+		if Input.is_action_just_pressed("ui_attack1"):
+			is_att=true
+			attacking()
+		if swordanimation==false and is_att==false:
 			$AnimatedSprite.play("Idleatt")
-		else:
+		elif is_att==false:
 			$AnimatedSprite.play("IdleSwordD")
 			$DrawSheet.start()
 		incrouch(false)
-		#attacking()
 		
 		
 func jump(mode):
@@ -198,40 +230,37 @@ func jump(mode):
 		if is_on_floor()==true:
 			limitation(mode,"jump")
 			velocity.y= JUMP_POWER
-	if mode==true:
-		if is_on_floor()==true:
-			velocity.y= JUMP_ATTPWR
-			$AnimatedSprite.play("Jumpatt00")
 
 			
 func climbladders(mode):
-	if is_inladder==true and is_ladder==true:
-		if velocity.y==0:
+	if limitation(mode,"ladder")==true:
+		if is_inladder==true and is_ladder==true:
+			if velocity.y==0:
+				$AnimatedSprite.play("climbl")
+				$AnimatedSprite.stop()
+			else:
+				$AnimatedSprite.play("climbl")
+			velocity.y=0
+			$ladder.enabled=false
+		if mode==false and is_on_floor()==false and is_ladder==true:
 			$AnimatedSprite.play("climbl")
-			$AnimatedSprite.stop()
-		else:
-			$AnimatedSprite.play("climbl")
-		velocity.y=0
-		$ladder.enabled=false
-	if mode==false and is_on_floor()==false and is_ladder==true:
-		$AnimatedSprite.play("climbl")
-		is_inladder=true
-	if mode==false and Input.is_action_pressed("ui_up") and is_ladder==true:
-		is_inladder=true
-		$AnimatedSprite.play("climbl")
-		velocity.y=-speed-10
-	elif (is_ladder==true or $ladder.is_colliding()==true) and Input.is_action_pressed("ui_down"):
-		if is_on_floor()==true and $ladder.is_colliding()==false:
-			set_collision_layer_bit(1,false)
-			velocity.y=speed+10
-		else:
-			set_collision_layer_bit(1,false)
+			is_inladder=true
+		if mode==false and Input.is_action_pressed("ui_up") and is_ladder==true:
 			is_inladder=true
 			$AnimatedSprite.play("climbl")
-			velocity.y=speed+10
+			velocity.y=-speed-10
+		elif (is_ladder==true or $ladder.is_colliding()==true) and Input.is_action_pressed("ui_down"):
+			if is_on_floor()==true and $ladder.is_colliding()==false:
+				set_collision_layer_bit(1,false)
+				velocity.y=speed+10
+			else:
+				set_collision_layer_bit(1,false)
+				is_inladder=true
+				$AnimatedSprite.play("climbl")
+				velocity.y=speed+10
 
 func Arrow(mode):
-	if firearrow==true and $Crouch.is_colliding()==false and is_climbw==false:
+	if firearrow==true and $Crouch.is_colliding()==false and is_climbw==false and is_inladder==false:
 		firearrow=false
 		if limitation(mode,"arrow")==true :
 			velocity.x=0
@@ -245,9 +274,38 @@ func Arrow(mode):
 func _on_Arrowdelay_timeout():
 	firearrow=true
 
+func attacking():
+	if is_attf==true and rdyatt==true:
+		match at:
+			1:
+				$AnimatedSprite.play("attack1")
+				$AttCollision2D/AttCollision.disabled=false
+				is_attf=false
+			2:
+				$AnimatedSprite.play("attack2")
+				$AttCollision2D/AttCollision.disabled=false
+				is_attf=false
+			3:
+				$AnimatedSprite.play("attack3")
+				$AttCollision2D/AttCollision.disabled=false
+				is_attf=false
+		rdyatt=false
+		$attdelay.start()
+		at+=1
+		if at>=4:
+			at=1
+
+
+func _on_att_delay_timeout():
+	rdyatt=true
+	
+func _on_AttCollision2D_body_entered(body):
+	if body.name=="Enemy":
+		print("fuck")
+
 #--------------------------------------------	
 func _physics_process(delta):
-	if attmode==false:
+	if attmode==false and is_inladder==false and is_climbw==false and is_on_floor()==true:
 		if Input.is_action_just_pressed("ui_attack"):
 			swordanimation=true
 			attmode=true
@@ -257,6 +315,7 @@ func _physics_process(delta):
 			swordanimation=true
 			attmode=false
 			print(attmode)
+	
 		
 	if  Input.is_action_pressed("ui_right"):
 		right(attmode)
@@ -271,10 +330,13 @@ func _physics_process(delta):
 		jump(attmode)
 	#climbladders------
 	if $ladder.is_colliding()==true:
-		set_collision_layer_bit(1,true)
-	elif $ladder.is_colliding()==false and get_collision_layer_bit(1)==true:
+		if attmode==true and is_on_floor()==false:
+			set_collision_layer_bit(1,false)
+		else:
+			set_collision_layer_bit(1,true)
+	elif $ladder.is_colliding()==false and get_collision_layer_bit(1)==true and attmode==false:
 		set_collision_layer_bit(1,false)	
-	if $ladder.is_colliding()==true or is_ladder==true or is_inladder==true:	
+	if ($ladder.is_colliding()==true or is_ladder==true or is_inladder==true) and attmode==false:	
 		climbladders(false)
 	#------
 	if Input.is_action_just_pressed("ui_focus_next"):
@@ -283,7 +345,7 @@ func _physics_process(delta):
 	climbwalls(attmode)
 		
 	if is_inladder==false and corner==false:
-		if (is_climbw==true or $climbw.is_colliding()==true) and is_on_floor()==false and corner==false and velocity.y>0:
+		if (is_climbw==true or $climbw.is_colliding()==true) and attmode==false and is_on_floor()==false and corner==false and velocity.y>0:
 			is_climbw=true
 			$AnimatedSprite.play("climbwdown")
 		velocity.y += GRAVITY
@@ -305,7 +367,7 @@ func _physics_process(delta):
 	velocity = move_and_slide(velocity, FLOOR)
 	
 func climbwalls(mode):
-	if mode==false and ($climbw.is_colliding()==true and Input.is_action_pressed("ui_up"))or($climbw.is_colliding()==true and Input.is_action_pressed("ui_up") and Input.is_action_pressed("ui_right")) or($climbw.is_colliding()==true and Input.is_action_pressed("ui_up") and Input.is_action_pressed("ui_left")):
+	if mode==false and (($climbw.is_colliding()==true and Input.is_action_pressed("ui_up"))or($climbw.is_colliding()==true and Input.is_action_pressed("ui_up") and Input.is_action_pressed("ui_right")) or($climbw.is_colliding()==true and Input.is_action_pressed("ui_up") and Input.is_action_pressed("ui_left"))):
 		is_climbw=true
 		velocity.y=-speed-5
 		$AnimatedSprite.play("climbl")
@@ -330,29 +392,8 @@ func climbwalls(mode):
 				on_ground=false
 
 
-"""	
-func attacking():
-	if is_attf==true and rdyatt==true:
-		match at:
-			1:
-				$AnimatedSprite.play("attack1")
-				is_attf=false
-			2:
-				$AnimatedSprite.play("attack2")
-				is_attf=false
-			3:
-				$AnimatedSprite.play("attack3")
-				is_attf=false
-		rdyatt=false
-		$attdelay.start()
-		at+=1
-		if at>=4:
-			at=1
 
 
-func _on_att_delay_timeout():
-	rdyatt=true
-"""
 func _on_AnimatedSprite_animation_finished():
 	if swordanimation==true:
 		anifinished=true
@@ -360,6 +401,7 @@ func _on_AnimatedSprite_animation_finished():
 	if is_att==true:
 		is_attf=true
 		is_att=false
+		$AttCollision2D/AttCollision.disabled=true
 		$AnimatedSprite.stop()
 	if is_attacking==true:
 		$Arrowdelay.start()
@@ -376,7 +418,6 @@ func _on_AnimatedSprite_animation_finished():
 func _on_ladders_body_entered(body):
 	if body.get_collision_mask_bit(1)==true:
 		is_ladder=true
-		print("true")
 
 func _on_ladders_body_exited(body):
 	if body.get_collision_mask_bit(1)==true:
@@ -384,9 +425,10 @@ func _on_ladders_body_exited(body):
 		is_ladder=false
 		$ladder.enabled=true
 		is_inladder=false
-		print("false")
 
 
 
 func _on_DrawSheet_timeout():
 	swordanimation=false
+
+
