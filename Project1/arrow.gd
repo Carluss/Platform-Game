@@ -1,7 +1,7 @@
 extends Area2D
 
 const SPEED = 200
-const maxpeed=175
+const maxspeed=175
 var velocity=Vector2()
 var direction=1
 
@@ -17,8 +17,8 @@ func set_arrow_direction(dir):
 		$AnimatedSprite.flip_h=false
 
 func _physics_process(delta):
-	#velocity.x = min(velocity.x+speed*delta,MaxSpeed)
-	velocity.x=SPEED*delta*direction
+	velocity.x = min((velocity.x+SPEED)*delta*direction,maxspeed)
+	#velocity.x=SPEED*delta*direction
 	translate(velocity)
 	$AnimatedSprite.play("arrow")
 	
@@ -30,7 +30,7 @@ func _on_VisibilityNotifier2D_screen_exited():
 
 func _on_arrow_body_entered(body):
 	if "Enemy" in body.name:
-		body.dead()
+		body.hurt()
 	if "sprite" in body.name:
 		body.hit()
 	queue_free()

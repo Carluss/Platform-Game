@@ -6,7 +6,7 @@
 [ext_resource path="res://CollisionCave.tres" type="TileSet" id=4]
 [ext_resource path="res://Enemy.tscn" type="PackedScene" id=5]
 
-[node name="StageOne" type="Node2D" index="0"]
+[node name="StageOne" type="Node2D"]
 
 [node name="Player" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -87,18 +87,23 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Enemy" parent="." index="5" instance=ExtResource( 5 )]
+[node name="Enemy" type="Node2D" parent="." index="5"]
 
-position = Vector2( 433.485, 109.569 )
+position = Vector2( 279.807, 81.428 )
+
+[node name="Enemy3" parent="Enemy" index="0" instance=ExtResource( 5 )]
+
+position = Vector2( -409.807, -131.428 )
+
+[node name="Enemy" parent="Enemy" index="1" instance=ExtResource( 5 )]
+
+position = Vector2( 153.678, 28.141 )
 collision/safe_margin = 0.001
+_sections_unfolded = [ "Collision", "Transform", "Z Index" ]
 
-[node name="Enemy3" parent="." index="6" instance=ExtResource( 5 )]
+[node name="Enemy2" parent="Enemy" index="2" instance=ExtResource( 5 )]
 
-position = Vector2( 180, 0 )
+position = Vector2( -99.807, -81.428 )
 collision/safe_margin = 0.001
-
-[node name="Enemy2" parent="." index="7" instance=ExtResource( 5 )]
-
-position = Vector2( -130, -50 )
 
 

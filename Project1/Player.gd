@@ -77,11 +77,15 @@ func limitation(mode,state):
 func fliph(position):
 	if position=="right":
 		$AnimatedSprite.flip_h = false
+		$AttCollision2D/AttCollisionE.visible=false
+		$AttCollision2D/AttCollisionD.visible=true
 		get_node("climbw").rotation_degrees = 270
 		if sign($Position2D.position.x)==-1:
 			$Position2D.position.x *=-1
 	elif position=="left":
 		$AnimatedSprite.flip_h = true
+		$AttCollision2D/AttCollisionE.visible=true
+		$AttCollision2D/AttCollisionD.visible=false
 		get_node("climbw").rotation_degrees = 90
 		if sign($Position2D.position.x)==1:
 			$Position2D.position.x *=-1	
@@ -279,15 +283,24 @@ func attacking():
 		match at:
 			1:
 				$AnimatedSprite.play("attack1")
-				$AttCollision2D/AttCollision.disabled=false
+				if fliph("nada")==true:
+					$AttCollision2D/AttCollisionD.disabled=false
+				else:
+					$AttCollision2D/AttCollisionE.disabled=false
 				is_attf=false
 			2:
 				$AnimatedSprite.play("attack2")
-				$AttCollision2D/AttCollision.disabled=false
+				if fliph("nada")==true:
+					$AttCollision2D/AttCollisionD.disabled=false
+				else:
+					$AttCollision2D/AttCollisionE.disabled=false
 				is_attf=false
 			3:
 				$AnimatedSprite.play("attack3")
-				$AttCollision2D/AttCollision.disabled=false
+				if fliph("nada")==true:
+					$AttCollision2D/AttCollisionD.disabled=false
+				else:
+					$AttCollision2D/AttCollisionE.disabled=false
 				is_attf=false
 		rdyatt=false
 		$attdelay.start()
@@ -300,8 +313,8 @@ func _on_att_delay_timeout():
 	rdyatt=true
 	
 func _on_AttCollision2D_body_entered(body):
-	if body.name=="Enemy":
-		print("fuck")
+	if "Enemy" in body.name:
+		body.hurt()
 
 #--------------------------------------------	
 func _physics_process(delta):
@@ -401,7 +414,8 @@ func _on_AnimatedSprite_animation_finished():
 	if is_att==true:
 		is_attf=true
 		is_att=false
-		$AttCollision2D/AttCollision.disabled=true
+		$AttCollision2D/AttCollisionD.disabled=true
+		$AttCollision2D/AttCollisionE.disabled=true
 		$AnimatedSprite.stop()
 	if is_attacking==true:
 		$Arrowdelay.start()
