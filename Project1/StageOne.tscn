@@ -103,7 +103,7 @@ _sections_unfolded = [ "Collision", "Transform", "Z Index" ]
 
 [node name="Enemy2" parent="Enemy" index="2" instance=ExtResource( 5 )]
 
-position = Vector2( -99.807, -81.428 )
+position = Vector2( -99.807, -91.428 )
 collision/safe_margin = 0.001
 
 
