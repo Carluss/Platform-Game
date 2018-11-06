@@ -49,7 +49,7 @@ func limitation(mode,state):
 	if state=="arrowjump":
 		if is_attacking==false and is_on_floor()==false and is_climbw==false:
 			return true
-	if mode==false and state=="jump":
+	if  state=="jump":
 		if $Crouch.is_colliding()==false and is_attacking==false and is_climbw==false:
 			return true
 	if mode==false and state=="crouch":
@@ -230,7 +230,7 @@ func idle(mode):
 		
 		
 func jump(mode):
-	if mode==false and limitation(mode,"jump")==true:
+	if limitation(mode,"jump")==true:
 		if is_on_floor()==true:
 			limitation(mode,"jump")
 			velocity.y= JUMP_POWER
@@ -372,9 +372,9 @@ func _physics_process(delta):
 		on_ground=false
 		if is_attacking==false and $Crouch.is_colliding()==false and is_ladder==false :
 			on_ground=false
-			if attmode==false and velocity.y<0 and is_ladder==false and corner==false and is_climbw==false:
+			if velocity.y<0 and is_ladder==false and corner==false and is_climbw==false:
 				$AnimatedSprite.play("Jump")
-			elif attmode==false and $Fallray.is_colliding()==false and corner==false and $climbw.is_colliding()==false:
+			elif $Fallray.is_colliding()==false and corner==false and $climbw.is_colliding()==false:
 				$AnimatedSprite.play("fall")	
 				
 	velocity = move_and_slide(velocity, FLOOR)
