@@ -89,7 +89,7 @@ __meta__ = {
 
 [node name="Enemy" type="Node2D" parent="." index="5"]
 
-position = Vector2( 279.807, 81.428 )
+position = Vector2( 280, 80 )
 
 [node name="Enemy3" parent="Enemy" index="0" instance=ExtResource( 5 )]
 
