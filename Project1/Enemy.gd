@@ -54,7 +54,9 @@ func attk():
 			if is_hurt==true:
 				if $Animatedattack.is_playing()==true:
 					$Animatedattack.stop()
+					$Animatedattack.set_frame(0)
 					$AnimatedSprite.stop()
+					$AnimatedSprite.set_frame(0)
 					$AnimatedSprite.visible=true
 					$Animatedattack.visible=false
 					$AnimatedSprite.play("hit")

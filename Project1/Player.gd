@@ -313,9 +313,15 @@ func _on_att_delay_timeout():
 	rdyatt=true
 	
 func _on_AttCollision2D_body_entered(body):
-	if "Enemy" in body.name:
+	if "Enemy" in body.name or "Enemy2" in body.name:
 		body.hurt()
 
+
+var health=100
+var dmg=25
+func hurt():
+	health-=dmg
+	$AnimatedSprite.play("hurt")
 #--------------------------------------------	
 func _physics_process(delta):
 	if attmode==false and is_inladder==false and is_climbw==false and is_on_floor()==true:
