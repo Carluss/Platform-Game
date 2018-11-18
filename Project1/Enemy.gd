@@ -47,19 +47,32 @@ func hurt():
 		dead()
 	#velocity.x = min((velocity.x+SPEED)*-direction,maxspeed)
 
-func _physics_process(delta):
+func attk():
 	if ($SeePlayer.is_colliding()==true or $Playerabove.is_colliding()==true) and is_dead==false:
 		velocity.x=0
 		if $AttPlayer.is_colliding()==true or $Playerabove.is_colliding()==true:
-			$AnimatedSprite.visible=false
-			$Animatedattack.visible=true
-			attplayer=true
-			react=false
-			$Animatedattack.play("attack")
+			if is_hurt==true:
+				if $Animatedattack.is_playing()==true:
+					$Animatedattack.stop()
+					$AnimatedSprite.stop()
+					$AnimatedSprite.visible=true
+					$Animatedattack.visible=false
+					$AnimatedSprite.play("hit")
+					print(is_hurt)
+			else:
+				$AnimatedSprite.visible=false
+				$Animatedattack.visible=true
+				attplayer=true
+				react=false
+				$Animatedattack.play("attack")
 		elif done==false:
 			$AnimatedSprite.play("react")
 			react=true	
 			
+
+func _physics_process(delta):
+
+	attk()
 	if $SeePlayer.is_colliding()==false:
 		done=false
 		
@@ -84,32 +97,7 @@ func _physics_process(delta):
 			velocity.x=(SPEED+30)*direction
 		elif attplayer==true or is_hurt==true:
 			velocity.x=0
-		if direction==1:
-			$AnimatedSprite.flip_h = false
-			$Animatedattack.flip_h = false
-			get_node("RayCast2D").position = Vector2(9.624265, 10.193007)
-			get_node("SeePlayer").position = Vector2(0, 0)
-			get_node("AttPlayer").position = Vector2(0, 0)
-			get_node("is_on_wall").position = Vector2(0, 0)
-			get_node("Playerabove").position = Vector2(0, -16.2)
-			
-			get_node("AnimatedSprite").position = Vector2(0, 0)
-			get_node("CollisionShape2D").position = Vector2(0, 0)
-			get_node("SeePlayer").rotation_degrees = 270
-			get_node("AttPlayer").rotation_degrees = 270
-		else:
-			$AnimatedSprite.flip_h = true
-			$Animatedattack.flip_h = true
-			get_node("RayCast2D").position = Vector2((9.624265*-1)+7, 10.193007)
-			get_node("SeePlayer").position = Vector2(16, 0)
-			get_node("AttPlayer").position = Vector2(16, 0)
-			get_node("is_on_wall").position = Vector2(16, 0)
-			get_node("Playerabove").position = Vector2(16, -16.2)
-			
-			get_node("AnimatedSprite").position = Vector2(16, 0)
-			get_node("CollisionShape2D").position = Vector2(16, 0)
-			get_node("SeePlayer").rotation_degrees = 90
-			get_node("AttPlayer").rotation_degrees = 90
+		fliph()
 		if attplayer==false and is_hurt==false:
 			$AnimatedSprite.play("walk")
 
@@ -140,7 +128,33 @@ func _on_AnimatedSprite_animation_finished():
 		$AnimatedSprite.stop()
 		react=false
 
-
+func fliph():
+	if direction==1:
+		$AnimatedSprite.flip_h = false
+		$Animatedattack.flip_h = false
+		get_node("RayCast2D").position = Vector2(9.624265, 10.193007)
+		get_node("SeePlayer").position = Vector2(0, 0)
+		get_node("AttPlayer").position = Vector2(0, 0)
+		get_node("is_on_wall").position = Vector2(0, 0)
+		get_node("Playerabove").position = Vector2(0, -16.2)
+			
+		get_node("AnimatedSprite").position = Vector2(0, 0)
+		get_node("CollisionShape2D").position = Vector2(0, 0)
+		get_node("SeePlayer").rotation_degrees = 270
+		get_node("AttPlayer").rotation_degrees = 270
+	else:
+		$AnimatedSprite.flip_h = true
+		$Animatedattack.flip_h = true
+		get_node("RayCast2D").position = Vector2((9.624265*-1)+7, 10.193007)
+		get_node("SeePlayer").position = Vector2(16, 0)
+		get_node("AttPlayer").position = Vector2(16, 0)
+		get_node("is_on_wall").position = Vector2(16, 0)
+		get_node("Playerabove").position = Vector2(16, -16.2)
+			
+		get_node("AnimatedSprite").position = Vector2(16, 0)
+		get_node("CollisionShape2D").position = Vector2(16, 0)
+		get_node("SeePlayer").rotation_degrees = 90
+		get_node("AttPlayer").rotation_degrees = 90
 
 func _on_Animatedattack_animation_finished():
 	if attplayer==true:
