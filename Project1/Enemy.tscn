@@ -117,14 +117,14 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=3]
 
 custom_solver_bias = 0.0
-extents = Vector2( 11.893, 16.0971 )
+extents = Vector2( 11.893, 12.2097 )
 
 [sub_resource type="RectangleShape2D" id=4]
 
 custom_solver_bias = 0.0
 extents = Vector2( 12.0552, 10 )
 
-[node name="Enemy" type="KinematicBody2D"]
+[node name="Enemy" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 9
@@ -149,12 +149,14 @@ animation = "attack"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
 
+position = Vector2( 0, 4.12946 )
 scale = Vector2( 0.934776, 1 )
 shape = SubResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="RayCast2D" type="RayCast2D" parent="." index="3"]
 
+visible = false
 position = Vector2( 9.62426, 10.193 )
 scale = Vector2( 1, 0.33605 )
 enabled = true
@@ -172,6 +174,7 @@ autostart = false
 
 [node name="SeePlayer" type="RayCast2D" parent="." index="5"]
 
+visible = false
 rotation = 4.71239
 scale = Vector2( 1, 1.79603 )
 enabled = true
@@ -182,6 +185,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="AttPlayer" type="RayCast2D" parent="." index="6"]
 
+visible = false
 position = Vector2( -0.33736, 3.01766e-006 )
 rotation = 4.71239
 scale = Vector2( 0.769372, 0.37793 )
@@ -193,6 +197,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Playerabove" type="RayCast2D" parent="." index="7"]
 
+visible = false
 position = Vector2( 0, -16.2 )
 rotation = 3.14159
 scale = Vector2( 8, 0.107866 )
@@ -204,6 +209,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="is_on_wall" type="Area2D" parent="." index="8"]
 
+visible = false
 position = Vector2( 0, -0.0873718 )
 scale = Vector2( 1, 0.43315 )
 input_pickable = true
@@ -220,6 +226,31 @@ _sections_unfolded = [ "Collision", "Transform" ]
 [node name="CollisionShape2D" type="CollisionShape2D" parent="is_on_wall" index="0"]
 
 shape = SubResource( 4 )
+
+[node name="Area2D" type="Area2D" parent="." index="9"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 8
+collision_mask = 8
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision" ]
+
+[node name="ColliD" type="CollisionPolygon2D" parent="Area2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 29.3832, 15.8422, 12.2958, 15.8422, 12.1534, -8.79221, -11.057, -8.64981, -11.057, -13.9184, -4.50684, -19.4718, 6.59999, -20.0414, 17.8492, -16.0544, 24.8266, -8.9346, 27.5321, 0.463478 )
+disabled = true
+
+[node name="ColliE" type="CollisionPolygon2D" parent="Area2D" index="1"]
+
+build_mode = 0
+polygon = PoolVector2Array( 4.03687, 15.9846, -13.4777, 15.6998, -12.3386, -2.81161, -9.20588, -10.3586, -2.6557, -16.7663, 8.30873, -19.899, 15.0013, -19.899, 23.4026, -16.6239, 25.8233, -13.9184, 26.3929, -8.50742, 4.17927, -8.50742 )
+disabled = true
 
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
 

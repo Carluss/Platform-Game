@@ -60,7 +60,6 @@ func attk():
 					$AnimatedSprite.visible=true
 					$Animatedattack.visible=false
 					$AnimatedSprite.play("hit")
-					print(is_hurt)
 			else:
 				$AnimatedSprite.visible=false
 				$Animatedattack.visible=true
@@ -132,6 +131,12 @@ func _on_AnimatedSprite_animation_finished():
 
 func fliph():
 	if direction==1:
+		$Area2D/ColliE.visible=false
+		$Area2D/ColliD.visible=true
+		
+		$Area2D/ColliD.disabled=true
+		$Area2D/ColliE.disabled=false
+		
 		$AnimatedSprite.flip_h = false
 		$Animatedattack.flip_h = false
 		get_node("RayCast2D").position = Vector2(9.624265, 10.193007)
@@ -141,10 +146,15 @@ func fliph():
 		get_node("Playerabove").position = Vector2(0, -16.2)
 			
 		get_node("AnimatedSprite").position = Vector2(0, 0)
-		get_node("CollisionShape2D").position = Vector2(0, 0)
+		get_node("CollisionShape2D").position = Vector2(0, 4.129459)
 		get_node("SeePlayer").rotation_degrees = 270
 		get_node("AttPlayer").rotation_degrees = 270
 	else:
+		$Area2D/ColliE.visible=true
+		$Area2D/ColliD.visible=false
+		
+		$Area2D/ColliD.disabled=false
+		$Area2D/ColliE.disabled=true
 		$AnimatedSprite.flip_h = true
 		$Animatedattack.flip_h = true
 		get_node("RayCast2D").position = Vector2((9.624265*-1)+7, 10.193007)
@@ -154,7 +164,7 @@ func fliph():
 		get_node("Playerabove").position = Vector2(16, -16.2)
 			
 		get_node("AnimatedSprite").position = Vector2(16, 0)
-		get_node("CollisionShape2D").position = Vector2(16, 0)
+		get_node("CollisionShape2D").position = Vector2(16, 4.129459)
 		get_node("SeePlayer").rotation_degrees = 90
 		get_node("AttPlayer").rotation_degrees = 90
 
