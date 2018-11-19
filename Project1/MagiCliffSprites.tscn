@@ -18,8 +18,9 @@
 [ext_resource path="res://magicFinal.tres" type="TileSet" id=16]
 [ext_resource path="res://sprites/Map Sprites/Dungeon_tileset.png" type="Texture" id=17]
 [ext_resource path="res://sprite.tscn" type="PackedScene" id=18]
-[ext_resource path="res://Enemy.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Enemys/Enemy.tscn" type="PackedScene" id=19]
 [ext_resource path="res://Puzzle-Game (1).ogg" type="AudioStream" id=20]
+
 
 [sub_resource type="RectangleShape2D" id=1]
 

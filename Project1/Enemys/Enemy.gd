@@ -134,8 +134,8 @@ func fliph():
 		$Area2D/ColliE.visible=false
 		$Area2D/ColliD.visible=true
 		
-		$Area2D/ColliD.disabled=true
-		$Area2D/ColliE.disabled=false
+		#$Area2D/ColliD.disabled=true
+		#$Area2D/ColliE.disabled=false
 		
 		$AnimatedSprite.flip_h = false
 		$Animatedattack.flip_h = false
@@ -153,8 +153,9 @@ func fliph():
 		$Area2D/ColliE.visible=true
 		$Area2D/ColliD.visible=false
 		
-		$Area2D/ColliD.disabled=false
-		$Area2D/ColliE.disabled=true
+		#$Area2D/ColliD.disabled=false
+		#$Area2D/ColliE.disabled=true
+		
 		$AnimatedSprite.flip_h = true
 		$Animatedattack.flip_h = true
 		get_node("RayCast2D").position = Vector2((9.624265*-1)+7, 10.193007)

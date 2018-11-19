@@ -4,9 +4,9 @@
 [ext_resource path="res://Ground tileset.tres" type="TileSet" id=2]
 [ext_resource path="res://sprite.tscn" type="PackedScene" id=3]
 [ext_resource path="res://CollisionCave.tres" type="TileSet" id=4]
-[ext_resource path="res://Enemy.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Enemys/Enemy.tscn" type="PackedScene" id=5]
 
-[node name="StageOne" type="Node2D"]
+[node name="StageOne" type="Node2D" index="0"]
 
 [node name="Player" parent="." index="0" instance=ExtResource( 1 )]
 
