@@ -40,9 +40,14 @@ func dead():
 
 func hurt():
 	health-=hitstun
+	$AnimatedSprite.stop()
+	$AnimatedSprite.set_frame(0)
 	if health>0:
-		is_hurt=true
-		$AnimatedSprite.play("hit")
+		if is_hurt==true:
+			$AnimatedSprite.play("hit")
+		else:
+			is_hurt=true
+			$AnimatedSprite.play("hit")
 	else:
 		dead()
 	#velocity.x = min((velocity.x+SPEED)*-direction,maxspeed)
@@ -67,8 +72,11 @@ func attk():
 				react=false
 				$Animatedattack.play("attack")
 		elif done==false:
-			$AnimatedSprite.play("react")
-			react=true	
+			if $AnimatedSprite.is_playing()==true and react==true and is_hurt==true:
+				$AnimatedSprite.play("hit")
+			else:
+				$AnimatedSprite.play("react")
+			react=true
 			
 
 func _physics_process(delta):
