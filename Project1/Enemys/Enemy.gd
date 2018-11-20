@@ -113,7 +113,7 @@ func _physics_process(delta):
 
 
 func _on_is_on_wall_body_entered(body):
-	if body.name!="Player":
+	if body.name!="Player" and body.name!="Enemy2" and body.name!="Enemy"and body.name!="Enemy3":
 		direction = direction * -1
 		$RayCast2D.position.x*=-1
 
@@ -139,14 +139,10 @@ func fliph():
 		
 		$AnimatedSprite.flip_h = false
 		$Animatedattack.flip_h = false
-		get_node("RayCast2D").position = Vector2(9.624265, 10.193007)
-		get_node("SeePlayer").position = Vector2(0, 0)
-		get_node("AttPlayer").position = Vector2(0, 0)
-		get_node("is_on_wall").position = Vector2(0, 0)
-		get_node("Playerabove").position = Vector2(0, -16.2)
+
 			
-		get_node("AnimatedSprite").position = Vector2(0, 0)
-		get_node("CollisionShape2D").position = Vector2(0, 4.129459)
+		get_node("Animatedattack").position = Vector2(9, -3)
+		
 		get_node("SeePlayer").rotation_degrees = 270
 		get_node("AttPlayer").rotation_degrees = 270
 	else:
@@ -158,14 +154,9 @@ func fliph():
 		
 		$AnimatedSprite.flip_h = true
 		$Animatedattack.flip_h = true
-		get_node("RayCast2D").position = Vector2((9.624265*-1)+7, 10.193007)
-		get_node("SeePlayer").position = Vector2(16, 0)
-		get_node("AttPlayer").position = Vector2(16, 0)
-		get_node("is_on_wall").position = Vector2(16, 0)
-		get_node("Playerabove").position = Vector2(16, -16.2)
+
 			
-		get_node("AnimatedSprite").position = Vector2(16, 0)
-		get_node("CollisionShape2D").position = Vector2(16, 4.129459)
+		get_node("Animatedattack").position = Vector2(-10, -3)
 		get_node("SeePlayer").rotation_degrees = 90
 		get_node("AttPlayer").rotation_degrees = 90
 
