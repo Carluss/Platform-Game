@@ -39,6 +39,7 @@ _sections_unfolded = [ "Collision", "Visibility" ]
 [node name="sprite2" parent="." index="2" instance=ExtResource( 3 )]
 
 position = Vector2( 279.807, 81.428 )
+_sections_unfolded = [ "Collision" ]
 
 [node name="ladders" type="TileMap" parent="." index="3"]
 

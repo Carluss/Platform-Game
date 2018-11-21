@@ -43,11 +43,8 @@ func hurt():
 	$AnimatedSprite.stop()
 	$AnimatedSprite.set_frame(0)
 	if health>0:
-		if is_hurt==true:
-			$AnimatedSprite.play("hit")
-		else:
-			is_hurt=true
-			$AnimatedSprite.play("hit")
+		is_hurt=true
+		$AnimatedSprite.play("hit")
 	else:
 		dead()
 	#velocity.x = min((velocity.x+SPEED)*-direction,maxspeed)
@@ -68,12 +65,18 @@ func attk():
 			else:
 				$AnimatedSprite.visible=false
 				$Animatedattack.visible=true
-				attplayer=true
 				react=false
+				if $Animatedattack.get_frame()==7:
+					if direction==1:
+						$Area2D/ColliD.disabled=false
+					else:
+						$Area2D/ColliE.disabled=false
+				attplayer=true
 				$Animatedattack.play("attack")
 		elif done==false:
 			if $AnimatedSprite.is_playing()==true and react==true and is_hurt==true:
 				$AnimatedSprite.play("hit")
+				react=false
 			else:
 				$AnimatedSprite.play("react")
 			react=true
@@ -142,9 +145,6 @@ func fliph():
 		$Area2D/ColliE.visible=false
 		$Area2D/ColliD.visible=true
 		
-		#$Area2D/ColliD.disabled=true
-		#$Area2D/ColliE.disabled=false
-		
 		$AnimatedSprite.flip_h = false
 		$Animatedattack.flip_h = false
 
@@ -157,9 +157,6 @@ func fliph():
 		$Area2D/ColliE.visible=true
 		$Area2D/ColliD.visible=false
 		
-		#$Area2D/ColliD.disabled=false
-		#$Area2D/ColliE.disabled=true
-		
 		$AnimatedSprite.flip_h = true
 		$Animatedattack.flip_h = true
 
@@ -167,7 +164,14 @@ func fliph():
 		get_node("Animatedattack").position = Vector2(-10, -3)
 		get_node("SeePlayer").rotation_degrees = 90
 		get_node("AttPlayer").rotation_degrees = 90
+		
+func _on_Area2D_body_entered(body):
+	if "Player" in body.name:
+		body.hurt()
 
 func _on_Animatedattack_animation_finished():
 	if attplayer==true:
+		$Area2D/ColliE.disabled=true
+		$Area2D/ColliD.disabled=true
 		attplayer=false
+
