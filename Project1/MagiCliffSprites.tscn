@@ -21,7 +21,6 @@
 [ext_resource path="res://Enemys/Enemy.tscn" type="PackedScene" id=19]
 [ext_resource path="res://Puzzle-Game (1).ogg" type="AudioStream" id=20]
 
-
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
