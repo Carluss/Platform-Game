@@ -88,6 +88,7 @@ _sections_unfolded = [ "Offset" ]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." index="2"]
 
+editor/display_folded = true
 layer = -1
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -772,6 +773,8 @@ region_rect = Rect2( 64, 176, 64, 112 )
 _sections_unfolded = [ "Offset", "Region" ]
 
 [node name="Chao_Esquerda_TileMap" type="Node" parent="." index="11"]
+
+editor/display_folded = true
 
 [node name="Chao_esquerda_7" type="Sprite" parent="Chao_Esquerda_TileMap" index="0"]
 
@@ -1689,6 +1692,8 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 [node name="Parte_cima_gruta17" type="Node" parent="." index="17"]
 
+editor/display_folded = true
+
 [node name="Parte_cima_gruta" type="Sprite" parent="Parte_cima_gruta17" index="0"]
 
 position = Vector2( 1230.68, -68.6621 )
@@ -2445,6 +2450,7 @@ _sections_unfolded = [ "Offset", "Region", "Transform" ]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." index="20"]
 
+editor/display_folded = true
 position = Vector2( 160, 100 )
 scale = Vector2( 12.3438, 15 )
 input_pickable = false
