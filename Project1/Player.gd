@@ -41,7 +41,11 @@ var anifinished=false
 #Modes
 var attmode=false
 #---
-
+#-health
+var health=100
+var dmg=25
+var is_hurt=false
+#------
 func limitation(mode,state):
 	if state=="arrow":
 		if is_attacking==false and is_on_floor()==true and is_climbw==false:
@@ -115,7 +119,10 @@ func right(mode):
 		incrouch(false)
 		velocity.x = min(velocity.x+speed,MaxSpeed)
 		if !velocity.y<0 and is_attacking==false:
-			$AnimatedSprite.play("Run")
+			if is_hurt==true:
+				$AnimatedSprite.play("hurt")
+			else:
+				$AnimatedSprite.play("Run")
 	elif mode==false and limitation(mode,"right")==true and Input.is_action_pressed("ui_down") or $Crouch.is_colliding()==true:
 		if limitation(attmode,"crouch")==true:
 			velocity.x= speed
@@ -158,7 +165,10 @@ func left(mode):
 		incrouch(false)
 		velocity.x = max(velocity.x-speed,-MaxSpeed)
 		if !velocity.y<0 and is_attacking==false:
-			$AnimatedSprite.play("Run")
+			if is_hurt==true:
+				$AnimatedSprite.play("hurt")
+			else:
+				$AnimatedSprite.play("Run")
 	elif mode==false and limitation(mode,"left")==true and Input.is_action_pressed("ui_down") or $Crouch.is_colliding()==true:
 		if limitation(attmode,"crouch")==true:
 			velocity.x= -speed
@@ -195,7 +205,10 @@ func left(mode):
 func crouch(mode):
 	if mode==false and limitation(mode,"crouch")==true:
 		limitation(mode,"crouch")
-		$AnimatedSprite.play("Crouch")
+		if is_hurt==true:
+			$AnimatedSprite.play("hurt")
+		else:
+			$AnimatedSprite.play("Crouch")
 		incrouch(true)
 		velocity.x=0
 	return true
@@ -208,24 +221,39 @@ func idle(mode):
 		if $Crouch.is_colliding()==true:
 			limitation(mode,"crouch")
 			incrouch(true)
-			$AnimatedSprite.play("Crouch")
+			if is_hurt==true:
+				$AnimatedSprite.play("hurt")
+			else:
+				$AnimatedSprite.play("Crouch")
 		elif $Crouch.is_colliding()==false and is_inladder==false and is_on_floor()==true:
 			limitation(mode,"idle")
 			if swordanimation==false:
-				$AnimatedSprite.play("Idle")
+				if is_hurt==true:
+					$AnimatedSprite.play("hurt")
+				else:
+					$AnimatedSprite.play("Idle")
 			else:
-				$AnimatedSprite.play("IdleSwordS")
-				$DrawSheet.start()
+				if is_hurt==true:
+					$AnimatedSprite.play("hurt")
+				else:
+					$AnimatedSprite.play("IdleSwordS")
+					$DrawSheet.start()
 			incrouch(false)
 	elif mode==true and limitation(mode,"idle")==true:
 		if Input.is_action_just_pressed("ui_attack1"):
 			is_att=true
 			attacking()
 		if swordanimation==false and is_att==false:
-			$AnimatedSprite.play("Idleatt")
+			if is_hurt==true:
+				$AnimatedSprite.play("hurt")
+			else:
+				$AnimatedSprite.play("Idleatt")
 		elif is_att==false:
-			$AnimatedSprite.play("IdleSwordD")
-			$DrawSheet.start()
+			if is_hurt==true:
+				$AnimatedSprite.play("hurt")
+			else:
+				$AnimatedSprite.play("IdleSwordD")
+				$DrawSheet.start()
 		incrouch(false)
 		
 		
@@ -317,11 +345,23 @@ func _on_AttCollision2D_body_entered(body):
 		body.hurt()
 
 
-var health=100
-var dmg=25
+
 func hurt():
+	$AnimatedSprite.modulate = Color(1, 0.22, 0.37) 
 	health-=dmg
-	$AnimatedSprite.play("hurt")
+	is_hurt=true
+	if health>0:
+		print(health)
+	else:
+		dead()
+
+func dead():
+	velocity = Vector2(0,0)
+	print("dead")
+	$AnimatedSprite.play("dead")
+	
+	
+	
 #--------------------------------------------	
 func _physics_process(delta):
 	if attmode==false and is_inladder==false and is_climbw==false and is_on_floor()==true:
@@ -414,6 +454,9 @@ func climbwalls(mode):
 
 
 func _on_AnimatedSprite_animation_finished():
+	if is_hurt==true:
+		$AnimatedSprite.modulate = Color(1, 1, 1) 
+		is_hurt=false
 	if swordanimation==true:
 		anifinished=true
 		swordanimation=false

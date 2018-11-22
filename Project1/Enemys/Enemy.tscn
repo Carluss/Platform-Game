@@ -117,14 +117,14 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=3]
 
 custom_solver_bias = 0.0
-extents = Vector2( 11.893, 12.2097 )
+extents = Vector2( 9.64673, 12.2097 )
 
 [sub_resource type="RectangleShape2D" id=4]
 
 custom_solver_bias = 0.0
-extents = Vector2( 12.0552, 10 )
+extents = Vector2( 10.1418, 7.70057 )
 
-[node name="Enemy" type="KinematicBody2D" index="0"]
+[node name="Enemy" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 9
@@ -137,26 +137,25 @@ _sections_unfolded = [ "Collision", "Transform" ]
 
 frames = SubResource( 1 )
 animation = "hit"
-frame = 7
 _sections_unfolded = [ "Transform" ]
 
 [node name="Animatedattack" type="AnimatedSprite" parent="." index="1"]
 
-visible = false
-position = Vector2( 7.03002, -2.98742 )
+position = Vector2( 9, -3 )
 frames = SubResource( 2 )
 animation = "attack"
+frame = 6
+_sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
 
-position = Vector2( 0, 4.12946 )
+position = Vector2( -0.0153618, 3.7933 )
 scale = Vector2( 0.934776, 1 )
 shape = SubResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="RayCast2D" type="RayCast2D" parent="." index="3"]
 
-visible = false
 position = Vector2( 9.62426, 10.193 )
 scale = Vector2( 1, 0.33605 )
 enabled = true
@@ -174,7 +173,6 @@ autostart = false
 
 [node name="SeePlayer" type="RayCast2D" parent="." index="5"]
 
-visible = false
 rotation = 4.71239
 scale = Vector2( 1, 1.79603 )
 enabled = true
@@ -185,8 +183,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="AttPlayer" type="RayCast2D" parent="." index="6"]
 
-visible = false
-position = Vector2( -0.33736, 3.01766e-006 )
 rotation = 4.71239
 scale = Vector2( 0.769372, 0.37793 )
 enabled = true
@@ -197,8 +193,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Playerabove" type="RayCast2D" parent="." index="7"]
 
-visible = false
-position = Vector2( 0, -16.2 )
+position = Vector2( 0, -8.7 )
 rotation = 3.14159
 scale = Vector2( 8, 0.107866 )
 enabled = true
@@ -221,14 +216,17 @@ collision_layer = 9
 collision_mask = 9
 audio_bus_override = false
 audio_bus_name = "Master"
-_sections_unfolded = [ "Collision", "Transform" ]
+_sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="is_on_wall" index="0"]
 
+position = Vector2( 0, 4 )
 shape = SubResource( 4 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="Area2D" type="Area2D" parent="." index="9"]
 
+position = Vector2( -0.269234, 0.179489 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -242,14 +240,16 @@ _sections_unfolded = [ "Collision" ]
 
 [node name="ColliD" type="CollisionPolygon2D" parent="Area2D" index="0"]
 
+position = Vector2( 1.79488, -0.179487 )
 build_mode = 0
-polygon = PoolVector2Array( 29.3832, 15.8422, 12.2958, 15.8422, 12.1534, -8.79221, -11.057, -8.64981, -11.057, -13.9184, -4.50684, -19.4718, 6.59999, -20.0414, 17.8492, -16.0544, 24.8266, -8.9346, 27.5321, 0.463478 )
+polygon = PoolVector2Array( 29.3832, 15.8422, 8.52637, 15.8721, 8.34688, -8.71779, -10.2302, -9.16651, -10.1404, -12.5768, -7.08914, -16.4358, 0.0904045, -19.6666, 9.69305, -19.3076, 17.6803, -16.1666, 24.7701, -9.16651, 27.5321, 0.463478 )
 disabled = true
 
 [node name="ColliE" type="CollisionPolygon2D" parent="Area2D" index="1"]
 
+position = Vector2( -13.7309, -0.269234 )
 build_mode = 0
-polygon = PoolVector2Array( 4.03687, 15.9846, -13.4777, 15.6998, -12.3386, -2.81161, -9.20588, -10.3586, -2.6557, -16.7663, 8.30873, -19.899, 15.0013, -19.899, 23.4026, -16.6239, 25.8233, -13.9184, 26.3929, -8.50742, 4.17927, -8.50742 )
+polygon = PoolVector2Array( 4.03687, 15.9846, -16.8713, 15.9619, -16.0636, 0.974596, -10.9481, -10.6922, -2.60192, -17.423, 8.30873, -19.899, 15.0013, -19.899, 18.847, -18.1409, 23.2444, -14.0127, 23.0649, -8.89728, 4.17927, -8.50742 )
 disabled = true
 
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
@@ -259,5 +259,7 @@ disabled = true
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 
 [connection signal="body_entered" from="is_on_wall" to="." method="_on_is_on_wall_body_entered"]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 
 

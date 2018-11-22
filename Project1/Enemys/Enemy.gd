@@ -40,6 +40,8 @@ func dead():
 
 func hurt():
 	health-=hitstun
+	$AnimatedSprite.stop()
+	$AnimatedSprite.set_frame(0)
 	if health>0:
 		is_hurt=true
 		$AnimatedSprite.play("hit")
@@ -63,12 +65,21 @@ func attk():
 			else:
 				$AnimatedSprite.visible=false
 				$Animatedattack.visible=true
-				attplayer=true
 				react=false
+				if $Animatedattack.get_frame()==7:
+					if direction==1:
+						$Area2D/ColliD.disabled=false
+					else:
+						$Area2D/ColliE.disabled=false
+				attplayer=true
 				$Animatedattack.play("attack")
 		elif done==false:
-			$AnimatedSprite.play("react")
-			react=true	
+			if $AnimatedSprite.is_playing()==true and react==true and is_hurt==true:
+				$AnimatedSprite.play("hit")
+				react=false
+			else:
+				$AnimatedSprite.play("react")
+			react=true
 			
 
 func _physics_process(delta):
@@ -113,7 +124,7 @@ func _physics_process(delta):
 
 
 func _on_is_on_wall_body_entered(body):
-	if body.name!="Player":
+	if body.name!="Player" and body.name!="Enemy2" and body.name!="Enemy"and body.name!="Enemy3":
 		direction = direction * -1
 		$RayCast2D.position.x*=-1
 
@@ -134,41 +145,33 @@ func fliph():
 		$Area2D/ColliE.visible=false
 		$Area2D/ColliD.visible=true
 		
-		#$Area2D/ColliD.disabled=true
-		#$Area2D/ColliE.disabled=false
-		
 		$AnimatedSprite.flip_h = false
 		$Animatedattack.flip_h = false
-		get_node("RayCast2D").position = Vector2(9.624265, 10.193007)
-		get_node("SeePlayer").position = Vector2(0, 0)
-		get_node("AttPlayer").position = Vector2(0, 0)
-		get_node("is_on_wall").position = Vector2(0, 0)
-		get_node("Playerabove").position = Vector2(0, -16.2)
+
 			
-		get_node("AnimatedSprite").position = Vector2(0, 0)
-		get_node("CollisionShape2D").position = Vector2(0, 4.129459)
+		get_node("Animatedattack").position = Vector2(9, -3)
+		
 		get_node("SeePlayer").rotation_degrees = 270
 		get_node("AttPlayer").rotation_degrees = 270
 	else:
 		$Area2D/ColliE.visible=true
 		$Area2D/ColliD.visible=false
 		
-		#$Area2D/ColliD.disabled=false
-		#$Area2D/ColliE.disabled=true
-		
 		$AnimatedSprite.flip_h = true
 		$Animatedattack.flip_h = true
-		get_node("RayCast2D").position = Vector2((9.624265*-1)+7, 10.193007)
-		get_node("SeePlayer").position = Vector2(16, 0)
-		get_node("AttPlayer").position = Vector2(16, 0)
-		get_node("is_on_wall").position = Vector2(16, 0)
-		get_node("Playerabove").position = Vector2(16, -16.2)
+
 			
-		get_node("AnimatedSprite").position = Vector2(16, 0)
-		get_node("CollisionShape2D").position = Vector2(16, 4.129459)
+		get_node("Animatedattack").position = Vector2(-10, -3)
 		get_node("SeePlayer").rotation_degrees = 90
 		get_node("AttPlayer").rotation_degrees = 90
+		
+func _on_Area2D_body_entered(body):
+	if "Player" in body.name:
+		body.hurt()
 
 func _on_Animatedattack_animation_finished():
 	if attplayer==true:
+		$Area2D/ColliE.disabled=true
+		$Area2D/ColliD.disabled=true
 		attplayer=false
+
