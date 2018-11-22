@@ -141,10 +141,10 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Animatedattack" type="AnimatedSprite" parent="." index="1"]
 
+visible = false
 position = Vector2( 9, -3 )
 frames = SubResource( 2 )
 animation = "attack"
-frame = 6
 _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]

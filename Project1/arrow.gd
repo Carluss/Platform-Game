@@ -16,7 +16,7 @@ func set_arrow_direction(dir):
 	else:
 		$AnimatedSprite.flip_h=false
 
-func _physics_process(delta):
+func _process(delta):
 	velocity.x = min((velocity.x+SPEED)*delta*direction,maxspeed)
 	#velocity.x=SPEED*delta*direction
 	translate(velocity)

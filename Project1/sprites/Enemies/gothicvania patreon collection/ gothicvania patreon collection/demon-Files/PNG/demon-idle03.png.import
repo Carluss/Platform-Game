@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/demon-attack.png-67a4d10e66c0e336f98b2f4037072b36.stex"
+path="res://.import/demon-idle03.png-89f315a2ec4840d055d524eeb9549eee.stex"
 
 [deps]
 
-source_file="res://sprites/Enemies/gothicvania patreon collection/ gothicvania patreon collection/demon-Files/PNG/demon-attack.png"
-dest_files=[ "res://.import/demon-attack.png-67a4d10e66c0e336f98b2f4037072b36.stex" ]
+source_file="res://sprites/Enemies/gothicvania patreon collection/ gothicvania patreon collection/demon-Files/PNG/demon-idle03.png"
+dest_files=[ "res://.import/demon-idle03.png-89f315a2ec4840d055d524eeb9549eee.stex" ]
 
 [params]
 
@@ -16,7 +16,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -25,5 +25,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

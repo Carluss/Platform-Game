@@ -40,7 +40,6 @@ _sections_unfolded = [ "Collision" ]
 position = Vector2( 4.72205, 1.50248 )
 frames = SubResource( 1 )
 animation = "arrow"
-_sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
