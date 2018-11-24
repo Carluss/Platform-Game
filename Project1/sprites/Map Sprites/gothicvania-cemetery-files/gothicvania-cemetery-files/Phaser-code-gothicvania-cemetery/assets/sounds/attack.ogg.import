@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/attack.ogg-64eab5784b9163ccf55bcb3e8001d626.oggstr"
+
+[deps]
+
+source_file="res://sprites/Map Sprites/gothicvania-cemetery-files/gothicvania-cemetery-files/Phaser-code-gothicvania-cemetery/assets/sounds/attack.ogg"
+dest_files=[ "res://.import/attack.ogg-64eab5784b9163ccf55bcb3e8001d626.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

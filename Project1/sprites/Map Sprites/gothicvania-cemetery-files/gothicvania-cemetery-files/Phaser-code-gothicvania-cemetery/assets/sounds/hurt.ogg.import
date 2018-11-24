@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/hurt.ogg-4a6b81269e1269081b98cfe2aee897f1.oggstr"
+
+[deps]
+
+source_file="res://sprites/Map Sprites/gothicvania-cemetery-files/gothicvania-cemetery-files/Phaser-code-gothicvania-cemetery/assets/sounds/hurt.ogg"
+dest_files=[ "res://.import/hurt.ogg-4a6b81269e1269081b98cfe2aee897f1.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
