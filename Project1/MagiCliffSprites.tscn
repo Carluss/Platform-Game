@@ -449,8 +449,6 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 [node name="Arvores" type="Node" parent="." index="6"]
 
-editor/display_folded = true
-
 [node name="Arvore_0" type="Sprite" parent="Arvores" index="0"]
 
 position = Vector2( 32, -112 )
@@ -462,7 +460,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 [node name="Arvore_2" type="Sprite" parent="Arvores" index="1"]
 
-position = Vector2( 656, 128 )
+position = Vector2( 656, -94 )
 texture = ExtResource( 9 )
 centered = false
 region_enabled = true
@@ -2326,7 +2324,6 @@ _sections_unfolded = [ "Offset", "Region", "Transform" ]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." index="20"]
 
-editor/display_folded = true
 position = Vector2( 160, 100 )
 scale = Vector2( 12.3438, 15 )
 input_pickable = false
