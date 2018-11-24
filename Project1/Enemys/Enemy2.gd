@@ -7,39 +7,85 @@ const maxspeed=50
 const GRAVITY= 10
 
 const CAST =preload("res://Enemys/Enemy2cast.tscn")
+const SUMM = preload("res://Enemys/Enemy2Summ.tscn")
+const SUMM1 = preload("res://Enemys/Enemy2Summ.tscn")
+const SUMM2 = preload("res://Enemys/Enemy2Summ.tscn")
 
 var is_dead=false
 var direction=-1
 #---
 var is_att=false
+var is_summ=false
 var cancast=true
-var fire=0
+var cansumm=true
+
+#health
+var level=1
+var health=100
+#hurt-----
+var hitstun=25
+var is_hurt=false
+var knockdir=Vector2(0,0)
+const TYPE="ENEMY"
 
 func _ready():
 	pass
 
 func _process(delta):
-	if $SeePlayer.is_colliding()==false and fire>=1 and fire<4 and cancast==true:
-		fire+=1
+	if is_dead==false:
+		summon()
+
+	if ($SeePlayer.is_colliding()==true and $Summon.is_colliding()==false) and is_dead==false and cancast==true and is_hurt==false:
 		cancast=false
 		$AnimatedSprite.play("att")
 		is_att=true
-	if $SeePlayer.is_colliding()==true and cancast==true:
-		fire+=1
-		cancast=false
-		$AnimatedSprite.play("att")
-		is_att=true
-	if fire>=4:
-		fire=0
-	if is_dead==false and is_att==false:
+	
+	if is_dead==false and is_att==false and is_hurt==false and is_summ==false:
 		velocity.x=0
 		$AnimatedSprite.play("idle")
 		velocity.y +=GRAVITY
 		
 	velocity = move_and_slide(velocity,FLOOR)
-
-
+func summon():
+	if $Summon.is_colliding()==true and cansumm==true:
+		is_summ=true
+		cansumm=false
+		$AnimatedSprite.play("cast")
+		
+func hurt():
+	health-=hitstun
+	$AnimatedSprite.stop()
+	$AnimatedSprite.set_frame(0)
+	if health>0:
+		print("fuck")
+		is_hurt=true
+		$AnimatedSprite.play("hurt")
+	else:
+		dead()
+func dead():
+	is_dead=true
+	velocity = Vector2(0,0)
+	$AnimatedSprite.play("die")
+	$CollisionShape2D.disabled = true
+	get_node("CollisionShape2D").scale = Vector2(0, 0)
+	$Timer.start()
+	
 func _on_AnimatedSprite_animation_finished():
+	if is_summ==true:
+		is_summ=false
+		$SumTimer.start()
+		var summm = SUMM.instance()
+		var summm1 = SUMM1.instance()
+		var summm2 = SUMM2.instance()
+		get_parent().add_child(summm)
+		get_parent().add_child(summm1)
+		get_parent().add_child(summm2)
+		summm.position = $summ1.global_position
+		summm1.position = $summ2.global_position
+		summm2.position = $summ3.global_position
+		
+	if is_hurt==true:
+		is_hurt=false
 	if is_att==true:
 		is_att=false
 		$attTimer.start()
@@ -54,3 +100,11 @@ func _on_AnimatedSprite_animation_finished():
 
 func _on_attTimer_timeout():
 	cancast=true
+
+
+func _on_Timer_timeout():
+	queue_free()
+
+
+func _on_SumTimer_timeout():
+	cansumm=true

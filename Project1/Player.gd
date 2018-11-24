@@ -342,6 +342,7 @@ func _on_att_delay_timeout():
 	
 func _on_AttCollision2D_body_entered(body):
 	if "Enemy" in body.name or "Enemy2" in body.name:
+		
 		body.hurt()
 
 
