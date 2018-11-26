@@ -196,7 +196,7 @@ _sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 
 [node name="Player" parent="." index="1" instance=ExtResource( 3 )]
 
-position = Vector2( -190, -100 )
+position = Vector2( 1330, 100 )
 
 [node name="Terra" type="Node" parent="." index="2"]
 
@@ -1490,22 +1490,22 @@ polygon = PoolVector2Array( -260, -310, -260, -240, -240, -240, -240, 360, -600,
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="collisions/StaticBody2D" index="1"]
 
 build_mode = 0
-polygon = PoolVector2Array( -240, 370, -80, 370, -80, 450, 60, 450, 60, 500, -240, 500 )
+polygon = PoolVector2Array( -240, 360, -80, 360, -80, 450, 60, 450, 60, 500, -240, 500 )
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="collisions/StaticBody2D" index="2"]
 
 build_mode = 0
-polygon = PoolVector2Array( 60, 500, 340, 500, 340, 400, 610, 400, 610, 500, 860, 500, 860, 600, 960, 600, 960, 500, 1140, 500, 1140, 510, 1300, 510, 1300, 550, 1370, 550, 1370, 740 )
+polygon = PoolVector2Array( 60, 500, 340, 500, 340, 400, 610, 400, 610, 500, 860, 500, 860, 600, 960, 600, 960, 500, 1140, 500, 1150, 500, 1300, 500, 1300, 550, 1370, 550, 1370, 740 )
 
 [node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="collisions/StaticBody2D" index="3"]
 
 build_mode = 0
-polygon = PoolVector2Array( 1360, 450, 1360, 160, 1300, 160, 1300, 120, 1240, 120, 1240, 80, 880, 80, 880, -10, 670, -10, 670, 370, 950, 370, 960, 440 )
+polygon = PoolVector2Array( 1360, 450, 1360, 150, 1300, 150, 1300, 120, 1240, 120, 1240, 80, 880, 80, 880, -20, 670, -20, 670, 370, 950, 370, 960, 440 )
 
 [node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="collisions/StaticBody2D" index="4"]
 
 build_mode = 0
-polygon = PoolVector2Array( 1430, 160, 1680, 160, 1680, 250, 1920, 250, 1920, 20, 2080, 540, 1440, 890 )
+polygon = PoolVector2Array( 1430, 150, 1680, 150, 1680, 250, 1920, 250, 1920, 20, 2080, 540, 1440, 890 )
 
 [node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="collisions/StaticBody2D" index="5"]
 
