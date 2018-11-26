@@ -12,6 +12,8 @@
 
 [node name="Background" type="Node" parent="." index="0"]
 
+editor/display_folded = true
+
 [node name="background" type="Sprite" parent="Background" index="0"]
 
 position = Vector2( 488.153, 444.124 )
@@ -194,7 +196,7 @@ _sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 
 [node name="Player" parent="." index="1" instance=ExtResource( 3 )]
 
-position = Vector2( 1050, 0 )
+position = Vector2( -190, -100 )
 
 [node name="Terra" type="Node" parent="." index="2"]
 
@@ -1498,11 +1500,16 @@ polygon = PoolVector2Array( 60, 500, 340, 500, 340, 400, 610, 400, 610, 500, 860
 [node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="collisions/StaticBody2D" index="3"]
 
 build_mode = 0
-polygon = PoolVector2Array( 1370, 450, 1360, 160, 1300, 160, 1300, 120, 1240, 120, 1240, 80, 880, 80, 880, -10, 670, -10, 670, 370, 950, 370, 960, 440 )
+polygon = PoolVector2Array( 1360, 450, 1360, 160, 1300, 160, 1300, 120, 1240, 120, 1240, 80, 880, 80, 880, -10, 670, -10, 670, 370, 950, 370, 960, 440 )
 
 [node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="collisions/StaticBody2D" index="4"]
 
 build_mode = 0
 polygon = PoolVector2Array( 1430, 160, 1680, 160, 1680, 250, 1920, 250, 1920, 20, 2080, 540, 1440, 890 )
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="collisions/StaticBody2D" index="5"]
+
+build_mode = 0
+polygon = PoolVector2Array( 1180, 30, 1380, 30, 1430, 30, 1430, 100, 1680, 100, 1680, 20, 1920, 20, 1740, -70, 1240, -70, 1240, -10, 1180, -10 )
 
 
