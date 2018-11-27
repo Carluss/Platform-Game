@@ -26,7 +26,7 @@ extents = Vector2( 10, 10 )
 custom_solver_bias = 0.0
 extents = Vector2( 10, 105.835 )
 
-[node name="Kadyria_1" type="Node" index="0"]
+[node name="Kadyria_1" type="Node"]
 
 __meta__ = {
 "_edit_horizontal_guides_": [  ]
@@ -1813,7 +1813,6 @@ bus = "Master"
 
 [node name="climb w" type="Area2D" parent="." index="25"]
 
-editor/display_folded = true
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0

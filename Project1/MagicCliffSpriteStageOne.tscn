@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://sprites/Map Sprites/caverns-files-web/caverns-files-web/layers/background.png" type="Texture" id=2]
@@ -8,11 +8,16 @@
 [ext_resource path="res://sprites/Map Sprites/gothicvania-cemetery-files/gothicvania-cemetery-files/PNG/Environment/tileset.png" type="Texture" id=6]
 [ext_resource path="res://sprites/Map Sprites/gothicvania-cemetery-files/gothicvania-cemetery-files/PNG/Environment/sliced-objects/statue.png" type="Texture" id=7]
 
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 67.5329 )
+
 [node name="Node" type="Node" index="0"]
 
 [node name="Player" parent="." index="0" instance=ExtResource( 1 )]
 
-position = Vector2( -188, 12 )
+position = Vector2( 1330, 130 )
 
 [node name="Background" type="Node" parent="." index="1"]
 
@@ -1703,6 +1708,8 @@ _sections_unfolded = [ "Region" ]
 
 [node name="Espinhos" type="Node" parent="." index="4"]
 
+editor/display_folded = true
+
 [node name="tileset" type="Sprite" parent="Espinhos" index="0"]
 
 position = Vector2( 664.219, 270.011 )
@@ -3266,6 +3273,8 @@ _sections_unfolded = [ "Region" ]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="collisions" index="0"]
 
+editor/display_folded = true
+visible = false
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -3338,5 +3347,108 @@ polygon = PoolVector2Array( 60, 500, 340, 500, 340, 400, 600, 400, 600, 500, 850
 
 build_mode = 0
 polygon = PoolVector2Array( 1430, 460, 1430, 550, 1360, 550, 1360, 670, 1390, 670, 1410, 660, 1710, 660 )
+
+[node name="ClimbWall" type="Node2D" parent="collisions" index="1"]
+
+[node name="Area2D" type="Area2D" parent="collisions/ClimbWall" index="0"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 5
+collision_mask = 5
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collisions/ClimbWall/Area2D" index="0"]
+
+light_mask = 5
+position = Vector2( -90, 407.578 )
+scale = Vector2( 1, 0.601444 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="collisions/ClimbWall/Area2D" index="1"]
+
+light_mask = 5
+position = Vector2( 600, 450.738 )
+scale = Vector2( 1, 0.742734 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="collisions/ClimbWall/Area2D" index="2"]
+
+light_mask = 5
+position = Vector2( 680, 330 )
+scale = Vector2( 1, 0.601025 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="collisions/ClimbWall/Area2D" index="3"]
+
+light_mask = 5
+position = Vector2( 600, 273.579 )
+scale = Vector2( 1, 1.15223 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="collisions/ClimbWall/Area2D" index="4"]
+
+light_mask = 5
+position = Vector2( 680, 172.63 )
+scale = Vector2( 1, 0.671603 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="collisions/ClimbWall/Area2D" index="5"]
+
+light_mask = 5
+position = Vector2( 680, 21.315 )
+scale = Vector2( 1, 0.548468 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="collisions/ClimbWall/Area2D" index="6"]
+
+light_mask = 5
+position = Vector2( 870, 31.9447 )
+scale = Vector2( 1, 0.681317 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="collisions/ClimbWall/Area2D" index="7"]
+
+light_mask = 5
+position = Vector2( 1430, 235.972 )
+scale = Vector2( 1, 1.19133 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="collisions/ClimbWall/Area2D" index="8"]
+
+light_mask = 5
+position = Vector2( 1680, 201.493 )
+scale = Vector2( 1, 0.68772 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="collisions/ClimbWall/Area2D" index="9"]
+
+light_mask = 5
+position = Vector2( 1290, 612.986 )
+scale = Vector2( 1, 1.51722 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="collisions/ClimbWall/Area2D" index="10"]
+
+light_mask = 5
+position = Vector2( 600, 47.116 )
+scale = Vector2( 1, 1.74222 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Visibility" ]
 
 
