@@ -20,6 +20,7 @@
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
+_sections_unfolded = [ "Resource" ]
 
 [sub_resource type="RectangleShape2D" id=2]
 
@@ -34,7 +35,6 @@ __meta__ = {
 
 [node name="WorldComplete" type="Area2D" parent="." index="0"]
 
-editor/display_folded = true
 position = Vector2( 1588.86, 338.268 )
 rotation = -0.0144382
 scale = Vector2( 1.25, 1 )
