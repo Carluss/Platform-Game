@@ -1149,7 +1149,7 @@ _sections_unfolded = [ "Region" ]
 
 [node name="tiles_terra_49" type="Sprite" parent="Terra" index="98"]
 
-position = Vector2( 1536, -208 )
+position = Vector2( 1440, -110 )
 scale = Vector2( 2.16667, 2.16667 )
 texture = ExtResource( 4 )
 region_enabled = true
@@ -1853,7 +1853,6 @@ _sections_unfolded = [ "Region" ]
 
 [node name="tiles_espinhos_1" type="Sprite" parent="tiles_second" index="0"]
 
-visible = false
 position = Vector2( 778.537, 209.327 )
 rotation = -1.56995
 texture = ExtResource( 6 )
@@ -3009,271 +3008,298 @@ _sections_unfolded = [ "Region" ]
 
 position = Vector2( 1892, 214 )
 scale = Vector2( 2.16667, 2.16667 )
+z_index = 1
 texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 384, 144, 32, 32 )
-_sections_unfolded = [ "Region" ]
+_sections_unfolded = [ "Region", "Z Index" ]
 
 [node name="environment-tiles3" type="Sprite" parent="Dragao_1" index="1"]
 
 modulate = Color( 0.321716, 0.656239, 0.980469, 1 )
-position = Vector2( 1450.67, 342.667 )
+position = Vector2( 1450, 340 )
 scale = Vector2( 2.16667, 2.16667 )
+z_index = 1
 texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 384, 144, 32, 32 )
-_sections_unfolded = [ "Region" ]
+_sections_unfolded = [ "Region", "Z Index" ]
 
 [node name="environment-tiles2" type="Sprite" parent="Dragao_1" index="2"]
 
 position = Vector2( 1418.67, 686.667 )
 scale = Vector2( 2.16667, 2.16667 )
+z_index = 1
 texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 384, 144, 32, 32 )
-_sections_unfolded = [ "Region" ]
+_sections_unfolded = [ "Region", "Z Index" ]
 
 [node name="environment-tiles10" type="Sprite" parent="Dragao_1" index="3"]
 
 position = Vector2( 1954, 214 )
 scale = Vector2( 2.16667, 2.16667 )
+z_index = 1
 texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 448, 192, 32, 32 )
-_sections_unfolded = [ "Region" ]
+_sections_unfolded = [ "Region", "Z Index" ]
 
 [node name="environment-tiles24" type="Sprite" parent="Dragao_1" index="4"]
 
 modulate = Color( 0.321716, 0.656239, 0.980469, 1 )
 position = Vector2( 1512.67, 342.667 )
 scale = Vector2( 2.16667, 2.16667 )
+z_index = 1
 texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 448, 192, 32, 32 )
-_sections_unfolded = [ "Region" ]
+_sections_unfolded = [ "Region", "Z Index" ]
 
 [node name="environment-tiles19" type="Sprite" parent="Dragao_1" index="5"]
 
 position = Vector2( 1480.67, 686.667 )
 scale = Vector2( 2.16667, 2.16667 )
+z_index = 1
 texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 448, 192, 32, 32 )
-_sections_unfolded = [ "Region" ]
+_sections_unfolded = [ "Region", "Z Index" ]
 
 [node name="environment-tiles11" type="Sprite" parent="Dragao_1" index="6"]
 
 position = Vector2( 2019, 214 )
 scale = Vector2( 2.16667, 2.16667 )
+z_index = 1
 texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 448, 192, 32, 32 )
-_sections_unfolded = [ "Region" ]
+_sections_unfolded = [ "Region", "Z Index" ]
 
 [node name="environment-tiles25" type="Sprite" parent="Dragao_1" index="7"]
 
 modulate = Color( 0.321716, 0.656239, 0.980469, 1 )
 position = Vector2( 1577.67, 342.667 )
 scale = Vector2( 2.16667, 2.16667 )
+z_index = 1
 texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 448, 192, 32, 32 )
-_sections_unfolded = [ "Region" ]
+_sections_unfolded = [ "Region", "Z Index" ]
 
 [node name="environment-tiles21" type="Sprite" parent="Dragao_1" index="8"]
 
 position = Vector2( 1545.67, 686.667 )
 scale = Vector2( 2.16667, 2.16667 )
+z_index = 1
 texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 448, 192, 32, 32 )
-_sections_unfolded = [ "Region" ]
+_sections_unfolded = [ "Region", "Z Index" ]
 
 [node name="environment-tiles12" type="Sprite" parent="Dragao_1" index="9"]
 
 position = Vector2( 2084, 214 )
 scale = Vector2( 2.16667, 2.16667 )
+z_index = 1
 texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 448, 192, 32, 32 )
-_sections_unfolded = [ "Region" ]
+_sections_unfolded = [ "Region", "Z Index" ]
 
 [node name="environment-tiles29" type="Sprite" parent="Dragao_1" index="10"]
 
 modulate = Color( 0.321716, 0.656239, 0.980469, 1 )
 position = Vector2( 1642.67, 342.667 )
 scale = Vector2( 2.16667, 2.16667 )
+z_index = 1
 texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 448, 192, 32, 32 )
-_sections_unfolded = [ "Region" ]
+_sections_unfolded = [ "Region", "Z Index" ]
 
 [node name="environment-tiles22" type="Sprite" parent="Dragao_1" index="11"]
 
 position = Vector2( 1610.67, 686.667 )
 scale = Vector2( 2.16667, 2.16667 )
+z_index = 1
 texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 448, 192, 32, 32 )
-_sections_unfolded = [ "Region" ]
+_sections_unfolded = [ "Region", "Z Index" ]
 
 [node name="environment-tiles13" type="Sprite" parent="Dragao_1" index="12"]
 
 position = Vector2( 2144, 214 )
 scale = Vector2( 2.16667, 2.16667 )
+z_index = 1
 texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 448, 192, 32, 32 )
-_sections_unfolded = [ "Region" ]
+_sections_unfolded = [ "Region", "Z Index" ]
 
 [node name="environment-tiles26" type="Sprite" parent="Dragao_1" index="13"]
 
 modulate = Color( 0.321716, 0.656239, 0.980469, 1 )
 position = Vector2( 1702.67, 342.667 )
 scale = Vector2( 2.16667, 2.16667 )
+z_index = 1
 texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 448, 192, 32, 32 )
-_sections_unfolded = [ "Region" ]
+_sections_unfolded = [ "Region", "Z Index" ]
 
 [node name="environment-tiles17" type="Sprite" parent="Dragao_1" index="14"]
 
 position = Vector2( 1670.67, 686.667 )
 scale = Vector2( 2.16667, 2.16667 )
+z_index = 1
 texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 448, 192, 32, 32 )
-_sections_unfolded = [ "Region" ]
+_sections_unfolded = [ "Region", "Z Index" ]
 
 [node name="environment-tiles14" type="Sprite" parent="Dragao_1" index="15"]
 
 position = Vector2( 2209, 214 )
 scale = Vector2( 2.16667, 2.16667 )
+z_index = 1
 texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 448, 192, 32, 32 )
-_sections_unfolded = [ "Region" ]
+_sections_unfolded = [ "Region", "Z Index" ]
 
 [node name="environment-tiles27" type="Sprite" parent="Dragao_1" index="16"]
 
 modulate = Color( 0.321716, 0.656239, 0.980469, 1 )
 position = Vector2( 1767.67, 342.667 )
 scale = Vector2( 2.16667, 2.16667 )
+z_index = 1
 texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 448, 192, 32, 32 )
-_sections_unfolded = [ "Region" ]
+_sections_unfolded = [ "Region", "Z Index" ]
 
 [node name="environment-tiles20" type="Sprite" parent="Dragao_1" index="17"]
 
 position = Vector2( 1735.67, 686.667 )
 scale = Vector2( 2.16667, 2.16667 )
+z_index = 1
 texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 448, 192, 32, 32 )
-_sections_unfolded = [ "Region" ]
+_sections_unfolded = [ "Region", "Z Index" ]
 
 [node name="environment-tiles15" type="Sprite" parent="Dragao_1" index="18"]
 
 position = Vector2( 2275, 214 )
 scale = Vector2( 2.16667, 2.16667 )
+z_index = 1
 texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 448, 192, 32, 32 )
-_sections_unfolded = [ "Region" ]
+_sections_unfolded = [ "Region", "Z Index" ]
 
 [node name="environment-tiles30" type="Sprite" parent="Dragao_1" index="19"]
 
 modulate = Color( 0.321716, 0.656239, 0.980469, 1 )
 position = Vector2( 1833.67, 342.667 )
 scale = Vector2( 2.16667, 2.16667 )
+z_index = 1
 texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 448, 192, 32, 32 )
-_sections_unfolded = [ "Region" ]
+_sections_unfolded = [ "Region", "Z Index" ]
 
 [node name="environment-tiles23" type="Sprite" parent="Dragao_1" index="20"]
 
 position = Vector2( 1801.67, 686.667 )
 scale = Vector2( 2.16667, 2.16667 )
+z_index = 1
 texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 448, 192, 32, 32 )
-_sections_unfolded = [ "Region" ]
+_sections_unfolded = [ "Region", "Z Index" ]
 
 [node name="environment-tiles16" type="Sprite" parent="Dragao_1" index="21"]
 
 position = Vector2( 2342, 214 )
 scale = Vector2( 2.16667, 2.16667 )
+z_index = 1
 texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 448, 192, 32, 32 )
-_sections_unfolded = [ "Region" ]
+_sections_unfolded = [ "Region", "Z Index" ]
 
 [node name="environment-tiles28" type="Sprite" parent="Dragao_1" index="22"]
 
 modulate = Color( 0.321716, 0.656239, 0.980469, 1 )
 position = Vector2( 1900.67, 342.667 )
 scale = Vector2( 2.16667, 2.16667 )
+z_index = 1
 texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 448, 192, 32, 32 )
-_sections_unfolded = [ "Region" ]
+_sections_unfolded = [ "Region", "Z Index" ]
 
 [node name="environment-tiles31" type="Sprite" parent="Dragao_1" index="23"]
 
 modulate = Color( 0.321716, 0.656239, 0.980469, 1 )
 position = Vector2( 1966.67, 342.667 )
 scale = Vector2( 2.16667, 2.16667 )
+z_index = 1
 texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 448, 192, 32, 32 )
-_sections_unfolded = [ "Region" ]
+_sections_unfolded = [ "Region", "Z Index" ]
 
 [node name="environment-tiles32" type="Sprite" parent="Dragao_1" index="24"]
 
 modulate = Color( 0.321716, 0.656239, 0.980469, 1 )
 position = Vector2( 2032.67, 342.667 )
 scale = Vector2( 2.16667, 2.16667 )
+z_index = 1
 texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 448, 192, 32, 32 )
-_sections_unfolded = [ "Region" ]
+_sections_unfolded = [ "Region", "Z Index" ]
 
 [node name="environment-tiles33" type="Sprite" parent="Dragao_1" index="25"]
 
 modulate = Color( 0.321716, 0.656239, 0.980469, 1 )
 position = Vector2( 2100.67, 342.667 )
 scale = Vector2( 2.16667, 2.16667 )
+z_index = 1
 texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 448, 192, 32, 32 )
-_sections_unfolded = [ "Region" ]
+_sections_unfolded = [ "Region", "Z Index" ]
 
 [node name="environment-tiles34" type="Sprite" parent="Dragao_1" index="26"]
 
 modulate = Color( 0.321716, 0.656239, 0.980469, 1 )
 position = Vector2( 2168.67, 342.667 )
 scale = Vector2( 2.16667, 2.16667 )
+z_index = 1
 texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 448, 192, 32, 32 )
-_sections_unfolded = [ "Region" ]
+_sections_unfolded = [ "Region", "Z Index" ]
 
 [node name="environment-tiles18" type="Sprite" parent="Dragao_1" index="27"]
 
 position = Vector2( 1868.67, 686.667 )
 scale = Vector2( 2.16667, 2.16667 )
+z_index = 1
 texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 448, 192, 32, 32 )
-_sections_unfolded = [ "Region" ]
+_sections_unfolded = [ "Region", "Z Index" ]
 
 [node name="collisions" type="Node2D" parent="." index="77"]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="collisions" index="0"]
 
-editor/display_folded = true
 visible = false
 input_pickable = false
 collision_layer = 1
@@ -3293,57 +3319,38 @@ polygon = PoolVector2Array( -260, -310, -260, -240, -240, -240, -236, 364, -600,
 build_mode = 0
 polygon = PoolVector2Array( -240, 364, -80, 364, -80, 450, 64, 448, 64, 500, -240, 500 )
 
-[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="collisions/StaticBody2D" index="2"]
-
-visible = false
-build_mode = 0
-polygon = PoolVector2Array( 60, 496, 336, 496, 336, 400, 610, 400, 608, 496, 852, 496, 852, 592, 956, 592, 956, 500, 1140, 500, 1150, 500, 1300, 500, 1300, 552, 1300, 720, 1460, 720, 1300, 768 )
-
-[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="collisions/StaticBody2D" index="3"]
-
-visible = false
-build_mode = 0
-polygon = PoolVector2Array( 1372, 456, 1368, 152, 1304, 152, 1304, 120, 1240, 120, 1240, 80, 880, 80, 880, -16, 672, -16, 672, 376, 896, 376, 950, 370, 960, 448, 1144, 456 )
-
-[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="collisions/StaticBody2D" index="4"]
-
-visible = false
-position = Vector2( 7, 1 )
-build_mode = 0
-polygon = PoolVector2Array( 1680, 150, 1680, 244.649, 2053, 247, 2053, 179, 1913, 179, 1913, 15, 2265, 11, 2080, 540, 1440, 890, 1421, 719, 1493, 719, 1493, 671, 1353, 671, 1353, 655, 1353, 547, 1417, 547, 1417, 531, 1417.26, 151.429 )
-
-[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="collisions/StaticBody2D" index="5"]
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="collisions/StaticBody2D" index="2"]
 
 position = Vector2( 7, 7 )
 build_mode = 0
 polygon = PoolVector2Array( 1177, 25, 1417, 25, 1417, 97, 1558.37, 96, 1680, 96, 1680, 20, 1920, 20, 1740, -70, 1225, -71, 1225, -23, 1177, -23 )
 
-[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="collisions/StaticBody2D" index="6"]
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="collisions/StaticBody2D" index="3"]
 
 build_mode = 0
 polygon = PoolVector2Array( 590, 350, 608, 352, 608, -64, 608, -64, 1232, -64, 570, -130, -140, -260, -140, 270, -20, 270, -20, 330, 100, 330, 100, 340, 250, 340, 250, 270, 340, 270, 340, 350 )
 
-[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="collisions/StaticBody2D" index="7"]
+[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="collisions/StaticBody2D" index="4"]
 
 build_mode = 0
-polygon = PoolVector2Array( 670, -10, 880, -10, 880, 80, 1240, 80, 1240, 120, 1300, 120, 1300, 150, 1370, 150, 1370, 370, 1650, 370, 1430, 460, 1430, 450, 960, 450, 960, 370, 900, 370, 670, 370 )
+polygon = PoolVector2Array( 670, -10, 880, -10, 880, 80, 1240, 80, 1240, 120, 1300, 120, 1300, 150, 1370, 150, 1370, 370, 1440, 370, 1450, 370, 1650, 370, 1430, 460, 1430, 450, 960, 450, 960, 370, 900, 370, 670, 370 )
 
-[node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="collisions/StaticBody2D" index="8"]
+[node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="collisions/StaticBody2D" index="5"]
 
 build_mode = 0
-polygon = PoolVector2Array( 1430, 310, 1430, 150, 1680, 150, 1680, 250, 2190, 250 )
+polygon = PoolVector2Array( 1420, 310, 1420, 150, 1690, 150, 1690, 250, 2190, 250 )
 
-[node name="CollisionPolygon2D10" type="CollisionPolygon2D" parent="collisions/StaticBody2D" index="9"]
+[node name="CollisionPolygon2D10" type="CollisionPolygon2D" parent="collisions/StaticBody2D" index="6"]
 
 build_mode = 0
 polygon = PoolVector2Array( 1920, 30, 1920, 180, 1880, 180, 1860, 190, 2190, 190 )
 
-[node name="CollisionPolygon2D11" type="CollisionPolygon2D" parent="collisions/StaticBody2D" index="10"]
+[node name="CollisionPolygon2D11" type="CollisionPolygon2D" parent="collisions/StaticBody2D" index="7"]
 
 build_mode = 0
-polygon = PoolVector2Array( 60, 500, 340, 500, 340, 400, 600, 400, 600, 500, 850, 500, 850, 590, 960, 590, 960, 500, 1140, 500, 1140, 510, 1300, 510, 1300, 720, 1780, 720, 1120, 790, 540, 620 )
+polygon = PoolVector2Array( 60, 500, 340, 500, 340, 400, 610, 400, 610, 500, 850, 500, 850, 590, 960, 590, 960, 500, 1140, 500, 1140, 510, 1230, 510, 1300, 510, 1300, 720, 1780, 720, 1120, 790, 540, 620 )
 
-[node name="CollisionPolygon2D12" type="CollisionPolygon2D" parent="collisions/StaticBody2D" index="11"]
+[node name="CollisionPolygon2D12" type="CollisionPolygon2D" parent="collisions/StaticBody2D" index="8"]
 
 build_mode = 0
 polygon = PoolVector2Array( 1430, 460, 1430, 550, 1360, 550, 1360, 670, 1390, 670, 1410, 660, 1710, 660 )
@@ -3422,7 +3429,7 @@ _sections_unfolded = [ "Visibility" ]
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="collisions/ClimbWall/Area2D" index="7"]
 
 light_mask = 5
-position = Vector2( 1430, 235.972 )
+position = Vector2( 1430, 230 )
 scale = Vector2( 1, 1.19133 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Visibility" ]
