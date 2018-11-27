@@ -8,7 +8,7 @@
 [ext_resource path="res://sprites/Map Sprites/gothicvania-cemetery-files/gothicvania-cemetery-files/PNG/Environment/tileset.png" type="Texture" id=6]
 [ext_resource path="res://sprites/Map Sprites/gothicvania-cemetery-files/gothicvania-cemetery-files/PNG/Environment/sliced-objects/statue.png" type="Texture" id=7]
 
-[node name="Node" type="Node"]
+[node name="Node" type="Node" index="0"]
 
 [node name="Player" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -3313,5 +3313,30 @@ polygon = PoolVector2Array( 1177, 25, 1417, 25, 1417, 97, 1558.37, 96, 1680, 96,
 
 build_mode = 0
 polygon = PoolVector2Array( 590, 350, 608, 352, 608, -64, 608, -64, 1232, -64, 570, -130, -140, -260, -140, 270, -20, 270, -20, 330, 100, 330, 100, 340, 250, 340, 250, 270, 340, 270, 340, 350 )
+
+[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="collisions/StaticBody2D" index="7"]
+
+build_mode = 0
+polygon = PoolVector2Array( 670, -10, 880, -10, 880, 80, 1240, 80, 1240, 120, 1300, 120, 1300, 150, 1370, 150, 1370, 370, 1650, 370, 1430, 460, 1430, 450, 960, 450, 960, 370, 900, 370, 670, 370 )
+
+[node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="collisions/StaticBody2D" index="8"]
+
+build_mode = 0
+polygon = PoolVector2Array( 1430, 310, 1430, 150, 1680, 150, 1680, 250, 2190, 250 )
+
+[node name="CollisionPolygon2D10" type="CollisionPolygon2D" parent="collisions/StaticBody2D" index="9"]
+
+build_mode = 0
+polygon = PoolVector2Array( 1920, 30, 1920, 180, 1880, 180, 1860, 190, 2190, 190 )
+
+[node name="CollisionPolygon2D11" type="CollisionPolygon2D" parent="collisions/StaticBody2D" index="10"]
+
+build_mode = 0
+polygon = PoolVector2Array( 60, 500, 340, 500, 340, 400, 600, 400, 600, 500, 850, 500, 850, 590, 960, 590, 960, 500, 1140, 500, 1140, 510, 1300, 510, 1300, 720, 1780, 720, 1120, 790, 540, 620 )
+
+[node name="CollisionPolygon2D12" type="CollisionPolygon2D" parent="collisions/StaticBody2D" index="11"]
+
+build_mode = 0
+polygon = PoolVector2Array( 1430, 460, 1430, 550, 1360, 550, 1360, 670, 1390, 670, 1410, 660, 1710, 660 )
 
 
