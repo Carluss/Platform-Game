@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://cast.gd" type="Script" id=1]
+[ext_resource path="res://Enemys/cast.gd" type="Script" id=1]
 [ext_resource path="res://sprites/Enemies/Necromancer/projectile/necromancer-projectile-projectile-00.png" type="Texture" id=2]
 [ext_resource path="res://sprites/Enemies/Necromancer/projectile/necromancer-projectile-projectile-01.png" type="Texture" id=3]
 [ext_resource path="res://sprites/Enemies/Necromancer/projectile/necromancer-projectile-projectile-02.png" type="Texture" id=4]

@@ -24,6 +24,8 @@ var attplayer=false
 var level=1
 var health=100
 
+var wall=false
+
 func _ready():
 	pass
 	
@@ -167,6 +169,7 @@ func fliph():
 		
 func _on_Area2D_body_entered(body):
 	if "Player" in body.name:
+		wall=true
 		body.hurt()
 
 func _on_Animatedattack_animation_finished():

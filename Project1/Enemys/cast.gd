@@ -5,6 +5,8 @@ const maxspeed=175
 var velocity=Vector2()
 var direction=1
 
+var player=false
+
 func _ready():
 	pass
 
@@ -26,6 +28,7 @@ func _process(delta):
 
 func _on_cast_body_entered(body):
 	if "Player" in body.name:
+		player=true
 		body.hurt()
 	queue_free()
 

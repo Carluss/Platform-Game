@@ -5,6 +5,8 @@ const maxspeed=175
 var velocity=Vector2()
 var direction=1
 
+var enemy=false
+
 func _ready():
 	pass
 
@@ -30,6 +32,7 @@ func _on_VisibilityNotifier2D_screen_exited():
 
 func _on_arrow_body_entered(body):
 	if "Enemy" in body.name:
+		enemy=true
 		body.hurt()
 	if "sprite" in body.name:
 		body.hit()
