@@ -3286,6 +3286,7 @@ polygon = PoolVector2Array( -240, 364, -80, 364, -80, 450, 64, 448, 64, 500, -24
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="collisions/StaticBody2D" index="2"]
 
+visible = false
 build_mode = 0
 polygon = PoolVector2Array( 60, 496, 336, 496, 336, 400, 610, 400, 608, 496, 852, 496, 852, 592, 956, 592, 956, 500, 1140, 500, 1150, 500, 1300, 500, 1300, 552, 1300, 720, 1460, 720, 1300, 768 )
 

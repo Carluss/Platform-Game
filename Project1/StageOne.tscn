@@ -8,7 +8,7 @@
 [ext_resource path="res://Enemys/Enemy1.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Enemys/Enemy2.tscn" type="PackedScene" id=7]
 
-[node name="StageOne" type="Node2D"]
+[node name="StageOne" type="Node2D" index="0"]
 
 [node name="Player" parent="." index="0" instance=ExtResource( 1 )]
 

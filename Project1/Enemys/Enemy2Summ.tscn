@@ -43,7 +43,7 @@ animations = [ {
 "speed": 7.0
 } ]
 
-[node name="Summ" type="Area2D" index="0"]
+[node name="Summ" type="Area2D"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
