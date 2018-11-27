@@ -8,8 +8,6 @@ const GRAVITY= 10
 
 const CAST =preload("res://Enemys/Enemy2cast.tscn")
 const SUMM = preload("res://Enemys/Enemy2Summ.tscn")
-const SUMM1 = preload("res://Enemys/Enemy2Summ.tscn")
-const SUMM2 = preload("res://Enemys/Enemy2Summ.tscn")
 
 var is_dead=false
 var direction=-1
@@ -32,7 +30,7 @@ func _ready():
 	pass
 
 func _process(delta):
-	if is_dead==false:
+	if is_dead==false and is_hurt==false and is_att==false:
 		summon()
 
 	if ($SeePlayer.is_colliding()==true and $Summon.is_colliding()==false) and is_dead==false and cancast==true and is_hurt==false:
@@ -53,11 +51,11 @@ func summon():
 		$AnimatedSprite.play("cast")
 		
 func hurt():
+	is_summ=false
 	health-=hitstun
 	$AnimatedSprite.stop()
 	$AnimatedSprite.set_frame(0)
 	if health>0:
-		print("fuck")
 		is_hurt=true
 		$AnimatedSprite.play("hurt")
 	else:
@@ -75,8 +73,8 @@ func _on_AnimatedSprite_animation_finished():
 		is_summ=false
 		$SumTimer.start()
 		var summm = SUMM.instance()
-		var summm1 = SUMM1.instance()
-		var summm2 = SUMM2.instance()
+		var summm1 = SUMM.instance()
+		var summm2 = SUMM.instance()
 		get_parent().add_child(summm)
 		get_parent().add_child(summm1)
 		get_parent().add_child(summm2)

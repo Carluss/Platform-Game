@@ -5,17 +5,17 @@
 [ext_resource path="res://sprites/Enemies/Undead Warrior/Individual Sprites/undead-warrior-idle-01.png" type="Texture" id=3]
 [ext_resource path="res://sprites/Enemies/Undead Warrior/Individual Sprites/undead-warrior-idle-02.png" type="Texture" id=4]
 [ext_resource path="res://sprites/Enemies/Undead Warrior/Individual Sprites/undead-warrior-idle-03.png" type="Texture" id=5]
-[ext_resource path="res://sprites/Enemies/Undead Warrior/Individual Sprites/undead-warrior-run-00.png" type="Texture" id=6]
-[ext_resource path="res://sprites/Enemies/Undead Warrior/Individual Sprites/undead-warrior-run-01.png" type="Texture" id=7]
-[ext_resource path="res://sprites/Enemies/Undead Warrior/Individual Sprites/undead-warrior-run-02.png" type="Texture" id=8]
-[ext_resource path="res://sprites/Enemies/Undead Warrior/Individual Sprites/undead-warrior-run-03.png" type="Texture" id=9]
-[ext_resource path="res://sprites/Enemies/Undead Warrior/Individual Sprites/undead-warrior-run-04.png" type="Texture" id=10]
-[ext_resource path="res://sprites/Enemies/Undead Warrior/Individual Sprites/undead-warrior-run-05.png" type="Texture" id=11]
-[ext_resource path="res://sprites/Enemies/Undead Warrior/Individual Sprites/undead-warrior-attack-00.png" type="Texture" id=12]
-[ext_resource path="res://sprites/Enemies/Undead Warrior/Individual Sprites/undead-warrior-attack-01.png" type="Texture" id=13]
-[ext_resource path="res://sprites/Enemies/Undead Warrior/Individual Sprites/undead-warrior-attack-02.png" type="Texture" id=14]
-[ext_resource path="res://sprites/Enemies/Undead Warrior/Individual Sprites/undead-warrior-attack-03.png" type="Texture" id=15]
-[ext_resource path="res://sprites/Enemies/Undead Warrior/Individual Sprites/undead-warrior-attack-04.png" type="Texture" id=16]
+[ext_resource path="res://sprites/Enemies/Undead Warrior/Individual Sprites/undead-warrior-attack-00.png" type="Texture" id=6]
+[ext_resource path="res://sprites/Enemies/Undead Warrior/Individual Sprites/undead-warrior-attack-01.png" type="Texture" id=7]
+[ext_resource path="res://sprites/Enemies/Undead Warrior/Individual Sprites/undead-warrior-attack-02.png" type="Texture" id=8]
+[ext_resource path="res://sprites/Enemies/Undead Warrior/Individual Sprites/undead-warrior-attack-03.png" type="Texture" id=9]
+[ext_resource path="res://sprites/Enemies/Undead Warrior/Individual Sprites/undead-warrior-attack-04.png" type="Texture" id=10]
+[ext_resource path="res://sprites/Enemies/Undead Warrior/Individual Sprites/undead-warrior-run-00.png" type="Texture" id=11]
+[ext_resource path="res://sprites/Enemies/Undead Warrior/Individual Sprites/undead-warrior-run-01.png" type="Texture" id=12]
+[ext_resource path="res://sprites/Enemies/Undead Warrior/Individual Sprites/undead-warrior-run-02.png" type="Texture" id=13]
+[ext_resource path="res://sprites/Enemies/Undead Warrior/Individual Sprites/undead-warrior-run-03.png" type="Texture" id=14]
+[ext_resource path="res://sprites/Enemies/Undead Warrior/Individual Sprites/undead-warrior-run-04.png" type="Texture" id=15]
+[ext_resource path="res://sprites/Enemies/Undead Warrior/Individual Sprites/undead-warrior-run-05.png" type="Texture" id=16]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -25,15 +25,15 @@ animations = [ {
 "name": "idle",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
-"loop": true,
-"name": "walk",
-"speed": 7.0
-}, {
-"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
+"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
 "loop": true,
 "name": "att",
 "speed": 12.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "walk",
+"speed": 7.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]

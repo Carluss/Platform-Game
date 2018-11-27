@@ -8,7 +8,7 @@ var canfly=false
 var stop=false
 func _ready():
 	$AnimatedSprite.visible=false
-	$AnimatedSprite.modulate = Color(1, 0.22, 0.37) 
+
 	$AnimatedSprite2.visible=true
 	$AnimatedSprite2.play("start")
 	
@@ -27,7 +27,7 @@ func _on_VisibilityNotifier2D_screen_exited():
 func _on_Summ_body_entered(body):
 	stop=true
 	$AnimatedSprite.visible=false
-	if "Player" in body.name:
+	if "Player" in body.name and $AnimatedSprite3.visible==false:
 		body.hurt()
 	$AnimatedSprite3.visible=true
 	$AnimatedSprite3.play("fall")
