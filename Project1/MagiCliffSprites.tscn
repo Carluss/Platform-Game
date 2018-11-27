@@ -2217,4 +2217,11 @@ _sections_unfolded = [ "Collision" ]
 position = Vector2( 1112.24, 144.87 )
 shape = SubResource( 2 )
 
+[node name="Magic-cliffs_tileset" type="Sprite" parent="." index="24"]
+
+position = Vector2( -400, -176 )
+texture = ExtResource( 9 )
+region_enabled = true
+_sections_unfolded = [ "Region" ]
+
 
