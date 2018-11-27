@@ -8,11 +8,11 @@
 [ext_resource path="res://sprites/Map Sprites/gothicvania-cemetery-files/gothicvania-cemetery-files/PNG/Environment/tileset.png" type="Texture" id=6]
 [ext_resource path="res://sprites/Map Sprites/gothicvania-cemetery-files/gothicvania-cemetery-files/PNG/Environment/sliced-objects/statue.png" type="Texture" id=7]
 
-[node name="Node" type="Node" index="0"]
+[node name="Node" type="Node"]
 
 [node name="Player" parent="." index="0" instance=ExtResource( 1 )]
 
-position = Vector2( 1164, 480 )
+position = Vector2( -188, 12 )
 
 [node name="Background" type="Node" parent="." index="1"]
 
