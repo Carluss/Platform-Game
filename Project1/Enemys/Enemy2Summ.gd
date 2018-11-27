@@ -30,6 +30,7 @@ func _on_Summ_body_entered(body):
 	if "Player" in body.name and $AnimatedSprite3.visible==false:
 		body.hurt()
 	$AnimatedSprite3.visible=true
+	$AnimatedSprite3.position.y+=6
 	$AnimatedSprite3.play("fall")
 
 

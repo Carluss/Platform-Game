@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Enemys/Enemy2Summ.gd" type="Script" id=1]
 [ext_resource path="res://sprites/Enemies/Necromancer/projectile/necromancer-projectile-projectile-00.png" type="Texture" id=2]
@@ -7,9 +7,14 @@
 [ext_resource path="res://sprites/Enemies/gothicvania patreon collection/ gothicvania patreon collection/demon-Files/PNG/blue0.png" type="Texture" id=5]
 [ext_resource path="res://sprites/Enemies/gothicvania patreon collection/ gothicvania patreon collection/demon-Files/PNG/blue3.png" type="Texture" id=6]
 [ext_resource path="res://sprites/Enemies/gothicvania patreon collection/ gothicvania patreon collection/demon-Files/PNG/blue4.png" type="Texture" id=7]
-[ext_resource path="res://sprites/Health Bar/Hearts/Hearts/PNG/basic/border.png" type="Texture" id=8]
-[ext_resource path="res://sprites/Health Bar/Hearts/Hearts/PNG/basic/background.png" type="Texture" id=9]
-[ext_resource path="res://sprites/Health Bar/Hearts/Hearts/PNG/basic/heart.png" type="Texture" id=10]
+[ext_resource path="res://sprites/Ballons/46829621_498350997331686_3426990216915714048_n.png" type="Texture" id=8]
+[ext_resource path="res://sprites/Ballons/47165511_2306234679447158_5048928300638928896_n.png" type="Texture" id=9]
+[ext_resource path="res://sprites/Ballons/46879929_2245016042210154_4704002629603164160_n.png" type="Texture" id=10]
+[ext_resource path="res://sprites/Ballons/46831497_737887039911114_385629028855316480_n.png" type="Texture" id=11]
+[ext_resource path="res://sprites/Ballons/46954038_421573985046949_8849777244369846272_n.png" type="Texture" id=12]
+[ext_resource path="res://sprites/Ballons/46799536_762876914045653_4633131095078993920_n.png" type="Texture" id=13]
+[ext_resource path="res://sprites/Ballons/46943310_362727494534673_5379692919038935040_n.png" type="Texture" id=14]
+[ext_resource path="res://sprites/Ballons/46787272_2453397444677585_9098814884304388096_n.png" type="Texture" id=15]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -37,7 +42,7 @@ animations = [ {
 [sub_resource type="SpriteFrames" id=4]
 
 animations = [ {
-"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
+"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ],
 "loop": true,
 "name": "fall",
 "speed": 7.0
@@ -84,8 +89,11 @@ _sections_unfolded = [ "Visibility" ]
 [node name="AnimatedSprite3" type="AnimatedSprite" parent="." index="4"]
 
 visible = false
+scale = Vector2( 1.3, 1.3 )
 frames = SubResource( 4 )
 animation = "fall"
+frame = 3
+_sections_unfolded = [ "Transform" ]
 
 [connection signal="body_entered" from="." to="." method="_on_Summ_body_entered"]
 
