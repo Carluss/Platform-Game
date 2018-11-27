@@ -35,7 +35,8 @@ __meta__ = {
 [node name="WorldComplete" type="Area2D" parent="." index="0"]
 
 editor/display_folded = true
-position = Vector2( 1584, 368 )
+position = Vector2( 1588.86, 338.268 )
+rotation = -0.0144382
 scale = Vector2( 1.25, 1 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -69,6 +70,8 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 [node name="Terra" type="Node" parent="." index="2"]
 
+editor/display_folded = true
+
 [node name="Magic-cliffs_tileset" type="Sprite" parent="Terra" index="0"]
 
 position = Vector2( -452, -36 )
@@ -80,8 +83,8 @@ _sections_unfolded = [ "Region" ]
 
 [node name="Magic-cliffs_tileset20" type="Sprite" parent="Terra" index="1"]
 
-position = Vector2( -452, -77.0001 )
-scale = Vector2( 26.75, 16.25 )
+position = Vector2( -1032, -352.5 )
+scale = Vector2( 63, 33.4687 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 96, 256, 32, 32 )
@@ -107,8 +110,8 @@ _sections_unfolded = [ "Region" ]
 
 [node name="Magic-cliffs_tileset4" type="Sprite" parent="Terra" index="4"]
 
-position = Vector2( -440, 338 )
-scale = Vector2( 45.5, 16.125 )
+position = Vector2( -1080, 338 )
+scale = Vector2( 85.5, 16.125 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 96, 256, 32, 32 )
@@ -116,8 +119,8 @@ _sections_unfolded = [ "Region" ]
 
 [node name="Magic-cliffs_tileset5" type="Sprite" parent="Terra" index="5"]
 
-position = Vector2( -450.001, 696 )
-scale = Vector2( 51.875, 26.125 )
+position = Vector2( -1114, 696 )
+scale = Vector2( 93.375, 26.125 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 96, 256, 32, 32 )
@@ -125,8 +128,8 @@ _sections_unfolded = [ "Region" ]
 
 [node name="Magic-cliffs_tileset19" type="Sprite" parent="Terra" index="6"]
 
-position = Vector2( -512, 656 )
-scale = Vector2( 51.875, 26.125 )
+position = Vector2( -1113, 656 )
+scale = Vector2( 89.4375, 26.125 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 96, 256, 32, 32 )
@@ -856,6 +859,8 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 [node name="Chao_Esquerda_TileMap" type="Node" parent="." index="13"]
 
+editor/display_folded = true
+
 [node name="Chao_esquerda_7" type="Sprite" parent="Chao_Esquerda_TileMap" index="0"]
 
 position = Vector2( 288, 64 )
@@ -1378,6 +1383,8 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 [node name="Chao_direita" type="Node" parent="." index="18"]
 
+editor/display_folded = true
+
 [node name="Chao_direita_0" type="Sprite" parent="Chao_direita" index="0"]
 
 position = Vector2( 1183.06, 21.8246 )
@@ -1449,6 +1456,8 @@ region_rect = Rect2( 192, 176, 48, 48 )
 _sections_unfolded = [ "Offset", "Region" ]
 
 [node name="Parte_cima_gruta17" type="Node" parent="." index="19"]
+
+editor/display_folded = true
 
 [node name="Parte_cima_gruta" type="Sprite" parent="Parte_cima_gruta17" index="0"]
 
@@ -1752,7 +1761,6 @@ __meta__ = {
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" index="0"]
 
-visible = false
 build_mode = 0
 polygon = PoolVector2Array( 15.3924, -2.66667, 15.3924, 2.66667, 9.72152, 6, 9.72152, 7.33333, 13.7722, 10, 17.8228, 10, 18.6329, 10, 20.2531, 9.33333, 22.6835, 9.33333, 37.2657, 9.33333, 21.0633, 15.3333, 21.0632, 18, 17.8228, 27.3333, -2.43038, 28, -5.67089, 22, -17.0127, 22, -25.1139, 22.6667, -27.5443, 11.3333, -27.5443, -0.666667, -27.5443, -0.666667, -26.7342, -25.3333, -20.2531, -30, -16.2025, -28.6667, -12.962, -26, -11.3417, -22.6667, -11.3417, -18, -11.3417, -10.6667, -11.3417, -9.33333, -10.5316, -8.66667, -10.5316, -8, -10.5316, -7.33333, -10.5316, -6.66667, -10.5316, -6, -9.72148, -6, 7.29114, -6, 9.72152, -2.66667 )
 
@@ -1773,7 +1781,6 @@ polygon = PoolVector2Array( 40.5063, -4, 39.6962, -3.33333, 40.5063, -2.66667, 4
 
 [node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="StaticBody2D" index="4"]
 
-visible = false
 position = Vector2( -12.962, -6.66667 )
 scale = Vector2( 0.0810127, 0.0666667 )
 build_mode = 0
@@ -1786,7 +1793,6 @@ polygon = PoolVector2Array( 55.8987, -12, 55.8987, -11.3333, 56.7089, -10.6667, 
 
 [node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="StaticBody2D" index="6"]
 
-visible = false
 position = Vector2( -13.043, -6.19999 )
 scale = Vector2( 0.0810127, 0.0666667 )
 build_mode = 0
@@ -1880,7 +1886,7 @@ _sections_unfolded = [ "Region" ]
 
 [node name="Chao_esquerda_19" type="Sprite" parent="." index="32"]
 
-position = Vector2( 1619.23, 17.0231 )
+position = Vector2( 1620.56, 23.1849 )
 rotation = 1.8427
 scale = Vector2( 1.75131, 1.75131 )
 texture = ExtResource( 2 )
