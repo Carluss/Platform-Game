@@ -34,6 +34,5 @@ func _on_arrow_body_entered(body):
 	if "Enemy" in body.name:
 		enemy=true
 		body.hurt()
-	if "sprite" in body.name:
-		body.hit()
+		
 	queue_free()
