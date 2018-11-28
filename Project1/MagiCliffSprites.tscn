@@ -27,7 +27,7 @@ _sections_unfolded = [ "Resource" ]
 custom_solver_bias = 0.0
 extents = Vector2( 10, 105.835 )
 
-[node name="Kadyria_1" type="Node"]
+[node name="Kadyria_1" type="Node" index="0"]
 
 __meta__ = {
 "_edit_horizontal_guides_": [  ]
@@ -69,8 +69,6 @@ region_rect = Rect2( 544, 96, 64, 48 )
 _sections_unfolded = [ "Offset", "Region" ]
 
 [node name="Terra" type="Node" parent="." index="2"]
-
-editor/display_folded = true
 
 [node name="Magic-cliffs_tileset" type="Sprite" parent="Terra" index="0"]
 
@@ -200,12 +198,13 @@ _sections_unfolded = [ "Region" ]
 
 [node name="Magic-cliffs_tileset21" type="Sprite" parent="Terra" index="14"]
 
-position = Vector2( 1616, 368 )
+position = Vector2( 1620, 370 )
 scale = Vector2( 8.75, 16.25 )
+z_index = 2
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 96, 256, 32, 32 )
-_sections_unfolded = [ "Region" ]
+_sections_unfolded = [ "Region", "Z Index" ]
 
 [node name="Magic-cliffs_tileset11" type="Sprite" parent="Terra" index="15"]
 
@@ -227,12 +226,13 @@ _sections_unfolded = [ "Region" ]
 
 [node name="Magic-cliffs_tileset13" type="Sprite" parent="Terra" index="17"]
 
-position = Vector2( 2128, 208 )
+position = Vector2( 2110, 210 )
 scale = Vector2( 36.375, 16.25 )
+z_index = 2
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 96, 256, 32, 32 )
-_sections_unfolded = [ "Region" ]
+_sections_unfolded = [ "Region", "Z Index" ]
 
 [node name="Magic-cliffs_tileset14" type="Sprite" parent="Terra" index="18"]
 
@@ -1745,7 +1745,6 @@ _sections_unfolded = [ "Offset", "Region", "Transform" ]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." index="22"]
 
-editor/display_folded = true
 position = Vector2( 160, 100 )
 scale = Vector2( 12.3438, 15 )
 input_pickable = false
@@ -1781,6 +1780,7 @@ polygon = PoolVector2Array( 40.5063, -4, 39.6962, -3.33333, 40.5063, -2.66667, 4
 
 [node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="StaticBody2D" index="4"]
 
+visible = false
 position = Vector2( -12.962, -6.66667 )
 scale = Vector2( 0.0810127, 0.0666667 )
 build_mode = 0
@@ -1796,7 +1796,7 @@ polygon = PoolVector2Array( 55.8987, -12, 55.8987, -11.3333, 56.7089, -10.6667, 
 position = Vector2( -13.043, -6.19999 )
 scale = Vector2( 0.0810127, 0.0666667 )
 build_mode = 0
-polygon = PoolVector2Array( 1270, 0, 1470, 0, 1506.9, 8.97438, 1566.96, 35.9858, 1599.48, 67.2794, 1620.99, 92.9998, 1630.99, 173, 1630.99, 213, 1620.99, 233, 1630.99, 263, 1620.99, 283, 1620.99, 297.136, 1620.99, 313, 1632.99, 329, 1616.99, 345, 1616.99, 409, 1632.99, 441, 1632.99, 473, 1632.99, 537, 1632.99, 633, 1770, 170, 1760, -190, 1260, -340, 1170, -250, 1170, -230, 1160, -220, 1170, -190, 1180, -160, 1220, -130, 1220, -110, 1230, -90, 1240, -60, 1240, -50, 1250, -20 )
+polygon = PoolVector2Array( 1270.99, -7.00015, 1470, 0, 1506.9, 8.97438, 1566.96, 35.9858, 1599.48, 67.2794, 1620.99, 92.9998, 1630.99, 173, 1630.99, 213, 1620.99, 233, 1630.99, 263, 1620.99, 283, 1620.99, 297.136, 1620.99, 313, 1632.99, 329, 1616.99, 345, 1616.99, 409, 1632.99, 441, 1632.99, 473, 1632.99, 537, 1632.99, 633, 1770, 170, 1760, -190, 1260, -340, 1170, -250, 1170, -230, 1160, -220, 1170, -190, 1180, -160, 1220, -130, 1220, -110, 1230, -90, 1240, -60, 1240, -50, 1250, -20 )
 
 [node name="Enemy" parent="." index="23" instance=ExtResource( 13 )]
 
@@ -1888,10 +1888,11 @@ _sections_unfolded = [ "Region" ]
 position = Vector2( 1620.56, 23.1849 )
 rotation = 1.8427
 scale = Vector2( 1.75131, 1.75131 )
+z_index = 3
 texture = ExtResource( 2 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 544, 96, 64, 48 )
-_sections_unfolded = [ "Offset", "Region" ]
+_sections_unfolded = [ "Offset", "Region", "Z Index" ]
 
 
