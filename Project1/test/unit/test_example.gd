@@ -37,7 +37,7 @@ func test_cast_on_cast_body_entered():
 	
 	myS._on_cast_body_entered(player_Instance)
 	add_child(myS)
-	assert_true(myS.player == true, "Teste cast em player")
+	assert_true(myS.player , "Teste cast em player")
 	
 func test_Enemy_on_Area2D_body_entered():
 	var myScript = load("res://Enemys/Enemy.gd")
