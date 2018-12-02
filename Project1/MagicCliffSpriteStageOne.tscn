@@ -27,7 +27,7 @@ custom_solver_bias = 0.0
 extents = Vector2( 50, 14.717 )
 _sections_unfolded = [ "Resource" ]
 
-[node name="Node" type="Node"]
+[node name="Node" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -892,7 +892,61 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_8" type="Sprite" parent="Terra" index="68"]
+[node name="tiles_terra_77" type="Sprite" parent="Terra" index="68"]
+
+position = Vector2( 36, 1056 )
+scale = Vector2( 7.13889, 7.13889 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 208, 176, 144, 112 )
+_sections_unfolded = [ "Region" ]
+
+[node name="tiles_terra_78" type="Sprite" parent="Terra" index="69"]
+
+position = Vector2( 948, 1136 )
+scale = Vector2( 7.13889, 7.13889 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 208, 176, 144, 112 )
+_sections_unfolded = [ "Region" ]
+
+[node name="tiles_terra_79" type="Sprite" parent="Terra" index="70"]
+
+position = Vector2( -44, 1700 )
+scale = Vector2( 7.13889, 7.13889 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 208, 176, 144, 112 )
+_sections_unfolded = [ "Region" ]
+
+[node name="tiles_terra_80" type="Sprite" parent="Terra" index="71"]
+
+position = Vector2( 952, 1860 )
+scale = Vector2( 7.13889, 7.13889 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 208, 176, 144, 112 )
+_sections_unfolded = [ "Region" ]
+
+[node name="tiles_terra_81" type="Sprite" parent="Terra" index="72"]
+
+position = Vector2( 1736, 1820 )
+scale = Vector2( 7.13889, 7.13889 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 208, 176, 144, 112 )
+_sections_unfolded = [ "Region" ]
+
+[node name="tiles_terra_82" type="Sprite" parent="Terra" index="73"]
+
+position = Vector2( 1916, 1232 )
+scale = Vector2( 7.13889, 7.13889 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 208, 176, 144, 112 )
+_sections_unfolded = [ "Region" ]
+
+[node name="tiles_terra_8" type="Sprite" parent="Terra" index="74"]
 
 position = Vector2( 416, 656 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -901,7 +955,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_9" type="Sprite" parent="Terra" index="69"]
+[node name="tiles_terra_9" type="Sprite" parent="Terra" index="75"]
 
 position = Vector2( 720, 730 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -910,7 +964,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_17" type="Sprite" parent="Terra" index="70"]
+[node name="tiles_terra_17" type="Sprite" parent="Terra" index="76"]
 
 position = Vector2( 683, 640 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -919,7 +973,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_16" type="Sprite" parent="Terra" index="71"]
+[node name="tiles_terra_16" type="Sprite" parent="Terra" index="77"]
 
 position = Vector2( 1024, 731 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -928,7 +982,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_43" type="Sprite" parent="Terra" index="72"]
+[node name="tiles_terra_43" type="Sprite" parent="Terra" index="78"]
 
 position = Vector2( 1142, 636 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -937,7 +991,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_47" type="Sprite" parent="Terra" index="73"]
+[node name="tiles_terra_47" type="Sprite" parent="Terra" index="79"]
 
 position = Vector2( 1140, 668 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -946,7 +1000,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_73" type="Sprite" parent="Terra" index="74"]
+[node name="tiles_terra_73" type="Sprite" parent="Terra" index="80"]
 
 position = Vector2( 1436, 608 )
 scale = Vector2( 0.833334, 0.833334 )
@@ -955,7 +1009,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_74" type="Sprite" parent="Terra" index="75"]
+[node name="tiles_terra_74" type="Sprite" parent="Terra" index="81"]
 
 position = Vector2( 1408, 856 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -964,7 +1018,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_76" type="Sprite" parent="Terra" index="76"]
+[node name="tiles_terra_76" type="Sprite" parent="Terra" index="82"]
 
 position = Vector2( 1619.72, 957.015 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -973,7 +1027,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_44" type="Sprite" parent="Terra" index="77"]
+[node name="tiles_terra_44" type="Sprite" parent="Terra" index="83"]
 
 position = Vector2( 1594, 608 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -982,7 +1036,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_53" type="Sprite" parent="Terra" index="78"]
+[node name="tiles_terra_53" type="Sprite" parent="Terra" index="84"]
 
 position = Vector2( 1824, 544 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -991,7 +1045,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_54" type="Sprite" parent="Terra" index="79"]
+[node name="tiles_terra_54" type="Sprite" parent="Terra" index="85"]
 
 position = Vector2( 1824, 720 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1000,7 +1054,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_55" type="Sprite" parent="Terra" index="80"]
+[node name="tiles_terra_55" type="Sprite" parent="Terra" index="86"]
 
 position = Vector2( 2112, 481 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1009,7 +1063,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_56" type="Sprite" parent="Terra" index="81"]
+[node name="tiles_terra_56" type="Sprite" parent="Terra" index="87"]
 
 position = Vector2( 2112, 720 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1018,7 +1072,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_57" type="Sprite" parent="Terra" index="82"]
+[node name="tiles_terra_57" type="Sprite" parent="Terra" index="88"]
 
 position = Vector2( 1888, 880 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1027,7 +1081,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_45" type="Sprite" parent="Terra" index="83"]
+[node name="tiles_terra_45" type="Sprite" parent="Terra" index="89"]
 
 position = Vector2( 1595, 768 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1036,7 +1090,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_46" type="Sprite" parent="Terra" index="84"]
+[node name="tiles_terra_46" type="Sprite" parent="Terra" index="90"]
 
 position = Vector2( 1209, 848 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1045,7 +1099,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_10" type="Sprite" parent="Terra" index="85"]
+[node name="tiles_terra_10" type="Sprite" parent="Terra" index="91"]
 
 position = Vector2( 64, 144 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1054,7 +1108,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_11" type="Sprite" parent="Terra" index="86"]
+[node name="tiles_terra_11" type="Sprite" parent="Terra" index="92"]
 
 position = Vector2( 64, 0 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1063,7 +1117,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_12" type="Sprite" parent="Terra" index="87"]
+[node name="tiles_terra_12" type="Sprite" parent="Terra" index="93"]
 
 position = Vector2( 352, 0 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1072,7 +1126,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_13" type="Sprite" parent="Terra" index="88"]
+[node name="tiles_terra_13" type="Sprite" parent="Terra" index="94"]
 
 position = Vector2( 368, 144 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1081,7 +1135,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_14" type="Sprite" parent="Terra" index="89"]
+[node name="tiles_terra_14" type="Sprite" parent="Terra" index="95"]
 
 position = Vector2( 451, 144 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1090,7 +1144,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_15" type="Sprite" parent="Terra" index="90"]
+[node name="tiles_terra_15" type="Sprite" parent="Terra" index="96"]
 
 position = Vector2( 452, 16 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1099,7 +1153,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_18" type="Sprite" parent="Terra" index="91"]
+[node name="tiles_terra_18" type="Sprite" parent="Terra" index="97"]
 
 position = Vector2( 789, 80.3333 )
 scale = Vector2( 1.26389, 1.26389 )
@@ -1108,7 +1162,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_20" type="Sprite" parent="Terra" index="92"]
+[node name="tiles_terra_20" type="Sprite" parent="Terra" index="98"]
 
 position = Vector2( 432, -176 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1117,7 +1171,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_22" type="Sprite" parent="Terra" index="93"]
+[node name="tiles_terra_22" type="Sprite" parent="Terra" index="99"]
 
 position = Vector2( 720, -192 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1126,7 +1180,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_26" type="Sprite" parent="Terra" index="94"]
+[node name="tiles_terra_26" type="Sprite" parent="Terra" index="100"]
 
 position = Vector2( 992, -192 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1135,7 +1189,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_27" type="Sprite" parent="Terra" index="95"]
+[node name="tiles_terra_27" type="Sprite" parent="Terra" index="101"]
 
 position = Vector2( 1248, -192 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1144,7 +1198,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_58" type="Sprite" parent="Terra" index="96"]
+[node name="tiles_terra_58" type="Sprite" parent="Terra" index="102"]
 
 position = Vector2( 1456, -96 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1153,7 +1207,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_48" type="Sprite" parent="Terra" index="97"]
+[node name="tiles_terra_48" type="Sprite" parent="Terra" index="103"]
 
 position = Vector2( 1536, -208 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1162,7 +1216,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_49" type="Sprite" parent="Terra" index="98"]
+[node name="tiles_terra_49" type="Sprite" parent="Terra" index="104"]
 
 position = Vector2( 1440, -110 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1171,7 +1225,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_28" type="Sprite" parent="Terra" index="99"]
+[node name="tiles_terra_28" type="Sprite" parent="Terra" index="105"]
 
 position = Vector2( 1840, -224 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1180,7 +1234,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_50" type="Sprite" parent="Terra" index="100"]
+[node name="tiles_terra_50" type="Sprite" parent="Terra" index="106"]
 
 position = Vector2( 1840, -224 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1189,7 +1243,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_30" type="Sprite" parent="Terra" index="101"]
+[node name="tiles_terra_30" type="Sprite" parent="Terra" index="107"]
 
 position = Vector2( 1556, -48.7778 )
 scale = Vector2( 1.77778, 1.77778 )
@@ -1198,7 +1252,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_34" type="Sprite" parent="Terra" index="102"]
+[node name="tiles_terra_34" type="Sprite" parent="Terra" index="108"]
 
 position = Vector2( 1792, -86 )
 scale = Vector2( 1.77778, 1.77778 )
@@ -1207,7 +1261,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_51" type="Sprite" parent="Terra" index="103"]
+[node name="tiles_terra_51" type="Sprite" parent="Terra" index="109"]
 
 position = Vector2( 2112, -240 )
 scale = Vector2( 1.77778, 1.77778 )
@@ -1216,7 +1270,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_52" type="Sprite" parent="Terra" index="104"]
+[node name="tiles_terra_52" type="Sprite" parent="Terra" index="110"]
 
 position = Vector2( 2240, -80 )
 scale = Vector2( 1.77778, 1.77778 )
@@ -1225,7 +1279,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_35" type="Sprite" parent="Terra" index="105"]
+[node name="tiles_terra_35" type="Sprite" parent="Terra" index="111"]
 
 position = Vector2( 2016, -80 )
 scale = Vector2( 1.77778, 1.77778 )
@@ -1234,7 +1288,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_36" type="Sprite" parent="Terra" index="106"]
+[node name="tiles_terra_36" type="Sprite" parent="Terra" index="112"]
 
 position = Vector2( 2016, -80 )
 scale = Vector2( 1.77778, 1.77778 )
@@ -1243,7 +1297,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_37" type="Sprite" parent="Terra" index="107"]
+[node name="tiles_terra_37" type="Sprite" parent="Terra" index="113"]
 
 position = Vector2( 2096, 112 )
 scale = Vector2( 1.77778, 1.77778 )
@@ -1252,7 +1306,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_59" type="Sprite" parent="Terra" index="108"]
+[node name="tiles_terra_59" type="Sprite" parent="Terra" index="114"]
 
 position = Vector2( 2304, 100 )
 scale = Vector2( 1.77778, 1.77778 )
@@ -1261,7 +1315,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_66" type="Sprite" parent="Terra" index="109"]
+[node name="tiles_terra_66" type="Sprite" parent="Terra" index="115"]
 
 position = Vector2( 2484, -92 )
 scale = Vector2( 1.77778, 1.77778 )
@@ -1270,7 +1324,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_67" type="Sprite" parent="Terra" index="110"]
+[node name="tiles_terra_67" type="Sprite" parent="Terra" index="116"]
 
 position = Vector2( 2556, 88 )
 scale = Vector2( 1.77778, 1.77778 )
@@ -1279,7 +1333,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_68" type="Sprite" parent="Terra" index="111"]
+[node name="tiles_terra_68" type="Sprite" parent="Terra" index="117"]
 
 position = Vector2( 2564, 252 )
 scale = Vector2( 1.77778, 1.77778 )
@@ -1288,7 +1342,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_69" type="Sprite" parent="Terra" index="112"]
+[node name="tiles_terra_69" type="Sprite" parent="Terra" index="118"]
 
 position = Vector2( 2600, 412 )
 scale = Vector2( 1.77778, 1.77778 )
@@ -1297,7 +1351,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_70" type="Sprite" parent="Terra" index="113"]
+[node name="tiles_terra_70" type="Sprite" parent="Terra" index="119"]
 
 position = Vector2( 2624, 600 )
 scale = Vector2( 1.77778, 1.77778 )
@@ -1306,7 +1360,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_71" type="Sprite" parent="Terra" index="114"]
+[node name="tiles_terra_71" type="Sprite" parent="Terra" index="120"]
 
 position = Vector2( 2628, 776 )
 scale = Vector2( 1.77778, 1.77778 )
@@ -1315,7 +1369,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_72" type="Sprite" parent="Terra" index="115"]
+[node name="tiles_terra_72" type="Sprite" parent="Terra" index="121"]
 
 position = Vector2( 2644, 964 )
 scale = Vector2( 1.77778, 1.77778 )
@@ -1324,7 +1378,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_60" type="Sprite" parent="Terra" index="116"]
+[node name="tiles_terra_60" type="Sprite" parent="Terra" index="122"]
 
 position = Vector2( 2308, 268 )
 scale = Vector2( 1.77778, 1.77778 )
@@ -1333,7 +1387,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_61" type="Sprite" parent="Terra" index="117"]
+[node name="tiles_terra_61" type="Sprite" parent="Terra" index="123"]
 
 position = Vector2( 2372, 432 )
 scale = Vector2( 1.77778, 1.77778 )
@@ -1342,7 +1396,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_62" type="Sprite" parent="Terra" index="118"]
+[node name="tiles_terra_62" type="Sprite" parent="Terra" index="124"]
 
 position = Vector2( 2376, 608 )
 scale = Vector2( 1.77778, 1.77778 )
@@ -1351,7 +1405,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_63" type="Sprite" parent="Terra" index="119"]
+[node name="tiles_terra_63" type="Sprite" parent="Terra" index="125"]
 
 position = Vector2( 2384, 760 )
 scale = Vector2( 1.77778, 1.77778 )
@@ -1360,7 +1414,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_64" type="Sprite" parent="Terra" index="120"]
+[node name="tiles_terra_64" type="Sprite" parent="Terra" index="126"]
 
 position = Vector2( 2384, 936 )
 scale = Vector2( 1.77778, 1.77778 )
@@ -1369,7 +1423,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_65" type="Sprite" parent="Terra" index="121"]
+[node name="tiles_terra_65" type="Sprite" parent="Terra" index="127"]
 
 position = Vector2( 2152, 936 )
 scale = Vector2( 1.77778, 1.77778 )
@@ -1378,7 +1432,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_38" type="Sprite" parent="Terra" index="122"]
+[node name="tiles_terra_38" type="Sprite" parent="Terra" index="128"]
 
 position = Vector2( 2064, 263 )
 scale = Vector2( 1.77778, 1.77778 )
@@ -1387,7 +1441,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_39" type="Sprite" parent="Terra" index="123"]
+[node name="tiles_terra_39" type="Sprite" parent="Terra" index="129"]
 
 position = Vector2( 1904, 368 )
 scale = Vector2( 1.77778, 1.77778 )
@@ -1396,7 +1450,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_40" type="Sprite" parent="Terra" index="124"]
+[node name="tiles_terra_40" type="Sprite" parent="Terra" index="130"]
 
 position = Vector2( 1648, 384 )
 scale = Vector2( 1.77778, 1.77778 )
@@ -1405,7 +1459,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_41" type="Sprite" parent="Terra" index="125"]
+[node name="tiles_terra_41" type="Sprite" parent="Terra" index="131"]
 
 position = Vector2( 1648, 384 )
 scale = Vector2( 1.77778, 1.77778 )
@@ -1414,7 +1468,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_42" type="Sprite" parent="Terra" index="126"]
+[node name="tiles_terra_42" type="Sprite" parent="Terra" index="132"]
 
 position = Vector2( 1560, 472 )
 scale = Vector2( 1.77778, 1.77778 )
@@ -1423,7 +1477,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_33" type="Sprite" parent="Terra" index="127"]
+[node name="tiles_terra_33" type="Sprite" parent="Terra" index="133"]
 
 position = Vector2( 1552, 236 )
 scale = Vector2( 1.44444, 1.22863 )
@@ -1432,7 +1486,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_75" type="Sprite" parent="Terra" index="128"]
+[node name="tiles_terra_75" type="Sprite" parent="Terra" index="134"]
 
 position = Vector2( 1400, 412 )
 scale = Vector2( 0.930556, 0.553572 )
@@ -1441,7 +1495,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_29" type="Sprite" parent="Terra" index="129"]
+[node name="tiles_terra_29" type="Sprite" parent="Terra" index="135"]
 
 position = Vector2( 1072, 240 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1450,7 +1504,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_31" type="Sprite" parent="Terra" index="130"]
+[node name="tiles_terra_31" type="Sprite" parent="Terra" index="136"]
 
 position = Vector2( 1072, 240 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1459,7 +1513,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_32" type="Sprite" parent="Terra" index="131"]
+[node name="tiles_terra_32" type="Sprite" parent="Terra" index="137"]
 
 position = Vector2( 1200, 320 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1468,7 +1522,7 @@ region_enabled = true
 region_rect = Rect2( 208, 176, 144, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_21" type="Sprite" parent="Terra" index="132"]
+[node name="tiles_terra_21" type="Sprite" parent="Terra" index="138"]
 
 position = Vector2( 880, 240 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1864,7 +1918,55 @@ region_enabled = true
 region_rect = Rect2( 128, 64, 32, 16 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_second" type="Node" parent="." index="5"]
+[node name="tiles_second_33" type="Sprite" parent="." index="5"]
+
+position = Vector2( 628, 1380 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 128, 32, 240, 176 )
+_sections_unfolded = [ "Region" ]
+
+[node name="tiles_second_35" type="Sprite" parent="." index="6"]
+
+position = Vector2( 856, 1380 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 128, 32, 240, 176 )
+_sections_unfolded = [ "Region" ]
+
+[node name="tiles_second_36" type="Sprite" parent="." index="7"]
+
+position = Vector2( 1092, 1468 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 48, 0, 240, 256 )
+_sections_unfolded = [ "Region" ]
+
+[node name="tiles_second_37" type="Sprite" parent="." index="8"]
+
+position = Vector2( 944, 1452 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 320, 144, 64, 96 )
+_sections_unfolded = [ "Region" ]
+
+[node name="tiles_second_38" type="Sprite" parent="." index="9"]
+
+position = Vector2( 968, 1556 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 336, 160, 80, 112 )
+_sections_unfolded = [ "Region" ]
+
+[node name="tiles_second_34" type="Sprite" parent="." index="10"]
+
+position = Vector2( 388, 1380 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 128, 32, 240, 176 )
+_sections_unfolded = [ "Region" ]
+
+[node name="tiles_second" type="Node" parent="." index="11"]
 
 [node name="tiles_second_1" type="Sprite" parent="tiles_second" index="0"]
 
@@ -2308,7 +2410,7 @@ region_enabled = true
 region_rect = Rect2( 256, 64, 80, 32 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tileset9" type="Sprite" parent="." index="6"]
+[node name="tileset9" type="Sprite" parent="." index="12"]
 
 position = Vector2( 1474.33, 117.273 )
 rotation = -3.1415
@@ -2318,7 +2420,7 @@ region_enabled = true
 region_rect = Rect2( 128, 64, 32, 16 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tileset10" type="Sprite" parent="." index="7"]
+[node name="tileset10" type="Sprite" parent="." index="13"]
 
 position = Vector2( 1529.9, 117.557 )
 rotation = -3.1415
@@ -2328,7 +2430,7 @@ region_enabled = true
 region_rect = Rect2( 128, 64, 32, 16 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tileset11" type="Sprite" parent="." index="8"]
+[node name="tileset11" type="Sprite" parent="." index="14"]
 
 position = Vector2( 1583.83, 118.023 )
 rotation = -3.1415
@@ -2338,7 +2440,7 @@ region_enabled = true
 region_rect = Rect2( 128, 64, 32, 16 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tileset12" type="Sprite" parent="." index="9"]
+[node name="tileset12" type="Sprite" parent="." index="15"]
 
 position = Vector2( 1642.63, 118.422 )
 rotation = -3.1415
@@ -2348,669 +2450,17 @@ region_enabled = true
 region_rect = Rect2( 128, 64, 32, 16 )
 _sections_unfolded = [ "Region" ]
 
-[node name="Lava_1" type="Sprite" parent="." index="10"]
+[node name="tileset13" type="Sprite" parent="." index="16"]
 
-position = Vector2( 283.679, 506.739 )
-rotation = 1.57173
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
+position = Vector2( 1766.27, 256.033 )
+rotation = -3.1415
+scale = Vector2( 1.86237, 1.86237 )
+texture = ExtResource( 7 )
 region_enabled = true
-region_rect = Rect2( 144, 224, 16, 16 )
+region_rect = Rect2( 128, 64, 32, 16 )
 _sections_unfolded = [ "Region" ]
 
-[node name="Lava_25" type="Sprite" parent="." index="11"]
-
-position = Vector2( 283.679, 632.739 )
-rotation = 1.57173
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 224, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_28" type="Sprite" parent="." index="12"]
-
-position = Vector2( 304.679, 632.739 )
-rotation = 1.57173
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 224, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_34" type="Sprite" parent="." index="13"]
-
-position = Vector2( 325.679, 632.739 )
-rotation = 1.57173
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 224, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_36" type="Sprite" parent="." index="14"]
-
-position = Vector2( 325.679, 716.739 )
-rotation = 1.57173
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 224, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_41" type="Sprite" parent="." index="15"]
-
-position = Vector2( 304.679, 716.739 )
-rotation = 1.57173
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 224, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_46" type="Sprite" parent="." index="16"]
-
-position = Vector2( 283.679, 716.739 )
-rotation = 1.57173
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 224, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_19" type="Sprite" parent="." index="17"]
-
-position = Vector2( 263.679, 505.739 )
-rotation = -1.56274
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 160, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_47" type="Sprite" parent="." index="18"]
-
-position = Vector2( 263.679, 590.739 )
-rotation = -1.56274
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 160, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_51" type="Sprite" parent="." index="19"]
-
-position = Vector2( 263.679, 675.739 )
-rotation = -1.56274
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 160, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_20" type="Sprite" parent="." index="20"]
-
-position = Vector2( 263.679, 526.739 )
-rotation = -1.56274
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 160, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_50" type="Sprite" parent="." index="21"]
-
-position = Vector2( 263.679, 611.739 )
-rotation = -1.56274
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 160, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_54" type="Sprite" parent="." index="22"]
-
-position = Vector2( 263.679, 696.739 )
-rotation = -1.56274
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 160, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_21" type="Sprite" parent="." index="23"]
-
-position = Vector2( 263.679, 547.739 )
-rotation = -1.56274
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 160, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_49" type="Sprite" parent="." index="24"]
-
-position = Vector2( 263.679, 632.739 )
-rotation = -1.56274
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 160, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_53" type="Sprite" parent="." index="25"]
-
-position = Vector2( 263.679, 717.739 )
-rotation = -1.56274
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 160, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_22" type="Sprite" parent="." index="26"]
-
-position = Vector2( 263.679, 569.739 )
-rotation = -1.56274
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 160, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_48" type="Sprite" parent="." index="27"]
-
-position = Vector2( 263.679, 654.739 )
-rotation = -1.56274
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 160, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_52" type="Sprite" parent="." index="28"]
-
-position = Vector2( 263.679, 739.739 )
-rotation = -1.56274
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 160, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_58" type="Sprite" parent="." index="29"]
-
-position = Vector2( 345.679, 739.739 )
-rotation = 1.57073
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 160, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_63" type="Sprite" parent="." index="30"]
-
-position = Vector2( 345.679, 633.739 )
-rotation = 1.57073
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 160, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_59" type="Sprite" parent="." index="31"]
-
-position = Vector2( 345.679, 718.739 )
-rotation = 1.57073
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 160, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_64" type="Sprite" parent="." index="32"]
-
-position = Vector2( 345.679, 612.739 )
-rotation = 1.57073
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 160, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_68" type="Sprite" parent="." index="33"]
-
-position = Vector2( 345.679, 571.739 )
-rotation = 1.57073
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 160, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_60" type="Sprite" parent="." index="34"]
-
-position = Vector2( 345.679, 696.739 )
-rotation = 1.57073
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 160, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_65" type="Sprite" parent="." index="35"]
-
-position = Vector2( 345.679, 590.739 )
-rotation = 1.57073
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 160, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_71" type="Sprite" parent="." index="36"]
-
-position = Vector2( 345.679, 549.739 )
-rotation = 1.57073
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 160, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_61" type="Sprite" parent="." index="37"]
-
-position = Vector2( 345.679, 675.739 )
-rotation = 1.57073
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 160, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_69" type="Sprite" parent="." index="38"]
-
-position = Vector2( 345.679, 528.739 )
-rotation = 1.57073
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 160, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_62" type="Sprite" parent="." index="39"]
-
-position = Vector2( 345.679, 653.739 )
-rotation = 1.57073
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 160, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_70" type="Sprite" parent="." index="40"]
-
-position = Vector2( 345.679, 506.739 )
-rotation = 1.57073
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 160, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_2" type="Sprite" parent="." index="41"]
-
-position = Vector2( 304.679, 506.739 )
-rotation = 1.57173
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 224, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_3" type="Sprite" parent="." index="42"]
-
-position = Vector2( 325.679, 506.739 )
-rotation = 1.57173
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 224, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_4" type="Sprite" parent="." index="43"]
-
-position = Vector2( 325.679, 527.739 )
-rotation = 1.57173
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 224, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_5" type="Sprite" parent="." index="44"]
-
-position = Vector2( 304.679, 527.739 )
-rotation = 1.57173
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 224, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_6" type="Sprite" parent="." index="45"]
-
-position = Vector2( 283.679, 527.739 )
-rotation = 1.57173
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 224, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_26" type="Sprite" parent="." index="46"]
-
-position = Vector2( 283.679, 653.739 )
-rotation = 1.57173
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 224, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_30" type="Sprite" parent="." index="47"]
-
-position = Vector2( 304.679, 653.739 )
-rotation = 1.57173
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 224, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_32" type="Sprite" parent="." index="48"]
-
-position = Vector2( 325.679, 653.739 )
-rotation = 1.57173
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 224, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_35" type="Sprite" parent="." index="49"]
-
-position = Vector2( 325.679, 737.739 )
-rotation = 1.57173
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 224, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_42" type="Sprite" parent="." index="50"]
-
-position = Vector2( 304.679, 737.739 )
-rotation = 1.57173
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 224, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_44" type="Sprite" parent="." index="51"]
-
-position = Vector2( 283.679, 737.739 )
-rotation = 1.57173
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 224, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_7" type="Sprite" parent="." index="52"]
-
-position = Vector2( 283.679, 548.739 )
-rotation = 1.57173
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 224, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_24" type="Sprite" parent="." index="53"]
-
-position = Vector2( 283.679, 674.739 )
-rotation = 1.57173
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 224, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_29" type="Sprite" parent="." index="54"]
-
-position = Vector2( 304.679, 674.739 )
-rotation = 1.57173
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 224, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_31" type="Sprite" parent="." index="55"]
-
-position = Vector2( 325.679, 674.739 )
-rotation = 1.57173
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 224, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_37" type="Sprite" parent="." index="56"]
-
-position = Vector2( 325.679, 758.739 )
-rotation = 1.57173
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 224, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_39" type="Sprite" parent="." index="57"]
-
-position = Vector2( 304.679, 758.739 )
-rotation = 1.57173
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 224, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_45" type="Sprite" parent="." index="58"]
-
-position = Vector2( 283.679, 758.739 )
-rotation = 1.57173
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 224, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_8" type="Sprite" parent="." index="59"]
-
-position = Vector2( 304.679, 548.739 )
-rotation = 1.57173
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 224, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_9" type="Sprite" parent="." index="60"]
-
-position = Vector2( 325.679, 548.739 )
-rotation = 1.57173
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 224, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_10" type="Sprite" parent="." index="61"]
-
-position = Vector2( 325.679, 569.739 )
-rotation = 1.57173
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 224, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_11" type="Sprite" parent="." index="62"]
-
-position = Vector2( 304.679, 569.739 )
-rotation = 1.57173
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 224, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_12" type="Sprite" parent="." index="63"]
-
-position = Vector2( 283.679, 569.739 )
-rotation = 1.57173
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 224, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_23" type="Sprite" parent="." index="64"]
-
-position = Vector2( 283.679, 695.739 )
-rotation = 1.57173
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 224, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_27" type="Sprite" parent="." index="65"]
-
-position = Vector2( 304.679, 695.739 )
-rotation = 1.57173
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 224, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_33" type="Sprite" parent="." index="66"]
-
-position = Vector2( 325.679, 695.739 )
-rotation = 1.57173
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 224, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_38" type="Sprite" parent="." index="67"]
-
-position = Vector2( 325.679, 779.739 )
-rotation = 1.57173
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 224, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_40" type="Sprite" parent="." index="68"]
-
-position = Vector2( 304.679, 779.739 )
-rotation = 1.57173
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 224, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_43" type="Sprite" parent="." index="69"]
-
-position = Vector2( 283.679, 779.739 )
-rotation = 1.57173
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 224, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_13" type="Sprite" parent="." index="70"]
-
-position = Vector2( 283.679, 590.739 )
-rotation = 1.57173
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 224, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_14" type="Sprite" parent="." index="71"]
-
-position = Vector2( 304.679, 590.739 )
-rotation = 1.57173
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 224, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_15" type="Sprite" parent="." index="72"]
-
-position = Vector2( 325.679, 590.739 )
-rotation = 1.57173
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 224, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_16" type="Sprite" parent="." index="73"]
-
-position = Vector2( 325.679, 611.739 )
-rotation = 1.57173
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 224, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_17" type="Sprite" parent="." index="74"]
-
-position = Vector2( 304.679, 611.739 )
-rotation = 1.57173
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 224, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Lava_18" type="Sprite" parent="." index="75"]
-
-position = Vector2( 283.679, 611.739 )
-rotation = 1.57173
-scale = Vector2( 1.33861, 1.33861 )
-texture = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 144, 224, 16, 16 )
-_sections_unfolded = [ "Region" ]
-
-[node name="Dragao_1" type="Node" parent="." index="76"]
-
-editor/display_folded = true
+[node name="Dragao_1" type="Node" parent="." index="17"]
 
 [node name="environment-tiles" type="Sprite" parent="Dragao_1" index="0"]
 
@@ -3033,7 +2483,19 @@ region_enabled = true
 region_rect = Rect2( 384, 144, 32, 32 )
 _sections_unfolded = [ "Region", "Z Index" ]
 
-[node name="environment-tiles2" type="Sprite" parent="Dragao_1" index="2"]
+[node name="environment-tiles4" type="Sprite" parent="Dragao_1" index="2"]
+
+modulate = Color( 0.321716, 0.656239, 0.980469, 1 )
+position = Vector2( 296, 1376 )
+scale = Vector2( 2.16667, 2.16667 )
+z_index = 1
+texture = ExtResource( 6 )
+flip_h = true
+region_enabled = true
+region_rect = Rect2( 384, 144, 32, 32 )
+_sections_unfolded = [ "Offset", "Region", "Z Index" ]
+
+[node name="environment-tiles2" type="Sprite" parent="Dragao_1" index="3"]
 
 position = Vector2( 1418.67, 686.667 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -3043,7 +2505,7 @@ region_enabled = true
 region_rect = Rect2( 384, 144, 32, 32 )
 _sections_unfolded = [ "Region", "Z Index" ]
 
-[node name="environment-tiles10" type="Sprite" parent="Dragao_1" index="3"]
+[node name="environment-tiles10" type="Sprite" parent="Dragao_1" index="4"]
 
 position = Vector2( 1954, 214 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -3053,7 +2515,7 @@ region_enabled = true
 region_rect = Rect2( 448, 192, 32, 32 )
 _sections_unfolded = [ "Region", "Z Index" ]
 
-[node name="environment-tiles24" type="Sprite" parent="Dragao_1" index="4"]
+[node name="environment-tiles24" type="Sprite" parent="Dragao_1" index="5"]
 
 modulate = Color( 0.321716, 0.656239, 0.980469, 1 )
 position = Vector2( 1512.67, 342.667 )
@@ -3064,7 +2526,18 @@ region_enabled = true
 region_rect = Rect2( 448, 192, 32, 32 )
 _sections_unfolded = [ "Region", "Z Index" ]
 
-[node name="environment-tiles19" type="Sprite" parent="Dragao_1" index="5"]
+[node name="environment-tiles35" type="Sprite" parent="Dragao_1" index="6"]
+
+modulate = Color( 0.321716, 0.656239, 0.980469, 1 )
+position = Vector2( -425.333, 1376.67 )
+scale = Vector2( 2.16667, 2.16667 )
+z_index = 1
+texture = ExtResource( 6 )
+region_enabled = true
+region_rect = Rect2( 448, 192, 32, 32 )
+_sections_unfolded = [ "Region", "Z Index" ]
+
+[node name="environment-tiles19" type="Sprite" parent="Dragao_1" index="7"]
 
 position = Vector2( 1480.67, 686.667 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -3074,7 +2547,7 @@ region_enabled = true
 region_rect = Rect2( 448, 192, 32, 32 )
 _sections_unfolded = [ "Region", "Z Index" ]
 
-[node name="environment-tiles11" type="Sprite" parent="Dragao_1" index="6"]
+[node name="environment-tiles11" type="Sprite" parent="Dragao_1" index="8"]
 
 position = Vector2( 2019, 214 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -3084,7 +2557,7 @@ region_enabled = true
 region_rect = Rect2( 448, 192, 32, 32 )
 _sections_unfolded = [ "Region", "Z Index" ]
 
-[node name="environment-tiles25" type="Sprite" parent="Dragao_1" index="7"]
+[node name="environment-tiles25" type="Sprite" parent="Dragao_1" index="9"]
 
 modulate = Color( 0.321716, 0.656239, 0.980469, 1 )
 position = Vector2( 1577.67, 342.667 )
@@ -3095,7 +2568,18 @@ region_enabled = true
 region_rect = Rect2( 448, 192, 32, 32 )
 _sections_unfolded = [ "Region", "Z Index" ]
 
-[node name="environment-tiles21" type="Sprite" parent="Dragao_1" index="8"]
+[node name="environment-tiles45" type="Sprite" parent="Dragao_1" index="10"]
+
+modulate = Color( 0.321716, 0.656239, 0.980469, 1 )
+position = Vector2( -360.333, 1376.67 )
+scale = Vector2( 2.16667, 2.16667 )
+z_index = 1
+texture = ExtResource( 6 )
+region_enabled = true
+region_rect = Rect2( 448, 192, 32, 32 )
+_sections_unfolded = [ "Region", "Z Index" ]
+
+[node name="environment-tiles21" type="Sprite" parent="Dragao_1" index="11"]
 
 position = Vector2( 1545.67, 686.667 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -3105,7 +2589,7 @@ region_enabled = true
 region_rect = Rect2( 448, 192, 32, 32 )
 _sections_unfolded = [ "Region", "Z Index" ]
 
-[node name="environment-tiles12" type="Sprite" parent="Dragao_1" index="9"]
+[node name="environment-tiles12" type="Sprite" parent="Dragao_1" index="12"]
 
 position = Vector2( 2084, 214 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -3115,7 +2599,7 @@ region_enabled = true
 region_rect = Rect2( 448, 192, 32, 32 )
 _sections_unfolded = [ "Region", "Z Index" ]
 
-[node name="environment-tiles29" type="Sprite" parent="Dragao_1" index="10"]
+[node name="environment-tiles29" type="Sprite" parent="Dragao_1" index="13"]
 
 modulate = Color( 0.321716, 0.656239, 0.980469, 1 )
 position = Vector2( 1642.67, 342.667 )
@@ -3126,7 +2610,18 @@ region_enabled = true
 region_rect = Rect2( 448, 192, 32, 32 )
 _sections_unfolded = [ "Region", "Z Index" ]
 
-[node name="environment-tiles22" type="Sprite" parent="Dragao_1" index="11"]
+[node name="environment-tiles41" type="Sprite" parent="Dragao_1" index="14"]
+
+modulate = Color( 0.321716, 0.656239, 0.980469, 1 )
+position = Vector2( -295.333, 1376.67 )
+scale = Vector2( 2.16667, 2.16667 )
+z_index = 1
+texture = ExtResource( 6 )
+region_enabled = true
+region_rect = Rect2( 448, 192, 32, 32 )
+_sections_unfolded = [ "Region", "Z Index" ]
+
+[node name="environment-tiles22" type="Sprite" parent="Dragao_1" index="15"]
 
 position = Vector2( 1610.67, 686.667 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -3136,7 +2631,7 @@ region_enabled = true
 region_rect = Rect2( 448, 192, 32, 32 )
 _sections_unfolded = [ "Region", "Z Index" ]
 
-[node name="environment-tiles13" type="Sprite" parent="Dragao_1" index="12"]
+[node name="environment-tiles13" type="Sprite" parent="Dragao_1" index="16"]
 
 position = Vector2( 2144, 214 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -3146,7 +2641,7 @@ region_enabled = true
 region_rect = Rect2( 448, 192, 32, 32 )
 _sections_unfolded = [ "Region", "Z Index" ]
 
-[node name="environment-tiles26" type="Sprite" parent="Dragao_1" index="13"]
+[node name="environment-tiles26" type="Sprite" parent="Dragao_1" index="17"]
 
 modulate = Color( 0.321716, 0.656239, 0.980469, 1 )
 position = Vector2( 1702.67, 342.667 )
@@ -3157,7 +2652,18 @@ region_enabled = true
 region_rect = Rect2( 448, 192, 32, 32 )
 _sections_unfolded = [ "Region", "Z Index" ]
 
-[node name="environment-tiles17" type="Sprite" parent="Dragao_1" index="14"]
+[node name="environment-tiles38" type="Sprite" parent="Dragao_1" index="18"]
+
+modulate = Color( 0.321716, 0.656239, 0.980469, 1 )
+position = Vector2( -235.333, 1376.67 )
+scale = Vector2( 2.16667, 2.16667 )
+z_index = 1
+texture = ExtResource( 6 )
+region_enabled = true
+region_rect = Rect2( 448, 192, 32, 32 )
+_sections_unfolded = [ "Region", "Z Index" ]
+
+[node name="environment-tiles17" type="Sprite" parent="Dragao_1" index="19"]
 
 position = Vector2( 1670.67, 686.667 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -3167,7 +2673,7 @@ region_enabled = true
 region_rect = Rect2( 448, 192, 32, 32 )
 _sections_unfolded = [ "Region", "Z Index" ]
 
-[node name="environment-tiles14" type="Sprite" parent="Dragao_1" index="15"]
+[node name="environment-tiles14" type="Sprite" parent="Dragao_1" index="20"]
 
 position = Vector2( 2209, 214 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -3177,7 +2683,7 @@ region_enabled = true
 region_rect = Rect2( 448, 192, 32, 32 )
 _sections_unfolded = [ "Region", "Z Index" ]
 
-[node name="environment-tiles27" type="Sprite" parent="Dragao_1" index="16"]
+[node name="environment-tiles27" type="Sprite" parent="Dragao_1" index="21"]
 
 modulate = Color( 0.321716, 0.656239, 0.980469, 1 )
 position = Vector2( 1767.67, 342.667 )
@@ -3188,7 +2694,18 @@ region_enabled = true
 region_rect = Rect2( 448, 192, 32, 32 )
 _sections_unfolded = [ "Region", "Z Index" ]
 
-[node name="environment-tiles20" type="Sprite" parent="Dragao_1" index="17"]
+[node name="environment-tiles37" type="Sprite" parent="Dragao_1" index="22"]
+
+modulate = Color( 0.321716, 0.656239, 0.980469, 1 )
+position = Vector2( -170.333, 1376.67 )
+scale = Vector2( 2.16667, 2.16667 )
+z_index = 1
+texture = ExtResource( 6 )
+region_enabled = true
+region_rect = Rect2( 448, 192, 32, 32 )
+_sections_unfolded = [ "Region", "Z Index" ]
+
+[node name="environment-tiles20" type="Sprite" parent="Dragao_1" index="23"]
 
 position = Vector2( 1735.67, 686.667 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -3198,7 +2715,7 @@ region_enabled = true
 region_rect = Rect2( 448, 192, 32, 32 )
 _sections_unfolded = [ "Region", "Z Index" ]
 
-[node name="environment-tiles15" type="Sprite" parent="Dragao_1" index="18"]
+[node name="environment-tiles15" type="Sprite" parent="Dragao_1" index="24"]
 
 position = Vector2( 2275, 214 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -3208,7 +2725,7 @@ region_enabled = true
 region_rect = Rect2( 448, 192, 32, 32 )
 _sections_unfolded = [ "Region", "Z Index" ]
 
-[node name="environment-tiles30" type="Sprite" parent="Dragao_1" index="19"]
+[node name="environment-tiles30" type="Sprite" parent="Dragao_1" index="25"]
 
 modulate = Color( 0.321716, 0.656239, 0.980469, 1 )
 position = Vector2( 1833.67, 342.667 )
@@ -3219,7 +2736,18 @@ region_enabled = true
 region_rect = Rect2( 448, 192, 32, 32 )
 _sections_unfolded = [ "Region", "Z Index" ]
 
-[node name="environment-tiles23" type="Sprite" parent="Dragao_1" index="20"]
+[node name="environment-tiles39" type="Sprite" parent="Dragao_1" index="26"]
+
+modulate = Color( 0.321716, 0.656239, 0.980469, 1 )
+position = Vector2( -104.333, 1376.67 )
+scale = Vector2( 2.16667, 2.16667 )
+z_index = 1
+texture = ExtResource( 6 )
+region_enabled = true
+region_rect = Rect2( 448, 192, 32, 32 )
+_sections_unfolded = [ "Region", "Z Index" ]
+
+[node name="environment-tiles23" type="Sprite" parent="Dragao_1" index="27"]
 
 position = Vector2( 1801.67, 686.667 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -3229,7 +2757,7 @@ region_enabled = true
 region_rect = Rect2( 448, 192, 32, 32 )
 _sections_unfolded = [ "Region", "Z Index" ]
 
-[node name="environment-tiles16" type="Sprite" parent="Dragao_1" index="21"]
+[node name="environment-tiles16" type="Sprite" parent="Dragao_1" index="28"]
 
 position = Vector2( 2342, 214 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -3239,7 +2767,7 @@ region_enabled = true
 region_rect = Rect2( 448, 192, 32, 32 )
 _sections_unfolded = [ "Region", "Z Index" ]
 
-[node name="environment-tiles28" type="Sprite" parent="Dragao_1" index="22"]
+[node name="environment-tiles28" type="Sprite" parent="Dragao_1" index="29"]
 
 modulate = Color( 0.321716, 0.656239, 0.980469, 1 )
 position = Vector2( 1900.67, 342.667 )
@@ -3250,7 +2778,18 @@ region_enabled = true
 region_rect = Rect2( 448, 192, 32, 32 )
 _sections_unfolded = [ "Region", "Z Index" ]
 
-[node name="environment-tiles31" type="Sprite" parent="Dragao_1" index="23"]
+[node name="environment-tiles36" type="Sprite" parent="Dragao_1" index="30"]
+
+modulate = Color( 0.321716, 0.656239, 0.980469, 1 )
+position = Vector2( -37.3334, 1376.67 )
+scale = Vector2( 2.16667, 2.16667 )
+z_index = 1
+texture = ExtResource( 6 )
+region_enabled = true
+region_rect = Rect2( 448, 192, 32, 32 )
+_sections_unfolded = [ "Region", "Z Index" ]
+
+[node name="environment-tiles31" type="Sprite" parent="Dragao_1" index="31"]
 
 modulate = Color( 0.321716, 0.656239, 0.980469, 1 )
 position = Vector2( 1966.67, 342.667 )
@@ -3261,7 +2800,18 @@ region_enabled = true
 region_rect = Rect2( 448, 192, 32, 32 )
 _sections_unfolded = [ "Region", "Z Index" ]
 
-[node name="environment-tiles32" type="Sprite" parent="Dragao_1" index="24"]
+[node name="environment-tiles40" type="Sprite" parent="Dragao_1" index="32"]
+
+modulate = Color( 0.321716, 0.656239, 0.980469, 1 )
+position = Vector2( 28.6667, 1376.67 )
+scale = Vector2( 2.16667, 2.16667 )
+z_index = 1
+texture = ExtResource( 6 )
+region_enabled = true
+region_rect = Rect2( 448, 192, 32, 32 )
+_sections_unfolded = [ "Region", "Z Index" ]
+
+[node name="environment-tiles32" type="Sprite" parent="Dragao_1" index="33"]
 
 modulate = Color( 0.321716, 0.656239, 0.980469, 1 )
 position = Vector2( 2032.67, 342.667 )
@@ -3272,7 +2822,18 @@ region_enabled = true
 region_rect = Rect2( 448, 192, 32, 32 )
 _sections_unfolded = [ "Region", "Z Index" ]
 
-[node name="environment-tiles33" type="Sprite" parent="Dragao_1" index="25"]
+[node name="environment-tiles42" type="Sprite" parent="Dragao_1" index="34"]
+
+modulate = Color( 0.321716, 0.656239, 0.980469, 1 )
+position = Vector2( 94.6666, 1376.67 )
+scale = Vector2( 2.16667, 2.16667 )
+z_index = 1
+texture = ExtResource( 6 )
+region_enabled = true
+region_rect = Rect2( 448, 192, 32, 32 )
+_sections_unfolded = [ "Region", "Z Index" ]
+
+[node name="environment-tiles33" type="Sprite" parent="Dragao_1" index="35"]
 
 modulate = Color( 0.321716, 0.656239, 0.980469, 1 )
 position = Vector2( 2100.67, 342.667 )
@@ -3283,7 +2844,18 @@ region_enabled = true
 region_rect = Rect2( 448, 192, 32, 32 )
 _sections_unfolded = [ "Region", "Z Index" ]
 
-[node name="environment-tiles34" type="Sprite" parent="Dragao_1" index="26"]
+[node name="environment-tiles44" type="Sprite" parent="Dragao_1" index="36"]
+
+modulate = Color( 0.321716, 0.656239, 0.980469, 1 )
+position = Vector2( 162.666, 1376.67 )
+scale = Vector2( 2.16667, 2.16667 )
+z_index = 1
+texture = ExtResource( 6 )
+region_enabled = true
+region_rect = Rect2( 448, 192, 32, 32 )
+_sections_unfolded = [ "Region", "Z Index" ]
+
+[node name="environment-tiles34" type="Sprite" parent="Dragao_1" index="37"]
 
 modulate = Color( 0.321716, 0.656239, 0.980469, 1 )
 position = Vector2( 2168.67, 342.667 )
@@ -3294,7 +2866,18 @@ region_enabled = true
 region_rect = Rect2( 448, 192, 32, 32 )
 _sections_unfolded = [ "Region", "Z Index" ]
 
-[node name="environment-tiles18" type="Sprite" parent="Dragao_1" index="27"]
+[node name="environment-tiles43" type="Sprite" parent="Dragao_1" index="38"]
+
+modulate = Color( 0.321716, 0.656239, 0.980469, 1 )
+position = Vector2( 230.667, 1376.67 )
+scale = Vector2( 2.16667, 2.16667 )
+z_index = 1
+texture = ExtResource( 6 )
+region_enabled = true
+region_rect = Rect2( 448, 192, 32, 32 )
+_sections_unfolded = [ "Region", "Z Index" ]
+
+[node name="environment-tiles18" type="Sprite" parent="Dragao_1" index="39"]
 
 position = Vector2( 1868.67, 686.667 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -3304,7 +2887,9 @@ region_enabled = true
 region_rect = Rect2( 448, 192, 32, 32 )
 _sections_unfolded = [ "Region", "Z Index" ]
 
-[node name="collisions" type="Node2D" parent="." index="77"]
+[node name="collisions" type="Node2D" parent="." index="18"]
+
+editor/display_folded = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="collisions" index="0"]
 
@@ -3354,6 +2939,7 @@ polygon = PoolVector2Array( 1920, 30, 1920, 180, 1880, 180, 1860, 190, 2190, 190
 
 [node name="CollisionPolygon2D11" type="CollisionPolygon2D" parent="collisions/StaticBody2D" index="7"]
 
+visible = false
 build_mode = 0
 polygon = PoolVector2Array( 60, 500, 340, 500, 340, 400, 610, 400, 610, 500, 850, 500, 850, 590, 960, 590, 960, 500, 1140, 500, 1140, 510, 1230, 510, 1300, 510, 1300, 720, 1780, 720, 1120, 790, 540, 620 )
 
@@ -3465,8 +3051,9 @@ scale = Vector2( 1, 1.74222 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Visibility" ]
 
-[node name="Area2D" type="Area2D" parent="." index="78"]
+[node name="Area2D" type="Area2D" parent="." index="19"]
 
+editor/display_folded = true
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -3486,7 +3073,7 @@ shape = SubResource( 2 )
 position = Vector2( 1879.63, 211.684 )
 _sections_unfolded = [ "Material", "Transform", "Visibility" ]
 
-[node name="Area2D2" type="Area2D" parent="." index="79"]
+[node name="Area2D2" type="Area2D" parent="." index="20"]
 
 editor/display_folded = true
 input_pickable = true
@@ -3507,7 +3094,7 @@ shape = SubResource( 3 )
 
 position = Vector2( 1416.06, 693.702 )
 
-[node name="KinematicBody2D" parent="." index="80" instance=ExtResource( 9 )]
+[node name="KinematicBody2D" parent="." index="21" instance=ExtResource( 9 )]
 
 position = Vector2( 294.507, 417.708 )
 rotation = 0.000963151
