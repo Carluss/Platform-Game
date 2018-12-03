@@ -37,7 +37,7 @@ extents = Vector2( 22.2351, 24.2209 )
 custom_solver_bias = 0.0
 extents = Vector2( 26.2759, 26.19 )
 
-[node name="Node" type="Node" index="0"]
+[node name="Node" type="Node"]
 
 script = ExtResource( 1 )
 
@@ -3352,6 +3352,8 @@ scale = Vector2( 1.33861, 1.33861 )
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 
 [connection signal="body_entered" from="Area2D2" to="." method="_on_Area2D2_body_entered"]
+
+[connection signal="body_entered" from="FstageB" to="." method="_on_FstageB_body_entered"]
 
 [connection signal="body_entered" from="FStage" to="." method="_on_FStage_body_entered"]
 

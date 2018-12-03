@@ -142,7 +142,7 @@ func right(mode):
 			velocity.x = min(velocity.x+speed,MaxSpeed)
 		else:
 			velocity.x = min(velocity.x+speed,MaxSpeedatt)
-		if Input.is_action_just_pressed("ui_attack1"):
+		if Input.is_action_just_pressed("ui_attack1") and is_on_floor()==true:
 			velocity.x = min(velocity.x+speed,MaxSpeedatt)
 			is_att=true
 			attacking()
@@ -188,7 +188,7 @@ func left(mode):
 			velocity.x = max(velocity.x-speed,-MaxSpeed)
 		else:
 			velocity.x = max(velocity.x-speed,-MaxSpeedatt)
-		if Input.is_action_just_pressed("ui_attack1"):
+		if Input.is_action_just_pressed("ui_attack1") and is_on_floor()==true:
 			is_att=true
 			attacking()
 		if !velocity.y<0 and is_attacking==false and is_att==false:
@@ -240,7 +240,7 @@ func idle(mode):
 					$DrawSheet.start()
 			incrouch(false)
 	elif mode==true and limitation(mode,"idle")==true:
-		if Input.is_action_just_pressed("ui_attack1"):
+		if Input.is_action_just_pressed("ui_attack1") and is_on_floor()==true:
 			is_att=true
 			attacking()
 		if swordanimation==false and is_att==false:

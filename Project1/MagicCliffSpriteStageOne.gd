@@ -28,3 +28,8 @@ func _on_Area2D2_body_entered(body):
 func _on_FStage_body_entered(body):
 	if "Player" in body.name:
 		get_node("Player").position=$FstageB/Fstageb.global_position
+
+
+func _on_FstageB_body_entered(body):
+	if "Player" in body.name:
+		get_node("Player").position=$FStage/Fstage.global_position
