@@ -25,3 +25,6 @@ func _on_Area2D2_body_entered(body):
 		get_node("Player").position=$Area2D/dra.global_position
 
 
+func _on_FStage_body_entered(body):
+	if "Player" in body.name:
+		get_node("Player").position=$FstageB/Fstageb.global_position

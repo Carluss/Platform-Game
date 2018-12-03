@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://MagicCliffSpriteStageOne.gd" type="Script" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
@@ -26,6 +26,16 @@ _sections_unfolded = [ "Resource" ]
 custom_solver_bias = 0.0
 extents = Vector2( 50, 14.717 )
 _sections_unfolded = [ "Resource" ]
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 22.2351, 24.2209 )
+
+[sub_resource type="RectangleShape2D" id=5]
+
+custom_solver_bias = 0.0
+extents = Vector2( 26.2759, 26.19 )
 
 [node name="Node" type="Node" index="0"]
 
@@ -3254,7 +3264,6 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="Area2D" type="Area2D" parent="." index="42"]
 
-editor/display_folded = true
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -3295,7 +3304,46 @@ shape = SubResource( 3 )
 
 position = Vector2( 1416.06, 693.702 )
 
-[node name="KinematicBody2D" parent="." index="44" instance=ExtResource( 9 )]
+[node name="FstageB" type="Area2D" parent="." index="44"]
+
+position = Vector2( 104.612, 1378.33 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FstageB" index="0"]
+
+position = Vector2( 34.6687, 0 )
+shape = SubResource( 4 )
+
+[node name="Fstageb" type="Position2D" parent="FstageB" index="1"]
+
+position = Vector2( 198.852, 1.62109 )
+
+[node name="FStage" type="Area2D" parent="." index="45"]
+
+position = Vector2( 1640.62, 341.989 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FStage" index="0"]
+
+shape = SubResource( 5 )
+
+[node name="Fstage" type="Position2D" parent="FStage" index="1"]
+
+position = Vector2( -1336.25, 1035.99 )
+
+[node name="KinematicBody2D" parent="." index="46" instance=ExtResource( 9 )]
 
 position = Vector2( 294.507, 417.708 )
 rotation = 0.000963151
@@ -3304,5 +3352,7 @@ scale = Vector2( 1.33861, 1.33861 )
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 
 [connection signal="body_entered" from="Area2D2" to="." method="_on_Area2D2_body_entered"]
+
+[connection signal="body_entered" from="FStage" to="." method="_on_FStage_body_entered"]
 
 
