@@ -42,9 +42,12 @@ var anifinished=false
 var attmode=false
 #---
 #-health
+var fullhealth=100
 var health=100
 var dmg=25
 var is_hurt=false
+var is_dead=false
+var teleport=false
 #------
 func limitation(mode,state):
 	if state=="arrow":
@@ -112,7 +115,7 @@ func incrouch(cmode):
 		
 #Move functions------------------
 func right(mode):
-	if mode==false and limitation(mode,"right")==true and not Input.is_action_pressed("ui_down") and $Crouch.is_colliding()==false:
+	if is_dead==false and mode==false and limitation(mode,"right")==true and not Input.is_action_pressed("ui_down") and $Crouch.is_colliding()==false:
 		limitation(mode,"right")
 		if is_attacking==false:
 			fliph("right")
@@ -123,7 +126,7 @@ func right(mode):
 				$AnimatedSprite.play("hurt")
 			else:
 				$AnimatedSprite.play("Run")
-	elif mode==false and limitation(mode,"right")==true and Input.is_action_pressed("ui_down") or $Crouch.is_colliding()==true:
+	elif is_dead==false and mode==false and limitation(mode,"right")==true and Input.is_action_pressed("ui_down") or $Crouch.is_colliding()==true:
 		if limitation(attmode,"crouch")==true:
 			velocity.x= speed
 			if is_attacking==false:
@@ -134,7 +137,7 @@ func right(mode):
 			velocity.x = min(velocity.x+speed,MaxSpeed)
 			if is_attacking==false:
 				fliph("right")
-	if mode==true and not Input.is_action_pressed("ui_down") and $Crouch.is_colliding()==false:
+	if is_dead==false and mode==true and not Input.is_action_pressed("ui_down") and $Crouch.is_colliding()==false:
 		if is_attacking==false:
 			fliph("right")
 		incrouch(false)
@@ -148,7 +151,7 @@ func right(mode):
 			attacking()
 		if !velocity.y<0 and is_attacking==false and is_att==false:
 			$AnimatedSprite.play("RunSword")
-	elif mode==true and Input.is_action_pressed("ui_down"):
+	elif is_dead==false and mode==true and Input.is_action_pressed("ui_down"):
 		if is_attacking==false:
 			fliph("right")
 		incrouch(false)
@@ -158,7 +161,7 @@ func right(mode):
 	return true
 	
 func left(mode):
-	if mode==false and limitation(mode,"left")==true and not Input.is_action_pressed("ui_down") and $Crouch.is_colliding()==false:
+	if is_dead==false and mode==false and limitation(mode,"left")==true and not Input.is_action_pressed("ui_down") and $Crouch.is_colliding()==false:
 		limitation(mode,"left")
 		if is_attacking==false:
 			fliph("left")
@@ -169,7 +172,7 @@ func left(mode):
 				$AnimatedSprite.play("hurt")
 			else:
 				$AnimatedSprite.play("Run")
-	elif mode==false and limitation(mode,"left")==true and Input.is_action_pressed("ui_down") or $Crouch.is_colliding()==true:
+	elif is_dead==false and mode==false and limitation(mode,"left")==true and Input.is_action_pressed("ui_down") or $Crouch.is_colliding()==true:
 		if limitation(attmode,"crouch")==true:
 			velocity.x= -speed
 			if is_attacking==false:
@@ -180,7 +183,7 @@ func left(mode):
 			velocity.x = max(velocity.x-speed,-MaxSpeed)
 			if is_attacking==false:
 				fliph("left")
-	if mode==true and not Input.is_action_pressed("ui_down") and $Crouch.is_colliding()==false:
+	if is_dead==false and mode==true and not Input.is_action_pressed("ui_down") and $Crouch.is_colliding()==false:
 		if is_attacking==false:
 			fliph("left")
 		incrouch(false)
@@ -193,7 +196,7 @@ func left(mode):
 			attacking()
 		if !velocity.y<0 and is_attacking==false and is_att==false:
 			$AnimatedSprite.play("RunSword")
-	elif mode==true and Input.is_action_pressed("ui_down"):
+	elif is_dead==false and mode==true and Input.is_action_pressed("ui_down"):
 		if is_attacking==false:
 			fliph("left")
 		incrouch(false)
@@ -203,7 +206,7 @@ func left(mode):
 	return true
 
 func crouch(mode):
-	if mode==false and limitation(mode,"crouch")==true:
+	if is_dead==false and mode==false and limitation(mode,"crouch")==true:
 		limitation(mode,"crouch")
 		if is_hurt==true:
 			$AnimatedSprite.play("hurt")
@@ -216,7 +219,14 @@ func crouch(mode):
 func idle(mode):
 	incrouch(false)
 	velocity.x=0
-	if mode==false and limitation(mode,"idle")==true:
+	if is_dead==true:
+		$AnimatedSprite.play("dead")
+		if teleport==true:
+			print("teleport")
+			health=fullhealth*0.75
+			is_dead=false
+			teleport=false
+	if is_dead==false and mode==false and limitation(mode,"idle")==true:
 		anifinished=false
 		if $Crouch.is_colliding()==true:
 			limitation(mode,"crouch")
@@ -265,7 +275,7 @@ func jump(mode):
 
 			
 func climbladders(mode):
-	if limitation(mode,"ladder")==true:
+	if is_dead==false and limitation(mode,"ladder")==true:
 		if is_inladder==true and is_ladder==true:
 			if velocity.y==0:
 				$AnimatedSprite.play("climbl")
@@ -357,9 +367,9 @@ func hurt():
 		dead()
 
 func dead():
+	is_dead=true
 	velocity = Vector2(0,0)
 	print("dead")
-	$AnimatedSprite.play("dead")
 	
 	
 	
@@ -455,6 +465,8 @@ func climbwalls(mode):
 
 
 func _on_AnimatedSprite_animation_finished():
+	if is_dead==true:
+		$deadtimer.start()
 	if is_hurt==true:
 		$AnimatedSprite.modulate = Color(1, 1, 1) 
 		is_hurt=false
@@ -496,3 +508,7 @@ func _on_DrawSheet_timeout():
 	swordanimation=false
 
 
+
+
+func _on_deadtimer_timeout():
+	teleport=true
