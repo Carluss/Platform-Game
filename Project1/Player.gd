@@ -48,6 +48,7 @@ var dmg=25
 var is_hurt=false
 var is_dead=false
 var teleport=false
+
 #------
 func limitation(mode,state):
 	if state=="arrow":
@@ -363,13 +364,14 @@ func hurt():
 	if health>0:
 		$AnimatedSprite.modulate = Color(1, 0.22, 0.37) 
 		print(health)
+		return is_dead
 	else:
 		dead()
+		return is_dead
 
 func dead():
 	is_dead=true
 	velocity = Vector2(0,0)
-	print("dead")
 	
 	
 	

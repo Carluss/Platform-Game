@@ -25,6 +25,7 @@ var level=1
 var health=100
 
 var wall=false
+var ignore=false
 
 func _ready():
 	pass
@@ -52,7 +53,7 @@ func hurt():
 	#velocity.x = min((velocity.x+SPEED)*-direction,maxspeed)
 
 func attk():
-	if ($SeePlayer.is_colliding()==true or $Playerabove.is_colliding()==true) and is_dead==false:
+	if ignore==false and ($SeePlayer.is_colliding()==true or $Playerabove.is_colliding()==true) and is_dead==false:
 		velocity.x=0
 		if $AttPlayer.is_colliding()==true or $Playerabove.is_colliding()==true:
 			if is_hurt==true:
@@ -87,10 +88,10 @@ func attk():
 func _physics_process(delta):
 
 	attk()
-	if $SeePlayer.is_colliding()==false:
+	if ignore==false and $SeePlayer.is_colliding()==false:
 		done=false
 		
-	if ($AttPlayer.is_colliding()==false or $Playerabove.is_colliding()==false) and attplayer==false:
+	if ignore==false and ($AttPlayer.is_colliding()==false or $Playerabove.is_colliding()==false) and attplayer==false:
 		$AnimatedSprite.visible=true
 		$Animatedattack.visible=false
 		$Animatedattack.stop()
@@ -100,20 +101,23 @@ func _physics_process(delta):
 		$Animatedattack.visible=false
 		$Animatedattack.stop()
 		
-	if ($AttPlayer.is_colliding()==false or $Playerabove.is_colliding()==false):
+	if ignore==false and ($AttPlayer.is_colliding()==false or $Playerabove.is_colliding()==false):
 		$SeePlayer.enabled=true
 		
 		
 	if is_dead==false and react==false and attplayer==false:
-		if done==false and attplayer==false and is_hurt==false:
+		if ignore==false and done==false and attplayer==false and is_hurt==false:
 			velocity.x=SPEED*direction
-		elif done==true and attplayer==false and is_hurt==false:
+		elif ignore==false and done==true and attplayer==false and is_hurt==false:
 			velocity.x=(SPEED+30)*direction
-		elif attplayer==true or is_hurt==true:
+		elif ignore==true or attplayer==true or is_hurt==true:
 			velocity.x=0
 		fliph()
 		if attplayer==false and is_hurt==false:
-			$AnimatedSprite.play("walk")
+			if ignore==true:
+				$AnimatedSprite.play("idle")
+			else:
+				$AnimatedSprite.play("walk")
 
 		velocity.y +=GRAVITY
 
@@ -126,7 +130,7 @@ func _physics_process(delta):
 
 
 func _on_is_on_wall_body_entered(body):
-	if (body.name!="Player") and body.name!="Enemy2" and body.name!="Enemy"and body.name!="Enemy3":
+	if body.name!="Player" and ignore==false and body.name!="Enemy2" and body.name!="Enemy"and body.name!="Enemy3":
 		direction = direction * -1
 		$RayCast2D.position.x*=-1
 
@@ -167,10 +171,16 @@ func fliph():
 		get_node("SeePlayer").rotation_degrees = 90
 		get_node("AttPlayer").rotation_degrees = 90
 		
+var pdead
 func _on_Area2D_body_entered(body):
 	if "Player" in body.name:
 		wall=true
-		body.hurt()
+		pdead=body.hurt()
+		if pdead==true:
+			ignore=true
+			print(ignore)
+			$ignore.start()
+		
 
 func _on_Animatedattack_animation_finished():
 	if attplayer==true:
@@ -178,3 +188,7 @@ func _on_Animatedattack_animation_finished():
 		$Area2D/ColliD.disabled=true
 		attplayer=false
 
+
+
+func _on_ignore_timeout():
+	ignore=false

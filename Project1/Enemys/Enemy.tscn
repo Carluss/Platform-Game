@@ -124,7 +124,7 @@ extents = Vector2( 9.64673, 12.2097 )
 custom_solver_bias = 0.0
 extents = Vector2( 10.1418, 7.70057 )
 
-[node name="Enemy" type="KinematicBody2D"]
+[node name="Enemy" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 9
@@ -252,6 +252,13 @@ build_mode = 0
 polygon = PoolVector2Array( 4.03687, 15.9846, -16.8713, 15.9619, -16.0636, 0.974596, -10.9481, -10.6922, -2.60192, -17.423, 8.30873, -19.899, 15.0013, -19.899, 18.847, -18.1409, 23.2444, -14.0127, 23.0649, -8.89728, 4.17927, -8.50742 )
 disabled = true
 
+[node name="ignore" type="Timer" parent="." index="10"]
+
+process_mode = 1
+wait_time = 4.0
+one_shot = true
+autostart = false
+
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
 
 [connection signal="animation_finished" from="Animatedattack" to="." method="_on_Animatedattack_animation_finished"]
@@ -261,5 +268,7 @@ disabled = true
 [connection signal="body_entered" from="is_on_wall" to="." method="_on_is_on_wall_body_entered"]
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+
+[connection signal="timeout" from="ignore" to="." method="_on_ignore_timeout"]
 
 
