@@ -358,10 +358,10 @@ func _on_AttCollision2D_body_entered(body):
 
 
 func hurt():
-	$AnimatedSprite.modulate = Color(1, 0.22, 0.37) 
 	health-=dmg
 	is_hurt=true
 	if health>0:
+		$AnimatedSprite.modulate = Color(1, 0.22, 0.37) 
 		print(health)
 	else:
 		dead()

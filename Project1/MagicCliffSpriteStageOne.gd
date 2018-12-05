@@ -9,10 +9,11 @@ func _ready():
 	# Initialization here
 	pass
 
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
+
+func _process(delta):
+	if get_node("Player").get("teleport")== true:
+		get_node("Player").position=$Dead.global_position
+	
 
 
 func _on_Area2D_body_entered(body):

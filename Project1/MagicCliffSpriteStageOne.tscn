@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://MagicCliffSpriteStageOne.gd" type="Script" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://sprites/Map Sprites/gothicvania-cemetery-files/gothicvania-cemetery-files/PNG/Environment/tileset.png" type="Texture" id=7]
 [ext_resource path="res://sprites/Map Sprites/gothicvania-cemetery-files/gothicvania-cemetery-files/PNG/Environment/sliced-objects/statue.png" type="Texture" id=8]
 [ext_resource path="res://Box.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Enemys/Enemy.tscn" type="PackedScene" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -37,7 +38,7 @@ extents = Vector2( 22.2351, 24.2209 )
 custom_solver_bias = 0.0
 extents = Vector2( 26.2759, 26.19 )
 
-[node name="Node" type="Node"]
+[node name="Node" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -383,7 +384,7 @@ _sections_unfolded = [ "Region" ]
 
 [node name="environment-tiles37" type="Sprite" parent="Terra" index="14"]
 
-position = Vector2( 882.726, 69.3575 )
+position = Vector2( 881.726, 69.3575 )
 rotation = -1.56458
 scale = Vector2( 1.33861, 1.33861 )
 texture = ExtResource( 6 )
@@ -503,7 +504,7 @@ _sections_unfolded = [ "Region" ]
 
 [node name="environment-tiles39" type="Sprite" parent="Terra" index="26"]
 
-position = Vector2( 882.726, -2.96118 )
+position = Vector2( 881.726, -2.96118 )
 rotation = -1.56458
 scale = Vector2( 1.33861, 1.33861 )
 texture = ExtResource( 6 )
@@ -663,7 +664,7 @@ _sections_unfolded = [ "Region" ]
 
 [node name="environment-tiles36" type="Sprite" parent="Terra" index="42"]
 
-position = Vector2( 882.726, 22.0394 )
+position = Vector2( 881.726, 22.0394 )
 rotation = -1.56458
 scale = Vector2( 1.33861, 1.33861 )
 texture = ExtResource( 6 )
@@ -763,7 +764,7 @@ _sections_unfolded = [ "Region" ]
 
 [node name="environment-tiles38" type="Sprite" parent="Terra" index="52"]
 
-position = Vector2( 882.726, 45.4371 )
+position = Vector2( 881.726, 45.4371 )
 rotation = -1.56458
 scale = Vector2( 1.33861, 1.33861 )
 texture = ExtResource( 6 )
@@ -4049,6 +4050,14 @@ position = Vector2( -164.62, 1274.01 )
 position = Vector2( 294.507, 417.708 )
 rotation = 0.000963151
 scale = Vector2( 1.33861, 1.33861 )
+
+[node name="Dead" type="Position2D" parent="." index="78"]
+
+position = Vector2( 858.921, -36.9621 )
+
+[node name="Enemy" parent="." index="79" instance=ExtResource( 10 )]
+
+position = Vector2( 1071.36, 54.1893 )
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 

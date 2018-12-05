@@ -126,7 +126,7 @@ func _physics_process(delta):
 
 
 func _on_is_on_wall_body_entered(body):
-	if body.name!="Player" and body.name!="Enemy2" and body.name!="Enemy"and body.name!="Enemy3":
+	if (body.name!="Player") and body.name!="Enemy2" and body.name!="Enemy"and body.name!="Enemy3":
 		direction = direction * -1
 		$RayCast2D.position.x*=-1
 
