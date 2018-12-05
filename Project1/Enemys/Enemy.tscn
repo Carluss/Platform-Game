@@ -255,7 +255,7 @@ disabled = true
 [node name="ignore" type="Timer" parent="." index="10"]
 
 process_mode = 1
-wait_time = 4.0
+wait_time = 2.0
 one_shot = true
 autostart = false
 
