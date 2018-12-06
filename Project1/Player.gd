@@ -48,6 +48,7 @@ var dmg=25
 var is_hurt=false
 var is_dead=false
 var teleport=false
+var canspikeshurt=true
 
 #------
 func limitation(mode,state):
@@ -356,7 +357,17 @@ func _on_AttCollision2D_body_entered(body):
 		
 		body.hurt()
 
-
+func spikes(dmgp):
+	if canspikeshurt==true and is_dead==false and health>0:
+		is_hurt=true
+		$AnimatedSprite.modulate = Color(1, 0.22, 0.37) 
+		health-=dmgp
+		print(health)
+		canspikeshurt=false
+		$Spikes.start()
+	if health<1:
+		dead()
+	
 
 func hurt():
 	health-=dmg
@@ -514,3 +525,7 @@ func _on_DrawSheet_timeout():
 
 func _on_deadtimer_timeout():
 	teleport=true
+
+
+func _on_Spikes_timeout():
+	canspikeshurt=true

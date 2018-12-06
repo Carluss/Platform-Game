@@ -168,7 +168,7 @@ texture = ExtResource( 4 )
 
 [node name="back-walls16" type="Sprite" parent="Background" index="18"]
 
-position = Vector2( 1456, 292 )
+position = Vector2( 1456.54, 292 )
 texture = ExtResource( 4 )
 
 [node name="back-walls11" type="Sprite" parent="Background" index="19"]
