@@ -38,7 +38,7 @@ extents = Vector2( 22.2351, 24.2209 )
 custom_solver_bias = 0.0
 extents = Vector2( 26.2759, 26.19 )
 
-[node name="Node" type="Node"]
+[node name="Node" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -3829,6 +3829,21 @@ polygon = PoolVector2Array( 60, 500, 340, 500, 340, 400, 610, 400, 610, 500, 850
 
 build_mode = 0
 polygon = PoolVector2Array( 1430, 460, 1430, 550, 1360, 550, 1360, 670, 1390, 670, 1410, 660, 1710, 660 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="collisions/StaticBody2D" index="9"]
+
+build_mode = 0
+polygon = PoolVector2Array( 1559.13, 1572.69, 1386.54, 1580.03, 1380.11, 1501.08, 1304.66, 1501.49, 1303.34, 1456.41, 1377.39, 1456.41, 1379.37, 1359.98, 1744.01, 1358.66, 1744.33, 1530.12, 2178.08, 1531.44, 2177.76, 1515.31, 2426.94, 1514.92, 2427.94, 1459.36, 2222.07, 1458.87, 2220.09, 1232.17, 2485.98, 1493.59, 2377.62, 1608.22, 1646.59, 1547.76 )
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="collisions/StaticBody2D" index="10"]
+
+build_mode = 0
+polygon = PoolVector2Array( 2221.47, 1230.65, 1743.69, 1229.98, 1743.66, 1310.05, 1380.19, 1311.12, 1379.38, 1232.58, 1247.5, 1234.19, 1243.48, 1435.76, 1036.01, 1435.23, 1036.28, 1355.88, 83.7296, 1354.26, 374.598, 1298.92, 1268.14, 1203.96, 1985.96, 1193.49 )
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="collisions/StaticBody2D" index="11"]
+
+build_mode = 0
+polygon = PoolVector2Array( 168.903, 1410.11, 975.378, 1404.21, 975.587, 1580.95, 1036.47, 1580.95, 1036.47, 1485.51, 1266.84, 1484.52, 1269.8, 1730.69, 1384, 1730.36, 1382.35, 1630.97, 1698.97, 1630.88, 1244.8, 1860.74, 802.322, 1517.95 )
 
 [node name="ClimbWall" type="Node2D" parent="collisions" index="1"]
 
