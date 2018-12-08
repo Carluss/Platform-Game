@@ -37,7 +37,7 @@ extents = Vector2( 13.0454, 32.9838 )
 custom_solver_bias = 0.0
 extents = Vector2( 10, 105.835 )
 
-[node name="Kadyria_1" type="Node" index="0"]
+[node name="Kadyria_1" type="Node"]
 
 script = ExtResource( 1 )
 __meta__ = {

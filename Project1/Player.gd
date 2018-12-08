@@ -123,7 +123,7 @@ func right(mode):
 			fliph("right")
 		incrouch(false)
 		velocity.x = min(velocity.x+speed,MaxSpeed)
-		if !velocity.y<0 and is_attacking==false:
+		if  is_attacking==false:
 			if is_hurt==true:
 				$AnimatedSprite.play("hurt")
 			else:
@@ -151,14 +151,14 @@ func right(mode):
 			velocity.x = min(velocity.x+speed,MaxSpeedatt)
 			is_att=true
 			attacking()
-		if !velocity.y<0 and is_attacking==false and is_att==false:
+		if is_attacking==false and is_att==false:
 			$AnimatedSprite.play("RunSword")
 	elif is_dead==false and mode==true and Input.is_action_pressed("ui_down"):
 		if is_attacking==false:
 			fliph("right")
 		incrouch(false)
 		velocity.x = min(velocity.x+speed,MaxSpeed)
-		if !velocity.y<0 and is_attacking==false:
+		if is_attacking==false:
 			$AnimatedSprite.play("RunSword")
 	return true
 	
@@ -169,7 +169,7 @@ func left(mode):
 			fliph("left")
 		incrouch(false)
 		velocity.x = max(velocity.x-speed,-MaxSpeed)
-		if !velocity.y<0 and is_attacking==false:
+		if is_attacking==false:
 			if is_hurt==true:
 				$AnimatedSprite.play("hurt")
 			else:
@@ -196,14 +196,14 @@ func left(mode):
 		if Input.is_action_just_pressed("ui_attack1") and is_on_floor()==true:
 			is_att=true
 			attacking()
-		if !velocity.y<0 and is_attacking==false and is_att==false:
+		if is_attacking==false and is_att==false:
 			$AnimatedSprite.play("RunSword")
 	elif is_dead==false and mode==true and Input.is_action_pressed("ui_down"):
 		if is_attacking==false:
 			fliph("left")
 		incrouch(false)
 		velocity.x = max(velocity.x-speed,-MaxSpeed)
-		if !velocity.y<0 and is_attacking==false:
+		if is_attacking==false:
 			$AnimatedSprite.play("RunSword")	
 	return true
 
@@ -358,7 +358,7 @@ func _on_AttCollision2D_body_entered(body):
 		body.hurt()
 
 func spikes(dmgp):
-	if canspikeshurt==true and is_dead==false and health>0:
+	if canspikeshurt==true and is_dead==false and health>-1:
 		is_hurt=true
 		$AnimatedSprite.modulate = Color(1, 0.22, 0.37) 
 		health-=dmgp
@@ -372,7 +372,7 @@ func spikes(dmgp):
 func hurt():
 	health-=dmg
 	is_hurt=true
-	if health>0:
+	if health>0 and is_dead==false:
 		$AnimatedSprite.modulate = Color(1, 0.22, 0.37) 
 		print(health)
 		return is_dead
@@ -444,8 +444,10 @@ func _physics_process(delta):
 			on_ground=false
 			if velocity.y<0 and is_ladder==false and corner==false and is_climbw==false:
 				$AnimatedSprite.play("Jump")
-			elif $Fallray.is_colliding()==false and corner==false and $climbw.is_colliding()==false:
-				$AnimatedSprite.play("fall")	
+				incrouch(false)
+			elif velocity.y>0 and $Fallray.is_colliding()==false and corner==false and $climbw.is_colliding()==false:
+				$AnimatedSprite.play("fall")
+				incrouch(false)
 				
 	velocity = move_and_slide(velocity, FLOOR)
 	
