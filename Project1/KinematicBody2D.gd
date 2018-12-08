@@ -16,6 +16,8 @@ func _ready():
 func _physics_process(delta):
 	if is_hit==true and on_ground==false:
 		velocity.y +=GRAVITY
+	if is_on_floor()==true:
+		velocity=Vector2(0,0)
 		
 		
 	velocity = move_and_slide(velocity,FLOOR)

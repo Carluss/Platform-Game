@@ -15,7 +15,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 10, 67.5329 )
+extents = Vector2( 10, 71.0481 )
 
 [sub_resource type="RectangleShape2D" id=2]
 
@@ -3171,6 +3171,7 @@ _sections_unfolded = [ "Region" ]
 
 position = Vector2( 176, 459 )
 texture = ExtResource( 9 )
+_sections_unfolded = [ "Z Index" ]
 
 [node name="tiles_second_3" type="Sprite" parent="tiles_second" index="5"]
 
@@ -4421,7 +4422,7 @@ polygon = PoolVector2Array( 2221.47, 1230.65, 1743.69, 1229.98, 1743.66, 1310.05
 [node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="collisions/StaticBody2D" index="11"]
 
 build_mode = 0
-polygon = PoolVector2Array( 168.903, 1410.11, 975.378, 1404.21, 975.587, 1580.95, 1036.47, 1580.95, 1036.47, 1485.51, 1266.84, 1484.52, 1269.8, 1730.69, 1384, 1730.36, 1382.35, 1630.97, 1698.97, 1630.88, 1244.8, 1860.74, 802.322, 1517.95 )
+polygon = PoolVector2Array( 168.999, 1405.56, 784.558, 1404.42, 975.378, 1404.21, 975.587, 1580.95, 1036.47, 1580.95, 1036.18, 1484.35, 1266.39, 1484.14, 1269.46, 1730.42, 1382.57, 1729.64, 1382.35, 1630.97, 1698.97, 1630.88, 1301.35, 1801.15, 802.322, 1517.95 )
 
 [node name="ClimbWall" type="Node2D" parent="collisions" index="1"]
 
@@ -4723,9 +4724,6 @@ shape = SubResource( 14 )
 [node name="Healthpack" parent="." index="80" instance=ExtResource( 10 )]
 
 position = Vector2( 1075.37, 1470.56 )
-collision_layer = 8
-collision_mask = 8
-_sections_unfolded = [ "Collision" ]
 
 [node name="Enemy" parent="." index="81" instance=ExtResource( 11 )]
 

@@ -14,7 +14,7 @@ extents = Vector2( 15.9438, 15.9293 )
 custom_solver_bias = 0.0
 extents = Vector2( 0.984091, 47.782 )
 
-[node name="KinematicBody2D" type="KinematicBody2D" index="0"]
+[node name="KinematicBody2D" type="KinematicBody2D"]
 
 position = Vector2( 0.332962, -2.20263 )
 z_as_relative = false

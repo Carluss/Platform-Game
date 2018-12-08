@@ -123,7 +123,7 @@ func right(mode):
 			fliph("right")
 		incrouch(false)
 		velocity.x = min(velocity.x+speed,MaxSpeed)
-		if  is_attacking==false:
+		if  !velocity.y<-2 and is_attacking==false:
 			if is_hurt==true:
 				$AnimatedSprite.play("hurt")
 			else:
@@ -151,14 +151,14 @@ func right(mode):
 			velocity.x = min(velocity.x+speed,MaxSpeedatt)
 			is_att=true
 			attacking()
-		if is_attacking==false and is_att==false:
+		if !velocity.y<-2 and is_attacking==false and is_att==false:
 			$AnimatedSprite.play("RunSword")
 	elif is_dead==false and mode==true and Input.is_action_pressed("ui_down"):
 		if is_attacking==false:
 			fliph("right")
 		incrouch(false)
 		velocity.x = min(velocity.x+speed,MaxSpeed)
-		if is_attacking==false:
+		if !velocity.y<-2 and is_attacking==false:
 			$AnimatedSprite.play("RunSword")
 	return true
 	
@@ -169,7 +169,7 @@ func left(mode):
 			fliph("left")
 		incrouch(false)
 		velocity.x = max(velocity.x-speed,-MaxSpeed)
-		if is_attacking==false:
+		if !velocity.y<-2 and is_attacking==false:
 			if is_hurt==true:
 				$AnimatedSprite.play("hurt")
 			else:
@@ -196,14 +196,14 @@ func left(mode):
 		if Input.is_action_just_pressed("ui_attack1") and is_on_floor()==true:
 			is_att=true
 			attacking()
-		if is_attacking==false and is_att==false:
+		if !velocity.y<-2 and is_attacking==false and is_att==false:
 			$AnimatedSprite.play("RunSword")
 	elif is_dead==false and mode==true and Input.is_action_pressed("ui_down"):
 		if is_attacking==false:
 			fliph("left")
 		incrouch(false)
 		velocity.x = max(velocity.x-speed,-MaxSpeed)
-		if is_attacking==false:
+		if !velocity.y<-2 and is_attacking==false:
 			$AnimatedSprite.play("RunSword")	
 	return true
 
