@@ -17,7 +17,7 @@ points = PoolVector2Array( 0, -10, 8.66025, 5, -8.66025, 5 )
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="MagicCliffStuff" type="Node" index="0"]
+[node name="MagicCliffStuff" type="Node"]
 
 [node name="NoCollisionStuff" type="Node" parent="." index="0"]
 
