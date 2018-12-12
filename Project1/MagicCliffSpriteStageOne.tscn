@@ -84,7 +84,7 @@ extents = Vector2( 55.1858, 10 )
 custom_solver_bias = 0.0
 extents = Vector2( 214.484, 10 )
 
-[node name="Node" type="Node" index="0"]
+[node name="Node" type="Node"]
 
 script = ExtResource( 1 )
 
@@ -4466,8 +4466,8 @@ _sections_unfolded = [ "Visibility" ]
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="collisions/ClimbWall/Area2D" index="3"]
 
 light_mask = 5
-position = Vector2( 600, 273.579 )
-scale = Vector2( 1, 1.15223 )
+position = Vector2( 598, 270.95 )
+scale = Vector2( 1, 1.01218 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Visibility" ]
 

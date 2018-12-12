@@ -37,7 +37,7 @@ extents = Vector2( 13.0454, 32.9838 )
 custom_solver_bias = 0.0
 extents = Vector2( 10, 105.835 )
 
-[node name="Kadyria_1" type="Node" index="0"]
+[node name="Kadyria_1" type="Node"]
 
 script = ExtResource( 1 )
 __meta__ = {
@@ -319,28 +319,30 @@ _sections_unfolded = [ "Region" ]
 
 [node name="Ballons" type="Node" parent="." index="6"]
 
-editor/display_folded = true
-
 [node name="Balao_benvindo" type="Sprite" parent="Ballons" index="0"]
 
+visible = false
 position = Vector2( 201, -48 )
 scale = Vector2( 0.212917, 0.212917 )
 texture = ExtResource( 5 )
 
 [node name="Balao_Flechas" type="Sprite" parent="Ballons" index="1"]
 
+visible = false
 position = Vector2( 772, -16 )
 scale = Vector2( 0.214444, 0.214444 )
 texture = ExtResource( 6 )
 
 [node name="Balao_agachar" type="Sprite" parent="Ballons" index="2"]
 
+visible = false
 position = Vector2( 1169, -25 )
 scale = Vector2( 0.214444, 0.214444 )
 texture = ExtResource( 7 )
 
 [node name="Balao_escalar" type="Sprite" parent="Ballons" index="3"]
 
+visible = false
 position = Vector2( 1030, 187 )
 scale = Vector2( 0.214444, 0.214444 )
 texture = ExtResource( 8 )
@@ -1668,6 +1670,7 @@ _sections_unfolded = [ "Offset", "Region", "Transform" ]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." index="25"]
 
+visible = false
 position = Vector2( 160, 100 )
 scale = Vector2( 12.3438, 15 )
 input_pickable = false
@@ -1737,6 +1740,7 @@ bus = "Master"
 
 [node name="spikes" type="Area2D" parent="." index="28"]
 
+visible = false
 position = Vector2( 880.839, 245.48 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )

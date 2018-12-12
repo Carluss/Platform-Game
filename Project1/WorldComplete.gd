@@ -5,12 +5,3 @@ func _physics_process(delta):
 		if body.name == "Player":
 			get_tree().change_scene("MagicCliffSpriteStageOne.tscn")
 			
-func _OCarlosCarrega(Karluss):
-	var Carluss = Carry
-	var grupo 
-	if Carluss not in grupo:
-		return 15
-	else:
-		return 20
-		
-		
