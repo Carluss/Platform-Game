@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://MagicCliffSpriteStageOne.gd" type="Script" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://sprites/Map Sprites/gothicvania-cemetery-files/gothicvania-cemetery-files/PNG/Environment/sliced-objects/statue.png" type="Texture" id=9]
 [ext_resource path="res://Healthpack.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Enemys/Enemy.tscn" type="PackedScene" id=11]
+[ext_resource path="res://CanvasLayer.tscn" type="PackedScene" id=12]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -4728,6 +4729,8 @@ position = Vector2( 1075.37, 1470.56 )
 [node name="Enemy" parent="." index="81" instance=ExtResource( 11 )]
 
 position = Vector2( 1034.36, 5.18929 )
+
+[node name="CanvasLayer" parent="." index="82" instance=ExtResource( 12 )]
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 
