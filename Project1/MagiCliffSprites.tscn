@@ -8,7 +8,7 @@
 [ext_resource path="res://sprites/Ballons/Balao_Flechas.png" type="Texture" id=6]
 [ext_resource path="res://sprites/Ballons/Balao_agachar.png" type="Texture" id=7]
 [ext_resource path="res://sprites/Ballons/Balao_escalar.png" type="Texture" id=8]
-[ext_resource path="res://sprites/game_background_2/layers/sky.png" type="Texture" id=9]
+[ext_resource path="res://sprites/game_background_2/transferir (3).jpg" type="Texture" id=9]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=10]
 [ext_resource path="res://sprites/Map Sprites/Dungeon_tileset.png" type="Texture" id=11]
 [ext_resource path="res://sprite.tscn" type="PackedScene" id=12]
@@ -44,31 +44,16 @@ __meta__ = {
 "_edit_horizontal_guides_": [  ]
 }
 
-[node name="Sprite" type="Sprite" parent="." index="0"]
+[node name="Sprite3" type="Sprite" parent="." index="0"]
 
-position = Vector2( -480, -291 )
-scale = Vector2( 3.95313, 3.5856 )
-texture = ExtResource( 2 )
-centered = false
-_sections_unfolded = [ "Offset" ]
-
-[node name="Sprite2" type="Sprite" parent="." index="1"]
-
-position = Vector2( -1144, -310 )
+visible = false
+position = Vector2( -420, -660 )
 scale = Vector2( 3.90625, 3.54308 )
 texture = ExtResource( 2 )
 centered = false
 _sections_unfolded = [ "Offset" ]
 
-[node name="Sprite3" type="Sprite" parent="." index="2"]
-
-position = Vector2( -624, -398 )
-scale = Vector2( 3.90625, 3.54308 )
-texture = ExtResource( 2 )
-centered = false
-_sections_unfolded = [ "Offset" ]
-
-[node name="WorldComplete" type="Area2D" parent="." index="3"]
+[node name="WorldComplete" type="Area2D" parent="." index="1"]
 
 position = Vector2( 1588.86, 338.268 )
 rotation = -0.0144382
@@ -92,7 +77,7 @@ position = Vector2( -5.72205e-006, -5.72205e-006 )
 scale = Vector2( 3.2, 3.2 )
 shape = SubResource( 1 )
 
-[node name="Chao_esquerda_20" type="Sprite" parent="." index="4"]
+[node name="Chao_esquerda_20" type="Sprite" parent="." index="2"]
 
 position = Vector2( 1455.91, 81.9624 )
 rotation = -1.26186
@@ -103,7 +88,7 @@ region_enabled = true
 region_rect = Rect2( 544, 96, 64, 48 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Terra" type="Node" parent="." index="5"]
+[node name="Terra" type="Node" parent="." index="3"]
 
 editor/display_folded = true
 
@@ -317,7 +302,7 @@ region_enabled = true
 region_rect = Rect2( 96, 256, 32, 32 )
 _sections_unfolded = [ "Region" ]
 
-[node name="Ballons" type="Node" parent="." index="6"]
+[node name="Ballons" type="Node" parent="." index="4"]
 
 [node name="Balao_benvindo" type="Sprite" parent="Ballons" index="0"]
 
@@ -348,7 +333,7 @@ scale = Vector2( 0.214444, 0.214444 )
 texture = ExtResource( 8 )
 _sections_unfolded = [ "Offset" ]
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="." index="7"]
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." index="5"]
 
 layer = -1
 offset = Vector2( 0, 0 )
@@ -364,13 +349,13 @@ scroll_ignore_camera_zoom = false
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground" index="0"]
 
-position = Vector2( -520, -524 )
+position = Vector2( -1040, -690 )
 scale = Vector2( 1.225, 1.11111 )
 texture = ExtResource( 9 )
 centered = false
 _sections_unfolded = [ "Offset" ]
 
-[node name="Ponte" type="Node" parent="." index="8"]
+[node name="Ponte" type="Node" parent="." index="6"]
 
 editor/display_folded = true
 
@@ -523,12 +508,12 @@ region_enabled = true
 region_rect = Rect2( 688, 176, 48, 48 )
 _sections_unfolded = [ "Offset", "Region", "Z Index" ]
 
-[node name="Player" parent="." index="9" instance=ExtResource( 10 )]
+[node name="Player" parent="." index="7" instance=ExtResource( 10 )]
 
 position = Vector2( 64, -16 )
 scale = Vector2( 1.25, 1.25 )
 
-[node name="Chao_esquerda" type="Node" parent="." index="10"]
+[node name="Chao_esquerda" type="Node" parent="." index="8"]
 
 [node name="Chao_esquerda_6" type="Sprite" parent="Chao_esquerda" index="0"]
 
@@ -585,7 +570,7 @@ region_enabled = true
 region_rect = Rect2( 256, 176, 32, 48 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Arvores" type="Node" parent="." index="11"]
+[node name="Arvores" type="Node" parent="." index="9"]
 
 editor/display_folded = true
 
@@ -636,7 +621,7 @@ region_enabled = true
 region_rect = Rect2( 192, 32, 128, 128 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Pedra_esquerda" type="Node" parent="." index="12"]
+[node name="Pedra_esquerda" type="Node" parent="." index="10"]
 
 editor/display_folded = true
 
@@ -659,7 +644,7 @@ region_enabled = true
 region_rect = Rect2( 576, 240, 64, 48 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Estruturas_flutuantes" type="Node" parent="." index="13"]
+[node name="Estruturas_flutuantes" type="Node" parent="." index="11"]
 
 editor/display_folded = true
 
@@ -767,7 +752,7 @@ region_enabled = true
 region_rect = Rect2( 432, 160, 32, 48 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Chao_Centro_5" type="Sprite" parent="." index="14"]
+[node name="Chao_Centro_5" type="Sprite" parent="." index="12"]
 
 position = Vector2( 692.898, 237.202 )
 rotation = -0.00420028
@@ -778,7 +763,7 @@ region_enabled = true
 region_rect = Rect2( 64, 176, 64, 112 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Chao_Centro_3" type="Sprite" parent="." index="15"]
+[node name="Chao_Centro_3" type="Sprite" parent="." index="13"]
 
 position = Vector2( 756.898, 236.933 )
 rotation = -0.00420028
@@ -788,7 +773,7 @@ region_enabled = true
 region_rect = Rect2( 64, 176, 64, 112 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Chao_Esquerda_TileMap" type="Node" parent="." index="16"]
+[node name="Chao_Esquerda_TileMap" type="Node" parent="." index="14"]
 
 editor/display_folded = true
 
@@ -966,7 +951,7 @@ region_enabled = true
 region_rect = Rect2( 320, 64, 64, 48 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Boca_de_precipicio" type="Node" parent="." index="17"]
+[node name="Boca_de_precipicio" type="Node" parent="." index="15"]
 
 [node name="Boca_de_precipicio_6" type="Sprite" parent="Boca_de_precipicio" index="0"]
 
@@ -1044,7 +1029,7 @@ region_enabled = true
 region_rect = Rect2( 432, 32, 64, 112 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Chao_Centro" type="Node" parent="." index="18"]
+[node name="Chao_Centro" type="Node" parent="." index="16"]
 
 editor/display_folded = true
 
@@ -1241,7 +1226,7 @@ region_enabled = true
 region_rect = Rect2( 192, 176, 48, 48 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Escalada" type="Node" parent="." index="19"]
+[node name="Escalada" type="Node" parent="." index="17"]
 
 editor/display_folded = true
 
@@ -1276,7 +1261,7 @@ region_enabled = true
 region_rect = Rect2( 32, 176, 96, 112 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Pedra_direita" type="Node" parent="." index="20"]
+[node name="Pedra_direita" type="Node" parent="." index="18"]
 
 editor/display_folded = true
 
@@ -1310,7 +1295,7 @@ region_enabled = true
 region_rect = Rect2( 144, 176, 32, 48 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Chao_direita" type="Node" parent="." index="21"]
+[node name="Chao_direita" type="Node" parent="." index="19"]
 
 editor/display_folded = true
 
@@ -1384,7 +1369,7 @@ region_enabled = true
 region_rect = Rect2( 192, 176, 48, 48 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Parte_cima_gruta17" type="Node" parent="." index="22"]
+[node name="Parte_cima_gruta17" type="Node" parent="." index="20"]
 
 [node name="Parte_cima_gruta" type="Sprite" parent="Parte_cima_gruta17" index="0"]
 
@@ -1566,7 +1551,7 @@ region_enabled = true
 region_rect = Rect2( 576, 240, 64, 48 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Espinhos" type="Node" parent="." index="23"]
+[node name="Espinhos" type="Node" parent="." index="21"]
 
 editor/display_folded = true
 
@@ -1615,7 +1600,7 @@ region_enabled = true
 region_rect = Rect2( 224, 304, 32, 16 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Mech" type="Node" parent="." index="24"]
+[node name="Mech" type="Node" parent="." index="22"]
 
 [node name="Dungeon_tileset" type="Sprite" parent="Mech" index="0"]
 
@@ -1668,7 +1653,7 @@ region_enabled = true
 region_rect = Rect2( 144, 416, 48, 64 )
 _sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." index="25"]
+[node name="StaticBody2D" type="StaticBody2D" parent="." index="23"]
 
 position = Vector2( 160, 100 )
 scale = Vector2( 12.3438, 15 )
@@ -1724,11 +1709,11 @@ scale = Vector2( 0.0810127, 0.0666667 )
 build_mode = 0
 polygon = PoolVector2Array( 1270.99, -7.00015, 1470, 0, 1506.9, 8.97438, 1566.96, 35.9858, 1599.48, 67.2794, 1620.99, 92.9998, 1630.99, 173, 1630.99, 213, 1620.99, 233, 1630.99, 263, 1620.99, 283, 1620.99, 297.136, 1620.99, 313, 1632.99, 329, 1616.99, 345, 1616.99, 409, 1632.99, 441, 1632.99, 473, 1632.99, 537, 1632.99, 633, 1770, 170, 1760, -190, 1260, -340, 1170, -250, 1170, -230, 1160, -220, 1170, -190, 1180, -160, 1220, -130, 1220, -110, 1230, -90, 1240, -60, 1240, -50, 1250, -20 )
 
-[node name="Enemy" parent="." index="26" instance=ExtResource( 13 )]
+[node name="Enemy" parent="." index="24" instance=ExtResource( 13 )]
 
 position = Vector2( 210.201, -16.2847 )
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="27"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="25"]
 
 stream = ExtResource( 14 )
 volume_db = 0.0
@@ -1737,7 +1722,7 @@ autoplay = true
 mix_target = 0
 bus = "Master"
 
-[node name="spikes" type="Area2D" parent="." index="28"]
+[node name="spikes" type="Area2D" parent="." index="26"]
 
 visible = false
 position = Vector2( 880.839, 245.48 )
@@ -1754,7 +1739,7 @@ audio_bus_name = "Master"
 position = Vector2( 15.9357, 7.97133 )
 shape = SubResource( 2 )
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="." index="29"]
+[node name="StaticBody2D2" type="StaticBody2D" parent="." index="27"]
 
 visible = false
 input_pickable = false
@@ -1773,7 +1758,7 @@ scale = Vector2( 1, 2.13661 )
 z_index = 1
 shape = SubResource( 3 )
 
-[node name="climb w" type="Area2D" parent="." index="30"]
+[node name="climb w" type="Area2D" parent="." index="28"]
 
 visible = false
 input_pickable = true
@@ -1792,7 +1777,7 @@ _sections_unfolded = [ "Collision", "Z Index" ]
 position = Vector2( 1112.24, 144.87 )
 shape = SubResource( 4 )
 
-[node name="environment-tiles" type="Sprite" parent="." index="31"]
+[node name="environment-tiles" type="Sprite" parent="." index="29"]
 
 position = Vector2( 346, 73.7342 )
 scale = Vector2( 1.625, 1.625 )
@@ -1801,7 +1786,7 @@ region_enabled = true
 region_rect = Rect2( 416, 48, 16, 16 )
 _sections_unfolded = [ "Region" ]
 
-[node name="environment-tiles2" type="Sprite" parent="." index="32"]
+[node name="environment-tiles2" type="Sprite" parent="." index="30"]
 
 position = Vector2( 346, 98 )
 scale = Vector2( 1.625, 1.625 )
@@ -1810,7 +1795,7 @@ region_enabled = true
 region_rect = Rect2( 416, 48, 16, 16 )
 _sections_unfolded = [ "Region" ]
 
-[node name="environment-tiles3" type="Sprite" parent="." index="33"]
+[node name="environment-tiles3" type="Sprite" parent="." index="31"]
 
 position = Vector2( 346, 122 )
 scale = Vector2( 1.625, 1.625 )
@@ -1819,7 +1804,7 @@ region_enabled = true
 region_rect = Rect2( 416, 48, 16, 16 )
 _sections_unfolded = [ "Region" ]
 
-[node name="environment-tiles4" type="Sprite" parent="." index="34"]
+[node name="environment-tiles4" type="Sprite" parent="." index="32"]
 
 position = Vector2( 346, 147 )
 scale = Vector2( 1.625, 1.625 )
@@ -1828,7 +1813,7 @@ region_enabled = true
 region_rect = Rect2( 416, 48, 16, 16 )
 _sections_unfolded = [ "Region" ]
 
-[node name="environment-tiles5" type="Sprite" parent="." index="35"]
+[node name="environment-tiles5" type="Sprite" parent="." index="33"]
 
 position = Vector2( 346, 171 )
 scale = Vector2( 1.625, 1.625 )
@@ -1837,7 +1822,7 @@ region_enabled = true
 region_rect = Rect2( 416, 48, 16, 16 )
 _sections_unfolded = [ "Region" ]
 
-[node name="environment-tiles6" type="Sprite" parent="." index="36"]
+[node name="environment-tiles6" type="Sprite" parent="." index="34"]
 
 position = Vector2( 346, 194 )
 scale = Vector2( 1.625, 1.625 )
@@ -1846,7 +1831,7 @@ region_enabled = true
 region_rect = Rect2( 416, 48, 16, 16 )
 _sections_unfolded = [ "Region" ]
 
-[node name="Chao_esquerda_19" type="Sprite" parent="." index="37"]
+[node name="Chao_esquerda_19" type="Sprite" parent="." index="35"]
 
 position = Vector2( 1620.56, 23.1849 )
 rotation = 1.8427
@@ -1858,7 +1843,7 @@ region_enabled = true
 region_rect = Rect2( 544, 96, 64, 48 )
 _sections_unfolded = [ "Offset", "Region", "Z Index" ]
 
-[node name="Dead" type="Position2D" parent="." index="38"]
+[node name="Dead" type="Position2D" parent="." index="36"]
 
 position = Vector2( 319.768, 24.5465 )
 
