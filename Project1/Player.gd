@@ -404,11 +404,11 @@ func _physics_process(delta):
 			print(attmode)
 	
 		
-	if  Input.is_action_pressed("ui_right"):
+	if  Input.is_action_pressed("ui_right") and is_dead==false:
 		right(attmode)
-	elif Input.is_action_pressed("ui_left") :
+	elif Input.is_action_pressed("ui_left") and is_dead==false:
 		left(attmode)
-	elif Input.is_action_pressed("ui_down") and limitation(attmode,"crouch")==true :
+	elif Input.is_action_pressed("ui_down") and limitation(attmode,"crouch")==true and is_dead==false :
 		crouch(attmode)
 	else:
 		idle(attmode)
