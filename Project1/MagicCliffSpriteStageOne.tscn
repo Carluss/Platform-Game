@@ -17,7 +17,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 10, 71.0481 )
+extents = Vector2( 10, 81.8521 )
 
 [sub_resource type="RectangleShape2D" id=2]
 
@@ -597,7 +597,7 @@ _sections_unfolded = [ "Region" ]
 
 [node name="environment-tiles88" type="Sprite" parent="Terra" index="17"]
 
-position = Vector2( 1273.78, 1538.72 )
+position = Vector2( 1272.96, 1544.17 )
 rotation = -1.56458
 scale = Vector2( 1.33861, 1.33861 )
 texture = ExtResource( 6 )
@@ -628,7 +628,7 @@ _sections_unfolded = [ "Region" ]
 
 [node name="environment-tiles90" type="Sprite" parent="Terra" index="20"]
 
-position = Vector2( 1273.78, 1634.12 )
+position = Vector2( 1273.78, 1638.12 )
 rotation = -1.56458
 scale = Vector2( 1.33861, 1.33861 )
 texture = ExtResource( 6 )
@@ -748,7 +748,7 @@ _sections_unfolded = [ "Region" ]
 
 [node name="environment-tiles87" type="Sprite" parent="Terra" index="32"]
 
-position = Vector2( 1273.78, 1562.41 )
+position = Vector2( 1272.57, 1567.33 )
 rotation = -1.56458
 scale = Vector2( 1.33861, 1.33861 )
 texture = ExtResource( 6 )
@@ -929,7 +929,7 @@ _sections_unfolded = [ "Region" ]
 
 [node name="environment-tiles83" type="Sprite" parent="Terra" index="50"]
 
-position = Vector2( 1273.78, 1586.8 )
+position = Vector2( 1273.1, 1590.34 )
 rotation = -1.56458
 scale = Vector2( 1.33861, 1.33861 )
 texture = ExtResource( 6 )
@@ -949,7 +949,7 @@ _sections_unfolded = [ "Region" ]
 
 [node name="environment-tiles86" type="Sprite" parent="Terra" index="52"]
 
-position = Vector2( 1273.78, 1657.8 )
+position = Vector2( 1274.09, 1662.1 )
 rotation = -1.56458
 scale = Vector2( 1.33861, 1.33861 )
 texture = ExtResource( 6 )
@@ -1049,7 +1049,7 @@ _sections_unfolded = [ "Region" ]
 
 [node name="environment-tiles91" type="Sprite" parent="Terra" index="62"]
 
-position = Vector2( 1273.78, 1514.8 )
+position = Vector2( 1273.55, 1520.68 )
 rotation = -1.56458
 scale = Vector2( 1.33861, 1.33861 )
 texture = ExtResource( 6 )
@@ -1057,7 +1057,17 @@ region_enabled = true
 region_rect = Rect2( 224, 64, 16, 16 )
 _sections_unfolded = [ "Region" ]
 
-[node name="environment-tiles85" type="Sprite" parent="Terra" index="63"]
+[node name="environment-tiles94" type="Sprite" parent="Terra" index="63"]
+
+position = Vector2( 1272.56, 1497.85 )
+rotation = -1.56458
+scale = Vector2( 1.33861, 1.33861 )
+texture = ExtResource( 6 )
+region_enabled = true
+region_rect = Rect2( 224, 64, 16, 16 )
+_sections_unfolded = [ "Region" ]
+
+[node name="environment-tiles85" type="Sprite" parent="Terra" index="64"]
 
 position = Vector2( 1030.78, 1494.78 )
 rotation = -1.56458
@@ -1068,7 +1078,7 @@ region_enabled = true
 region_rect = Rect2( 224, 64, 16, 16 )
 _sections_unfolded = [ "Region" ]
 
-[node name="environment-tiles78" type="Sprite" parent="Terra" index="64"]
+[node name="environment-tiles78" type="Sprite" parent="Terra" index="65"]
 
 position = Vector2( 1304.78, 614.172 )
 rotation = -1.56458
@@ -1078,9 +1088,9 @@ region_enabled = true
 region_rect = Rect2( 224, 64, 16, 16 )
 _sections_unfolded = [ "Region" ]
 
-[node name="environment-tiles92" type="Sprite" parent="Terra" index="65"]
+[node name="environment-tiles92" type="Sprite" parent="Terra" index="66"]
 
-position = Vector2( 1273.78, 1610.2 )
+position = Vector2( 1273.41, 1614.5 )
 rotation = -1.56458
 scale = Vector2( 1.33861, 1.33861 )
 texture = ExtResource( 6 )
@@ -1088,7 +1098,7 @@ region_enabled = true
 region_rect = Rect2( 224, 64, 16, 16 )
 _sections_unfolded = [ "Region" ]
 
-[node name="environment-tiles81" type="Sprite" parent="Terra" index="66"]
+[node name="environment-tiles81" type="Sprite" parent="Terra" index="67"]
 
 position = Vector2( 1304.78, 685.172 )
 rotation = -1.56458
@@ -1098,9 +1108,9 @@ region_enabled = true
 region_rect = Rect2( 224, 64, 16, 16 )
 _sections_unfolded = [ "Region" ]
 
-[node name="environment-tiles93" type="Sprite" parent="Terra" index="67"]
+[node name="environment-tiles93" type="Sprite" parent="Terra" index="68"]
 
-position = Vector2( 1273.78, 1681.2 )
+position = Vector2( 1274.7, 1684.58 )
 rotation = -1.56458
 scale = Vector2( 1.33861, 1.33861 )
 texture = ExtResource( 6 )
@@ -1108,7 +1118,7 @@ region_enabled = true
 region_rect = Rect2( 224, 64, 16, 16 )
 _sections_unfolded = [ "Region" ]
 
-[node name="environment-tiles26" type="Sprite" parent="Terra" index="68"]
+[node name="environment-tiles26" type="Sprite" parent="Terra" index="69"]
 
 position = Vector2( 668.252, 46.0842 )
 rotation = 1.5621
@@ -1118,7 +1128,7 @@ region_enabled = true
 region_rect = Rect2( 224, 64, 16, 16 )
 _sections_unfolded = [ "Region" ]
 
-[node name="environment-tiles30" type="Sprite" parent="Terra" index="69"]
+[node name="environment-tiles30" type="Sprite" parent="Terra" index="70"]
 
 position = Vector2( 668.252, 188.084 )
 rotation = 1.5621
@@ -1128,7 +1138,7 @@ region_enabled = true
 region_rect = Rect2( 224, 64, 16, 16 )
 _sections_unfolded = [ "Region" ]
 
-[node name="environment-tiles33" type="Sprite" parent="Terra" index="70"]
+[node name="environment-tiles33" type="Sprite" parent="Terra" index="71"]
 
 position = Vector2( 668.252, 330.082 )
 rotation = 1.5621
@@ -1138,7 +1148,7 @@ region_enabled = true
 region_rect = Rect2( 224, 64, 16, 16 )
 _sections_unfolded = [ "Region" ]
 
-[node name="environment-tiles32" type="Sprite" parent="Terra" index="71"]
+[node name="environment-tiles32" type="Sprite" parent="Terra" index="72"]
 
 position = Vector2( 668.252, 211.084 )
 rotation = 1.5621
@@ -1148,7 +1158,7 @@ region_enabled = true
 region_rect = Rect2( 224, 64, 16, 16 )
 _sections_unfolded = [ "Region" ]
 
-[node name="environment-tiles35" type="Sprite" parent="Terra" index="72"]
+[node name="environment-tiles35" type="Sprite" parent="Terra" index="73"]
 
 position = Vector2( 668.252, 353.082 )
 rotation = 1.5621
@@ -1158,7 +1168,7 @@ region_enabled = true
 region_rect = Rect2( 224, 64, 16, 16 )
 _sections_unfolded = [ "Region" ]
 
-[node name="environment-tiles27" type="Sprite" parent="Terra" index="73"]
+[node name="environment-tiles27" type="Sprite" parent="Terra" index="74"]
 
 position = Vector2( 668.252, 22.0837 )
 rotation = 1.5621
@@ -1168,7 +1178,7 @@ region_enabled = true
 region_rect = Rect2( 224, 64, 16, 16 )
 _sections_unfolded = [ "Region" ]
 
-[node name="environment-tiles31" type="Sprite" parent="Terra" index="74"]
+[node name="environment-tiles31" type="Sprite" parent="Terra" index="75"]
 
 position = Vector2( 668.252, 164.084 )
 rotation = 1.5621
@@ -1178,7 +1188,7 @@ region_enabled = true
 region_rect = Rect2( 224, 64, 16, 16 )
 _sections_unfolded = [ "Region" ]
 
-[node name="environment-tiles34" type="Sprite" parent="Terra" index="75"]
+[node name="environment-tiles34" type="Sprite" parent="Terra" index="76"]
 
 position = Vector2( 668.252, 306.083 )
 rotation = 1.5621
@@ -1188,7 +1198,7 @@ region_enabled = true
 region_rect = Rect2( 224, 64, 16, 16 )
 _sections_unfolded = [ "Region" ]
 
-[node name="environment-tiles28" type="Sprite" parent="Terra" index="76"]
+[node name="environment-tiles28" type="Sprite" parent="Terra" index="77"]
 
 position = Vector2( 668.252, -1.91687 )
 rotation = 1.5621
@@ -1198,7 +1208,7 @@ region_enabled = true
 region_rect = Rect2( 224, 64, 16, 16 )
 _sections_unfolded = [ "Region" ]
 
-[node name="environment-tiles29" type="Sprite" parent="Terra" index="77"]
+[node name="environment-tiles29" type="Sprite" parent="Terra" index="78"]
 
 position = Vector2( 668.252, 140.084 )
 rotation = 1.5621
@@ -1208,7 +1218,7 @@ region_enabled = true
 region_rect = Rect2( 224, 64, 16, 16 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_terra_7" type="Sprite" parent="Terra" index="78"]
+[node name="tiles_terra_7" type="Sprite" parent="Terra" index="79"]
 
 position = Vector2( 128, 640 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1220,7 +1230,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_77" type="Sprite" parent="Terra" index="79"]
+[node name="tiles_terra_77" type="Sprite" parent="Terra" index="80"]
 
 position = Vector2( 52, 1000 )
 scale = Vector2( 7.13889, 7.13889 )
@@ -1232,7 +1242,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_102" type="Sprite" parent="Terra" index="80"]
+[node name="tiles_terra_102" type="Sprite" parent="Terra" index="81"]
 
 position = Vector2( -760, 816 )
 scale = Vector2( 7.13889, 7.13889 )
@@ -1244,7 +1254,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_103" type="Sprite" parent="Terra" index="81"]
+[node name="tiles_terra_103" type="Sprite" parent="Terra" index="82"]
 
 position = Vector2( -1088, 32 )
 scale = Vector2( 7.13889, 7.13889 )
@@ -1256,7 +1266,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_104" type="Sprite" parent="Terra" index="82"]
+[node name="tiles_terra_104" type="Sprite" parent="Terra" index="83"]
 
 position = Vector2( -864, 1196 )
 scale = Vector2( 7.13889, 7.13889 )
@@ -1268,7 +1278,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_78" type="Sprite" parent="Terra" index="83"]
+[node name="tiles_terra_78" type="Sprite" parent="Terra" index="84"]
 
 position = Vector2( 837, 1042.11 )
 scale = Vector2( 5.59722, 5.4623 )
@@ -1280,7 +1290,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_91" type="Sprite" parent="Terra" index="84"]
+[node name="tiles_terra_91" type="Sprite" parent="Terra" index="85"]
 
 position = Vector2( 1172, 1000.94 )
 scale = Vector2( 5.59722, 3.94544 )
@@ -1292,7 +1302,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_79" type="Sprite" parent="Terra" index="85"]
+[node name="tiles_terra_79" type="Sprite" parent="Terra" index="86"]
 
 position = Vector2( -44, 1700 )
 scale = Vector2( 7.13889, 7.13889 )
@@ -1304,7 +1314,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_80" type="Sprite" parent="Terra" index="86"]
+[node name="tiles_terra_80" type="Sprite" parent="Terra" index="87"]
 
 position = Vector2( 699, 1857.89 )
 scale = Vector2( 3.625, 7.17659 )
@@ -1316,7 +1326,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_92" type="Sprite" parent="Terra" index="87"]
+[node name="tiles_terra_92" type="Sprite" parent="Terra" index="88"]
 
 position = Vector2( 968, 1992 )
 scale = Vector2( 3.625, 7.17659 )
@@ -1328,7 +1338,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_81" type="Sprite" parent="Terra" index="88"]
+[node name="tiles_terra_81" type="Sprite" parent="Terra" index="89"]
 
 position = Vector2( 1734.27, 1979.97 )
 rotation = -0.00142498
@@ -1341,7 +1351,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_99" type="Sprite" parent="Terra" index="89"]
+[node name="tiles_terra_99" type="Sprite" parent="Terra" index="90"]
 
 position = Vector2( 1710.89, 2325.7 )
 rotation = -0.00142498
@@ -1354,7 +1364,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_100" type="Sprite" parent="Terra" index="90"]
+[node name="tiles_terra_100" type="Sprite" parent="Terra" index="91"]
 
 position = Vector2( 758.885, 2439.27 )
 rotation = -0.00142498
@@ -1367,7 +1377,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_101" type="Sprite" parent="Terra" index="91"]
+[node name="tiles_terra_101" type="Sprite" parent="Terra" index="92"]
 
 position = Vector2( -61.1757, 2278.94 )
 rotation = -0.00142498
@@ -1380,7 +1390,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_93" type="Sprite" parent="Terra" index="92"]
+[node name="tiles_terra_93" type="Sprite" parent="Terra" index="93"]
 
 position = Vector2( 2065.89, 1869.93 )
 rotation = -0.00142498
@@ -1393,7 +1403,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_82" type="Sprite" parent="Terra" index="93"]
+[node name="tiles_terra_82" type="Sprite" parent="Terra" index="94"]
 
 position = Vector2( 1916, 1026.11 )
 scale = Vector2( 7.13889, 3.4623 )
@@ -1405,7 +1415,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_94" type="Sprite" parent="Terra" index="94"]
+[node name="tiles_terra_94" type="Sprite" parent="Terra" index="95"]
 
 position = Vector2( 1563.5, 1204 )
 scale = Vector2( 2.45139, 1.83829 )
@@ -1417,7 +1427,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_95" type="Sprite" parent="Terra" index="95"]
+[node name="tiles_terra_95" type="Sprite" parent="Terra" index="96"]
 
 position = Vector2( 2436, 1308 )
 scale = Vector2( 2.45139, 1.83829 )
@@ -1429,7 +1439,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_96" type="Sprite" parent="Terra" index="96"]
+[node name="tiles_terra_96" type="Sprite" parent="Terra" index="97"]
 
 position = Vector2( 1564, 1472 )
 scale = Vector2( 2.45139, 1.83829 )
@@ -1441,7 +1451,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_97" type="Sprite" parent="Terra" index="97"]
+[node name="tiles_terra_97" type="Sprite" parent="Terra" index="98"]
 
 position = Vector2( 1884, 1652 )
 scale = Vector2( 2.45139, 1.83829 )
@@ -1453,7 +1463,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_83" type="Sprite" parent="Terra" index="98"]
+[node name="tiles_terra_83" type="Sprite" parent="Terra" index="99"]
 
 position = Vector2( 2960, 1316 )
 scale = Vector2( 7.13889, 7.13889 )
@@ -1465,7 +1475,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_98" type="Sprite" parent="Terra" index="99"]
+[node name="tiles_terra_98" type="Sprite" parent="Terra" index="100"]
 
 position = Vector2( 2945, 1316 )
 scale = Vector2( 7.13889, 7.13889 )
@@ -1477,7 +1487,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_84" type="Sprite" parent="Terra" index="100"]
+[node name="tiles_terra_84" type="Sprite" parent="Terra" index="101"]
 
 position = Vector2( 2688, 1932 )
 scale = Vector2( 7.13889, 7.13889 )
@@ -1489,7 +1499,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_85" type="Sprite" parent="Terra" index="101"]
+[node name="tiles_terra_85" type="Sprite" parent="Terra" index="102"]
 
 position = Vector2( 3676, 1996 )
 scale = Vector2( 7.13889, 7.13889 )
@@ -1501,7 +1511,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_86" type="Sprite" parent="Terra" index="102"]
+[node name="tiles_terra_86" type="Sprite" parent="Terra" index="103"]
 
 position = Vector2( 3848, 1236 )
 scale = Vector2( 7.13889, 7.13889 )
@@ -1513,7 +1523,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_87" type="Sprite" parent="Terra" index="103"]
+[node name="tiles_terra_87" type="Sprite" parent="Terra" index="104"]
 
 position = Vector2( 3152, 532 )
 scale = Vector2( 7.13889, 7.13889 )
@@ -1525,7 +1535,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_88" type="Sprite" parent="Terra" index="104"]
+[node name="tiles_terra_88" type="Sprite" parent="Terra" index="105"]
 
 position = Vector2( 3084, 44 )
 scale = Vector2( 7.13889, 7.13889 )
@@ -1537,7 +1547,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_89" type="Sprite" parent="Terra" index="105"]
+[node name="tiles_terra_89" type="Sprite" parent="Terra" index="106"]
 
 position = Vector2( 4092, 56 )
 scale = Vector2( 7.13889, 7.13889 )
@@ -1549,7 +1559,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_90" type="Sprite" parent="Terra" index="106"]
+[node name="tiles_terra_90" type="Sprite" parent="Terra" index="107"]
 
 position = Vector2( 4104, 496 )
 scale = Vector2( 7.13889, 7.13889 )
@@ -1561,7 +1571,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_8" type="Sprite" parent="Terra" index="107"]
+[node name="tiles_terra_8" type="Sprite" parent="Terra" index="108"]
 
 position = Vector2( 416, 656 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1573,7 +1583,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_9" type="Sprite" parent="Terra" index="108"]
+[node name="tiles_terra_9" type="Sprite" parent="Terra" index="109"]
 
 position = Vector2( 720, 730 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1585,7 +1595,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_17" type="Sprite" parent="Terra" index="109"]
+[node name="tiles_terra_17" type="Sprite" parent="Terra" index="110"]
 
 position = Vector2( 683, 640 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1597,7 +1607,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_16" type="Sprite" parent="Terra" index="110"]
+[node name="tiles_terra_16" type="Sprite" parent="Terra" index="111"]
 
 position = Vector2( 1024, 731 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1609,7 +1619,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_43" type="Sprite" parent="Terra" index="111"]
+[node name="tiles_terra_43" type="Sprite" parent="Terra" index="112"]
 
 position = Vector2( 1142, 636 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1621,7 +1631,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_47" type="Sprite" parent="Terra" index="112"]
+[node name="tiles_terra_47" type="Sprite" parent="Terra" index="113"]
 
 position = Vector2( 1140, 668 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1633,7 +1643,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_73" type="Sprite" parent="Terra" index="113"]
+[node name="tiles_terra_73" type="Sprite" parent="Terra" index="114"]
 
 position = Vector2( 1436, 608 )
 scale = Vector2( 0.833334, 0.833334 )
@@ -1645,7 +1655,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_74" type="Sprite" parent="Terra" index="114"]
+[node name="tiles_terra_74" type="Sprite" parent="Terra" index="115"]
 
 position = Vector2( 1408, 856 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1657,7 +1667,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_76" type="Sprite" parent="Terra" index="115"]
+[node name="tiles_terra_76" type="Sprite" parent="Terra" index="116"]
 
 position = Vector2( 1617.72, 957.015 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1669,7 +1679,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_44" type="Sprite" parent="Terra" index="116"]
+[node name="tiles_terra_44" type="Sprite" parent="Terra" index="117"]
 
 position = Vector2( 1594, 608 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1681,7 +1691,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_53" type="Sprite" parent="Terra" index="117"]
+[node name="tiles_terra_53" type="Sprite" parent="Terra" index="118"]
 
 position = Vector2( 1824, 544 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1693,7 +1703,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_54" type="Sprite" parent="Terra" index="118"]
+[node name="tiles_terra_54" type="Sprite" parent="Terra" index="119"]
 
 position = Vector2( 1824, 720 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1705,7 +1715,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_55" type="Sprite" parent="Terra" index="119"]
+[node name="tiles_terra_55" type="Sprite" parent="Terra" index="120"]
 
 position = Vector2( 2112, 481 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1717,7 +1727,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_56" type="Sprite" parent="Terra" index="120"]
+[node name="tiles_terra_56" type="Sprite" parent="Terra" index="121"]
 
 position = Vector2( 2112, 720 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1729,7 +1739,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_57" type="Sprite" parent="Terra" index="121"]
+[node name="tiles_terra_57" type="Sprite" parent="Terra" index="122"]
 
 position = Vector2( 1888, 880 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1741,7 +1751,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_45" type="Sprite" parent="Terra" index="122"]
+[node name="tiles_terra_45" type="Sprite" parent="Terra" index="123"]
 
 position = Vector2( 1595, 768 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1753,7 +1763,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_46" type="Sprite" parent="Terra" index="123"]
+[node name="tiles_terra_46" type="Sprite" parent="Terra" index="124"]
 
 position = Vector2( 1209, 848 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1765,7 +1775,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_10" type="Sprite" parent="Terra" index="124"]
+[node name="tiles_terra_10" type="Sprite" parent="Terra" index="125"]
 
 position = Vector2( 64, 144 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1777,7 +1787,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_11" type="Sprite" parent="Terra" index="125"]
+[node name="tiles_terra_11" type="Sprite" parent="Terra" index="126"]
 
 position = Vector2( 64, 0 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1789,7 +1799,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_12" type="Sprite" parent="Terra" index="126"]
+[node name="tiles_terra_12" type="Sprite" parent="Terra" index="127"]
 
 position = Vector2( 352, 0 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1801,7 +1811,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_13" type="Sprite" parent="Terra" index="127"]
+[node name="tiles_terra_13" type="Sprite" parent="Terra" index="128"]
 
 position = Vector2( 368, 144 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1813,7 +1823,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_14" type="Sprite" parent="Terra" index="128"]
+[node name="tiles_terra_14" type="Sprite" parent="Terra" index="129"]
 
 position = Vector2( 451, 144 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1825,7 +1835,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_15" type="Sprite" parent="Terra" index="129"]
+[node name="tiles_terra_15" type="Sprite" parent="Terra" index="130"]
 
 position = Vector2( 452, 16 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1837,7 +1847,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_18" type="Sprite" parent="Terra" index="130"]
+[node name="tiles_terra_18" type="Sprite" parent="Terra" index="131"]
 
 position = Vector2( 789, 80.3333 )
 scale = Vector2( 1.26389, 1.26389 )
@@ -1849,7 +1859,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_20" type="Sprite" parent="Terra" index="131"]
+[node name="tiles_terra_20" type="Sprite" parent="Terra" index="132"]
 
 position = Vector2( 432, -176 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1861,7 +1871,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_22" type="Sprite" parent="Terra" index="132"]
+[node name="tiles_terra_22" type="Sprite" parent="Terra" index="133"]
 
 position = Vector2( 720, -192 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1873,7 +1883,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_26" type="Sprite" parent="Terra" index="133"]
+[node name="tiles_terra_26" type="Sprite" parent="Terra" index="134"]
 
 position = Vector2( 992, -192 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1885,7 +1895,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_27" type="Sprite" parent="Terra" index="134"]
+[node name="tiles_terra_27" type="Sprite" parent="Terra" index="135"]
 
 position = Vector2( 1248, -192 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1897,7 +1907,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_58" type="Sprite" parent="Terra" index="135"]
+[node name="tiles_terra_58" type="Sprite" parent="Terra" index="136"]
 
 position = Vector2( 1456, -96 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1909,7 +1919,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_48" type="Sprite" parent="Terra" index="136"]
+[node name="tiles_terra_48" type="Sprite" parent="Terra" index="137"]
 
 position = Vector2( 1536, -208 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1921,7 +1931,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_49" type="Sprite" parent="Terra" index="137"]
+[node name="tiles_terra_49" type="Sprite" parent="Terra" index="138"]
 
 position = Vector2( 1440, -110 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1933,7 +1943,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_28" type="Sprite" parent="Terra" index="138"]
+[node name="tiles_terra_28" type="Sprite" parent="Terra" index="139"]
 
 position = Vector2( 1840, -224 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1945,7 +1955,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_50" type="Sprite" parent="Terra" index="139"]
+[node name="tiles_terra_50" type="Sprite" parent="Terra" index="140"]
 
 position = Vector2( 1840, -224 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -1957,7 +1967,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_30" type="Sprite" parent="Terra" index="140"]
+[node name="tiles_terra_30" type="Sprite" parent="Terra" index="141"]
 
 position = Vector2( 1556, -48.7778 )
 scale = Vector2( 1.77778, 1.77778 )
@@ -1969,7 +1979,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_34" type="Sprite" parent="Terra" index="141"]
+[node name="tiles_terra_34" type="Sprite" parent="Terra" index="142"]
 
 position = Vector2( 1792, -86 )
 scale = Vector2( 1.77778, 1.77778 )
@@ -1981,7 +1991,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_51" type="Sprite" parent="Terra" index="142"]
+[node name="tiles_terra_51" type="Sprite" parent="Terra" index="143"]
 
 position = Vector2( 2112, -240 )
 scale = Vector2( 1.77778, 1.77778 )
@@ -1993,7 +2003,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_52" type="Sprite" parent="Terra" index="143"]
+[node name="tiles_terra_52" type="Sprite" parent="Terra" index="144"]
 
 position = Vector2( 2240, -80 )
 scale = Vector2( 1.77778, 1.77778 )
@@ -2005,7 +2015,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_35" type="Sprite" parent="Terra" index="144"]
+[node name="tiles_terra_35" type="Sprite" parent="Terra" index="145"]
 
 position = Vector2( 2016, -80 )
 scale = Vector2( 1.77778, 1.77778 )
@@ -2017,7 +2027,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_36" type="Sprite" parent="Terra" index="145"]
+[node name="tiles_terra_36" type="Sprite" parent="Terra" index="146"]
 
 position = Vector2( 2016, -80 )
 scale = Vector2( 1.77778, 1.77778 )
@@ -2029,7 +2039,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_37" type="Sprite" parent="Terra" index="146"]
+[node name="tiles_terra_37" type="Sprite" parent="Terra" index="147"]
 
 position = Vector2( 2096, 112 )
 scale = Vector2( 1.77778, 1.77778 )
@@ -2041,7 +2051,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_59" type="Sprite" parent="Terra" index="147"]
+[node name="tiles_terra_59" type="Sprite" parent="Terra" index="148"]
 
 position = Vector2( 2304, 100 )
 scale = Vector2( 1.77778, 1.77778 )
@@ -2053,7 +2063,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_66" type="Sprite" parent="Terra" index="148"]
+[node name="tiles_terra_66" type="Sprite" parent="Terra" index="149"]
 
 position = Vector2( 2484, -92 )
 scale = Vector2( 1.77778, 1.77778 )
@@ -2065,7 +2075,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_67" type="Sprite" parent="Terra" index="149"]
+[node name="tiles_terra_67" type="Sprite" parent="Terra" index="150"]
 
 position = Vector2( 2556, 88 )
 scale = Vector2( 1.77778, 1.77778 )
@@ -2077,7 +2087,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_68" type="Sprite" parent="Terra" index="150"]
+[node name="tiles_terra_68" type="Sprite" parent="Terra" index="151"]
 
 position = Vector2( 2564, 252 )
 scale = Vector2( 1.77778, 1.77778 )
@@ -2089,7 +2099,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_69" type="Sprite" parent="Terra" index="151"]
+[node name="tiles_terra_69" type="Sprite" parent="Terra" index="152"]
 
 position = Vector2( 2600, 412 )
 scale = Vector2( 1.77778, 1.77778 )
@@ -2101,7 +2111,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_70" type="Sprite" parent="Terra" index="152"]
+[node name="tiles_terra_70" type="Sprite" parent="Terra" index="153"]
 
 position = Vector2( 2624, 600 )
 scale = Vector2( 1.77778, 1.77778 )
@@ -2113,7 +2123,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_71" type="Sprite" parent="Terra" index="153"]
+[node name="tiles_terra_71" type="Sprite" parent="Terra" index="154"]
 
 position = Vector2( 2628, 776 )
 scale = Vector2( 1.77778, 1.77778 )
@@ -2125,7 +2135,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_72" type="Sprite" parent="Terra" index="154"]
+[node name="tiles_terra_72" type="Sprite" parent="Terra" index="155"]
 
 position = Vector2( 2644, 964 )
 scale = Vector2( 1.77778, 1.77778 )
@@ -2137,7 +2147,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_60" type="Sprite" parent="Terra" index="155"]
+[node name="tiles_terra_60" type="Sprite" parent="Terra" index="156"]
 
 position = Vector2( 2308, 268 )
 scale = Vector2( 1.77778, 1.77778 )
@@ -2149,7 +2159,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_61" type="Sprite" parent="Terra" index="156"]
+[node name="tiles_terra_61" type="Sprite" parent="Terra" index="157"]
 
 position = Vector2( 2372, 432 )
 scale = Vector2( 1.77778, 1.77778 )
@@ -2161,7 +2171,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_62" type="Sprite" parent="Terra" index="157"]
+[node name="tiles_terra_62" type="Sprite" parent="Terra" index="158"]
 
 position = Vector2( 2376, 608 )
 scale = Vector2( 1.77778, 1.77778 )
@@ -2173,7 +2183,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_63" type="Sprite" parent="Terra" index="158"]
+[node name="tiles_terra_63" type="Sprite" parent="Terra" index="159"]
 
 position = Vector2( 2384, 760 )
 scale = Vector2( 1.77778, 1.77778 )
@@ -2185,7 +2195,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_64" type="Sprite" parent="Terra" index="159"]
+[node name="tiles_terra_64" type="Sprite" parent="Terra" index="160"]
 
 position = Vector2( 2384, 936 )
 scale = Vector2( 1.77778, 1.77778 )
@@ -2197,7 +2207,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_65" type="Sprite" parent="Terra" index="160"]
+[node name="tiles_terra_65" type="Sprite" parent="Terra" index="161"]
 
 position = Vector2( 2152, 936 )
 scale = Vector2( 1.77778, 1.77778 )
@@ -2209,7 +2219,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_38" type="Sprite" parent="Terra" index="161"]
+[node name="tiles_terra_38" type="Sprite" parent="Terra" index="162"]
 
 position = Vector2( 2064, 263 )
 scale = Vector2( 1.77778, 1.77778 )
@@ -2221,7 +2231,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_39" type="Sprite" parent="Terra" index="162"]
+[node name="tiles_terra_39" type="Sprite" parent="Terra" index="163"]
 
 position = Vector2( 1904, 368 )
 scale = Vector2( 1.77778, 1.77778 )
@@ -2233,7 +2243,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_40" type="Sprite" parent="Terra" index="163"]
+[node name="tiles_terra_40" type="Sprite" parent="Terra" index="164"]
 
 position = Vector2( 1648, 384 )
 scale = Vector2( 1.77778, 1.77778 )
@@ -2245,7 +2255,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_41" type="Sprite" parent="Terra" index="164"]
+[node name="tiles_terra_41" type="Sprite" parent="Terra" index="165"]
 
 position = Vector2( 1648, 384 )
 scale = Vector2( 1.77778, 1.77778 )
@@ -2257,7 +2267,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_42" type="Sprite" parent="Terra" index="165"]
+[node name="tiles_terra_42" type="Sprite" parent="Terra" index="166"]
 
 position = Vector2( 1560, 472 )
 scale = Vector2( 1.77778, 1.77778 )
@@ -2269,7 +2279,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_33" type="Sprite" parent="Terra" index="166"]
+[node name="tiles_terra_33" type="Sprite" parent="Terra" index="167"]
 
 position = Vector2( 1552, 236 )
 scale = Vector2( 1.44444, 1.22863 )
@@ -2281,7 +2291,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_75" type="Sprite" parent="Terra" index="167"]
+[node name="tiles_terra_75" type="Sprite" parent="Terra" index="168"]
 
 position = Vector2( 1400, 412 )
 scale = Vector2( 0.930556, 0.553572 )
@@ -2293,7 +2303,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_29" type="Sprite" parent="Terra" index="168"]
+[node name="tiles_terra_29" type="Sprite" parent="Terra" index="169"]
 
 position = Vector2( 1072, 240 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -2305,7 +2315,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_31" type="Sprite" parent="Terra" index="169"]
+[node name="tiles_terra_31" type="Sprite" parent="Terra" index="170"]
 
 position = Vector2( 1072, 240 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -2317,7 +2327,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_32" type="Sprite" parent="Terra" index="170"]
+[node name="tiles_terra_32" type="Sprite" parent="Terra" index="171"]
 
 position = Vector2( 1200, 320 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -2329,7 +2339,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tiles_terra_21" type="Sprite" parent="Terra" index="171"]
+[node name="tiles_terra_21" type="Sprite" parent="Terra" index="172"]
 
 position = Vector2( 880, 240 )
 scale = Vector2( 2.16667, 2.16667 )
@@ -4530,8 +4540,8 @@ _sections_unfolded = [ "Visibility" ]
 [node name="CollisionShape2D14" type="CollisionShape2D" parent="collisions/ClimbWall/Area2D" index="10"]
 
 light_mask = 5
-position = Vector2( 1259, 1609.01 )
-scale = Vector2( 1, 1.51722 )
+position = Vector2( 1258.07, 1590.8 )
+scale = Vector2( 1, 1.29166 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Visibility" ]
 
