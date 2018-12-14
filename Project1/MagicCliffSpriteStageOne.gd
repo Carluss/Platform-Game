@@ -14,6 +14,7 @@ func _process(delta):
 	if get_node("Node2D").get("bt")==true:
 		$Node2D/Wall/tiles_second_33.visible=false
 		$Node2D/Wall/CollisionShape2D.disabled=true
+		$Node2D/Wall/CollisionShape2D.scale=Vector2(0,0)
 	if get_node("Player").get("teleport")== true:
 		get_node("Player").position=$Dead.global_position
 	$Spikes/CollisionShape2D.disabled=false
