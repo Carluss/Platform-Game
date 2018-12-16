@@ -91,7 +91,7 @@ extents = Vector2( 114.767, 10 )
 custom_solver_bias = 0.0
 extents = Vector2( 8.46692, 24.906 )
 
-[node name="Node" type="Node"]
+[node name="Node" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -4983,8 +4983,8 @@ _sections_unfolded = [ "Collision" ]
 [node name="CollisionShape2D" type="CollisionShape2D" parent="collisions/ClimbWall/Area2D" index="0"]
 
 light_mask = 5
-position = Vector2( -90, 407.578 )
-scale = Vector2( 1, 0.601444 )
+position = Vector2( -89.2523, 408.978 )
+scale = Vector2( 1, 0.54744 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Visibility" ]
 
@@ -4999,8 +4999,8 @@ _sections_unfolded = [ "Visibility" ]
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="collisions/ClimbWall/Area2D" index="2"]
 
 light_mask = 5
-position = Vector2( 680, 330 )
-scale = Vector2( 1, 0.601025 )
+position = Vector2( 680, 324.236 )
+scale = Vector2( 1, 0.5331 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Visibility" ]
 
@@ -5039,24 +5039,24 @@ _sections_unfolded = [ "Visibility" ]
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="collisions/ClimbWall/Area2D" index="7"]
 
 light_mask = 5
-position = Vector2( 1431.65, 229.182 )
-scale = Vector2( 1, 1.12519 )
+position = Vector2( 1432.67, 231.392 )
+scale = Vector2( 1, 0.959424 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="collisions/ClimbWall/Area2D" index="8"]
 
 light_mask = 5
-position = Vector2( 1680, 201.493 )
-scale = Vector2( 1, 0.68772 )
+position = Vector2( 1677.97, 206.1 )
+scale = Vector2( 1, 0.634122 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="collisions/ClimbWall/Area2D" index="9"]
 
 light_mask = 5
-position = Vector2( 1290, 612.986 )
-scale = Vector2( 1, 1.51722 )
+position = Vector2( 1290, 624.207 )
+scale = Vector2( 1, 1.38854 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Visibility" ]
 
@@ -5079,7 +5079,7 @@ _sections_unfolded = [ "Visibility" ]
 [node name="CollisionShape2D13" type="CollisionShape2D" parent="collisions/ClimbWall/Area2D" index="12"]
 
 light_mask = 5
-position = Vector2( 1046, 1520 )
+position = Vector2( 1046, 1527.49 )
 scale = Vector2( 1, 0.49642 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Visibility" ]
@@ -5087,7 +5087,7 @@ _sections_unfolded = [ "Visibility" ]
 [node name="CollisionShape2D18" type="CollisionShape2D" parent="collisions/ClimbWall/Area2D" index="13"]
 
 light_mask = 5
-position = Vector2( 2050.98, 1272.33 )
+position = Vector2( 2054.61, 1269.17 )
 scale = Vector2( 1, 0.881462 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Visibility" ]
