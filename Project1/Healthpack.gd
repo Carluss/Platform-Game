@@ -12,7 +12,7 @@ func _ready():
 func _process(delta):
 	$AnimatedSprite.play("health")
 
-var heal = 30
+var heal = 1
 func _on_Healthpack_body_entered(body):
 	if "Player" in body.name:
 		if body.get("health")!=body.get("fullhealth"):	

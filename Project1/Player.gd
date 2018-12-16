@@ -42,9 +42,9 @@ var anifinished=false
 var attmode=false
 #---
 #-health
-var fullhealth=100
-var health=100
-var dmg=25
+var fullhealth=5
+var health=5
+var dmg=1
 var is_hurt=false
 var is_dead=false
 var teleport=false
@@ -225,7 +225,7 @@ func idle(mode):
 		$AnimatedSprite.play("dead")
 		if teleport==true:
 			print("teleport")
-			health=fullhealth*0.75
+			health=3
 			is_dead=false
 			teleport=false
 	if is_dead==false and mode==false and limitation(mode,"idle")==true:
@@ -358,7 +358,7 @@ func _on_AttCollision2D_body_entered(body):
 		body.hurt()
 
 func spikes(dmgp):
-	if canspikeshurt==true and is_dead==false and health>-1:
+	if canspikeshurt==true and is_dead==false and health>0:
 		is_hurt=true
 		$AnimatedSprite.modulate = Color(1, 0.22, 0.37) 
 		health-=dmgp

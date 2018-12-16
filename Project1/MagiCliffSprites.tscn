@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://MagiCliffSprites.gd" type="Script" id=1]
 [ext_resource path="res://sprites/Map Sprites/Free Pixel Art Hill/Free Pixel Art Hill/PNG/Hills Layer 04.png" type="Texture" id=2]
@@ -10,12 +10,13 @@
 [ext_resource path="res://sprites/Ballons/Balao_escalar.png" type="Texture" id=8]
 [ext_resource path="res://sprites/game_background_2/transferir (3).jpg" type="Texture" id=9]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=10]
-[ext_resource path="res://sprites/Map Sprites/Dungeon_tileset.png" type="Texture" id=11]
-[ext_resource path="res://sprite.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Enemys/Enemy.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Puzzle-Game (1).ogg" type="AudioStream" id=14]
-[ext_resource path="res://sprites/Map Sprites/Grotto-escape-2-files/Grotto-escape-2-files/PNG/environment-tiles.png" type="Texture" id=15]
-[ext_resource path="res://CanvasLayer.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Camera2DStageone.tscn" type="PackedScene" id=11]
+[ext_resource path="res://sprites/Map Sprites/Dungeon_tileset.png" type="Texture" id=12]
+[ext_resource path="res://sprite.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Enemys/Enemy.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Puzzle-Game (1).ogg" type="AudioStream" id=15]
+[ext_resource path="res://sprites/Map Sprites/Grotto-escape-2-files/Grotto-escape-2-files/PNG/environment-tiles.png" type="Texture" id=16]
+[ext_resource path="res://CanvasLayer.tscn" type="PackedScene" id=17]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -38,7 +39,7 @@ extents = Vector2( 13.0454, 32.9838 )
 custom_solver_bias = 0.0
 extents = Vector2( 10, 105.835 )
 
-[node name="Kadyria_1" type="Node"]
+[node name="Kadyria_1" type="Node" index="0"]
 
 script = ExtResource( 1 )
 __meta__ = {
@@ -513,6 +514,11 @@ _sections_unfolded = [ "Offset", "Region", "Z Index" ]
 
 position = Vector2( 64, -16 )
 scale = Vector2( 1.25, 1.25 )
+_sections_unfolded = [ "Collision", "Transform", "collision" ]
+
+[node name="Camera2D" parent="Player" index="14" instance=ExtResource( 11 )]
+
+current = true
 
 [node name="Chao_esquerda" type="Node" parent="." index="8"]
 
@@ -1559,7 +1565,7 @@ editor/display_folded = true
 [node name="Espinhos_0" type="Sprite" parent="Espinhos" index="0"]
 
 position = Vector2( 816, 240 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 224, 304, 32, 16 )
@@ -1568,7 +1574,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 [node name="Espinhos_1" type="Sprite" parent="Espinhos" index="1"]
 
 position = Vector2( 848, 240 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 224, 304, 32, 16 )
@@ -1577,7 +1583,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 [node name="Espinhos_2" type="Sprite" parent="Espinhos" index="2"]
 
 position = Vector2( 880, 240 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 224, 304, 32, 16 )
@@ -1586,7 +1592,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 [node name="Espinhos_3" type="Sprite" parent="Espinhos" index="3"]
 
 position = Vector2( 912, 240 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 224, 304, 32, 16 )
@@ -1595,7 +1601,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 [node name="Espinhos_4" type="Sprite" parent="Espinhos" index="4"]
 
 position = Vector2( 944, 240 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 224, 304, 32, 16 )
@@ -1606,13 +1612,13 @@ _sections_unfolded = [ "Offset", "Region" ]
 [node name="Dungeon_tileset" type="Sprite" parent="Mech" index="0"]
 
 position = Vector2( 880, -64 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 416, 240, 32, 64 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="sprite2" parent="Mech/Dungeon_tileset" index="0" instance=ExtResource( 12 )]
+[node name="sprite2" parent="Mech/Dungeon_tileset" index="0" instance=ExtResource( 13 )]
 
 position = Vector2( 17.7905, 48.7364 )
 scale = Vector2( 2.5, 2.5 )
@@ -1621,7 +1627,7 @@ _sections_unfolded = [ "Collision", "collision" ]
 [node name="Dungeon_tileset3" type="Sprite" parent="Mech" index="1"]
 
 position = Vector2( 149, -29 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 144, 416, 48, 64 )
@@ -1630,7 +1636,7 @@ _sections_unfolded = [ "Offset", "Region", "Transform" ]
 [node name="Dungeon_tileset4" type="Sprite" parent="Mech" index="2"]
 
 position = Vector2( 720, -10 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 144, 416, 48, 64 )
@@ -1639,7 +1645,7 @@ _sections_unfolded = [ "Region", "Transform", "Visibility", "Z Index" ]
 [node name="Dungeon_tileset5" type="Sprite" parent="Mech" index="3"]
 
 position = Vector2( 992, 208 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 144, 416, 48, 64 )
@@ -1648,7 +1654,7 @@ _sections_unfolded = [ "Offset", "Region", "Transform" ]
 [node name="Dungeon_tileset6" type="Sprite" parent="Mech" index="4"]
 
 position = Vector2( 1120, -5 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 144, 416, 48, 64 )
@@ -1710,13 +1716,13 @@ scale = Vector2( 0.0810127, 0.0666667 )
 build_mode = 0
 polygon = PoolVector2Array( 1270.99, -7.00015, 1470, 0, 1506.9, 8.97438, 1566.96, 35.9858, 1599.48, 67.2794, 1620.99, 92.9998, 1630.99, 173, 1630.99, 213, 1620.99, 233, 1630.99, 263, 1620.99, 283, 1620.99, 297.136, 1620.99, 313, 1632.99, 329, 1616.99, 345, 1616.99, 409, 1632.99, 441, 1632.99, 473, 1632.99, 537, 1632.99, 633, 1770, 170, 1760, -190, 1260, -340, 1170, -250, 1170, -230, 1160, -220, 1170, -190, 1180, -160, 1220, -130, 1220, -110, 1230, -90, 1240, -60, 1240, -50, 1250, -20 )
 
-[node name="Enemy" parent="." index="24" instance=ExtResource( 13 )]
+[node name="Enemy" parent="." index="24" instance=ExtResource( 14 )]
 
 position = Vector2( 210.201, -16.2847 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="25"]
 
-stream = ExtResource( 14 )
+stream = ExtResource( 15 )
 volume_db = 0.0
 pitch_scale = 1.0
 autoplay = true
@@ -1782,7 +1788,7 @@ shape = SubResource( 4 )
 
 position = Vector2( 346, 73.7342 )
 scale = Vector2( 1.625, 1.625 )
-texture = ExtResource( 15 )
+texture = ExtResource( 16 )
 region_enabled = true
 region_rect = Rect2( 416, 48, 16, 16 )
 _sections_unfolded = [ "Region" ]
@@ -1791,7 +1797,7 @@ _sections_unfolded = [ "Region" ]
 
 position = Vector2( 346, 98 )
 scale = Vector2( 1.625, 1.625 )
-texture = ExtResource( 15 )
+texture = ExtResource( 16 )
 region_enabled = true
 region_rect = Rect2( 416, 48, 16, 16 )
 _sections_unfolded = [ "Region" ]
@@ -1800,7 +1806,7 @@ _sections_unfolded = [ "Region" ]
 
 position = Vector2( 346, 122 )
 scale = Vector2( 1.625, 1.625 )
-texture = ExtResource( 15 )
+texture = ExtResource( 16 )
 region_enabled = true
 region_rect = Rect2( 416, 48, 16, 16 )
 _sections_unfolded = [ "Region" ]
@@ -1809,7 +1815,7 @@ _sections_unfolded = [ "Region" ]
 
 position = Vector2( 346, 147 )
 scale = Vector2( 1.625, 1.625 )
-texture = ExtResource( 15 )
+texture = ExtResource( 16 )
 region_enabled = true
 region_rect = Rect2( 416, 48, 16, 16 )
 _sections_unfolded = [ "Region" ]
@@ -1818,7 +1824,7 @@ _sections_unfolded = [ "Region" ]
 
 position = Vector2( 346, 171 )
 scale = Vector2( 1.625, 1.625 )
-texture = ExtResource( 15 )
+texture = ExtResource( 16 )
 region_enabled = true
 region_rect = Rect2( 416, 48, 16, 16 )
 _sections_unfolded = [ "Region" ]
@@ -1827,7 +1833,7 @@ _sections_unfolded = [ "Region" ]
 
 position = Vector2( 346, 194 )
 scale = Vector2( 1.625, 1.625 )
-texture = ExtResource( 15 )
+texture = ExtResource( 16 )
 region_enabled = true
 region_rect = Rect2( 416, 48, 16, 16 )
 _sections_unfolded = [ "Region" ]
@@ -1848,7 +1854,7 @@ _sections_unfolded = [ "Offset", "Region", "Z Index" ]
 
 position = Vector2( 319.768, 24.5465 )
 
-[node name="CanvasLayer" parent="." index="37" instance=ExtResource( 16 )]
+[node name="CanvasLayer" parent="." index="37" instance=ExtResource( 17 )]
 
 [connection signal="body_entered" from="spikes" to="." method="_on_spikes_body_entered"]
 

@@ -59,4 +59,4 @@ func _on_Spikes_body_entered(body):
 		$Spikes/fsta1.disabled=true
 		$Spikes/CollisionShape2D7.disabled=true
 		$Spikes/CollisionShape2D6.disabled=true
-		body.spikes(25)
+		body.spikes(1)
