@@ -11,6 +11,56 @@ func _ready():
 
 
 func _process(delta):
+	if($leaver.hit==true):
+		$Leaver00col/tiles_second_64.visible=false
+		$Leaver00col/CollisionShape2D.disabled=true
+		$Leaver00col/CollisionShape2D.position=Vector2(-3.469971,-80.103271)
+	if($leaver2.hit==true):
+		$Leaver01col/tiles_second_62.visible=false
+		$Leaver01col/CollisionShape2D.disabled=true
+		$Leaver01col/CollisionShape2D.position=Vector2(10.029953,70.693726)
+	var at=get_node("Player").get("health")
+	match at:
+		0: 
+			$Player/Camera2D/heart.visible=false
+			$Player/Camera2D/heart2.visible=false
+			$Player/Camera2D/heart3.visible=false
+			$Player/Camera2D/heart4.visible=false
+			$Player/Camera2D/heart5.visible=false
+		1: 
+			$Player/Camera2D/heart.visible=true
+			$Player/Camera2D/heart2.visible=false
+			$Player/Camera2D/heart3.visible=false
+			$Player/Camera2D/heart4.visible=false
+			$Player/Camera2D/heart5.visible=false
+			
+		2:
+			$Player/Camera2D/heart.visible=true
+			$Player/Camera2D/heart2.visible=true
+			$Player/Camera2D/heart3.visible=false
+			$Player/Camera2D/heart4.visible=false
+			$Player/Camera2D/heart5.visible=false
+			
+		3:
+			$Player/Camera2D/heart.visible=true
+			$Player/Camera2D/heart2.visible=true
+			$Player/Camera2D/heart3.visible=true
+			$Player/Camera2D/heart4.visible=false
+			$Player/Camera2D/heart5.visible=false
+			
+		4:
+			$Player/Camera2D/heart.visible=true
+			$Player/Camera2D/heart2.visible=true
+			$Player/Camera2D/heart3.visible=true
+			$Player/Camera2D/heart4.visible=true
+			$Player/Camera2D/heart5.visible=false
+			
+		5:
+			$Player/Camera2D/heart.visible=true
+			$Player/Camera2D/heart2.visible=true
+			$Player/Camera2D/heart3.visible=true
+			$Player/Camera2D/heart4.visible=true
+			$Player/Camera2D/heart5.visible=true
 	if get_node("Node2D").get("bt")==true:
 		$Node2D/Wall/tiles_second_33.visible=false
 		$Node2D/Wall/CollisionShape2D.disabled=true

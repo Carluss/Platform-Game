@@ -353,9 +353,11 @@ func _on_att_delay_timeout():
 	rdyatt=true
 	
 func _on_AttCollision2D_body_entered(body):
+	print(body.name)
 	if "Enemy" in body.name or "Enemy2" in body.name:
-		
 		body.hurt()
+	if "leaver" in body.name:
+		body.hit()
 
 func spikes(dmgp):
 	if canspikeshurt==true and is_dead==false and health>0:
@@ -535,3 +537,4 @@ func _on_deadtimer_timeout():
 
 func _on_Spikes_timeout():
 	canspikeshurt=true
+

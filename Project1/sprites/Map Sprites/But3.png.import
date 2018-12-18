@@ -1,0 +1,29 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/But3.png-9eb24d0d0d584377aa7b4036964d86db.stex"
+
+[deps]
+
+source_file="res://sprites/Map Sprites/But3.png"
+dest_files=[ "res://.import/But3.png-9eb24d0d0d584377aa7b4036964d86db.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0
