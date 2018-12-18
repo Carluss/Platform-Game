@@ -23,7 +23,7 @@ func test_arrow_on_arrow_body_entered():
 	
 	myS._on_arrow_body_entered(enemy_Instance)
 	add_child(myS)
-	assert_true(myS.enemy == true, "Teste Arrow a tocar nos Enimigos")
+	assert_true(myS.enemy, "Teste Arrow a tocar nos Enimigos")
 	
 
 func test_cast_on_cast_body_entered():	
@@ -50,10 +50,21 @@ func test_Enemy_on_Area2D_body_entered():
 	
 	myS._on_Area2D_body_entered(player_Instance)
 	add_child(myS)
-	assert_true(myS.wall == true, "Teste hits player")
-
-
-
-
-
+	assert_true(myS.wall, "Teste hits player")
+	
+func test_Player_hurt():
+	var myScript = load("res://Player.gd")
+	var myS = myScript.new()
+	
+	myS.hurt()
+	add_child(myS)
+	assert_true(myS.is_hurt, "Teste hits player")
+	
+func test_Player_hurt1():
+	var myScript = load("res://Player.gd")
+	var myS = myScript.new()
+	
+	myS.hurt()
+	add_child(myS)
+	assert_ne(myS.health, myS.fullhealth)
 

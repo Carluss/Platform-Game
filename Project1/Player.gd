@@ -353,7 +353,6 @@ func _on_att_delay_timeout():
 	rdyatt=true
 	
 func _on_AttCollision2D_body_entered(body):
-	print(body.name)
 	if "Enemy" in body.name or "Enemy2" in body.name:
 		body.hurt()
 	if "leaver" in body.name:
@@ -375,7 +374,7 @@ func hurt():
 	health-=dmg
 	is_hurt=true
 	if health>0 and is_dead==false:
-		$AnimatedSprite.modulate = Color(1, 0.22, 0.37) 
+		#$AnimatedSprite.modulate = Color(1, 0.22, 0.37) 
 		print(health)
 		return is_dead
 	else:
