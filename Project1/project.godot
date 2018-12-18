@@ -11,7 +11,7 @@ config_version=3
 [application]
 
 config/name="Platform game"
-run/main_scene="res://StageOne.tscn"
+run/main_scene="res://Menu/TitleScreen.tscn"
 config/icon="res://icon.png"
 
 [display]

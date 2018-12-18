@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://MagiCliffSprites.gd" type="Script" id=1]
 [ext_resource path="res://sprites/Map Sprites/Free Pixel Art Hill/Free Pixel Art Hill/PNG/Hills Layer 04.png" type="Texture" id=2]
@@ -13,11 +13,10 @@
 [ext_resource path="res://Camera2DStageone.tscn" type="PackedScene" id=11]
 [ext_resource path="res://sprites/Map Sprites/Dungeon_tileset.png" type="Texture" id=12]
 [ext_resource path="res://sprite.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Enemys/Enemy.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Puzzle-Game (1).ogg" type="AudioStream" id=15]
-[ext_resource path="res://sprites/Map Sprites/Grotto-escape-2-files/Grotto-escape-2-files/PNG/environment-tiles.png" type="Texture" id=16]
-[ext_resource path="res://CanvasLayer.tscn" type="PackedScene" id=17]
-[ext_resource path="res://Healthpack.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Puzzle-Game (1).ogg" type="AudioStream" id=14]
+[ext_resource path="res://sprites/Map Sprites/Grotto-escape-2-files/Grotto-escape-2-files/PNG/environment-tiles.png" type="Texture" id=15]
+[ext_resource path="res://CanvasLayer.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Healthpack.tscn" type="PackedScene" id=17]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -40,7 +39,7 @@ extents = Vector2( 13.0454, 32.9838 )
 custom_solver_bias = 0.0
 extents = Vector2( 10, 105.835 )
 
-[node name="Kadyria_1" type="Node"]
+[node name="Kadyria_1" type="Node" index="0"]
 
 script = ExtResource( 1 )
 __meta__ = {
@@ -93,36 +92,43 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 [node name="Terra" type="Node" parent="." index="3"]
 
-editor/display_folded = true
-
 [node name="Magic-cliffs_tileset" type="Sprite" parent="Terra" index="0"]
 
-position = Vector2( -452, -36 )
-scale = Vector2( 26.75, 16.25 )
+position = Vector2( -847.854, -16.1282 )
+scale = Vector2( 53.2808, 15.2906 )
 texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 96, 256, 32, 32 )
 _sections_unfolded = [ "Region" ]
 
-[node name="Magic-cliffs_tileset20" type="Sprite" parent="Terra" index="1"]
+[node name="Magic-cliffs_tileset4" type="Sprite" parent="Terra" index="1"]
 
-position = Vector2( -1032, -352.5 )
-scale = Vector2( 63, 33.4687 )
+position = Vector2( -389.681, -246.408 )
+scale = Vector2( 21.5825, 4.52561 )
 texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 96, 256, 32, 32 )
 _sections_unfolded = [ "Region" ]
 
-[node name="Magic-cliffs_tileset2" type="Sprite" parent="Terra" index="2"]
+[node name="Magic-cliffs_tileset20" type="Sprite" parent="Terra" index="2"]
 
-position = Vector2( -428.5, 275 )
-scale = Vector2( 28.2187, 16.25 )
+position = Vector2( -725.477, 184.285 )
+scale = Vector2( 45.7319, 7.65418 )
 texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 96, 256, 32, 32 )
 _sections_unfolded = [ "Region" ]
 
-[node name="Magic-cliffs_tileset3" type="Sprite" parent="Terra" index="3"]
+[node name="Magic-cliffs_tileset2" type="Sprite" parent="Terra" index="3"]
+
+position = Vector2( -455.594, 418.571 )
+scale = Vector2( 46.7598, 21.908 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 96, 256, 32, 32 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Magic-cliffs_tileset3" type="Sprite" parent="Terra" index="4"]
 
 position = Vector2( 116, 288 )
 scale = Vector2( 8.75, 16.25 )
@@ -131,19 +137,10 @@ region_enabled = true
 region_rect = Rect2( 96, 256, 32, 32 )
 _sections_unfolded = [ "Region" ]
 
-[node name="Magic-cliffs_tileset4" type="Sprite" parent="Terra" index="4"]
-
-position = Vector2( -1080, 338 )
-scale = Vector2( 85.5, 16.125 )
-texture = ExtResource( 4 )
-region_enabled = true
-region_rect = Rect2( 96, 256, 32, 32 )
-_sections_unfolded = [ "Region" ]
-
 [node name="Magic-cliffs_tileset5" type="Sprite" parent="Terra" index="5"]
 
-position = Vector2( -1120, 693 )
-scale = Vector2( 93, 26.3125 )
+position = Vector2( 592.96, 797.372 )
+scale = Vector2( 49.7997, 13.3888 )
 texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 96, 256, 32, 32 )
@@ -151,8 +148,8 @@ _sections_unfolded = [ "Region" ]
 
 [node name="Magic-cliffs_tileset22" type="Sprite" parent="Terra" index="6"]
 
-position = Vector2( -1120, 693 )
-scale = Vector2( 93, 26.3125 )
+position = Vector2( -193.329, 693 )
+scale = Vector2( 35.0831, 26.3125 )
 texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 96, 256, 32, 32 )
@@ -241,8 +238,8 @@ _sections_unfolded = [ "Region" ]
 
 [node name="Magic-cliffs_tileset21" type="Sprite" parent="Terra" index="16"]
 
-position = Vector2( 1620, 370 )
-scale = Vector2( 8.75, 16.25 )
+position = Vector2( 1658.7, 521.158 )
+scale = Vector2( 8.75, 31.0945 )
 z_index = 2
 texture = ExtResource( 4 )
 region_enabled = true
@@ -251,8 +248,8 @@ _sections_unfolded = [ "Region", "Z Index" ]
 
 [node name="Magic-cliffs_tileset11" type="Sprite" parent="Terra" index="17"]
 
-position = Vector2( 1392, 688 )
-scale = Vector2( 8.75, 16.25 )
+position = Vector2( 1392, 722.462 )
+scale = Vector2( 8.75, 18.4039 )
 texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 96, 256, 32, 32 )
@@ -260,8 +257,8 @@ _sections_unfolded = [ "Region" ]
 
 [node name="Magic-cliffs_tileset12" type="Sprite" parent="Terra" index="18"]
 
-position = Vector2( 2186, 560 )
-scale = Vector2( 34.375, 16.25 )
+position = Vector2( 2350.05, 592.706 )
+scale = Vector2( 38.4512, 27.3201 )
 texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 96, 256, 32, 32 )
@@ -269,7 +266,7 @@ _sections_unfolded = [ "Region" ]
 
 [node name="Magic-cliffs_tileset13" type="Sprite" parent="Terra" index="19"]
 
-position = Vector2( 2110, 210 )
+position = Vector2( 2303.47, -16.688 )
 scale = Vector2( 36.375, 16.25 )
 z_index = 2
 texture = ExtResource( 4 )
@@ -279,8 +276,8 @@ _sections_unfolded = [ "Region", "Z Index" ]
 
 [node name="Magic-cliffs_tileset14" type="Sprite" parent="Terra" index="20"]
 
-position = Vector2( 2085, -272 )
-scale = Vector2( 50.6875, 16.25 )
+position = Vector2( 2085, -510.884 )
+scale = Vector2( 50.6875, 31.1803 )
 texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 96, 256, 32, 32 )
@@ -352,7 +349,7 @@ scroll_ignore_camera_zoom = false
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground" index="0"]
 
-position = Vector2( -635.367, -617.42 )
+position = Vector2( -633.862, -619.938 )
 scale = Vector2( 1.225, 1.11111 )
 texture = ExtResource( 9 )
 centered = false
@@ -654,8 +651,6 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 [node name="Estruturas_flutuantes" type="Node" parent="." index="11"]
 
-editor/display_folded = true
-
 [node name="Flutuante_4" type="Sprite" parent="Estruturas_flutuantes" index="0"]
 
 position = Vector2( 461.663, 70.1056 )
@@ -753,7 +748,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 [node name="Flutuante_8" type="Sprite" parent="Estruturas_flutuantes/Flutuante_2" index="5"]
 
-position = Vector2( 46.3996, -20.5515 )
+position = Vector2( 66.6423, -16.8915 )
 texture = ExtResource( 4 )
 centered = false
 region_enabled = true
@@ -782,8 +777,6 @@ region_rect = Rect2( 64, 176, 64, 112 )
 _sections_unfolded = [ "Offset", "Region" ]
 
 [node name="Chao_Esquerda_TileMap" type="Node" parent="." index="14"]
-
-editor/display_folded = true
 
 [node name="Chao_esquerda_7" type="Sprite" parent="Chao_Esquerda_TileMap" index="0"]
 
@@ -917,8 +910,9 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 [node name="Chao_esquerda_15" type="Sprite" parent="Chao_Esquerda_TileMap" index="13"]
 
-position = Vector2( -58.2947, -284.633 )
+position = Vector2( -58.629, -285.331 )
 rotation = -0.446605
+scale = Vector2( 1, 1.01613 )
 texture = ExtResource( 4 )
 centered = false
 flip_h = true
@@ -939,7 +933,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 [node name="Chao_esquerda_17" type="Sprite" parent="Chao_Esquerda_TileMap" index="15"]
 
-position = Vector2( -95.4753, -299.67 )
+position = Vector2( -99.1508, -295.259 )
 rotation = -1.20018
 texture = ExtResource( 4 )
 centered = false
@@ -950,8 +944,81 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 [node name="Chao_esquerda_18" type="Sprite" parent="Chao_Esquerda_TileMap" index="16"]
 
-position = Vector2( -111.279, -296.316 )
-rotation = -1.63765
+position = Vector2( -150.178, -297.939 )
+rotation = -1.57458
+scale = Vector2( 0.851977, 1.51518 )
+texture = ExtResource( 4 )
+centered = false
+flip_h = true
+region_enabled = true
+region_rect = Rect2( 320, 64, 64, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Chao_esquerda_19" type="Sprite" parent="Chao_Esquerda_TileMap" index="17"]
+
+position = Vector2( -220.159, -298.819 )
+rotation = -1.57458
+scale = Vector2( 0.851977, 1.51518 )
+texture = ExtResource( 4 )
+centered = false
+flip_h = true
+region_enabled = true
+region_rect = Rect2( 320, 64, 64, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Chao_esquerda_20" type="Sprite" parent="Chao_Esquerda_TileMap" index="18"]
+
+position = Vector2( -283.537, -298.819 )
+rotation = -1.57458
+scale = Vector2( 0.851977, 1.51518 )
+texture = ExtResource( 4 )
+centered = false
+flip_h = true
+region_enabled = true
+region_rect = Rect2( 320, 64, 64, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Chao_esquerda_21" type="Sprite" parent="Chao_Esquerda_TileMap" index="19"]
+
+position = Vector2( -352.991, -297.621 )
+rotation = -1.57458
+scale = Vector2( 0.851977, 1.51518 )
+texture = ExtResource( 4 )
+centered = false
+flip_h = true
+region_enabled = true
+region_rect = Rect2( 320, 64, 64, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Chao_esquerda_22" type="Sprite" parent="Chao_Esquerda_TileMap" index="20"]
+
+position = Vector2( -422.445, -296.424 )
+rotation = -1.57458
+scale = Vector2( 0.851977, 1.51518 )
+texture = ExtResource( 4 )
+centered = false
+flip_h = true
+region_enabled = true
+region_rect = Rect2( 320, 64, 64, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Chao_esquerda_23" type="Sprite" parent="Chao_Esquerda_TileMap" index="21"]
+
+position = Vector2( -493.695, -297.023 )
+rotation = -1.57458
+scale = Vector2( 0.851977, 1.51518 )
+texture = ExtResource( 4 )
+centered = false
+flip_h = true
+region_enabled = true
+region_rect = Rect2( 320, 64, 64, 48 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Chao_esquerda_24" type="Sprite" parent="Chao_Esquerda_TileMap" index="22"]
+
+position = Vector2( -564.346, -298.22 )
+rotation = -1.57458
+scale = Vector2( 0.851977, 1.51518 )
 texture = ExtResource( 4 )
 centered = false
 flip_h = true
@@ -1513,6 +1580,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 position = Vector2( 1208.14, -338.196 )
 rotation = -0.00420028
+scale = Vector2( 1.09113, 1 )
 texture = ExtResource( 4 )
 centered = false
 region_enabled = true
@@ -1621,45 +1689,9 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 [node name="sprite2" parent="Mech/Dungeon_tileset" index="0" instance=ExtResource( 13 )]
 
-position = Vector2( 17.7905, 48.7364 )
-scale = Vector2( 2.5, 2.5 )
+position = Vector2( 18.4376, 48.693 )
+scale = Vector2( 2.5, 2.86262 )
 _sections_unfolded = [ "Collision", "collision" ]
-
-[node name="Dungeon_tileset3" type="Sprite" parent="Mech" index="1"]
-
-position = Vector2( 149, -29 )
-texture = ExtResource( 12 )
-centered = false
-region_enabled = true
-region_rect = Rect2( 144, 416, 48, 64 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
-
-[node name="Dungeon_tileset4" type="Sprite" parent="Mech" index="2"]
-
-position = Vector2( 720, -10 )
-texture = ExtResource( 12 )
-centered = false
-region_enabled = true
-region_rect = Rect2( 144, 416, 48, 64 )
-_sections_unfolded = [ "Region", "Transform", "Visibility", "Z Index" ]
-
-[node name="Dungeon_tileset5" type="Sprite" parent="Mech" index="3"]
-
-position = Vector2( 992, 208 )
-texture = ExtResource( 12 )
-centered = false
-region_enabled = true
-region_rect = Rect2( 144, 416, 48, 64 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
-
-[node name="Dungeon_tileset6" type="Sprite" parent="Mech" index="4"]
-
-position = Vector2( 1120, -5 )
-texture = ExtResource( 12 )
-centered = false
-region_enabled = true
-region_rect = Rect2( 144, 416, 48, 64 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." index="23"]
 
@@ -1695,7 +1727,7 @@ polygon = PoolVector2Array( 32.4051, -0.666667, 32.4051, -2, 35.6456, -2, 35.645
 [node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="StaticBody2D" index="3"]
 
 build_mode = 0
-polygon = PoolVector2Array( 40.5063, -4, 39.6962, -3.33333, 40.5063, -2.66667, 40.5063, 0.666667, 42.1264, 1.33333, 42.9365, 2.66667, 44.5568, 2.66667, 45.3671, 1.33333, 46.177, 2.66667, 47.7973, 2.66667, 49.4177, 1.33333, 50.2276, 2, 51.8481, 0, 51.8481, -2.66667, 52.6582, -3.33333, 51.8481, -4, 44.557, -4.66667 )
+polygon = PoolVector2Array( 39.839, -3.99877, 39.6962, -3.33333, 40.4427, -2.71561, 40.5063, 0.666667, 42.9365, 2.66667, 44.5568, 2.66667, 46.177, 2.66667, 47.7973, 2.66667, 50.2276, 2, 51.8481, 0, 52.0713, -3.09012, 52.6582, -3.33333, 52.2721, -3.99938 )
 
 [node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="StaticBody2D" index="4"]
 
@@ -1717,20 +1749,16 @@ scale = Vector2( 0.0810127, 0.0666667 )
 build_mode = 0
 polygon = PoolVector2Array( 1270.99, -7.00015, 1470, 0, 1506.9, 8.97438, 1566.96, 35.9858, 1599.48, 67.2794, 1620.99, 92.9998, 1630.99, 173, 1630.99, 213, 1620.99, 233, 1630.99, 263, 1620.99, 283, 1620.99, 297.136, 1620.99, 313, 1632.99, 329, 1616.99, 345, 1616.99, 409, 1632.99, 441, 1632.99, 473, 1632.99, 537, 1632.99, 633, 1770, 170, 1760, -190, 1260, -340, 1170, -250, 1170, -230, 1160, -220, 1170, -190, 1180, -160, 1220, -130, 1220, -110, 1230, -90, 1240, -60, 1240, -50, 1250, -20 )
 
-[node name="Enemy" parent="." index="24" instance=ExtResource( 14 )]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="24"]
 
-position = Vector2( 210.201, -16.2847 )
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="25"]
-
-stream = ExtResource( 15 )
+stream = ExtResource( 14 )
 volume_db = 0.0
 pitch_scale = 1.0
 autoplay = true
 mix_target = 0
 bus = "Master"
 
-[node name="spikes" type="Area2D" parent="." index="26"]
+[node name="spikes" type="Area2D" parent="." index="25"]
 
 visible = false
 position = Vector2( 880.839, 245.48 )
@@ -1747,7 +1775,7 @@ audio_bus_name = "Master"
 position = Vector2( 15.9357, 7.97133 )
 shape = SubResource( 2 )
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="." index="27"]
+[node name="StaticBody2D2" type="StaticBody2D" parent="." index="26"]
 
 visible = false
 input_pickable = false
@@ -1766,7 +1794,7 @@ scale = Vector2( 1, 2.13661 )
 z_index = 1
 shape = SubResource( 3 )
 
-[node name="climb w" type="Area2D" parent="." index="28"]
+[node name="climb w" type="Area2D" parent="." index="27"]
 
 visible = false
 input_pickable = true
@@ -1785,61 +1813,61 @@ _sections_unfolded = [ "Collision", "Z Index" ]
 position = Vector2( 1112.24, 144.87 )
 shape = SubResource( 4 )
 
-[node name="environment-tiles" type="Sprite" parent="." index="29"]
+[node name="environment-tiles" type="Sprite" parent="." index="28"]
 
 position = Vector2( 346, 73.7342 )
 scale = Vector2( 1.625, 1.625 )
-texture = ExtResource( 16 )
+texture = ExtResource( 15 )
 region_enabled = true
 region_rect = Rect2( 416, 48, 16, 16 )
 _sections_unfolded = [ "Region" ]
 
-[node name="environment-tiles2" type="Sprite" parent="." index="30"]
+[node name="environment-tiles2" type="Sprite" parent="." index="29"]
 
 position = Vector2( 346, 98 )
 scale = Vector2( 1.625, 1.625 )
-texture = ExtResource( 16 )
+texture = ExtResource( 15 )
 region_enabled = true
 region_rect = Rect2( 416, 48, 16, 16 )
 _sections_unfolded = [ "Region" ]
 
-[node name="environment-tiles3" type="Sprite" parent="." index="31"]
+[node name="environment-tiles3" type="Sprite" parent="." index="30"]
 
 position = Vector2( 346, 122 )
 scale = Vector2( 1.625, 1.625 )
-texture = ExtResource( 16 )
+texture = ExtResource( 15 )
 region_enabled = true
 region_rect = Rect2( 416, 48, 16, 16 )
 _sections_unfolded = [ "Region" ]
 
-[node name="environment-tiles4" type="Sprite" parent="." index="32"]
+[node name="environment-tiles4" type="Sprite" parent="." index="31"]
 
 position = Vector2( 346, 147 )
 scale = Vector2( 1.625, 1.625 )
-texture = ExtResource( 16 )
+texture = ExtResource( 15 )
 region_enabled = true
 region_rect = Rect2( 416, 48, 16, 16 )
 _sections_unfolded = [ "Region" ]
 
-[node name="environment-tiles5" type="Sprite" parent="." index="33"]
+[node name="environment-tiles5" type="Sprite" parent="." index="32"]
 
 position = Vector2( 346, 171 )
 scale = Vector2( 1.625, 1.625 )
-texture = ExtResource( 16 )
+texture = ExtResource( 15 )
 region_enabled = true
 region_rect = Rect2( 416, 48, 16, 16 )
 _sections_unfolded = [ "Region" ]
 
-[node name="environment-tiles6" type="Sprite" parent="." index="34"]
+[node name="environment-tiles6" type="Sprite" parent="." index="33"]
 
 position = Vector2( 346, 194 )
 scale = Vector2( 1.625, 1.625 )
-texture = ExtResource( 16 )
+texture = ExtResource( 15 )
 region_enabled = true
 region_rect = Rect2( 416, 48, 16, 16 )
 _sections_unfolded = [ "Region" ]
 
-[node name="Chao_esquerda_19" type="Sprite" parent="." index="35"]
+[node name="Chao_esquerda_19" type="Sprite" parent="." index="34"]
 
 position = Vector2( 1620.56, 23.1849 )
 rotation = 1.8427
@@ -1851,13 +1879,13 @@ region_enabled = true
 region_rect = Rect2( 544, 96, 64, 48 )
 _sections_unfolded = [ "Offset", "Region", "Z Index" ]
 
-[node name="Dead" type="Position2D" parent="." index="36"]
+[node name="Dead" type="Position2D" parent="." index="35"]
 
-position = Vector2( 319.768, 24.5465 )
+position = Vector2( 319.768, 26.2167 )
 
-[node name="CanvasLayer" parent="." index="37" instance=ExtResource( 17 )]
+[node name="CanvasLayer" parent="." index="36" instance=ExtResource( 16 )]
 
-[node name="Healthpack" parent="." index="38" instance=ExtResource( 18 )]
+[node name="Healthpack" parent="." index="37" instance=ExtResource( 17 )]
 
 position = Vector2( 1200.95, 20.948 )
 

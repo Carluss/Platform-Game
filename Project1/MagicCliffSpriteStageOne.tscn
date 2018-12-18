@@ -88,17 +88,17 @@ extents = Vector2( 55.1858, 10 )
 custom_solver_bias = 0.0
 extents = Vector2( 114.767, 10 )
 
-[sub_resource type="RectangleShape2D" id=17]
+[sub_resource type="RectangleShape2D" id=15]
 
 custom_solver_bias = 0.0
 extents = Vector2( 7.66917, 30.5497 )
 
-[sub_resource type="RectangleShape2D" id=15]
+[sub_resource type="RectangleShape2D" id=16]
 
 custom_solver_bias = 0.0
 extents = Vector2( 7.91699, 32.7446 )
 
-[sub_resource type="RectangleShape2D" id=16]
+[sub_resource type="RectangleShape2D" id=17]
 
 custom_solver_bias = 0.0
 extents = Vector2( 8.46692, 24.906 )
@@ -4880,7 +4880,7 @@ polygon = PoolVector2Array( -260, -310, -260, -240, -240, -240, -236, 364, -600,
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="collisions/StaticBody2D" index="1"]
 
 build_mode = 0
-polygon = PoolVector2Array( -240, 364, -80, 364, -80, 450, 64, 448, 64, 500, -240, 500 )
+polygon = PoolVector2Array( -240, 364, -80, 364, -79.7177, 448.117, 64, 448, 64, 500, -240, 500 )
 
 [node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="collisions/StaticBody2D" index="2"]
 
@@ -5323,7 +5323,6 @@ bounce = 0.0
 [node name="tiles_second_62" type="Sprite" parent="Leaver01col" index="0"]
 
 rotation = 2.32831e-010
-scale = Vector2( 1, 1 )
 texture = ExtResource( 6 )
 region_enabled = true
 region_rect = Rect2( 111.5, 20, 16, 54.5 )
@@ -5332,7 +5331,7 @@ _sections_unfolded = [ "Region" ]
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Leaver01col" index="1"]
 
 position = Vector2( -0.32428, 0.655884 )
-shape = SubResource( 17 )
+shape = SubResource( 15 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Leaver00col" type="StaticBody2D" parent="." index="110"]
@@ -5358,7 +5357,7 @@ _sections_unfolded = [ "Region" ]
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Leaver00col" index="1"]
 
 position = Vector2( -0.162109, -0.107178 )
-shape = SubResource( 15 )
+shape = SubResource( 16 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Node2D" parent="." index="111" instance=ExtResource( 11 )]
@@ -5378,7 +5377,7 @@ bounce = 0.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Wall" index="0"]
 
 position = Vector2( -40.9124, 88.0339 )
-shape = SubResource( 16 )
+shape = SubResource( 17 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="tiles_second_33" type="Sprite" parent="Node2D/Wall" index="1"]
@@ -5399,11 +5398,11 @@ position = Vector2( 221.937, 466.298 )
 
 [node name="Enemy3" parent="." index="114" instance=ExtResource( 14 )]
 
-position = Vector2( 465.823, 378.313 )
+position = Vector2( 466.845, 382.4 )
 
 [node name="Enemy4" parent="." index="115" instance=ExtResource( 14 )]
 
-position = Vector2( 761.323, 463.052 )
+position = Vector2( 763.826, 482.579 )
 
 [node name="Enemy5" parent="." index="116" instance=ExtResource( 13 )]
 
@@ -5415,15 +5414,15 @@ position = Vector2( 1109.49, 481.106 )
 
 [node name="Enemy7" parent="." index="118" instance=ExtResource( 14 )]
 
-position = Vector2( 11.8924, 419.631 )
+position = Vector2( 10.6657, 431.101 )
 
 [node name="Enemy8" parent="." index="119" instance=ExtResource( 14 )]
 
-position = Vector2( 931.396, 43.912 )
+position = Vector2( 932.077, 64.3457 )
 
 [node name="Enemy9" parent="." index="120" instance=ExtResource( 14 )]
 
-position = Vector2( 2244.52, 1476.59 )
+position = Vector2( 2246.36, 1498.41 )
 
 [node name="Enemy10" parent="." index="121" instance=ExtResource( 13 )]
 
