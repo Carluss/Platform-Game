@@ -12,8 +12,8 @@
 [ext_resource path="res://sprites/Map Sprites/gothicvania-cemetery-files/gothicvania-cemetery-files/PNG/Environment/sliced-objects/statue.png" type="Texture" id=10]
 [ext_resource path="res://Button.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Healthpack.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Enemys/Enemy.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Enemys/Boss.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Enemys/Enemy2.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Enemys/Enemy.tscn" type="PackedScene" id=14]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -4932,7 +4932,7 @@ polygon = PoolVector2Array( 1920, 30, 1920, 180, 1880, 180, 1860, 190, 2190, 190
 [node name="CollisionPolygon2D11" type="CollisionPolygon2D" parent="collisions/StaticBody2D" index="7"]
 
 build_mode = 0
-polygon = PoolVector2Array( 60, 500, 340, 500, 340, 400, 610, 400, 610, 500, 850, 500, 850, 590, 960, 590, 960, 500, 1140, 500, 1140, 510, 1230, 510, 1300, 510, 1300, 720, 1780, 720, 1120, 790, 540, 620 )
+polygon = PoolVector2Array( 60, 500, 340, 500, 340, 400, 610, 400, 610, 500, 850, 500, 850, 590, 960, 590, 960, 500, 1131.46, 499.953, 1147.38, 503.251, 1229.31, 504.594, 1298.38, 503.751, 1300, 720, 1780, 720, 1120, 790, 540, 620 )
 
 [node name="CollisionPolygon2D12" type="CollisionPolygon2D" parent="collisions/StaticBody2D" index="8"]
 
@@ -5355,13 +5355,25 @@ _sections_unfolded = [ "Region" ]
 
 position = Vector2( 1122.86, 1470.56 )
 
-[node name="Enemy" parent="." index="111" instance=ExtResource( 13 )]
+[node name="Enemy2" parent="." index="111" instance=ExtResource( 13 )]
 
-position = Vector2( 1034.36, 5.18929 )
+position = Vector2( 221.937, 466.298 )
 
-[node name="KinematicBody2D3" parent="." index="112" instance=ExtResource( 14 )]
+[node name="Enemy3" parent="." index="112" instance=ExtResource( 14 )]
 
-position = Vector2( 140.183, 393.416 )
+position = Vector2( 465.823, 378.313 )
+
+[node name="Enemy4" parent="." index="113" instance=ExtResource( 14 )]
+
+position = Vector2( 761.323, 463.052 )
+
+[node name="Enemy5" parent="." index="114" instance=ExtResource( 13 )]
+
+position = Vector2( 1094.87, 51.9615 )
+
+[node name="Enemy" parent="." index="115" instance=ExtResource( 14 )]
+
+position = Vector2( 1109.49, 481.106 )
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 
