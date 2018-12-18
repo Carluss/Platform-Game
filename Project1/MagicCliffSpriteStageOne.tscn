@@ -5375,6 +5375,26 @@ position = Vector2( 1094.87, 51.9615 )
 
 position = Vector2( 1109.49, 481.106 )
 
+[node name="Enemy6" parent="." index="116" instance=ExtResource( 14 )]
+
+position = Vector2( 103.634, 468.9 )
+
+[node name="Enemy7" parent="." index="117" instance=ExtResource( 14 )]
+
+position = Vector2( 11.8924, 419.631 )
+
+[node name="Enemy8" parent="." index="118" instance=ExtResource( 14 )]
+
+position = Vector2( 931.396, 43.912 )
+
+[node name="Enemy9" parent="." index="119" instance=ExtResource( 14 )]
+
+position = Vector2( 2289.94, 1487.31 )
+
+[node name="Enemy10" parent="." index="120" instance=ExtResource( 13 )]
+
+position = Vector2( 1898.26, 1262.02 )
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 
 [connection signal="body_entered" from="Area2D2" to="." method="_on_Area2D2_body_entered"]
