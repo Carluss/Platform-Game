@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://MagicCliffSpriteStageOne.gd" type="Script" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://Button.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Healthpack.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Enemys/Enemy.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Enemys/Boss.tscn" type="PackedScene" id=14]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -3731,7 +3732,15 @@ region_enabled = true
 region_rect = Rect2( 112, 0, 64, 80 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_second_16" type="Sprite" parent="tiles_second" index="22"]
+[node name="tiles_second_33" type="Sprite" parent="tiles_second" index="22"]
+
+position = Vector2( 704, 114 )
+texture = ExtResource( 6 )
+region_enabled = true
+region_rect = Rect2( 112, 0, 64, 80 )
+_sections_unfolded = [ "Region" ]
+
+[node name="tiles_second_16" type="Sprite" parent="tiles_second" index="23"]
 
 position = Vector2( 576, 79 )
 texture = ExtResource( 6 )
@@ -3740,7 +3749,7 @@ region_enabled = true
 region_rect = Rect2( 112, 0, 64, 80 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_second_19" type="Sprite" parent="tiles_second" index="23"]
+[node name="tiles_second_19" type="Sprite" parent="tiles_second" index="24"]
 
 position = Vector2( 576, 32 )
 texture = ExtResource( 6 )
@@ -3749,7 +3758,7 @@ region_enabled = true
 region_rect = Rect2( 112, 0, 64, 80 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_second_12" type="Sprite" parent="tiles_second" index="24"]
+[node name="tiles_second_12" type="Sprite" parent="tiles_second" index="25"]
 
 position = Vector2( 736, -7 )
 texture = ExtResource( 6 )
@@ -3757,7 +3766,7 @@ region_enabled = true
 region_rect = Rect2( 112, 80, 128, 144 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_second_20" type="Sprite" parent="tiles_second" index="25"]
+[node name="tiles_second_20" type="Sprite" parent="tiles_second" index="26"]
 
 position = Vector2( 904, 25 )
 texture = ExtResource( 6 )
@@ -3765,7 +3774,7 @@ region_enabled = true
 region_rect = Rect2( 304, 80, 208, 208 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_second_25" type="Sprite" parent="tiles_second" index="26"]
+[node name="tiles_second_25" type="Sprite" parent="tiles_second" index="27"]
 
 position = Vector2( 1120, 137 )
 texture = ExtResource( 6 )
@@ -3773,7 +3782,7 @@ region_enabled = true
 region_rect = Rect2( 144, 144, 240, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_second_27" type="Sprite" parent="tiles_second" index="27"]
+[node name="tiles_second_27" type="Sprite" parent="tiles_second" index="28"]
 
 position = Vector2( 1264, 160 )
 texture = ExtResource( 6 )
@@ -3781,7 +3790,7 @@ region_enabled = true
 region_rect = Rect2( 304, 144, 80, 80 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_second_28" type="Sprite" parent="tiles_second" index="28"]
+[node name="tiles_second_28" type="Sprite" parent="tiles_second" index="29"]
 
 position = Vector2( 1328, 192 )
 texture = ExtResource( 6 )
@@ -3789,7 +3798,7 @@ region_enabled = true
 region_rect = Rect2( 304, 144, 80, 80 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_second_31" type="Sprite" parent="tiles_second" index="29"]
+[node name="tiles_second_31" type="Sprite" parent="tiles_second" index="30"]
 
 position = Vector2( 1354, 258 )
 texture = ExtResource( 6 )
@@ -3797,7 +3806,7 @@ region_enabled = true
 region_rect = Rect2( 352, 16, 32, 64 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_second_32" type="Sprite" parent="tiles_second" index="30"]
+[node name="tiles_second_32" type="Sprite" parent="tiles_second" index="31"]
 
 position = Vector2( 1355, 320 )
 texture = ExtResource( 6 )
@@ -3805,7 +3814,7 @@ region_enabled = true
 region_rect = Rect2( 352, 16, 32, 64 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_second_47" type="Sprite" parent="tiles_second" index="31"]
+[node name="tiles_second_47" type="Sprite" parent="tiles_second" index="32"]
 
 position = Vector2( 1388, 360 )
 texture = ExtResource( 6 )
@@ -3813,7 +3822,7 @@ region_enabled = true
 region_rect = Rect2( 352, 208, 96, 48 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_second_34" type="Sprite" parent="tiles_second" index="32"]
+[node name="tiles_second_34" type="Sprite" parent="tiles_second" index="33"]
 
 position = Vector2( 1385.02, 433.671 )
 rotation = -0.00258851
@@ -3822,7 +3831,7 @@ region_enabled = true
 region_rect = Rect2( 208, 48, 128, 48 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_second_35" type="Sprite" parent="tiles_second" index="33"]
+[node name="tiles_second_35" type="Sprite" parent="tiles_second" index="34"]
 
 position = Vector2( 1440, 272 )
 texture = ExtResource( 6 )
@@ -3830,7 +3839,7 @@ region_enabled = true
 region_rect = Rect2( 112, 16, 32, 64 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_second_36" type="Sprite" parent="tiles_second" index="34"]
+[node name="tiles_second_36" type="Sprite" parent="tiles_second" index="35"]
 
 position = Vector2( 1456, 312 )
 texture = ExtResource( 6 )
@@ -3838,7 +3847,7 @@ region_enabled = true
 region_rect = Rect2( 112, 48, 64, 48 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_second_38" type="Sprite" parent="tiles_second" index="35"]
+[node name="tiles_second_38" type="Sprite" parent="tiles_second" index="36"]
 
 position = Vector2( 1425, 466 )
 texture = ExtResource( 6 )
@@ -3846,7 +3855,7 @@ region_enabled = true
 region_rect = Rect2( 80, 0, 64, 48 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_second_48" type="Sprite" parent="tiles_second" index="36"]
+[node name="tiles_second_48" type="Sprite" parent="tiles_second" index="37"]
 
 position = Vector2( 1440, 496 )
 texture = ExtResource( 6 )
@@ -3854,7 +3863,7 @@ region_enabled = true
 region_rect = Rect2( 112, 16, 32, 64 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_second_49" type="Sprite" parent="tiles_second" index="37"]
+[node name="tiles_second_49" type="Sprite" parent="tiles_second" index="38"]
 
 position = Vector2( 1440, 518 )
 texture = ExtResource( 6 )
@@ -3862,7 +3871,7 @@ region_enabled = true
 region_rect = Rect2( 112, 16, 32, 64 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_second_29" type="Sprite" parent="tiles_second" index="38"]
+[node name="tiles_second_29" type="Sprite" parent="tiles_second" index="39"]
 
 position = Vector2( 1550.53, 144.002 )
 texture = ExtResource( 6 )
@@ -3870,7 +3879,7 @@ region_enabled = true
 region_rect = Rect2( 112, 32, 256, 208 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_second_39" type="Sprite" parent="tiles_second" index="39"]
+[node name="tiles_second_39" type="Sprite" parent="tiles_second" index="40"]
 
 position = Vector2( 1735, 152 )
 texture = ExtResource( 6 )
@@ -3878,7 +3887,7 @@ region_enabled = true
 region_rect = Rect2( 352, 0, 160, 288 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_second_40" type="Sprite" parent="tiles_second" index="40"]
+[node name="tiles_second_40" type="Sprite" parent="tiles_second" index="41"]
 
 position = Vector2( 1735, 152 )
 texture = ExtResource( 6 )
@@ -3886,7 +3895,7 @@ region_enabled = true
 region_rect = Rect2( 352, 0, 160, 288 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_second_41" type="Sprite" parent="tiles_second" index="41"]
+[node name="tiles_second_41" type="Sprite" parent="tiles_second" index="42"]
 
 position = Vector2( 1872, 224 )
 texture = ExtResource( 6 )
@@ -3894,7 +3903,7 @@ region_enabled = true
 region_rect = Rect2( 0, 160, 128, 112 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_second_42" type="Sprite" parent="tiles_second" index="42"]
+[node name="tiles_second_42" type="Sprite" parent="tiles_second" index="43"]
 
 position = Vector2( 1952, 128 )
 texture = ExtResource( 6 )
@@ -3902,7 +3911,7 @@ region_enabled = true
 region_rect = Rect2( 112, 160, 64, 80 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_second_43" type="Sprite" parent="tiles_second" index="43"]
+[node name="tiles_second_43" type="Sprite" parent="tiles_second" index="44"]
 
 position = Vector2( 1952, 48 )
 texture = ExtResource( 6 )
@@ -3910,7 +3919,7 @@ region_enabled = true
 region_rect = Rect2( 112, 160, 64, 80 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_second_44" type="Sprite" parent="tiles_second" index="44"]
+[node name="tiles_second_44" type="Sprite" parent="tiles_second" index="45"]
 
 position = Vector2( 1776, 0 )
 texture = ExtResource( 6 )
@@ -3918,7 +3927,7 @@ region_enabled = true
 region_rect = Rect2( 128, 48, 192, 48 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_second_45" type="Sprite" parent="tiles_second" index="45"]
+[node name="tiles_second_45" type="Sprite" parent="tiles_second" index="46"]
 
 position = Vector2( 1904, 32 )
 texture = ExtResource( 6 )
@@ -3926,7 +3935,7 @@ region_enabled = true
 region_rect = Rect2( 48, 0, 96, 48 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_second_21" type="Sprite" parent="tiles_second" index="46"]
+[node name="tiles_second_21" type="Sprite" parent="tiles_second" index="47"]
 
 position = Vector2( 982, -102 )
 texture = ExtResource( 6 )
@@ -3934,7 +3943,7 @@ region_enabled = true
 region_rect = Rect2( 128, 16, 240, 80 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_second_23" type="Sprite" parent="tiles_second" index="47"]
+[node name="tiles_second_23" type="Sprite" parent="tiles_second" index="48"]
 
 position = Vector2( 1224, -38 )
 texture = ExtResource( 6 )
@@ -3942,7 +3951,7 @@ region_enabled = true
 region_rect = Rect2( 32, 0, 144, 80 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_second_24" type="Sprite" parent="tiles_second" index="48"]
+[node name="tiles_second_24" type="Sprite" parent="tiles_second" index="49"]
 
 position = Vector2( 1223, -7 )
 texture = ExtResource( 6 )
@@ -3950,7 +3959,7 @@ region_enabled = true
 region_rect = Rect2( 64, 208, 80, 80 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_second_26" type="Sprite" parent="tiles_second" index="49"]
+[node name="tiles_second_26" type="Sprite" parent="tiles_second" index="50"]
 
 position = Vector2( 1285, 18 )
 texture = ExtResource( 6 )
@@ -3958,7 +3967,7 @@ region_enabled = true
 region_rect = Rect2( 112, 64, 208, 32 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_second_30" type="Sprite" parent="tiles_second" index="50"]
+[node name="tiles_second_30" type="Sprite" parent="tiles_second" index="51"]
 
 position = Vector2( 1415, 50 )
 texture = ExtResource( 6 )
@@ -3966,7 +3975,7 @@ region_enabled = true
 region_rect = Rect2( 64, 0, 80, 64 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_second_22" type="Sprite" parent="tiles_second" index="51"]
+[node name="tiles_second_22" type="Sprite" parent="tiles_second" index="52"]
 
 position = Vector2( 1112, -102 )
 texture = ExtResource( 6 )
@@ -3974,7 +3983,7 @@ region_enabled = true
 region_rect = Rect2( 128, 16, 240, 80 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_second_14" type="Sprite" parent="tiles_second" index="52"]
+[node name="tiles_second_14" type="Sprite" parent="tiles_second" index="53"]
 
 position = Vector2( 602, -41 )
 texture = ExtResource( 6 )
@@ -3982,7 +3991,7 @@ region_enabled = true
 region_rect = Rect2( 336, 0, 80, 80 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_second_17" type="Sprite" parent="tiles_second" index="53"]
+[node name="tiles_second_17" type="Sprite" parent="tiles_second" index="54"]
 
 position = Vector2( 602, -41 )
 texture = ExtResource( 6 )
@@ -3990,7 +3999,7 @@ region_enabled = true
 region_rect = Rect2( 336, 0, 80, 80 )
 _sections_unfolded = [ "Region" ]
 
-[node name="tiles_second_18" type="Sprite" parent="tiles_second" index="54"]
+[node name="tiles_second_18" type="Sprite" parent="tiles_second" index="55"]
 
 position = Vector2( 656, -79 )
 texture = ExtResource( 6 )
@@ -4906,13 +4915,14 @@ polygon = PoolVector2Array( 590, 350, 608, 352, 608, -64, 608, -64, 1232, -64, 5
 
 [node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="collisions/StaticBody2D" index="4"]
 
+visible = false
 build_mode = 0
 polygon = PoolVector2Array( 670, -10, 880, -10, 880, 80, 1240, 80, 1240, 120, 1300, 120, 1300, 150, 1370, 150, 1370.36, 367.32, 1437.84, 368.128, 1650, 370, 1430, 460, 1430, 450, 960, 450, 960, 370, 900, 370, 670, 370 )
 
 [node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="collisions/StaticBody2D" index="5"]
 
 build_mode = 0
-polygon = PoolVector2Array( 1420, 310, 1420, 150, 1690, 150, 1690.59, 246.522, 2191.11, 247.418 )
+polygon = PoolVector2Array( 1423.05, 310.403, 1422.84, 151.999, 1687.49, 152.214, 1687.49, 247.728, 2191.11, 247.418 )
 
 [node name="CollisionPolygon2D10" type="CollisionPolygon2D" parent="collisions/StaticBody2D" index="6"]
 
@@ -5022,6 +5032,7 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="collisions/ClimbWall/Area2D" index="5"]
 
+visible = false
 light_mask = 5
 position = Vector2( 680, 30 )
 scale = Vector2( 1, 0.548468 )
@@ -5039,7 +5050,7 @@ _sections_unfolded = [ "Visibility" ]
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="collisions/ClimbWall/Area2D" index="7"]
 
 light_mask = 5
-position = Vector2( 1432.67, 231.392 )
+position = Vector2( 1433.46, 231.392 )
 scale = Vector2( 1, 0.959424 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Visibility" ]
@@ -5047,7 +5058,7 @@ _sections_unfolded = [ "Visibility" ]
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="collisions/ClimbWall/Area2D" index="8"]
 
 light_mask = 5
-position = Vector2( 1677.97, 206.1 )
+position = Vector2( 1676.97, 204.1 )
 scale = Vector2( 1, 0.634122 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Visibility" ]
@@ -5087,7 +5098,7 @@ _sections_unfolded = [ "Visibility" ]
 [node name="CollisionShape2D18" type="CollisionShape2D" parent="collisions/ClimbWall/Area2D" index="13"]
 
 light_mask = 5
-position = Vector2( 2054.61, 1269.17 )
+position = Vector2( 2050.61, 1270.17 )
 scale = Vector2( 1, 0.881462 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Visibility" ]
@@ -5347,6 +5358,10 @@ position = Vector2( 1122.86, 1470.56 )
 [node name="Enemy" parent="." index="111" instance=ExtResource( 13 )]
 
 position = Vector2( 1034.36, 5.18929 )
+
+[node name="KinematicBody2D3" parent="." index="112" instance=ExtResource( 14 )]
+
+position = Vector2( 140.183, 393.416 )
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 
