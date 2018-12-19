@@ -1,34 +1,128 @@
-frvft5r 
-dfgsfdbfd
-st
-hf
-g
-h
-g
-h
-s
-h
-gh
 
-fhs
-h
-fdh
-s
-hf
-sg
-h
-sfg
-h
-g
+public interface ABP_i<E extends Comparable<? super E>> {
+     boolean isEmpty();
+     boolean contains(E x);
+     E findMin();
+     E findMax();
+     void insere(E x);
+     void remove(E x);
+     void printEmOrdem();
+     void printPosOrdem();
+     void printPreOrdem();
+
+}
 
 
-gs
-h
+public class DoubleNode<T> {
 
-j
-sf
-g
-hs
+    //variaveis
+    T elemento;
+    DoubleNode<T> next;
+    DoubleNode<T> previous;
 
-gf
-sf
+    //construtor
+    public DoubleNode(T x){
+        elemento=x;
+        next=null;
+        previous=null;
+    }
+
+    //construtor vazio
+    public DoubleNode(T x, DoubleNode<T> next){
+        this(null);
+    }
+
+    //construtor com elemento, next e prev
+    public DoubleNode(T x, DoubleNode<T> n, DoubleNode<T> p){
+        elemento= x;
+        next=n;
+        previous=p;
+    }
+
+    public DoubleNode() {
+
+    }
+
+
+    //metodos
+    public T element() throws InvalidNodeException {
+        if(this==null){
+            throw new InvalidNodeException("Null node");
+        }
+        return elemento;
+    }
+
+    public DoubleNode<T> getNext(){
+        return next;
+    }
+
+    public void setElement(T x){
+        this.elemento=x;
+    }
+
+    public void setNext(DoubleNode<T> n){
+        next=n;
+    }
+
+    public DoubleNode<T> getPrevious(){
+        return previous;
+    }
+
+    public void setPrevious(DoubleNode<T> n){
+        previous=n;
+    }
+
+
+}
+
+public class InvalidNodeException extends RuntimeException {
+
+    public InvalidNodeException() {
+        super();
+    }
+    public InvalidNodeException(String x){
+        super(x);
+
+    }
+}
+
+public class DualLinkedListIterator<E> implements java.util.Iterator<E>{
+
+    private DoubleNode<E> current;
+
+    public DualLinkedListIterator(DoubleNode<E> c) {
+        current = c;
+    }
+
+    public boolean hasNext() {
+        return current != null;
+    }
+
+    public boolean hasPrevious(){
+        return current != null;
+    }
+
+    public E next() {
+        if (!hasNext())
+            throw new java.util.NoSuchElementException();
+        E nextItem = null;
+        nextItem = current.element();
+        current = current.getNext();
+        return nextItem;
+    }
+
+    public E previous(){
+        if (!hasPrevious())
+            throw new java.util.NoSuchElementException();
+        E prevItem = null;
+        prevItem = current.element();
+        current = current.getNext();
+        return prevItem;
+
+    }
+    public void remove() {
+        throw new UnsupportedOperationException();
+    }
+
+
+}
