@@ -13,7 +13,7 @@
 [ext_resource path="res://Camera2DStageone.tscn" type="PackedScene" id=11]
 [ext_resource path="res://sprites/Map Sprites/Dungeon_tileset.png" type="Texture" id=12]
 [ext_resource path="res://sprite.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Puzzle-Game (1).ogg" type="AudioStream" id=14]
+[ext_resource path="res://AudioStreamPlayer.tscn" type="PackedScene" id=14]
 [ext_resource path="res://sprites/Map Sprites/Grotto-escape-2-files/Grotto-escape-2-files/PNG/environment-tiles.png" type="Texture" id=15]
 [ext_resource path="res://CanvasLayer.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Healthpack.tscn" type="PackedScene" id=17]
@@ -39,7 +39,7 @@ extents = Vector2( 13.0454, 32.9838 )
 custom_solver_bias = 0.0
 extents = Vector2( 10, 105.835 )
 
-[node name="Kadyria_1" type="Node"]
+[node name="Kadyria_1" type="Node" index="0"]
 
 script = ExtResource( 1 )
 __meta__ = {
@@ -1749,14 +1749,7 @@ scale = Vector2( 0.0810127, 0.0666667 )
 build_mode = 0
 polygon = PoolVector2Array( 1270.99, -7.00015, 1470, 0, 1506.9, 8.97438, 1566.96, 35.9858, 1599.48, 67.2794, 1620.99, 92.9998, 1630.99, 173, 1630.99, 213, 1620.99, 233, 1630.99, 263, 1620.99, 283, 1620.99, 297.136, 1620.99, 313, 1632.99, 329, 1616.99, 345, 1616.99, 409, 1632.99, 441, 1632.99, 473, 1632.99, 537, 1632.99, 633, 1770, 170, 1760, -190, 1260, -340, 1170, -250, 1170, -230, 1160, -220, 1170, -190, 1180, -160, 1220, -130, 1220, -110, 1230, -90, 1240, -60, 1240, -50, 1250, -20 )
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="24"]
-
-stream = ExtResource( 14 )
-volume_db = 0.0
-pitch_scale = 1.0
-autoplay = true
-mix_target = 0
-bus = "Master"
+[node name="AudioStreamPlayer" parent="." index="24" instance=ExtResource( 14 )]
 
 [node name="spikes" type="Area2D" parent="." index="25"]
 
@@ -1887,7 +1880,7 @@ position = Vector2( 319.768, 26.2167 )
 
 [node name="Healthpack" parent="." index="37" instance=ExtResource( 17 )]
 
-position = Vector2( 1200.95, 20.948 )
+position = Vector2( 504, 208 )
 
 [connection signal="body_entered" from="spikes" to="." method="_on_spikes_body_entered"]
 

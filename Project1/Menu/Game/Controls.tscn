@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Menu/Game/Return_to_title.gd" type="Script" id=1]
 [ext_resource path="res://Menu/fonts/new_dynamicfont_48.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Menu/fonts/new_dynamicfont_24.tres" type="DynamicFont" id=3]
+[ext_resource path="res://AudioStreamPlayer.tscn" type="PackedScene" id=4]
 
 [node name="Controls" type="Control"]
 
@@ -101,6 +102,8 @@ text = "Back"
 flat = false
 align = 1
 _sections_unfolded = [ "custom_fonts" ]
+
+[node name="AudioStreamPlayer" parent="." index="1" instance=ExtResource( 4 )]
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Button" to="." method="_on_Button_pressed"]
 
