@@ -4948,6 +4948,7 @@ polygon = PoolVector2Array( 2177.44, 1512.5, 2287.96, 1512.53, 2288.05, 1596.87,
 
 [node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="collisions/StaticBody2D" index="13"]
 
+visible = false
 build_mode = 0
 polygon = PoolVector2Array( 2220.8, 1231.6, 2135.65, 1231.87, 2135.3, 1345.51, 2040.66, 1345.15, 2040.52, 1230.87, 2040.97, 1199.02, 1875.81, 1198.79, 1731.19, 1199.21, 1730.96, 1310.77, 1380.19, 1311.12, 1379.38, 1232.58, 1247.5, 1234.19, 1243.48, 1435.76, 1038.02, 1434.76, 1037.09, 1355.95, 83.7296, 1354.26, 374.598, 1298.92, 1268.14, 1203.96, 2041.62, 1155.8 )
 
@@ -5079,8 +5080,8 @@ _sections_unfolded = [ "Visibility" ]
 [node name="CollisionShape2D18" type="CollisionShape2D" parent="collisions/ClimbWall/Area2D" index="13"]
 
 light_mask = 5
-position = Vector2( 2050.61, 1270.17 )
-scale = Vector2( 1, 0.881462 )
+position = Vector2( 2050.61, 1301.32 )
+scale = Vector2( 1, 0.514371 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Visibility" ]
 
